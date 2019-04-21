@@ -3,6 +3,6 @@ package WUProtos.Networking.Requests.Messages;
 
 import "WUProtos/Data/EmailOpts.proto";
 
-message OptIntoEmailsMessage {
+message OptIntoMarketingEmailsMessage {
 	.WUProtos.Data.EmailOpts email_opts = 1;
 }

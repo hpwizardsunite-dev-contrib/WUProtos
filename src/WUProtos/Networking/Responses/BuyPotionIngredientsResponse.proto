@@ -3,7 +3,7 @@ package WUProtos.Networking.Responses;
 
 import "WUProtos/Data/Loot/LootCollection.proto";
 
-message BuyStorePackResponse {
+message BuyPotionIngredientsResponse {
 	Status status = 1;
 	.WUProtos.Data.Loot.LootCollection rewards = 2;
 

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package WUProtos.Networking.Responses;
 
-message OptIntoEmailsResponse {
+message OptIntoMarketingEmailsResponse {
 	Status status = 1;
 
 	enum Status {

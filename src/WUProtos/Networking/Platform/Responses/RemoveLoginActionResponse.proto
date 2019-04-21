@@ -1,5 +1,5 @@
 syntax = "proto3";
-package WUProtos.Networking.Responses;
+package WUProtos.Networking.Platform.Responses;
 
 import "WUProtos/Data/LoginDetail.proto";
 

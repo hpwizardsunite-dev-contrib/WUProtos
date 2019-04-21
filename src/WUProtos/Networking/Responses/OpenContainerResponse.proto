@@ -3,7 +3,7 @@ package WUProtos.Networking.Responses;
 
 import "WUProtos/Data/Loot/LootCollection.proto";
 
-message OpenFamilyChestResponse {
+message OpenContainerResponse {
 	int32 family_level = 1;
 	repeated .WUProtos.Data.Loot.LootCollection chest_reward = 2;
 	int32 family_xp = 3;

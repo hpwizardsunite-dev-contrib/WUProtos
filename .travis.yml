@@ -18,5 +18,5 @@ script:
   - ./compile.py python --generate_desc --include_imports --include_source_info
   # Compile Single need revision
   #- ./compile_single.py -d -o out2
-  - clang-format-3.8 -i -style file $(find src -name "*.proto")
+  #- clang-format-3.8 -i -style file $(find src -name "*.proto")
   - git diff --exit-code

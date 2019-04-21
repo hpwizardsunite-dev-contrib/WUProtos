@@ -8,7 +8,7 @@ message QualityLevel {
 	.WUProtos.Data.SharedQualityLevel quality_level = 2;
 
 	enum AntialiasingSetting {
-		off = 0;
+		offf = 0;
 		msaa2x = 2;
 		msaa4x = 4;
 		msaa8x = 8;

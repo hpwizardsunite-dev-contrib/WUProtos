@@ -18,7 +18,7 @@ We are following [semantic versioning](http://semver.org/) for WUProtos.  Every 
 
 | Version      | API           | Notes           | Extra                     |
 |--------------|---------------|-----------------|---------------------------|
-| 1.0.0.0-beta | 0.6.0-beta    | Compatible      |  Protocol Buffers v3.7.1  |
+| 1.0.0.0-beta | 0.6.0-beta    | Initial         |  Protocol Buffers v3.7.1  |
 
 ### Usage
 

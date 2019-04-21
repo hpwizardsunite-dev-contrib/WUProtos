@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+message CollectionItemRequirement {
+	string item_id = 1;
+	ComparisonOperator comparison_operator = 2;
+	int32 shards = 3;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message PermissionsConfigLocalDataProto {
+	string id = 1;
+	bool first_play = 2;
+	bool first_request = 3;
+	bool parental_approval = 4;
+	bool permission_granted = 5;
+}
+

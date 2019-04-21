@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ColorProto.proto";
+import "wuprotos/atlas/proto/SoundConfigProto.proto";
+message ClientCollectionFamilyProto {
+	string id = 1;
+	string name = 3;
+	string description = 4;
+	string icon = 5;
+	string landmark_texture = 6;
+	string landmark_prefab = 7;
+	string landmark_description = 8;
+	bool show_in_ui = 9;
+	string landmark_icon = 11;
+	ColorProto color = 12;
+	ColorProto color_highlight = 13;
+	string trace_prefab = 14;
+	repeated string border_images = 15;
+	string family_runestone_icon = 16;
+	SoundConfigProto sound = 17;
+}
+

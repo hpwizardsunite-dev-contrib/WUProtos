@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Requirements.proto";
+message ChamberTemplateProto {
+	string id = 1;
+	Requirements unlock_requirements = 2;
+	Requirements visibility_requirements = 3;
+	uint32 min_runestone_level = 4;
+	uint32 max_runestone_level = 5;
+	uint32 player_cap = 6;
+	int64 duration_ms = 7;
+	int64 knockout_time_ms = 10;
+	uint32 base_chamber_rating = 12;
+}
+

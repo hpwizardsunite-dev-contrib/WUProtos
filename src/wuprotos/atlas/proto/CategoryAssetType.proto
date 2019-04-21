@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum CategoryAssetType {
+	CATEGORY_ASSET_TYPE_UNSET = 0;
+	CATEGORY_ASSET_LENS = 1;
+	CATEGORY_ASSET_FILTER = 2;
+	CATEGORY_ASSET_FRAME = 3;
+	CATEGORY_ASSET_STICKER = 4;
+}
+

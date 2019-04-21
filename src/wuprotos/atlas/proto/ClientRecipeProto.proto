@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ColorProto.proto";
+message ClientRecipeProto {
+	string id = 1;
+	string name = 2;
+	string description = 3;
+	string icon = 4;
+	string model = 5;
+	string collect_fx = 6;
+	string crafting_fx = 7;
+	string reveal_fx = 8;
+	ColorProto primary_color = 9;
+	ColorProto secondary_color = 10;
+	int32 index = 11;
+}
+

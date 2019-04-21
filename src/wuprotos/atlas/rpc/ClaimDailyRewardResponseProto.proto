@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message ClaimDailyRewardResponseProto {
+	uint64 time_until_next_claim = 1;
+	string daily_reward_monthly_schedule_id = 2;
+	uint32 days_claimed_this_month = 3;
+	wuprotos.atlas.proto.LootCollectionProto reward = 4;
+}
+

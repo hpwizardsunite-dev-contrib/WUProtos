@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message GenericRunestoneRewardProto {
+	int32 rank = 1;
+	int64 amount = 2;
+}
+

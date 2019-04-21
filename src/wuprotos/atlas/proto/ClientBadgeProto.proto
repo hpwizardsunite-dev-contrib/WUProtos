@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Requirements.proto";
+message ClientBadgeProto {
+	string name = 1;
+	string icon = 2;
+	bool disabled = 3;
+	bool show_badge = 4;
+	Requirements visibility_conditions = 5;
+	Requirements unlock_conditions = 6;
+}
+

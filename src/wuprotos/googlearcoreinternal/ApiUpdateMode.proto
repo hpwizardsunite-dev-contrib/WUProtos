@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.googlearcoreinternal;
+
+enum ApiUpdateMode {
+	blocking = 0;
+	latest_camera_image = 1;
+}
+

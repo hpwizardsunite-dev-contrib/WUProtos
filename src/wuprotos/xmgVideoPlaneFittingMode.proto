@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum xmgVideoPlaneFittingMode {
+	fit_screen_horizontally = 0;
+	fit_screen_vertically = 1;
+}
+

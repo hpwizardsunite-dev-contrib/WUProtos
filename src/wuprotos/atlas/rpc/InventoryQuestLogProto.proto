@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/InventoryInProgressQuestProto.proto";
+import "wuprotos/atlas/rpc/InventoryCompletedQuestProto.proto";
+message InventoryQuestLogProto {
+	repeated InventoryInProgressQuestProto quests = 1;
+	repeated InventoryCompletedQuestProto completed_quests = 2;
+}
+

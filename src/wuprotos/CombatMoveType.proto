@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum CombatMoveType {
+	COMBAT_PLAYER_ATTACK = 0;
+	COMBAT_PLAYER_DEFEND = 1;
+	COMBAT_PLAYER_AUTO_ADVANCE = 2;
+}
+

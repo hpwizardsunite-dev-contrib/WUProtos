@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ActiveEngagement.proto";
+message ClientTelemetryWizardingChallengeSelectMob {
+	int32 mob_level = 1;
+	string mob_affinity = 2;
+	string mob_gmt_id = 3;
+	int32 player_profession_rank = 4;
+	string player_profession_gmt_id = 5;
+	ActiveEngagement is_mob_already_engaged = 6;
+	string player_engagement_with_mob = 7;
+}
+

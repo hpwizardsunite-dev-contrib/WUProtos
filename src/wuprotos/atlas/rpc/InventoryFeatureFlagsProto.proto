@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/InventoryFeatureFlagProto.proto";
+message InventoryFeatureFlagsProto {
+	string id = 1;
+	repeated InventoryFeatureFlagProto flags = 2;
+}
+

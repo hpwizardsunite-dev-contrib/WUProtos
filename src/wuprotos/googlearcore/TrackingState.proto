@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.googlearcore;
+
+enum TrackingState {
+	tracking = 0;
+	paused = 1;
+	stopped = 2;
+}
+
+
+//----- End googlearcore -----
+//------------------------------
+//----- Begin googlearcoreinternal -----
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+import "wuprotos/atlas/rpc/debug/StorePackPurchasedProto.proto";
+message DebugResetStorePackPurchasedRequestProto {
+	repeated StorePackPurchasedProto store_pack = 1;
+}
+

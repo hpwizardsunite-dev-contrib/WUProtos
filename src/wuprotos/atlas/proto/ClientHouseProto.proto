@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ColorProto.proto";
+message ClientHouseProto {
+	string name = 1;
+	string description = 2;
+	string icon = 3;
+	string anim_in = 4;
+	string anim_loop = 5;
+	string anim_out = 6;
+	ColorProto color = 7;
+	string sound_select = 8;
+	string intro_sound_select = 9;
+}
+

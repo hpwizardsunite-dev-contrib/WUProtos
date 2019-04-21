@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ARMode.proto";
+message ClientTelemetrySwishSpellGameStart {
+	string encounter_id = 1;
+	int32 attempt_number = 2;
+	int32 player_level = 3;
+	string encounter_proto_id = 4;
+	string spell_pattern = 5;
+	ARMode ar_mode = 6;
+}
+

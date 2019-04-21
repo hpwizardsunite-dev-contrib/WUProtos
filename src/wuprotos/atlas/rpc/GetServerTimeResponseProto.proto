@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message GetServerTimeResponseProto {
+	int64 server_time_ms = 1;
+	uint64 time_until_daily_rollover = 2;
+}
+

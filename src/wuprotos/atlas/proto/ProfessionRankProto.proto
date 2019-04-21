@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Requirements.proto";
+message ProfessionRankProto {
+	uint32 potential_rank_points = 1;
+	repeated Requirements requirements = 2;
+	bool show_in_ui = 4;
+	string id = 5;
+}
+

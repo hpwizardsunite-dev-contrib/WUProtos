@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetryLoginStart {
+	string auth_provider_id = 1;
+}
+

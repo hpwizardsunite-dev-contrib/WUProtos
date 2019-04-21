@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message CheckWalkboxesResponseProto {
+	// ref: Atlas.Rpc.CheckWalkboxesResponseProto/Types/OpenedWalkboxProto
+	message OpenedWalkboxProto {
+		string walkbox_gmt_template = 1;
+		wuprotos.atlas.proto.LootCollectionProto rewards = 2;
+		repeated int64 portkey_ids = 3;
+	}
+
+	repeated OpenedWalkboxProto opened_walkboxes = 1;
+}
+

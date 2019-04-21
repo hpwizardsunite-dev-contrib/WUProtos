@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ARMode.proto";
+message ClientTelemetrySettingsARModeToggled {
+	ARMode ar_mode = 1;
+}
+

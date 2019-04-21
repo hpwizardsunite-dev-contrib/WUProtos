@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.auth.token;
+
+message FbTokenProto {
+	string token = 1;
+}
+

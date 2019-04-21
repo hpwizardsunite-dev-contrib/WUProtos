@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum Permission {
+	PERMISSION_AUTO_INVALID = 0;
+	camera_aed5 = 1;
+	GPS = 2;
+	microphone = 3;
+	notifications = 4;
+	photo_storage = 5;
+	write_external_storage = 6;
+	contacts = 7;
+	phone_state = 8;
+	get_accounts = 9;
+}
+

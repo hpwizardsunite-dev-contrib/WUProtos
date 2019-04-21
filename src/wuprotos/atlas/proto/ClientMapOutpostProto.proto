@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientDarkDetectorAmplifierProto.proto";
+message ClientMapOutpostProto {
+	int64 next_loot_time = 1;
+	ClientDarkDetectorAmplifierProto dark_detector_amplifier = 2;
+	string outpost_template_gmt_id = 3;
+}
+

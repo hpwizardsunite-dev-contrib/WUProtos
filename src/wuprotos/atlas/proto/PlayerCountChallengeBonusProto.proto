@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message PlayerCountChallengeBonusProto {
+	int32 number_of_players = 1;
+}
+

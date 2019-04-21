@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message OptOutProto {
+	repeated string categories = 1;
+}
+

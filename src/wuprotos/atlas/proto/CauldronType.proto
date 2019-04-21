@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum CauldronType {
+	CAULDRON_UNKNOWN = 0;
+	CAULDRON_NORMAL = 1;
+	CAULDRON_RENTAL = 2;
+}
+

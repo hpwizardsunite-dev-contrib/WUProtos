@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientEncounterStageProto.proto";
+import "wuprotos/atlas/proto/AudioParameterProto.proto";
+import "wuprotos/atlas/proto/ColorProto.proto";
+message ClientEncounterProto {
+	string id = 1;
+	string encounter_searching_timeline = 2;
+	repeated string encounter_searching_idle_timelines = 3;
+	string encounter_flee_timeline = 4;
+	string encounter_target = 5;
+	repeated ClientEncounterStageProto stages = 6;
+	string encounter_target_layout = 7;
+	string search_target_layout = 8;
+	repeated string encounter_assets = 9;
+	string encounter_map_sprite = 10;
+	repeated AudioParameterProto encounter_music_params = 11;
+	string name = 12;
+	string encounter_map_sprite_frame = 13;
+	ColorProto map_health_bar_color = 14;
+	ColorProto hud_health_bar_color = 15;
+}
+

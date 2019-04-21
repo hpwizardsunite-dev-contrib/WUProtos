@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message EnergyVaultItem {
-	float impact = 1;
-	int32 spell_effect = 2;
-}

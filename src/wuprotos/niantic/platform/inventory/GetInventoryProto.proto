@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.inventory;
+
+message GetInventoryProto {
+	int64 timestamp_millis = 1;
+}
+

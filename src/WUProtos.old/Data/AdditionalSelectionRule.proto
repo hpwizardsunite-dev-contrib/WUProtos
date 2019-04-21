@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-enum AdditionalSelectionRule {
-    none = 0;
-    no_if_max_health = 1;
-    no_if_max_focus = 2;
-    no_if_alive = 3;
-}

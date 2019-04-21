@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/PotionBonusMetadataProto.proto";
+import "wuprotos/atlas/proto/WrackspurtBonusMetadataProto.proto";
+import "wuprotos/atlas/proto/FirstTimeCollectionBonusMetadataProto.proto";
+import "wuprotos/atlas/proto/ChallengeBonusProto.proto";
+import "wuprotos/atlas/proto/SpellGameBonusMetadataProto.proto";
+import "wuprotos/atlas/proto/ChallengeBonusMetadataProto.proto";
+import "wuprotos/atlas/proto/ShardConversionBonusMetadataProto.proto";
+import "wuprotos/atlas/proto/ChallengeChamberBonusMetadataProto.proto";
+message BonusMetadataProto {
+	// ref: Atlas.Proto.BonusMetadataProto/MetadataTypeOneofCase
+
+	PotionBonusMetadataProto potion = 1;
+	WrackspurtBonusMetadataProto wrackspurt = 2;
+	FirstTimeCollectionBonusMetadataProto first_time_collection = 3;
+	ChallengeBonusProto challenge = 4;
+	SpellGameBonusMetadataProto spell_game = 5;
+	ChallengeBonusMetadataProto challenge_bonus = 6;
+	ShardConversionBonusMetadataProto shard_conversion = 7;
+	ChallengeChamberBonusMetadataProto challenge_chamber_bonus = 8;
+}
+

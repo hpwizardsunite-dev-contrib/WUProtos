@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/EncounterStageProto.proto";
+message EncounterProto {
+	string id = 1;
+	string collection_item_reward_gmt_id = 2;
+	repeated EncounterStageProto stages = 3;
+	int32 collection_item_reward_shards = 4;
+	string collection_family_gmt_id = 5;
+	string affinity_profession_id = 6;
+	repeated string encounter_searching_idle_timelines = 7;
+	repeated string encounter_assets = 8;
+
+}
+

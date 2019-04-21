@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ChallengeBonusMetadataProto {
+	string challenge_bonus_gmt_id = 1;
+}
+

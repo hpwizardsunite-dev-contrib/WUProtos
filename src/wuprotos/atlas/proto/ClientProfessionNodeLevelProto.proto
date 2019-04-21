@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientProfessionNodeLevelProto {
+	bool is_grant_new_map_ability = 1;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos;
+
+import "wuprotos/PlayerInAppPurchaseLogProto.proto";
+import "wuprotos/BalanceSnapshotEntryProto.proto";
+message AdminGetInAppPurchaseLogsOutProto {
+	repeated PlayerInAppPurchaseLogProto log = 1;
+	repeated BalanceSnapshotEntryProto current_balance = 2;
+}
+

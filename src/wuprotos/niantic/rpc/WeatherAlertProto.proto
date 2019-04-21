@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wuprotos.niantic.rpc;
+
+message WeatherAlertProto {
+	// ref: Niantic.Rpc.WeatherAlertProto/Types/Severity
+	enum Severity {
+		NONE = 0;
+		MODERATE = 1;
+		EXTREME = 2;
+	}
+
+	Severity severity = 1;
+	bool warn_weather = 2;
+}
+
+
+//----- End rpc -----
+//------------------------------
+//----- Begin spine -----
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum ForceChangeType {
+	false_a7fe = 0;
+	true_a7fe = 1;
+}
+

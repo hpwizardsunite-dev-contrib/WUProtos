@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum ActiveEngagement {
+	ACTIVE_ENGAGEMENT_UNSET = 0;
+	MOB_IS_ENGAGED = 1;
+	MOB_IS_FREE = 2;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum AdviceOverlayAlignment {
+	bottom = 0;
+	top = 1;
+}
+

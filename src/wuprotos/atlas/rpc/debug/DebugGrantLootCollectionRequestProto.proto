@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message DebugGrantLootCollectionRequestProto {
+	wuprotos.atlas.proto.LootCollectionProto loot_collection = 1;
+}
+

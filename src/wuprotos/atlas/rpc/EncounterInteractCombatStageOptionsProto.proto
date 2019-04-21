@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message EncounterInteractCombatStageOptionsProto {
+	// ref: Atlas.Rpc.EncounterInteractCombatStageOptionsProto/TypeOneofCase
+
+	// ref: Atlas.Rpc.EncounterInteractCombatStageOptionsProto/Types/Attack
+	message Attack {
+		repeated string energy_gmt_id = 1;
+		float skill_modifier = 2;
+	}
+
+	// ref: Atlas.Rpc.EncounterInteractCombatStageOptionsProto/Types/AutoAdvance
+	message AutoAdvance {
+	}
+
+	// ref: Atlas.Rpc.EncounterInteractCombatStageOptionsProto/Types/Defend
+	message Defend {
+		bool block_success = 1;
+		repeated string energy_gmt_id = 2;
+	}
+
+	Attack attack = 1;
+	Defend defend = 2;
+	AutoAdvance auto_advance = 3;
+}
+

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message PlaceItemResponseProto {
+	// ref: Atlas.Rpc.PlaceItemResponseProto/Types/Status
+	enum Status {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		NOT_READY = 2;
+	}
+
+	Status status = 1;
+	string collection_item_id = 2;
+	repeated wuprotos.atlas.proto.LootCollectionProto completion_rewards = 3;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Requirements.proto";
+message DisabledFeatureConfigProto {
+	string id = 1;
+	Requirements failed_reqs = 2;
+}
+

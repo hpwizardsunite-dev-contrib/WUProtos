@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.clientconfig;
+
+enum ClientOs {
+	UNKNOWN_OS = 0;
+	IOS = 1;
+	ANDROID = 2;
+	DESKTOP = 3;
+}
+

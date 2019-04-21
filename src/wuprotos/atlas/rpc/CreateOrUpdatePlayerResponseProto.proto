@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message CreateOrUpdatePlayerResponseProto {
+	// ref: Atlas.Rpc.CreateOrUpdatePlayerResponseProto/Types/ClientPlayerDataProto
+	message ClientPlayerDataProto {
+		int64 creation_time_ms = 1;
+		bool update_privacy_policy = 4;
+		bool update_terms_of_service = 5;
+	}
+
+	// ref: Atlas.Rpc.CreateOrUpdatePlayerResponseProto/Types/PlayerDisciplineInfoProto
+	message PlayerDisciplineInfoProto {
+		bool warn = 1;
+		bool warn_message_acknowledged = 2;
+		int64 warn_expire_ms = 3;
+		bool was_suspended = 4;
+		bool suspended_message_acknowledged = 5;
+	}
+
+	bool success = 1;
+	ClientPlayerDataProto player = 2;
+	bool first_login_of_day = 3;
+	PlayerDisciplineInfoProto player_discipline = 4;
+}
+

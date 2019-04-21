@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum TwistMethod {
+	standard = 0;
+	pivot = 1;
+}
+

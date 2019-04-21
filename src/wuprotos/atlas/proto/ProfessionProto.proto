@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Requirements.proto";
+import "wuprotos/atlas/proto/ProfessionTierProto.proto";
+message ProfessionProto {
+	string id = 1;
+	repeated Requirements requirements = 3;
+	bool show_in_ui = 4;
+	repeated ProfessionTierProto profession_tiers = 6;
+}
+

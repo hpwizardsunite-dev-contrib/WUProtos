@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.iap.protos;
+
+message CurrencyUpdateProto {
+	string currency_name = 1;
+	int32 currency_delta = 2;
+	int32 currency_balance = 3;
+}
+

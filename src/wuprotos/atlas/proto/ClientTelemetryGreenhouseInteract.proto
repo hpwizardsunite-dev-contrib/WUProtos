@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/POIInteract.proto";
+message ClientTelemetryGreenhouseInteract {
+	POIInteract common_data = 1;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message BatterySaverProfile {
+	repeated string profiles = 1;
+	string name = 2;
+}
+

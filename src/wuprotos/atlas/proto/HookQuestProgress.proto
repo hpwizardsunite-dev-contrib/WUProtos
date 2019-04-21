@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/DoEncounterHookQuestProgress.proto";
+import "wuprotos/atlas/proto/LootOutpostsQuestProgress.proto";
+import "wuprotos/atlas/proto/WinTracesQuestProgress.proto";
+import "wuprotos/atlas/proto/CollectPotionIngredientsQuestProgress.proto";
+import "wuprotos/atlas/proto/BrewPotionsQuestProgress.proto";
+import "wuprotos/atlas/proto/WalkDistanceQuestProgress.proto";
+import "wuprotos/atlas/proto/PlayFortressChallengesQuestProgress.proto";
+message HookQuestProgress {
+	// ref: Atlas.Proto.HookQuestProgress/TypeOneofCase
+
+	DoEncounterHookQuestProgress do_encounter = 1;
+	LootOutpostsQuestProgress loot_outposts = 2;
+	WinTracesQuestProgress win_traces = 3;
+	CollectPotionIngredientsQuestProgress collect_potion_ingredients = 4;
+	BrewPotionsQuestProgress brew_potions = 5;
+	WalkDistanceQuestProgress walk_distance = 6;
+	PlayFortressChallengesQuestProgress play_fortress_challenges = 7;
+}
+

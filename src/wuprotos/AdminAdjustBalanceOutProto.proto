@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wuprotos;
+
+message AdminAdjustBalanceOutProto {
+	// ref: AdminAdjustBalanceOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+		BALANCE_TOO_LOW = 3;
+	}
+
+	Status status = 1;
+}
+

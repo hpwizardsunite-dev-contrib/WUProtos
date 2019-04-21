@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum PotionConsumableScenario {
+	UNKNOWN_CONSUMABLE_SCENARIO = 0;
+	OVERWORLD = 1;
+	ENCOUNTER = 2;
+	SWISH_ENCOUNTER = 3;
+	COMBAT_ENCOUNTER = 4;
+	WC_ENCOUNTER = 5;
+}
+

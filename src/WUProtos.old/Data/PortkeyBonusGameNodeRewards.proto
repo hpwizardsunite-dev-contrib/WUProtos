@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-import "WUProtos/Data/PortkeyBonusGameRewardTuple.proto";
-
-message PortkeyBonusGameNodeRewards {
-	repeated .WUProtos.Data.PortkeyBonusGameRewardTuple rewards = 1;
-}

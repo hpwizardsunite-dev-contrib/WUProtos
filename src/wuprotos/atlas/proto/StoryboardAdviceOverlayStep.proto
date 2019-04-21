@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/SpeechBubble.proto";
+import "wuprotos/atlas/proto/AdviceOverlayAlignment.proto";
+message StoryboardAdviceOverlayStep {
+	SpeechBubble speech_bubble = 1;
+	bool requires_scrim = 2;
+	AdviceOverlayAlignment alignment = 3;
+	bool show_continue_action_text = 4;
+}
+

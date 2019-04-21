@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/FlooNetworkFortressStatistics.proto";
+message GetFortressFlooNetworkStatisticsResponse {
+	wuprotos.atlas.proto.FlooNetworkFortressStatistics fortress_statistics = 1;
+	int64 temp_next_add_pts_timestamp_ms = 2;
+}
+

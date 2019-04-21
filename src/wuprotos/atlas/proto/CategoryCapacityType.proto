@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum CategoryCapacityType {
+	CAGETORY_CAPACITY_TYPE_UNSET = 0;
+	DEFAULT = 1;
+	INFINITE = 2;
+}
+

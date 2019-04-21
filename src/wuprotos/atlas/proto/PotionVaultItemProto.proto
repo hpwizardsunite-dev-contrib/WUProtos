@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/PotionConsumableScenario.proto";
+message PotionVaultItemProto {
+	repeated PotionConsumableScenario consumable_scenario = 3;
+	repeated string applied_buff_gmt_id = 4;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum DownloadType {
+	DOWNLOAD_TYPE_UNSET = 0;
+	PORTRAIT_DOWNLOAD_PASSPORT = 1;
+	PORTRAIT_DOWNLOAD_PHOTO = 2;
+}
+

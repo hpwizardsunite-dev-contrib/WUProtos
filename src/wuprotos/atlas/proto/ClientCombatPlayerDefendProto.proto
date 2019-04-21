@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientCombatPlayerDefendPatternProto.proto";
+message ClientCombatPlayerDefendProto {
+	repeated ClientCombatPlayerDefendPatternProto pattern_list = 1;
+}
+

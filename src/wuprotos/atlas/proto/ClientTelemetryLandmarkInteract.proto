@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/POIInteract.proto";
+message ClientTelemetryLandmarkInteract {
+	string landmark_type = 1;
+	POIInteract common_data = 2;
+}
+

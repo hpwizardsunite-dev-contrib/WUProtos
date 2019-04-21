@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message QualityLevelOverrides {
-	int32 target_fps = 1;
-}

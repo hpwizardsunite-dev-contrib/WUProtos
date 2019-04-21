@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientWandWoodProto {
+	string name = 1;
+	string btn_icon = 2;
+	string icon = 3;
+	string texture = 4;
+	string material = 5;
+}
+

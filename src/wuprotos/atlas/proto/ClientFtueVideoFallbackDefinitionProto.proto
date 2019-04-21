@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientFtueVideoNameDefinitionProto.proto";
+message ClientFtueVideoFallbackDefinitionProto {
+	repeated ClientFtueVideoNameDefinitionProto name_definitions = 1;
+}
+

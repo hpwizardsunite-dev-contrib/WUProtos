@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.telemetry;
+
+import "wuprotos/niantic/platform/telemetry/PlatformDataId.proto";
+message ClientTelemetryProto {
+	repeated PlatformDataId data_id = 1;
+	repeated bytes application_data = 2;
+}
+

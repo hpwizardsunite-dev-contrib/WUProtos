@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+import "wuprotos/atlas/rpc/AtlasInventoryItemProto.proto";
+import "wuprotos/atlas/rpc/AtlasInventoryKeyProto.proto";
+message DebugUpdatePlayerInventoryRequestProto {
+	repeated wuprotos.atlas.rpc.AtlasInventoryItemProto insert_or_replace_items = 1;
+	repeated wuprotos.atlas.rpc.AtlasInventoryKeyProto delete_items = 2;
+}
+

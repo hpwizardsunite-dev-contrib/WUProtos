@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/RequirementsQuestProgress.proto";
+import "wuprotos/atlas/proto/HookQuestProgress.proto";
+message QuestProgress {
+	// ref: Atlas.Proto.QuestProgress/TypeOneofCase
+
+	RequirementsQuestProgress req_progress = 1;
+	HookQuestProgress hook_progress = 2;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum CullingStrategy {
+	no_cull = 0;
+	cull_below_default_clear_flags = 1;
+	cull_below_clear_to_black = 2;
+}
+

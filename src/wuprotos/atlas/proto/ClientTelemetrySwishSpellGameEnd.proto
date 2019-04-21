@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetrySwishSpellGameEnd {
+	// ref: Atlas.Proto.ClientTelemetrySwishSpellGameEnd/Types/FailReason
+	enum FailReason {
+		none = 0;
+		timer = 1;
+		checkpoint = 2;
+		score = 3;
+	}
+
+	string encounter_id = 1;
+	int32 attempt_number = 2;
+	bool success = 3;
+	FailReason fail_reason = 4;
+	double cast_time = 5;
+	int32 failed_checkpoint_number = 6;
+	double average_drawing_error = 7;
+	double median_drawing_error = 8;
+	double final_spellbar_score = 9;
+	string encounter_proto_id = 10;
+}
+

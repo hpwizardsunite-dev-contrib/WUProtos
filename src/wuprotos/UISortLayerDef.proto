@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum UISortLayerDef {
+	background = 0;
+	default_ab95 = 1;
+	modal = 2;
+	tutorial = 3;
+	notif = 4;
+	debug = 5;
+	error = 6;
+	watermark = 7;
+}
+

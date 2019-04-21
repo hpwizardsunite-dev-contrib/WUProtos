@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+message DateRequirement {
+	int64 epoch_date_in_seconds = 1;
+	ComparisonOperator comparison_operator = 2;
+}
+

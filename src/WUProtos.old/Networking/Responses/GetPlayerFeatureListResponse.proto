@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Networking.Responses;
-
-import "WUProtos/Data/DisabledFeatureConfig.proto";
-
-message GetPlayerFeatureListResponse {
-	repeated string enabled_feature_list = 1;
-	repeated .WUProtos.Data.DisabledFeatureConfig disabled_feature_list = 2;
-}

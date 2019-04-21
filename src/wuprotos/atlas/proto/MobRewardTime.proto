@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message MobRewardTime {
+	int64 time_ms = 1;
+}
+

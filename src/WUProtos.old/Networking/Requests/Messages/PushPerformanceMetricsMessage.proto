@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Networking.Requests.Messages;
-
-import "WUProtos/Data/PerformanceSnapshot.proto";
-
-message PushPerformanceMetricsMessage {
-	.WUProtos.Data.PerformanceSnapshot performance_snapshot = 1;
-}

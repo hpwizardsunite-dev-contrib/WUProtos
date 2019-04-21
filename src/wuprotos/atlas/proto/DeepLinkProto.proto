@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Requirements.proto";
+message DeepLinkProto {
+	string id = 1;
+	string category = 2;
+	Requirements requirements = 3;
+	string item = 4;
+}
+

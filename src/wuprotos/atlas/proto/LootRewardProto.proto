@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/VaultItemLootRewardProto.proto";
+import "wuprotos/atlas/proto/CollectionFamilyLootRewardProto.proto";
+import "wuprotos/atlas/proto/CollectionItemRewardProto.proto";
+import "wuprotos/atlas/proto/WalkboxRewardProto.proto";
+import "wuprotos/atlas/proto/PortkeyRewardProto.proto";
+import "wuprotos/atlas/proto/LootTableRewardProto.proto";
+import "wuprotos/atlas/proto/VaultCapacityLootRewardProto.proto";
+import "wuprotos/atlas/proto/GenericRunestoneRewardProto.proto";
+import "wuprotos/atlas/proto/PotionRewardProto.proto";
+import "wuprotos/atlas/proto/PortkeyCollectibleRewardProto.proto";
+import "wuprotos/atlas/proto/GenericCollectionFamilyLootRewardProto.proto";
+import "wuprotos/atlas/proto/CauldronRewardProto.proto";
+import "wuprotos/atlas/proto/CurrencyRewardProto.proto";
+import "wuprotos/atlas/proto/QuestRewardProto.proto";
+import "wuprotos/atlas/proto/BonusMetadataProto.proto";
+message LootRewardProto {
+	// ref: Atlas.Proto.LootRewardProto/RewardDataOneofCase
+
+	VaultItemLootRewardProto item_reward = 1;
+	CollectionFamilyLootRewardProto collection_family_reward = 2;
+	CollectionItemRewardProto collection_reward = 3;
+	WalkboxRewardProto walkbox_reward = 4;
+	PortkeyRewardProto portkey_reward = 5;
+	LootTableRewardProto loot_table_reward = 6;
+	VaultCapacityLootRewardProto vault_capacity_reward = 7;
+	GenericRunestoneRewardProto generic_runestone = 8;
+	PotionRewardProto potion_reward = 9;
+	PortkeyCollectibleRewardProto portkey_collectible = 10;
+	GenericCollectionFamilyLootRewardProto generic_collection_family_reward = 11;
+	CauldronRewardProto cauldron_reward = 12;
+	CurrencyRewardProto currency_reward = 13;
+	QuestRewardProto quest_reward = 14;
+	BonusMetadataProto bonus_metadata = 101;
+}
+

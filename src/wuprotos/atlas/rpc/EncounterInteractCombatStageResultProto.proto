@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/CombatResults.proto";
+message EncounterInteractCombatStageResultProto {
+	// ref: Atlas.Rpc.EncounterInteractCombatStageResultProto/Types/Status
+	enum Status {
+		COMBAT_INTERACT_RESULT_UNKNOWN = 0;
+		COMBAT_INTERACT_RESULT_ENEMY_DEFEATED = 1;
+		COMBAT_INTERACT_RESULT_CONTINUE = 2;
+		COMBAT_INTERACT_RESULT_PLAYER_DEFEATED = 3;
+		COMBAT_INTERACT_RESULT_OUT_OF_ENERGY = 4;
+		COMBAT_INTERACT_RESULT_ERROR = 5;
+	}
+
+	Status status = 1;
+	CombatResults results = 2;
+}
+

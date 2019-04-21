@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientBonusConfigProto {
+	string id = 1;
+	repeated float accuracy_tier = 2;
+	repeated string accuracy_tier_bonus_id = 3;
+	repeated string accuracy_tier_bonus_text = 4;
+	string first_time_bonus_id = 5;
+	string first_time_bonus_text = 6;
+	string life_time_bonus_id = 7;
+	string life_time_bonus_text = 8;
+}
+

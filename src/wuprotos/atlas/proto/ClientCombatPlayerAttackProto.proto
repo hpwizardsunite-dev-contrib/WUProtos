@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientCombatPlayerAttackProto {
+	string enemy_bone_name = 1;
+	float ui_target_radius = 2;
+	float reticle_time_to_fill = 3;
+}
+

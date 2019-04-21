@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+message DebugSimulateWalkingResponseProto {
+	// ref: Atlas.Rpc.Debug.DebugSimulateWalkingResponseProto/Types/Status
+	enum Status {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		ERROR = 2;
+	}
+
+	Status status = 1;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.wbg.assets;
+
+enum AssetError {
+	asset_bundle_manager_not_initialized = 0;
+	asset_not_found = 1;
+	cached_asset_bundle_not_found = 2;
+	duplicate_asset = 3;
+}
+

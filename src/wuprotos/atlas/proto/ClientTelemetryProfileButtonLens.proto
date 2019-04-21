@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CategoryLens.proto";
+message ClientTelemetryProfileButtonLens {
+	string pressed_button_id = 1;
+	CategoryLens lens_category = 2;
+}
+

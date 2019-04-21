@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message BuyStorePackResponseProto {
+	// ref: Atlas.Rpc.BuyStorePackResponseProto/Types/Status
+	enum Status {
+		UNKNOWN = 0;
+		ERROR = 1;
+		PACK_NOT_AVAILABLE = 2;
+		INSUFFICIENT_FUNDS = 3;
+		ALREADY_PURCHASED = 4;
+		SUCCESS = 5;
+		AT_ITEM_CAP = 6;
+	}
+
+	Status status = 1;
+	wuprotos.atlas.proto.LootCollectionProto rewards = 2;
+}
+

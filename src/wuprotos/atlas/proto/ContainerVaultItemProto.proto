@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message ContainerVaultItemProto {
+	LootCollectionProto contents = 1;
+	bool auto_consume = 2;
+}
+

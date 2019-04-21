@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CauldronType.proto";
+message CauldronProto {
+	string id = 1;
+	CauldronType type = 2;
+	float discount = 3;
+}
+

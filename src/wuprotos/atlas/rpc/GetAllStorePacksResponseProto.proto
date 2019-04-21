@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/StorePackProto.proto";
+message GetAllStorePacksResponseProto {
+	// ref: Atlas.Rpc.GetAllStorePacksResponseProto/Types/Status
+	enum Status {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		ERROR = 2;
+	}
+
+	repeated wuprotos.atlas.proto.StorePackProto store_pack = 1;
+	Status status = 2;
+}
+

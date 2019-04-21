@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message GetFortressFlooNetworkStatisticsRequest {
+	string fortress_id = 1;
+	double latitude = 2;
+	double longitude = 3;
+}
+

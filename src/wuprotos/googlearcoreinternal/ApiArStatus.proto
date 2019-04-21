@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package wuprotos.googlearcoreinternal;
+
+enum ApiArStatus {
+	success = 0;
+	unavailable_sdk_too_old = -104;
+	unavailable_apk_too_old = -103;
+	unavailable_android_version_not_supported = -102;
+	unavailable_device_not_compatible = -101;
+	unavailable_ar_core_not_installed = -100;
+	error_not_yet_available = -12;
+	error_resource_exhausted = -11;
+	error_deadline_exceeded = -10;
+	error_camera_permission_not_granted = -9;
+	error_unsupported_configuration = -8;
+	error_missing_gl_context = -7;
+	error_texture_not_set = -6;
+	error_not_tracking = -5;
+	error_session_not_paused = -4;
+	error_session_paused = -3;
+	error_fatal = -2;
+	error_invalid_argument = -1;
+}
+

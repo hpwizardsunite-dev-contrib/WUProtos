@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum TextureWrap {
+	mirrored_repeat = 0;
+	clamp_to_edge = 1;
+	repeat = 2;
+}
+

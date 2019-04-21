@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/VaultItemActiveBuffSource.proto";
+import "wuprotos/atlas/proto/ProfessionActiveBuffSource.proto";
+import "wuprotos/atlas/proto/MapAbilityActiveBuffSource.proto";
+message ActiveBuffSource {
+	// ref: Atlas.Proto.ActiveBuffSource/TypeOneofCase
+
+	VaultItemActiveBuffSource vault_item = 1;
+	ProfessionActiveBuffSource profession = 2;
+	MapAbilityActiveBuffSource map_ability = 3;
+}
+

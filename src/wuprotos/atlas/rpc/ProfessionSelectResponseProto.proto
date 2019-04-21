@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message ProfessionSelectResponseProto {
+	// ref: Atlas.Rpc.ProfessionSelectResponseProto/Types/Status
+	enum Status {
+		NONE = 0;
+		SUCCESS = 1;
+		PROFESSION_GMT_ID_INVALID = 2;
+		PROFESSION_UNAVAILABLE = 3;
+		ERROR = 4;
+		PROFESSION_ALREADY_ACTIVE = 5;
+		ERROR_ADDING_BUFFS = 6;
+		ERROR_PLAYER_IN_CHALLENGE = 7;
+	}
+
+	Status status = 1;
+}
+

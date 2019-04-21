@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum RotateMode {
+	tangent = 0;
+	chain = 1;
+	chain_scale = 2;
+}
+

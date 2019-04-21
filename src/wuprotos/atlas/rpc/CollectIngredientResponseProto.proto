@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message CollectIngredientResponseProto {
+	// ref: Atlas.Rpc.CollectIngredientResponseProto/Types/CollectIngredientResult
+	enum CollectIngredientResult {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		BAD_TICKET = 2;
+		NOT_IN_RANGE = 3;
+		ALREADY_COLLECTED = 4;
+		FULL_CAPACITY = 5;
+	}
+
+	CollectIngredientResult result = 1;
+	wuprotos.atlas.proto.LootCollectionProto rewards = 2;
+}
+

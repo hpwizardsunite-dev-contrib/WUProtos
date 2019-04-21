@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/TimeBuffDuration.proto";
+import "wuprotos/atlas/proto/ChargesBuffDuration.proto";
+import "wuprotos/atlas/proto/ProfessionBuffDuration.proto";
+import "wuprotos/atlas/proto/PermanentBuffDuration.proto";
+import "wuprotos/atlas/proto/InstantBuffDuration.proto";
+import "wuprotos/atlas/proto/ChallengeBuffDuration.proto";
+message BuffDuration {
+	// ref: Atlas.Proto.BuffDuration/TypeOneofCase
+
+	TimeBuffDuration time = 1;
+	ChargesBuffDuration charges = 2;
+	ProfessionBuffDuration profession = 3;
+	PermanentBuffDuration permanent = 4;
+	InstantBuffDuration instant = 5;
+	ChallengeBuffDuration challenge = 6;
+}
+

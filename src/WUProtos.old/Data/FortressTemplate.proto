@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message FortressTemplate {
-	string id = 1;
-	repeated string chamber_gmt_ids = 2;
-}

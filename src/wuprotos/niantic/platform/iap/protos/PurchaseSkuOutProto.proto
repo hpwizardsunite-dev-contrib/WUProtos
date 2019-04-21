@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.iap.protos;
+
+message PurchaseSkuOutProto {
+	// ref: Niantic.Platform.Iap.Protos.PurchaseSkuOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+		BALANCE_TOO_LOW = 3;
+		SKU_NOT_AVAILABLE = 4;
+		OVER_INVENTORY_LIMIT = 5;
+	}
+
+}
+

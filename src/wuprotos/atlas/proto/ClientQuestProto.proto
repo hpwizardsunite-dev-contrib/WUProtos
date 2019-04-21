@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientQuestProto {
+	string id = 1;
+	int32 sort_order = 2;
+	string quest_name_loc_key = 3;
+	string quest_desc_loc_key = 4;
+}
+

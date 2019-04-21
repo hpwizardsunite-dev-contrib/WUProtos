@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+import "wuprotos/atlas/proto/ConditionTargetType.proto";
+message StatsTagCondition {
+	string target_type = 1;
+	string target_stat = 2;
+	ComparisonOperator comparison_operator = 3;
+	int64 target_comparison_value = 4;
+	bool target_stat_is_percentage = 5;
+	ConditionTargetType condition_target_type = 6;
+}
+

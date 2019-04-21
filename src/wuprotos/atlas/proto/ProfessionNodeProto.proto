@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Requirements.proto";
+import "wuprotos/atlas/proto/ProfessionNodeLevelProto.proto";
+message ProfessionNodeProto {
+	uint32 potential_rank_points = 6;
+	string id = 1;
+	repeated Requirements edges = 2;
+	repeated ProfessionNodeLevelProto levels = 3;
+	uint32 row_pos = 4;
+	uint32 col_pos = 5;
+}
+

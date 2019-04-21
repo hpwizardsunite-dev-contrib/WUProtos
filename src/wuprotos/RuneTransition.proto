@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum RuneTransition {
+	hidden = 0;
+	master_success = 1;
+	idle = 2;
+}
+

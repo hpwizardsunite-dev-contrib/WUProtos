@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message OpenFamilyChestResponseProto {
+	int32 family_level = 1;
+	repeated wuprotos.atlas.proto.LootCollectionProto chest_reward = 2;
+	int32 family_xp = 3;
+	int32 current_chests_opened = 4;
+}
+

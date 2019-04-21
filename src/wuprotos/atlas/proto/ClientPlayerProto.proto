@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientPlayerMapState.proto";
+import "wuprotos/atlas/proto/ClientPlayerChallengeState.proto";
+message ClientPlayerProto {
+	// ref: Atlas.Proto.ClientPlayerProto/StateOneofCase
+
+	int64 creation_time_ms = 1;
+	ClientPlayerMapState map = 2;
+	ClientPlayerChallengeState challenge = 3;
+}
+

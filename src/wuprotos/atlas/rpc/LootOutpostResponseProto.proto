@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message LootOutpostResponseProto {
+	// ref: Atlas.Rpc.LootOutpostResponseProto/Types/Status
+	enum Status {
+		UNKNOWN = 0;
+		ERROR = 1;
+		TOO_FAR = 2;
+		ON_COOLDOWN = 3;
+		SUCCESS = 4;
+		POI_CLOSED = 5;
+	}
+
+	Status status = 1;
+	int64 awarded_food_key = 2;
+	int64 next_loot_time = 3;
+	wuprotos.atlas.proto.LootCollectionProto loot = 4;
+	string partner_id = 5;
+}
+

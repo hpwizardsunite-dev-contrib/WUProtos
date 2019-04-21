@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetryCombatGamePotionButton {
+	int32 player_level = 1;
+	string encounter_id = 2;
+	int32 attempt = 3;
+}
+

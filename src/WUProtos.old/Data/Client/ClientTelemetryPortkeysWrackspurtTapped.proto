@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryPortkeysWrackspurtTapped {
-	string wrackspurt_id = 1;
-	string portkey_id = 2;
-}

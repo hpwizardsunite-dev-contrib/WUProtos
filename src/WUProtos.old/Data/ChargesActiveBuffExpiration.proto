@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message ChargesActiveBuffExpiration {
-    bytes encounter_id = 1;
-    int32 remaining_charges = 2;
-}

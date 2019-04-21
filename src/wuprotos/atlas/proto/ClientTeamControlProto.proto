@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ColorProto.proto";
+message ClientTeamControlProto {
+	string id = 1;
+	string team_name = 2;
+	string team_icon = 3;
+	ColorProto team_color = 4;
+	string team_header_icon = 5;
+	string team_banner = 6;
+	string team_flag = 7;
+}
+

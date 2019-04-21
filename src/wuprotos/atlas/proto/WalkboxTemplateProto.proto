@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message WalkboxTemplateProto {
+	string id = 1;
+	float required_distance_km = 2;
+}
+

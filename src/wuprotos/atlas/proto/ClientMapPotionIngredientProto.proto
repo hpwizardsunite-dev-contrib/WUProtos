@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientMapPotionIngredientProto {
+	string ingredient_gmt_id = 1;
+	double latitude = 2;
+	double longitude = 3;
+	bytes ticket = 4;
+	int64 expiry_time_ms = 5;
+}
+

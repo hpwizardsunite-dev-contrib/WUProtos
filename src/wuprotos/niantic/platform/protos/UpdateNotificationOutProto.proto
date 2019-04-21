@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+import "wuprotos/niantic/platform/protos/NotificationState.proto";
+message UpdateNotificationOutProto {
+	repeated string notification_ids = 1;
+	repeated int64 create_timestamp_ms = 2;
+	NotificationState state = 3;
+}
+

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/MysteryItemInfoProto.proto";
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+import "wuprotos/atlas/proto/Requirements.proto";
+message CollectionItemProto {
+	repeated MysteryItemInfoProto mystery_data = 11;
+	string id = 1;
+	string family_id = 2;
+	int32 shard_count = 3;
+	int32 rarity = 4;
+	LootCollectionProto one_time_rewards = 5;
+	string page_id = 6;
+	Requirements unlock_requirements = 7;
+	repeated int32 shard_counts = 8;
+	bool sticker_disabled = 10;
+}
+

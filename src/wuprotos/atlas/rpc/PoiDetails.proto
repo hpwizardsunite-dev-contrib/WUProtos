@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message PoiDetails {
+	string name = 1;
+	string description = 2;
+	repeated string image_urls = 3;
+}
+

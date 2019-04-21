@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message EnemyTagCondition {
+	string rank_tag = 1;
+}
+

@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetrySettingsBatteryModeToggled {
+	bool battery_mode = 1;
+}
+

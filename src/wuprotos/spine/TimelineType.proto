@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum TimelineType {
+	rotate = 0;
+	translate = 1;
+	scale = 2;
+	shear = 3;
+	attachment = 4;
+	color = 5;
+	deform = 6;
+	event = 7;
+	draw_order = 8;
+	ik_constraint = 9;
+	transform_constraint = 10;
+	path_constraint_position = 11;
+	path_constraint_spacing = 12;
+	path_constraint_mix = 13;
+	two_color = 14;
+}
+

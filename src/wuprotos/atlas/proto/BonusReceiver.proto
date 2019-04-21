@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum BonusReceiver {
+	BONUS_RECEIVER_UNKNOWN = 0;
+	TEAM = 1;
+	PLAYER = 2;
+}
+

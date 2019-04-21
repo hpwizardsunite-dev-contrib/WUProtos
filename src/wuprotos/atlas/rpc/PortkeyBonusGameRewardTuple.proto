@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootRewardProto.proto";
+message PortkeyBonusGameRewardTuple {
+	wuprotos.atlas.proto.LootRewardProto reward = 1;
+	float multiplier = 2;
+	string category_proto_id = 3;
+}
+

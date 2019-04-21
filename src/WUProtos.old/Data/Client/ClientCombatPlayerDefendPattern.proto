@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientCombatPlayerDefendPattern {
-    int32 weight = 1;
-    string protego_pattern = 2;
-}

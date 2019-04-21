@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message AudioParameterProto {
+	string param_name = 1;
+	float param_value = 2;
+}
+

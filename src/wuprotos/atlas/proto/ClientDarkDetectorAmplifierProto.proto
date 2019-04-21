@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientDarkDetectorAmplifierProto {
+	int32 num_slots = 1;
+}
+

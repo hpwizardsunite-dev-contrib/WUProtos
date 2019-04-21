@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/EncounterInteractStatusProto.proto";
+import "wuprotos/atlas/rpc/EncounterInteractStageResultProto.proto";
+message EncounterInteractResponseProto {
+	// ref: Atlas.Rpc.EncounterInteractResponseProto/Types/EncounterType
+	enum EncounterType {
+		UNKNOWN = 0;
+		TRACE_SWISH = 1;
+		TRACE_COMBAT = 2;
+		WC_COMBAT = 3;
+		INGREDIENT = 4;
+	}
+
+	EncounterInteractStatusProto status = 1;
+	EncounterInteractStageResultProto stage = 2;
+	EncounterType encounter_type = 3;
+}
+

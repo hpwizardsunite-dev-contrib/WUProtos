@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum EVideoSource {
+	camera_a395 = 0;
+	picture = 1;
+	video = 2;
+}
+

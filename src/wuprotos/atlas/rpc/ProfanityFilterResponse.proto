@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message ProfanityFilterResponse {
+	// ref: Atlas.Rpc.ProfanityFilterResponse/Types/Status
+	enum Status {
+		UNSET = 0;
+		UNKNOWN = 1;
+		ALLOW = 2;
+		REJECT = 3;
+	}
+
+	repeated Status status = 1;
+}
+

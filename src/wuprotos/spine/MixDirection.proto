@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum MixDirection {
+	in = 0;
+	out = 1;
+}
+

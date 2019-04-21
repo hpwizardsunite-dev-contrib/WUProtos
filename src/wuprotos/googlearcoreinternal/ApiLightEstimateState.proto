@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.googlearcoreinternal;
+
+enum ApiLightEstimateState {
+	not_valid = 0;
+	valid = 1;
+}
+

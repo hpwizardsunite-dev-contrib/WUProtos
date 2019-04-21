@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum VFXSplineTravelStyle {
+	emitter_travel = 0;
+	emitted_particles_travel = 1;
+}
+

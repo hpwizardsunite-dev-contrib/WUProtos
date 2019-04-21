@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package wuprotos;
+
+message RedeemPasscodeResponseProto {
+	// ref: RedeemPasscodeResponseProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		NOT_AVAILABLE = 2;
+		OVER_INVENTORY_LIMIT = 3;
+		ALREADY_REDEEMED = 4;
+	}
+
+	// ref: RedeemPasscodeResponseProto/Types/AcquiredItem
+	message AcquiredItem {
+		string item = 1;
+		int64 count = 2;
+	}
+
+	Result result = 1;
+	repeated AcquiredItem acquired_item = 2;
+	bytes acquired_items_proto = 3;
+	string passcode = 4;
+}
+

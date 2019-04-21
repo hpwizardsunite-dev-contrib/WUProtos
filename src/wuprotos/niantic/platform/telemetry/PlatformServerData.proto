@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.telemetry;
+
+message PlatformServerData {
+	string user_id = 1;
+	string telemetry_id = 2;
+	string session_id = 3;
+	repeated int32 experiment_ids = 4;
+}
+

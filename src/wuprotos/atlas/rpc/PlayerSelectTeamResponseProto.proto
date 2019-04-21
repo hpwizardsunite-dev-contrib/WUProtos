@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message PlayerSelectTeamResponseProto {
+	// ref: Atlas.Rpc.PlayerSelectTeamResponseProto/Types/Result
+	enum Result {
+		UNKNOWN = 0;
+		TEAM_SET = 1;
+		TEAM_ID_INVALID = 2;
+		PLAYER_ALREADY_HAS_TEAM = 3;
+	}
+
+	Result result = 1;
+}
+

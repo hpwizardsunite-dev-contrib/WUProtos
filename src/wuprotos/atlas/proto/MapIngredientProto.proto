@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message MapIngredientProto {
+	string id = 1;
+	LootCollectionProto loot = 2;
+	LootCollectionProto cost = 3;
+}
+

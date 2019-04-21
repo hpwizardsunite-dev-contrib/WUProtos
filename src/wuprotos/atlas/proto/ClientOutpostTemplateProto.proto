@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientOutpostTemplateProto {
+	string id = 1;
+	string interior = 2;
+	string exterior = 3;
+}
+

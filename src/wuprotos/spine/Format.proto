@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum Format {
+	alpha = 0;
+	intensity = 1;
+	luminance_alpha = 2;
+	RGB565 = 3;
+	RGBA4444 = 4;
+	RGB888 = 5;
+	RGBA8888 = 6;
+}
+

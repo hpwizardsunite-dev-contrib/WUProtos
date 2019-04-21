@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum DistanceUnit {
+	pixels = 0;
+	inches = 1;
+	centimeters = 2;
+}
+

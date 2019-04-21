@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum TriggerThrottle {
+	none_a924 = 0;
+	on_inital_point_entrance_only = 1;
+	on_player_change = 2;
+	on10_second_interval = 3;
+}
+

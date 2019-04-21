@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ActiveBuffExpiration.proto";
+import "wuprotos/atlas/proto/ActiveBuffSource.proto";
+message ActiveBuffProto {
+	string gmt_buff_id = 1;
+	ActiveBuffExpiration expiration = 2;
+	ActiveBuffSource source = 3;
+	int64 start_time_ms = 5;
+}
+

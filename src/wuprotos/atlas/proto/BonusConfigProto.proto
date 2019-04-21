@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message BonusConfigProto {
+	// ref: Atlas.Proto.BonusConfigProto/Types/BonusTier
+	message BonusTier {
+		float tier_threshold = 1;
+		LootCollectionProto bonus = 2;
+	}
+
+	repeated BonusTier swish_game_accuracy_reward = 1;
+	LootCollectionProto first_time_success_reward = 2;
+	LootCollectionProto life_time_first_success_reward = 3;
+
+	string id = 5;
+	repeated float accuracy_tiers = 6;
+	repeated string accuracy_tier_bonus_id = 7;
+	repeated string accuracy_tier_bonus_text = 8;
+
+}
+

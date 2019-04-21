@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+enum NotificationState {
+	UNSET_STATE = 0;
+	VIEWED = 1;
+}
+

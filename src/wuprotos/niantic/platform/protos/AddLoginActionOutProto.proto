@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+import "wuprotos/niantic/platform/protos/LoginDetail.proto";
+message AddLoginActionOutProto {
+	// ref: Niantic.Platform.Protos.AddLoginActionOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		AUTH_FAILURE = 1;
+		LOGIN_TAKEN = 2;
+	}
+
+	bool success = 1;
+	repeated LoginDetail login_detail = 2;
+	Status status = 3;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum ConditionTargetType {
+	CONDITION_TARGET_TYPE_UNSET = 0;
+	SELF = 1;
+	OPPONENT = 2;
+}
+

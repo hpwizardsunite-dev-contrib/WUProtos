@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message RuneInChallengeCondition {
-	string vault_item_id = 1;
-}

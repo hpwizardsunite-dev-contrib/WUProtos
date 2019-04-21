@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message OutpostMenu {
+	int64 menu_timestamp = 2;
+}
+

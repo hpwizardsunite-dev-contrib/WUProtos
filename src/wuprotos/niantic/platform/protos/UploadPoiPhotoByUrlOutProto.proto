@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+import "wuprotos/niantic/platform/protos/PortalCurationImageResult.proto";
+message UploadPoiPhotoByUrlOutProto {
+	PortalCurationImageResult.Result status = 1;
+}
+

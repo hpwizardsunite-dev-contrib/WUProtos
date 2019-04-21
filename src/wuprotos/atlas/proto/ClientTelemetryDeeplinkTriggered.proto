@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetryDeeplinkTriggered {
+	string link = 1;
+	bool rejected = 2;
+	string rejection_reason = 3;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.iap;
+
+message IapStoreItem {
+}
+
+
+//----- End iap -----
+//------------------------------
+//----- Begin inventory -----
+

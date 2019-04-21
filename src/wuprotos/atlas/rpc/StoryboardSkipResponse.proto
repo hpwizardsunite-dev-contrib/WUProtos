@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message StoryboardSkipResponse {
+	// ref: Atlas.Rpc.StoryboardSkipResponse/Types/Status
+	enum Status {
+		STORYBOARD_SKIP_UNKNOWN = 0;
+		STORYBOARD_SKIP_SUCCESS = 1;
+		STORYBOARD_SKIP_ERROR = 2;
+	}
+
+	Status status = 1;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetrySettingsAuthUpdated {
+	string primary_auth_channel = 1;
+	string secondary_auth_channel = 2;
+	string platform = 3;
+}
+

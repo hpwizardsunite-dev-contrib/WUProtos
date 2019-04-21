@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message BuffExclusivityGroup {
+	string exclusivity_group = 1;
+	int32 exclusivity_priority = 2;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/MasterNoteGesture.proto";
+message ApplyMasterNoteRequestProto {
+	int64 cauldron_id = 1;
+	repeated wuprotos.atlas.proto.MasterNoteGesture gesture = 2;
+}
+

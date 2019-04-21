@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/EmailOptsProto.proto";
+message OptIntoEmailsRequestProto {
+	wuprotos.atlas.proto.EmailOptsProto email_opts = 1;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message InventoryCauldronSlotProto {
+	wuprotos.atlas.proto.LootCollectionProto rewards = 1;
+	int64 time_to_brew = 2;
+	string recipe_gmt_id = 3;
+	bool master_note_applied = 4;
+}
+

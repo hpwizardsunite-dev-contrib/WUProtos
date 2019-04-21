@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.googlearcore;
+
+enum LightEstimateState {
+	not_valid = 0;
+	valid = 1;
+}
+

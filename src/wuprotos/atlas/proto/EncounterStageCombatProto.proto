@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CombatStateProto.proto";
+import "wuprotos/atlas/proto/CombatEnemyStatsProto.proto";
+message EncounterStageCombatProto {
+	repeated CombatStateProto state_graph_nodes = 1;
+	CombatEnemyStatsProto enemy_stats = 2;
+	repeated string enemy_ranks = 3;
+}
+

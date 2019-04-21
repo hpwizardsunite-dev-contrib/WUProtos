@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/OutpostMenu.proto";
+import "wuprotos/atlas/rpc/PoiDetails.proto";
+import "wuprotos/atlas/proto/PoiAccessibility.proto";
+message GetOutpostDetailsResponseProto {
+	repeated string image_urls = 1;
+	OutpostMenu current_menu = 2;
+	string partner_id = 3;
+	PoiDetails poi_details = 4;
+	wuprotos.atlas.proto.PoiAccessibility poi_accessibility = 5;
+}
+

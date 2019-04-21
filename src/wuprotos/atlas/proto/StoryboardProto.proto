@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/TriggerPoint.proto";
+import "wuprotos/atlas/proto/Requirements.proto";
+import "wuprotos/atlas/proto/StoryboardStepProto.proto";
+import "wuprotos/atlas/proto/StoryboardResetMode.proto";
+message StoryboardProto {
+	wuprotos.TriggerPoint trigger_point = 8;
+	string id = 1;
+	Requirements start_reqs = 2;
+	string step_flag_gmt_id = 3;
+	string complete_flag_gmt_id = 4;
+	repeated StoryboardStepProto storyboard_steps = 5;
+	StoryboardResetMode reset_mode = 6;
+	Requirements reset_reqs = 7;
+}
+

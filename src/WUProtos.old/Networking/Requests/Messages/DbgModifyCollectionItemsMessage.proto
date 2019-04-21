@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Networking.Requests.Messages;
-
-import "WUProtos/Data/Debug/DebugModifyCollectionItem.proto";
-
-message DbgModifyCollectionItemsMessage {
-    repeated .WUProtos.Data.Debug.DebugModifyCollectionItem collection_items = 1;
-}

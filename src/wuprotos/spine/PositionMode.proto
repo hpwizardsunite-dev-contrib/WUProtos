@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum PositionMode {
+	fixed_a335 = 0;
+	percent_a335 = 1;
+}
+

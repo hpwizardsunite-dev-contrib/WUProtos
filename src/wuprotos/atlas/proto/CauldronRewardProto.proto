@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message CauldronRewardProto {
+	string template_id = 1;
+	int64 cauldron_id = 2;
+	int64 availability_time = 3;
+}
+

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientEncounterStageSwishProto.proto";
+import "wuprotos/atlas/proto/ClientEncounterStageCombatProto.proto";
+import "wuprotos/atlas/proto/ClientEncounterStagePortkeyProto.proto";
+import "wuprotos/atlas/proto/ClientEncounterStagePictureProto.proto";
+import "wuprotos/atlas/proto/ClientSequenceDataProto.proto";
+message ClientEncounterStageProto {
+	// ref: Atlas.Proto.ClientEncounterStageProto/TypeOneofCase
+
+	ClientEncounterStageSwishProto swish = 1;
+	ClientEncounterStageCombatProto combat = 2;
+	ClientEncounterStagePortkeyProto portkey = 3;
+	ClientEncounterStagePictureProto picture = 4;
+	float disappear_delay = 5;
+	string intro_text = 6;
+	repeated ClientSequenceDataProto stage_setup_sequence = 7;
+	repeated ClientSequenceDataProto stage_completion_sequence = 8;
+	string spell_aim_layout = 9;
+	repeated string idle_loop_timelines = 10;
+	string rng_intro_timeline = 11;
+	string rng_loop_timeline = 12;
+	string spell_failed_timeline = 13;
+	repeated string combat_spell_list = 14;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientChallengeBonusProto {
+	string id = 1;
+	string display_text = 2;
+	string icon = 3;
+}
+

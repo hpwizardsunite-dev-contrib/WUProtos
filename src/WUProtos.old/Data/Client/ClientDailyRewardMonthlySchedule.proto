@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientDailyRewardMonthlySchedule {
-    string id = 1;
-}

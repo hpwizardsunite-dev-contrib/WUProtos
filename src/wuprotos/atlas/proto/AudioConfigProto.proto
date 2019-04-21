@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/MusicConfigProto.proto";
+message AudioConfigProto {
+	// ref: Atlas.Proto.AudioConfigProto/MusicPlayLocation
+	enum MusicPlayLocation {
+		loading_screen = 0;
+		map = 1;
+		menu = 2;
+		pub = 3;
+		fortress_hub = 4;
+		challenge_map = 5;
+		rewards_screen = 6;
+	}
+
+	string music_event = 1;
+	repeated MusicConfigProto music_config = 2;
+}
+

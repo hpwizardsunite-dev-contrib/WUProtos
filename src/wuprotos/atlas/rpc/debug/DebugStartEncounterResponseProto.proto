@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+import "wuprotos/atlas/rpc/EncounterStartResponseProto.proto";
+message DebugStartEncounterResponseProto {
+	wuprotos.atlas.rpc.EncounterStartResponseProto response = 1;
+}
+

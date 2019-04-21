@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetryEnvironmentalTagSevereWeatherAcknowledged {
+	int32 player_level = 1;
+	string warning_severity = 2;
+}
+

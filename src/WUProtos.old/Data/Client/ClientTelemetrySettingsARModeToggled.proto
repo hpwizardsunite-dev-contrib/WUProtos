@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-import "WUProtos/Data/ARMode.proto";
-
-message ClientTelemetrySettingsARModeToggled {
-	.WUProtos.Data.ARMode ar_mode = 1;
-}

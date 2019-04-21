@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum VFXMessage {
+	none_a088 = 0;
+	retaliation = 1;
+	retaliation_enemy_miss = 2;
+	retaliation_enemy_unlockable_attack = 3;
+	is_rngidle = 4;
+	is_spell_beam = 5;
+}
+

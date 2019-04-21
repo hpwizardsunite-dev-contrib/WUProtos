@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/BonusReceiver.proto";
+import "wuprotos/atlas/proto/BonusTargetReward.proto";
+import "wuprotos/atlas/proto/PlayerCountChallengeBonusProto.proto";
+import "wuprotos/atlas/proto/FastCompletionChallengeBonusProto.proto";
+import "wuprotos/atlas/proto/RuneLevelChallengeBonusProto.proto";
+import "wuprotos/atlas/proto/DefeatedMobCountChallengeBonusProto.proto";
+import "wuprotos/atlas/proto/PlayerRatioChallengeBonusProto.proto";
+message ChallengeBonusProto {
+	// ref: Atlas.Proto.ChallengeBonusProto/BonusKindOneofCase
+
+	string id = 1;
+	BonusReceiver receiver = 2;
+	BonusTargetReward target_reward = 3;
+	float modifier = 4;
+	PlayerCountChallengeBonusProto player_count = 20;
+	FastCompletionChallengeBonusProto fast_completion = 21;
+	RuneLevelChallengeBonusProto rune_level = 22;
+	DefeatedMobCountChallengeBonusProto defeated_mob_count = 23;
+	PlayerRatioChallengeBonusProto player_ratio = 24;
+}
+

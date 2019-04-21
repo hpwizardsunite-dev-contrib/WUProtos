@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Networking.Responses;
-
-import "WUProtos/Data/PortalCurationImageResult.proto";
-
-message UploadPoiPhotoByUrlResponse {
-	.WUProtos.Data.PortalCurationImageResult.Result status = 1;
-}

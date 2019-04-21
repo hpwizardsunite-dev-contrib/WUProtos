@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message StorePackPurchased {
-    string store_pack_id = 1;
-    int64 new_count = 2;
-}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CollectionFamilyProto.proto";
+import "wuprotos/atlas/proto/CollectionPrestigeLevelProto.proto";
+message CollectionSubfeaturePrestigeLevelsProto {
+	CollectionFamilyProto.SubfeatureType subfeature = 1;
+	repeated CollectionPrestigeLevelProto prestige_levels = 2;
+}
+

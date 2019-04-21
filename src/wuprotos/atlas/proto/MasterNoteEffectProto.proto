@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message MasterNoteEffectProto {
+	// ref: Atlas.Proto.MasterNoteEffectProto/Types/MasterNoteEffectType
+	enum MasterNoteEffectType {
+		UNSET = 0;
+		BREW_SPEED_STATIC = 1;
+		BREW_SPEED_PERCENT = 2;
+		BREW_YIELD_STATIC = 3;
+	}
+
+	string id = 1;
+	MasterNoteEffectType effect_type = 2;
+	int64 power = 3;
+}
+

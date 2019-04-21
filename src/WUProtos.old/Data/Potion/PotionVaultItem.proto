@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Potion;
-
-import "WUProtos/Enums/PotionConsumableScenario.proto";
-
-message PotionVaultItem {
-	repeated .WUProtos.Enums.PotionConsumableScenario consumable_scenario = 3;
-	repeated string applied_buff_gmt_id = 4;
-}

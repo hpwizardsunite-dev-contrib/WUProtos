@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+import "wuprotos/atlas/proto/Requirements.proto";
+message CollectionPageProto {
+	string id = 1;
+	string family_id = 2;
+	repeated string items = 3;
+	repeated LootCollectionProto completion_rewards = 4;
+	Requirements unlock_requirements = 5;
+}
+

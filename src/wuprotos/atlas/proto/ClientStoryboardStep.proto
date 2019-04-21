@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/StoryboardGenericDialogStep.proto";
+import "wuprotos/atlas/proto/StoryboardPauseStep.proto";
+import "wuprotos/atlas/proto/StoryboardAdviceOverlayStep.proto";
+import "wuprotos/atlas/proto/StoryboardAdviceInterjectionStep.proto";
+import "wuprotos/atlas/proto/StoryboardConversationInterjectionStep.proto";
+message ClientStoryboardStep {
+	// ref: Atlas.Proto.ClientStoryboardStep/DataOneofCase
+
+	string custom_state = 1;
+	StoryboardGenericDialogStep generic_dialog = 2;
+	StoryboardPauseStep pause = 3;
+	StoryboardAdviceOverlayStep advice_overlay = 4;
+	StoryboardAdviceInterjectionStep advice_interjection = 5;
+	StoryboardConversationInterjectionStep conversation_interjection = 6;
+	string call_to_action_asset = 7;
+	string call_to_action_button_identifier = 8;
+}
+

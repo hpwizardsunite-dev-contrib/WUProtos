@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientSequenceDataProto {
+	int32 sequence_type = 1;
+	string obstacle = 2;
+	string obstacle_alias = 3;
+	string encounter_target = 4;
+	string timeline_file = 5;
+	float sequence_delay_time = 6;
+	string sequence_layout_node = 7;
+}
+

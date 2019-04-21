@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message BatterySaverProfile {
-    repeated string profiles = 1;
-    string name = 2;
-}

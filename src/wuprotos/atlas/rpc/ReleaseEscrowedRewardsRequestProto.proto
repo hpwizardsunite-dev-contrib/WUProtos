@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/ClaimByCategoryRequestAction.proto";
+import "wuprotos/atlas/rpc/AbandonAllRequestAction.proto";
+message ReleaseEscrowedRewardsRequestProto {
+	// ref: Atlas.Rpc.ReleaseEscrowedRewardsRequestProto/ActionOneofCase
+
+	ClaimByCategoryRequestAction claim_by_category = 1;
+	AbandonAllRequestAction abandon_all = 2;
+}
+

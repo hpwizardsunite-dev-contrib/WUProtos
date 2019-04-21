@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum TimelineEventType {
+	none_a5a8 = 0;
+	maximum_combat_game_window = 1;
+	real_combat_game_window = 2;
+	player_hit_react = 3;
+}
+

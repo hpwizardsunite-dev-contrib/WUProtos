@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum BaseTimelineBehaviourStatus {
+	pre_start = 0;
+	in_progress_a67d = 1;
+	end = 2;
+}
+

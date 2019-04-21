@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/GrowthType.proto";
+message CombatGrowthProto {
+	GrowthType grow_type = 1;
+	float growth_adjustment = 2;
+}
+

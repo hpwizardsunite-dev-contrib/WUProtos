@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.wbg.assets;
+
+enum AssetPriority {
+	low = 0;
+	high = 1;
+}
+

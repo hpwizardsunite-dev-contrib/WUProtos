@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientCombatStateProto.proto";
+import "wuprotos/atlas/proto/ClientCombatEnemyTraitProto.proto";
+import "wuprotos/atlas/proto/ClientEncounterTypeProto.proto";
+message ClientEncounterStageCombatProto {
+	repeated ClientCombatStateProto state_graph_nodes = 1;
+	repeated ClientCombatEnemyTraitProto enemy_traits = 2;
+	repeated ClientEncounterTypeProto enemy_rank_tags = 3;
+	string enemy_flavor_text = 4;
+}
+

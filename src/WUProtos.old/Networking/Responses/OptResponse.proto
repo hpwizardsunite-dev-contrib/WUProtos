@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Networking.Responses;
-
-message OptResponse {
-	repeated string categories = 1;
-}

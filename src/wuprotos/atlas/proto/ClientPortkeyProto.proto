@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientPortkeyProto {
+	string id = 1;
+	string name = 2;
+	string icon = 3;
+	string localized_complete_text = 4;
+}
+

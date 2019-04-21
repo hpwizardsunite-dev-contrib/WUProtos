@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientSpellProto {
+	string id = 1;
+	string name = 2;
+	repeated string charge_up_effect = 3;
+	string pattern = 6;
+	string glyph_image = 7;
+	string protego_player_succeed_tl = 8;
+	string protego_player_failed_tl = 9;
+	string protego_player_succeed_intro_tl = 10;
+	string end_burst_effect = 11;
+	string rng_vfx_tl = 12;
+	string spell_rng_loop_tl = 13;
+	string spell_rng_succeed_tl = 14;
+	string spell_rng_fail_tl = 15;
+}
+

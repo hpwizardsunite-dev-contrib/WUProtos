@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/BoolLiteral.proto";
+import "wuprotos/atlas/proto/LevelRequirement.proto";
+import "wuprotos/atlas/proto/VaultItemRequirement.proto";
+import "wuprotos/atlas/proto/CollectionItemRequirement.proto";
+import "wuprotos/atlas/proto/CollectionFamilyRequirement.proto";
+import "wuprotos/atlas/proto/DateRequirement.proto";
+import "wuprotos/atlas/proto/PlayerFlagRequirement.proto";
+import "wuprotos/atlas/proto/ProfessionRequirement.proto";
+import "wuprotos/atlas/proto/ProfessionNodeRequirement.proto";
+import "wuprotos/atlas/proto/ProfessionTotalNodeLevelRequirement.proto";
+import "wuprotos/atlas/proto/HasWalkboxRequirement.proto";
+import "wuprotos/atlas/proto/HasPortkeyRequirement.proto";
+import "wuprotos/atlas/proto/ProfessionRankPointsRequirement.proto";
+import "wuprotos/atlas/proto/CollectionPageLevelRequirement.proto";
+import "wuprotos/atlas/proto/CollectionItemPlacedRequirement.proto";
+import "wuprotos/atlas/proto/EventRequirement.proto";
+import "wuprotos/atlas/proto/QuestCompletedRequirement.proto";
+import "wuprotos/atlas/proto/FeatureFlagRequirement.proto";
+import "wuprotos/atlas/proto/StorePackQuantityRequirement.proto";
+import "wuprotos/atlas/proto/ActiveArModeRequirement.proto";
+import "wuprotos/atlas/proto/PlatformRequirement.proto";
+import "wuprotos/atlas/proto/PlayerAccountAgeRequirement.proto";
+import "wuprotos/atlas/proto/ProfessionTierRequirement.proto";
+import "wuprotos/atlas/proto/AccountCreationDateRequirement.proto";
+message Requirement {
+	// ref: Atlas.Proto.Requirement/RequirementOneofCase
+
+	BoolLiteral bool_literal_req = 1;
+	LevelRequirement level_req = 2;
+	VaultItemRequirement vault_item_req = 3;
+	CollectionItemRequirement collection_item_req = 4;
+	CollectionFamilyRequirement collection_family_req = 5;
+	DateRequirement date_req = 6;
+	PlayerFlagRequirement flag_req = 7;
+	ProfessionRequirement profession_req = 8;
+	ProfessionNodeRequirement profession_node_req = 9;
+	ProfessionTotalNodeLevelRequirement profession_num_node_level_req = 10;
+	HasWalkboxRequirement has_walkbox_req = 11;
+	HasPortkeyRequirement has_portkey_req = 12;
+	ProfessionRankPointsRequirement profession_rank_points_req = 13;
+	CollectionPageLevelRequirement collection_page_req = 14;
+	CollectionItemPlacedRequirement collection_item_placed_requirement = 15;
+	EventRequirement event_req = 16;
+	QuestCompletedRequirement quest_completed_req = 17;
+	FeatureFlagRequirement feature_flag_req = 18;
+	StorePackQuantityRequirement store_pack_req = 19;
+	ActiveArModeRequirement active_ar_mode_req = 20;
+	PlatformRequirement platform_requirement = 21;
+	PlayerAccountAgeRequirement player_account_age_requirement = 22;
+	ProfessionTierRequirement profession_tier_req = 23;
+	AccountCreationDateRequirement account_creation_date_requirement = 24;
+}
+

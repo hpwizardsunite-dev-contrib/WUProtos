@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.wbg.assets;
+
+enum BundleProgress {
+	not_started = 0;
+	in_progress = 1;
+	done = 2;
+}
+
+
+//----- End assets -----
+//------------------------------
+//----- Begin auth -----
+

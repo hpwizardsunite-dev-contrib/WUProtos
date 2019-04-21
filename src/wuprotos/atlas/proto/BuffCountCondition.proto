@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+import "wuprotos/atlas/proto/ConditionTargetType.proto";
+message BuffCountCondition {
+	string target_type = 1;
+	ComparisonOperator comparison_operator = 2;
+	int32 target_comparison_value = 3;
+	bool look_for_buffs = 4;
+	ConditionTargetType condition_target_type = 5;
+}
+

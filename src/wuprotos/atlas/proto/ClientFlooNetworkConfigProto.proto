@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientFlooNetworkConfigProto {
+	// ref: Atlas.Proto.ClientFlooNetworkConfigProto/Types/ElectoralVotesPerFlooPoints
+	message ElectoralVotesPerFlooPoints {
+		repeated string fortress_prefabs = 1;
+	}
+
+	repeated ElectoralVotesPerFlooPoints electoral_votes_per_floo_points = 1;
+}
+

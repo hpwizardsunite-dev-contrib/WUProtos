@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message ClaimByCategoryRequestAction {
+	string vault_category_gmt_id = 1;
+}
+

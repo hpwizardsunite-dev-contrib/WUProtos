@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/ChallengeRpcStatus.proto";
+import "wuprotos/atlas/rpc/ChamberState.proto";
+import "wuprotos/atlas/proto/ClientPlayerSnapshotProto.proto";
+message SetRunestonesResponseProto {
+	ChallengeRpcStatus status = 1;
+	ChamberState state = 2;
+	wuprotos.atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
+	string fortress_id = 4;
+	string partner_id = 5;
+}
+

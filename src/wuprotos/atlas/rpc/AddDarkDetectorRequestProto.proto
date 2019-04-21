@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message AddDarkDetectorRequestProto {
+	string dark_detector_id = 1;
+	string target_outpost_id = 2;
+	int32 slot_index = 3;
+}
+

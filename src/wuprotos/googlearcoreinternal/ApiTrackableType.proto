@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.googlearcoreinternal;
+
+enum ApiTrackableType {
+	invalid = 0;
+	base_trackable = 1095893248;
+	plane = 1095893249;
+	point = 1095893250;
+}
+

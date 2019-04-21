@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.gamemaster;
+
+import "wuprotos/niantic/platform/gamemaster/ClientGameMasterTemplateProto.proto";
+message DownloadGmTemplatesResponseProto {
+	// ref: Niantic.Platform.GameMaster.DownloadGmTemplatesResponseProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		COMPLETE = 1;
+		MORE_RESULTS = 2;
+		BATCH_ID_NOT_LIVE = 3;
+		INVALID_BASIS_BATCH_ID = 4;
+	}
+
+	Result result = 5;
+	repeated ClientGameMasterTemplateProto template = 1;
+	repeated string deleted_template = 2;
+	uint64 batch_id = 3;
+	int32 page_offset = 4;
+}
+
+
+//----- End gamemaster -----
+//------------------------------
+//----- Begin google -----
+

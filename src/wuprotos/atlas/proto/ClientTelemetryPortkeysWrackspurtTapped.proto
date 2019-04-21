@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetryPortkeysWrackspurtTapped {
+	string wrackspurt_id = 1;
+	string portkey_id = 2;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+message DebugGetSpellcastInfoRequestProto {
+	bytes encounter_id = 1;
+	repeated string energy_gmt_id = 2;
+	float accuracy_bonus = 3;
+}
+

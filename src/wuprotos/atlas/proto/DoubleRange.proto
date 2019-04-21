@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message DoubleRange {
+	double avg = 1;
+	double min = 2;
+	double max = 3;
+}
+

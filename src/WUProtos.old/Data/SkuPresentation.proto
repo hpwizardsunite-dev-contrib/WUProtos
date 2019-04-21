@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message SkuPresentation {
-	string key = 1;
-	string value = 2;
-}

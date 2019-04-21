@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message FlooNetworkSeasonScores {
+	string season_id = 1;
+}
+

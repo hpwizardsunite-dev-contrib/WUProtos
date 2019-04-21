@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message DefeatedMobCountChallengeBonusProto {
+	float threshold = 1;
+}
+

@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message StoryboardGenericDialogStep {
-	string title = 1;
-	string text = 2;
-	string button_text = 3;
-}

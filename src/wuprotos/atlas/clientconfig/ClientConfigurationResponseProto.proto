@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wuprotos.atlas.clientconfig;
+
+import "wuprotos/atlas/proto/SharedQualityLevelProto.proto";
+message ClientConfigurationResponseProto {
+	bool force_update = 1;
+	string server_uri = 2;
+	string actual_env_id = 3;
+	string manifest_version = 4;
+	wuprotos.atlas.proto.SharedQualityLevelProto quality_level = 5;
+	string force_update_url = 6;
+}
+
+
+//----- End clientconfig -----
+//------------------------------
+//----- Begin debug -----
+

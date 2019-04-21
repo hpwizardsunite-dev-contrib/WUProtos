@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package wuprotos;
+
+import "wuprotos/niantic/rpc/WeatherAlertProto.proto";
+message WeatherAlertSettingsProto {
+	// ref: WeatherAlertSettingsProto/Types/AlertEnforceSettings
+	message AlertEnforceSettings {
+		// ref: WeatherAlertSettingsProto/Types/AlertEnforceSettings/Types/EnforceCondition
+		message EnforceCondition {
+			repeated string color = 1;
+			repeated string type = 2;
+			repeated string category = 3;
+		}
+
+		string country_code = 1;
+		WeatherAlertSettingsProto.EnforceCondition when = 2;
+	}
+
+	// ref: WeatherAlertSettingsProto/Types/AlertIgnoreSettings
+	message AlertIgnoreSettings {
+		// ref: WeatherAlertSettingsProto/Types/AlertIgnoreSettings/Types/OverrideCondition
+		message OverrideCondition {
+			repeated string color = 1;
+			repeated string type = 2;
+		}
+
+		string country_code = 1;
+		WeatherAlertSettingsProto.OverrideCondition when = 2;
+	}
+
+	// ref: WeatherAlertSettingsProto/Types/AlertEnforceSettings/Types/EnforceCondition
+	message EnforceCondition {
+		repeated string color = 1;
+		repeated string type = 2;
+		repeated string category = 3;
+	}
+
+	// ref: WeatherAlertSettingsProto/Types/AlertIgnoreSettings/Types/OverrideCondition
+	message OverrideCondition {
+		repeated string color = 1;
+		repeated string type = 2;
+	}
+
+	bool warn_weather = 1;
+	wuprotos.niantic.rpc.WeatherAlertProto.Severity default_severity = 2;
+	repeated AlertIgnoreSettings ignores = 3;
+	repeated AlertEnforceSettings enforces = 4;
+}
+

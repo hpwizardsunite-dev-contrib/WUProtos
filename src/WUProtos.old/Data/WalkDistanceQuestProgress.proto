@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message WalkDistanceQuestProgress {
-	int64 current_micrometers_walked = 1;
-}

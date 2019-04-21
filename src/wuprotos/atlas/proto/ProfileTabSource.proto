@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum ProfileTabSource {
+	PROFILE_TAB_SOURCE_UNSET = 0;
+	TAB_NEW = 1;
+	TAB_LAST_PHOTO = 2;
+	TAB_STOCK_PHOTO = 3;
+	TAB_GALLERY = 4;
+}
+

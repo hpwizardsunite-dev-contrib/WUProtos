@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/ActiveBuffListProto.proto";
+import "wuprotos/atlas/proto/MobReward.proto";
+message ChamberMobState {
+	bytes mob_id = 1;
+	string encounter_gmt_id = 2;
+	int64 hp = 5;
+	int64 max_hp = 6;
+	int32 level = 7;
+	bytes encounter_ticket = 8;
+	double x = 9;
+	double y = 10;
+	wuprotos.atlas.proto.ActiveBuffListProto active_buff_list = 11;
+	repeated wuprotos.atlas.proto.MobReward rewards = 12;
+	int64 time_to_spawn = 101;
+}
+

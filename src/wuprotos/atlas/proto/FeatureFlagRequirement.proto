@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message FeatureFlagRequirement {
+	string feature_flag_id = 1;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message TimeOfDayCondition {
+	int64 starting_daily_timestamp = 1;
+	int64 ending_daily_timestamp = 2;
+}
+

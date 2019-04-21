@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message PlayerProfessionProgressV3Proto {
+	// ref: Atlas.Rpc.PlayerProfessionProgressV3Proto/Types/RankProgressV3/Types/NodeProgressV3
+	message NodeProgressV3 {
+		uint32 level = 1;
+		int64 last_updated_timestamp = 2;
+		wuprotos.atlas.proto.LootCollectionProto unlocked_levels_cost = 3;
+	}
+
+	// ref: Atlas.Rpc.PlayerProfessionProgressV3Proto/Types/RankProgressV3
+	message RankProgressV3 {
+		// ref: Atlas.Rpc.PlayerProfessionProgressV3Proto/Types/RankProgressV3/Types/NodeProgressV3
+		message NodeProgressV3 {
+			uint32 level = 1;
+			int64 last_updated_timestamp = 2;
+			wuprotos.atlas.proto.LootCollectionProto unlocked_levels_cost = 3;
+		}
+
+	}
+
+	uint32 rank_points = 2;
+}
+

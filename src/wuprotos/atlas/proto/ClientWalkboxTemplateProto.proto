@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientWalkboxTemplateProto {
+	string id = 1;
+	string name = 2;
+	string icon = 3;
+	string unlocked_icon = 4;
+}
+

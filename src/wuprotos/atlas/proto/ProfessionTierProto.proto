@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ProfessionTierProto {
+	uint32 rank_points_upper_bound = 1;
+}
+

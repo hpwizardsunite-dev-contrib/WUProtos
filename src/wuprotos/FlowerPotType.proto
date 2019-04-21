@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum FlowerPotType {
+	none_a006 = 0;
+	normal = 1;
+	premium = 2;
+	rental = 3;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message GetFlooNetworkRegionScoresRequest {
+	string season_id = 1;
+	string region_id = 2;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message InventoryVaultItemProto {
+	string id = 1;
+	int64 qty = 2;
+}
+

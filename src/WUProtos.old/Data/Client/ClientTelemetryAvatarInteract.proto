@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryAvatarInteract {
-    int64 player_level = 1;
-}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message QualityLevelOverridesProto {
+	int32 target_fps = 1;
+}
+

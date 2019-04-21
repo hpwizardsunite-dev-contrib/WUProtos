@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/niantic/platform/inventory/InventoryDeltaProto.proto";
+message GetLexiconInventoryResponseProto {
+	bool success = 1;
+	wuprotos.niantic.platform.inventory.InventoryDeltaProto inventory_delta = 2;
+}
+

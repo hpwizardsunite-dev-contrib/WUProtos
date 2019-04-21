@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+message DebugResetProfessionResponseProto {
+	bool success = 1;
+}
+

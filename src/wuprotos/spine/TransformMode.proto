@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum TransformMode {
+	normal_a0ae = 0;
+	no_rotation_or_reflection = 1;
+	no_scale = 2;
+	no_scale_or_reflection = 6;
+	only_translation = 7;
+}
+
+
+//----- End spine -----
+//------------------------------
+//----- Begin telemetry -----
+

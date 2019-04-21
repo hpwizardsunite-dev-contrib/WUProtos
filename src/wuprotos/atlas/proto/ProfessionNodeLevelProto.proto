@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Requirements.proto";
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message ProfessionNodeLevelProto {
+	// ref: Atlas.Proto.ProfessionNodeLevelProto/Purpose
+	enum Purpose {
+		none = 0;
+		buff = 1;
+		learn_new_map_ability = 2;
+		upgrade_map_ability = 3;
+	}
+
+	string buff_gmt_id = 1;
+	Requirements prerequisite = 2;
+	LootCollectionProto cost = 3;
+	repeated string map_abilities = 4;
+	uint32 rank_points = 5;
+}
+

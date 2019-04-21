@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.iap.protos;
+
+message GetAvailableSkusAndBalancesProto {
+}
+

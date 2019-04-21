@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message TimeBuffDuration {
+	int64 time_ms = 1;
+	bool is_override = 2;
+}
+

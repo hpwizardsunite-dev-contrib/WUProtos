@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+package wuprotos;
+
+import "wuprotos/niantic/rpc/GameplayWeatherProto.proto";
+import "wuprotos/niantic/rpc/DisplayWeatherProto.proto";
+import "wuprotos/WeatherAlertSettingsProto.proto";
+message WeatherSettingsProto {
+	// ref: WeatherSettingsProto/Types/GameplayWeatherSettingsProto/Types/ConditionMapSettings
+	message ConditionMapSettings {
+		wuprotos.niantic.rpc.GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
+		repeated string provider_enums = 2;
+	}
+
+	// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/DisplayLevelSettings
+	message DisplayLevelSettings {
+		repeated string condition_enums = 1;
+		wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel cloud_level = 2;
+		wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel rain_level = 3;
+		wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel snow_level = 4;
+		wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel fog_level = 5;
+		wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel special_effect_level = 6;
+	}
+
+	// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto
+	message DisplayWeatherSettingsProto {
+		// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/DisplayLevelSettings
+		message DisplayLevelSettings {
+			repeated string condition_enums = 1;
+			wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel cloud_level = 2;
+			wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel rain_level = 3;
+			wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel snow_level = 4;
+			wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel fog_level = 5;
+			wuprotos.niantic.rpc.DisplayWeatherProto.DisplayLevel special_effect_level = 6;
+		}
+
+		// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/WindLevelSettings
+		message WindLevelSettings {
+			int32 wind_level1_speed = 1;
+			int32 wind_level2_speed = 2;
+			int32 wind_level3_speed = 3;
+		}
+
+		repeated WeatherSettingsProto.DisplayLevelSettings display_level_settings = 1;
+		WeatherSettingsProto.WindLevelSettings wind_level_settings = 2;
+	}
+
+	// ref: WeatherSettingsProto/Types/GameplayWeatherSettingsProto
+	message GameplayWeatherSettingsProto {
+		// ref: WeatherSettingsProto/Types/GameplayWeatherSettingsProto/Types/ConditionMapSettings
+		message ConditionMapSettings {
+			wuprotos.niantic.rpc.GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
+			repeated string provider_enums = 2;
+		}
+
+		repeated WeatherSettingsProto.ConditionMapSettings condition_map = 1;
+		int32 min_speed_for_windy = 2;
+		repeated string conditions_for_windy = 3;
+	}
+
+	// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/WindLevelSettings
+	message WindLevelSettings {
+		int32 wind_level1_speed = 1;
+		int32 wind_level2_speed = 2;
+		int32 wind_level3_speed = 3;
+	}
+
+	GameplayWeatherSettingsProto gameplay_settings = 1;
+	DisplayWeatherSettingsProto display_settings = 2;
+	WeatherAlertSettingsProto alert_settings = 3;
+}
+
+
+//----- End proto -----
+//------------------------------
+//----- Begin protos -----
+

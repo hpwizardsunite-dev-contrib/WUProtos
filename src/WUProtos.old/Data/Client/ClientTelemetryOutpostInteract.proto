@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-import "WUProtos/Data/POIInteract.proto";
-
-message ClientTelemetryOutpostInteract {
-	string outpost_type = 1;
-	.WUProtos.Data.POIInteract common_data = 2;
-}

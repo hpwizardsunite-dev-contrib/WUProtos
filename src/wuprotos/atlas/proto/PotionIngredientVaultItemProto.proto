@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message PotionIngredientVaultItemProto {
+	LootCollectionProto cost = 1;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message ClaimPotionRequestProto {
+	int64 cauldron_id = 1;
+	int32 cauldron_slot = 2;
+	wuprotos.atlas.proto.LootCollectionProto requested_rewards = 3;
+}
+

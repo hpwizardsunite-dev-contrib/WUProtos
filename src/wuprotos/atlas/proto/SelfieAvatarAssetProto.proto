@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Requirements.proto";
+message SelfieAvatarAssetProto {
+	string id = 1;
+	Requirements unlock_conditions = 2;
+}
+

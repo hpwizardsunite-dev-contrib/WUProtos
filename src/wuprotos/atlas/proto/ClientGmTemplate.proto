@@ -1,0 +1,77 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientCollectionFamilyProto.proto";
+import "wuprotos/atlas/proto/ClientCollectionItemProto.proto";
+import "wuprotos/atlas/proto/ClientWalkboxTemplateProto.proto";
+import "wuprotos/atlas/proto/ClientEncounterProto.proto";
+import "wuprotos/atlas/proto/ClientPortkeyProto.proto";
+import "wuprotos/atlas/proto/ClientVaultItemProto.proto";
+import "wuprotos/atlas/proto/ClientGameConfigProto.proto";
+import "wuprotos/atlas/proto/ClientStorePackProto.proto";
+import "wuprotos/atlas/proto/ClientSpellProto.proto";
+import "wuprotos/atlas/proto/ClientProtegoPatternProto.proto";
+import "wuprotos/atlas/proto/ClientChamberTemplateProto.proto";
+import "wuprotos/atlas/proto/ClientCollectionPageProto.proto";
+import "wuprotos/atlas/proto/ClientTeamControlProto.proto";
+import "wuprotos/atlas/proto/ClientStoreConfigProto.proto";
+import "wuprotos/atlas/proto/ClientStoreSubcategoryProto.proto";
+import "wuprotos/atlas/proto/ClientHapticProto.proto";
+import "wuprotos/atlas/proto/ClientProfessionProto.proto";
+import "wuprotos/atlas/proto/ClientBonusCategoryProto.proto";
+import "wuprotos/atlas/proto/ClientVaultCategoryProto.proto";
+import "wuprotos/atlas/proto/ClientProfileConfigProto.proto";
+import "wuprotos/atlas/proto/ClientMapIngredientProto.proto";
+import "wuprotos/atlas/proto/ClientMapAbilityProto.proto";
+import "wuprotos/atlas/proto/ClientStoryboardProto.proto";
+import "wuprotos/atlas/proto/ClientRpgstatProto.proto";
+import "wuprotos/atlas/proto/ClientRpgstatsBlockProto.proto";
+import "wuprotos/atlas/proto/ClientSelfieAvatarAssetProto.proto";
+import "wuprotos/atlas/proto/ClientBuffProto.proto";
+import "wuprotos/atlas/proto/ClientOutpostTemplateProto.proto";
+import "wuprotos/atlas/proto/ClientChallengeBonusProto.proto";
+import "wuprotos/atlas/proto/ClientRecipeProto.proto";
+import "wuprotos/atlas/proto/ClientMasterNoteProto.proto";
+import "wuprotos/atlas/proto/ClientQuestProto.proto";
+import "wuprotos/atlas/proto/ClientDailyRewardMonthlyScheduleProto.proto";
+import "wuprotos/atlas/proto/ClientEncounterTypeProto.proto";
+message ClientGmTemplate {
+	// ref: Atlas.Proto.ClientGmTemplate/MessageTypeOneofCase
+
+	ClientCollectionFamilyProto collection_family = 1;
+	ClientCollectionItemProto collection_item = 2;
+	ClientWalkboxTemplateProto walkbox_template = 3;
+	ClientEncounterProto encounter = 4;
+	ClientPortkeyProto portkey = 5;
+	ClientVaultItemProto vault_item = 6;
+	ClientGameConfigProto game_config = 7;
+	ClientStorePackProto store_pack = 8;
+	ClientSpellProto spell = 9;
+	ClientProtegoPatternProto protego_pattern = 10;
+	ClientChamberTemplateProto chamber_template = 11;
+	ClientCollectionPageProto collection_page = 12;
+	ClientTeamControlProto team_control = 13;
+	ClientStoreConfigProto store_config = 14;
+	ClientStoreSubcategoryProto store_subcategory = 15;
+	ClientHapticProto haptic = 16;
+	ClientProfessionProto profession = 17;
+	ClientBonusCategoryProto bonus_category = 18;
+	ClientVaultCategoryProto vault_category = 19;
+	ClientProfileConfigProto profile_config = 20;
+	ClientMapIngredientProto map_ingredient = 21;
+	ClientMapAbilityProto map_ability = 22;
+	ClientStoryboardProto storyboard = 23;
+	ClientRpgstatProto rpgstat = 24;
+	ClientRpgstatsBlockProto rpgstats_block = 25;
+	ClientSelfieAvatarAssetProto selfie_avatar_asset = 26;
+	ClientBuffProto buff = 27;
+	ClientOutpostTemplateProto outpost_template = 29;
+	ClientChallengeBonusProto challenge_bonus = 30;
+	ClientRecipeProto recipe = 31;
+	ClientMasterNoteProto master_note = 32;
+	ClientQuestProto quest = 33;
+	ClientDailyRewardMonthlyScheduleProto daily_reward_monthly_schedule = 34;
+	ClientEncounterTypeProto encounter_type = 35;
+}
+

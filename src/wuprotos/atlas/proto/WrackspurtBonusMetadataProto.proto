@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message WrackspurtBonusMetadataProto {
+	float multiplier = 1;
+}
+
+
+//----- End proto -----
+//------------------------------
+//----- Begin proto -----
+

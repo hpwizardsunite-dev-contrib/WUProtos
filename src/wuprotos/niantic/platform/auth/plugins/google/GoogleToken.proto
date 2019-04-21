@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.auth.plugins.google;
+
+message GoogleToken {
+	string id_token = 1;
+}
+
+
+//----- End google -----
+//------------------------------
+//----- Begin googlearcore -----
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CombatPlayerAttackProto.proto";
+import "wuprotos/atlas/proto/CombatPlayerDefendProto.proto";
+import "wuprotos/atlas/proto/CombatPlayerAutoAdvanceProto.proto";
+message CombatMoveTypeProto {
+	// ref: Atlas.Proto.CombatMoveTypeProto/CombatMoveOneofCase
+
+	CombatPlayerAttackProto player_attack = 1;
+	CombatPlayerDefendProto player_defend = 2;
+	CombatPlayerAutoAdvanceProto player_auto_advance = 3;
+}
+

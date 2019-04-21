@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientRpgstatsBlock {
-    string id = 1;
-    repeated string relevant_stats = 2;
-}

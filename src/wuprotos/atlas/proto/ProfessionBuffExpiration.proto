@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ProfessionBuffExpiration {
+	string profession_gmt_id = 1;
+}
+

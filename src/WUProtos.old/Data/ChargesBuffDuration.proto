@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message ChargesBuffDuration {
-    int32 num_charges = 1;
-    bool is_override = 2;
-}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/ProfileFieldOperation.proto";
+message UpdateProfileFieldRequestProto {
+	// ref: Atlas.Rpc.UpdateProfileFieldRequestProto/Types/ProfileFieldUpdate
+	message ProfileFieldUpdate {
+		ProfileFieldOperation operation = 1;
+		string value = 2;
+	}
+
+	repeated ProfileFieldUpdate updates = 1;
+}
+

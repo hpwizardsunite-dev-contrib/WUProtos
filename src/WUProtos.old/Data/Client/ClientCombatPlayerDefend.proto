@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-import "WUProtos/Data/Client/ClientCombatPlayerDefendPattern.proto";
-
-message ClientCombatPlayerDefend {
-    repeated .WUProtos.Data.Client.ClientCombatPlayerDefendPattern pattern_list = 1;
-}

@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message EncounterInteractStatusProto {
+	// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/ClientStaleData/Types/Reason
+	enum Reason {
+		ENCOUNTER_INTERACT_UNKNOWN = 0;
+		ENCOUNTER_INTERACT_NOT_IN_ENCOUNTER = 1;
+		ENCOUNTER_INTERACT_WC_PLAYER_NOT_IN_CHAMBER = 2;
+		ENCOUNTER_INTERACT_WC_NOT_IN_PROGRESS = 3;
+	}
+
+	// ref: Atlas.Rpc.EncounterInteractStatusProto/StatusOneofCase
+
+	// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/ClientStaleData
+	message ClientStaleData {
+		// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/ClientStaleData/Types/Reason
+		enum Reason {
+			ENCOUNTER_INTERACT_UNKNOWN = 0;
+			ENCOUNTER_INTERACT_NOT_IN_ENCOUNTER = 1;
+			ENCOUNTER_INTERACT_WC_PLAYER_NOT_IN_CHAMBER = 2;
+			ENCOUNTER_INTERACT_WC_NOT_IN_PROGRESS = 3;
+		}
+
+		EncounterInteractStatusProto.Reason reason = 1;
+	}
+
+	// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/Continue
+	message Continue {
+	}
+
+	// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/Error
+	message Error {
+		string description = 1;
+	}
+
+	// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/Lose
+	message Lose {
+	}
+
+	// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/NextStage
+	message NextStage {
+		int32 next_stage_index = 1;
+	}
+
+	// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/Win
+	message Win {
+		wuprotos.atlas.proto.LootCollectionProto rewards = 1;
+		wuprotos.atlas.proto.LootCollectionProto one_time_rewards = 2;
+	}
+
+	Continue continue = 1;
+	NextStage next_stage = 2;
+	Win win = 3;
+	Lose lose = 4;
+	ClientStaleData client_stale_data = 5;
+	Error error = 6;
+}
+

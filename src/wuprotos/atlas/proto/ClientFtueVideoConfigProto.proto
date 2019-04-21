@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientFtueVideoFallbackDefinitionProto.proto";
+import "wuprotos/atlas/proto/ClientFtueVideoNameDefinitionProto.proto";
+message ClientFtueVideoConfigProto {
+	// ref: Atlas.Proto.ClientFtueVideoConfigProto/VideoSourceOneofCase
+
+	ClientFtueVideoFallbackDefinitionProto from_assets = 1;
+	ClientFtueVideoNameDefinitionProto from_url = 2;
+	repeated string quality_buckets = 3;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetryAssetLoad {
+	string asset_name = 1;
+	double total_load_time = 2;
+	repeated string bundle_name = 3;
+}
+

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wuprotos;
+
+import "wuprotos/BalanceSnapshotEntryProto.proto";
+message PlayerInAppPurchaseLogProto {
+	int64 timestamp_ms = 1;
+	string player_id = 2;
+	string type = 3;
+	string description = 4;
+	string sku_id = 5;
+	string currency_used = 6;
+	int64 price_paid_e6 = 7;
+	string vendor_code = 8;
+	repeated BalanceSnapshotEntryProto initial_balance = 9;
+	repeated BalanceSnapshotEntryProto final_balance = 10;
+	repeated string item_id = 11;
+}
+

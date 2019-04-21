@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum EncounterOrigin {
+	DITTO_TRACE = 0;
+	TUTORIAL_TRACE = 1;
+	DEBUG = 2;
+}
+

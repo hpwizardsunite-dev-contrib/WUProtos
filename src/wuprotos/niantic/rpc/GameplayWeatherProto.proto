@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wuprotos.niantic.rpc;
+
+import "wuprotos/atlas/proto/WeatherCondition.proto";
+message GameplayWeatherProto {
+	// ref: Niantic.Rpc.GameplayWeatherProto/Types/WeatherCondition
+	enum WeatherCondition {
+		NONE = 0;
+		CLEAR = 1;
+		RAINY = 2;
+		PARTLY_CLOUDY = 3;
+		OVERCAST = 4;
+		WINDY = 5;
+		SNOW = 6;
+		FOG = 7;
+	}
+
+	WeatherCondition gameplay_condition = 1;
+}
+

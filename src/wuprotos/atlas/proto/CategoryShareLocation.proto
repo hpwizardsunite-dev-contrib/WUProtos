@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum CategoryShareLocation {
+	CATEGORY_SHARE_LOCATION_UNSET = 0;
+	CATEGORY_SAVE_PASSPORT = 1;
+	CATEGORY_SAVE_SELFIE_FLOW = 2;
+}
+

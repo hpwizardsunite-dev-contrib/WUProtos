@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message GetUploadUrlOutProto {
+	// ref: Niantic.Platform.Protos.GetUploadUrlOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		FAILURES = 1;
+		SUCCESS = 2;
+	}
+
+	Status status = 1;
+	string signed_url = 2;
+	string supporting_image_signed_url = 3;
+}
+

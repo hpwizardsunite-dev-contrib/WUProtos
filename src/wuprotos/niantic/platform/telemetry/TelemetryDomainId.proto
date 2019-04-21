@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.telemetry;
+
+enum TelemetryDomainId {
+	TELEMETRY_NO_DOMAIN_ID = 0;
+	TELEMETRY_DITTO = 1;
+	TELEMETRY_GAME = 2;
+}
+

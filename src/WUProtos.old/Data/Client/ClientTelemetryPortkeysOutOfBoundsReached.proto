@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryPortkeysOutOfBoundsReached {
-	string portkey_id = 2;
-}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientMapPoiProto.proto";
+import "wuprotos/atlas/proto/ClientMapTraceProto.proto";
+import "wuprotos/atlas/proto/ClientMapLandmarkProto.proto";
+import "wuprotos/atlas/proto/ClientMapPotionIngredientProto.proto";
+import "wuprotos/niantic/rpc/ClientWeatherProto.proto";
+import "wuprotos/atlas/proto/ClientEnvironmentTagsProto.proto";
+message GameEntityProto {
+	// ref: Atlas.Proto.GameEntityProto/TypeOneofCase
+
+	wuprotos.atlas.proto.ClientMapPoiProto poi = 1;
+	wuprotos.atlas.proto.ClientMapTraceProto trace = 2;
+	wuprotos.atlas.proto.ClientMapLandmarkProto landmark = 3;
+	wuprotos.atlas.proto.ClientMapPotionIngredientProto potion_ingredient = 4;
+	wuprotos.niantic.rpc.ClientWeatherProto weather = 5;
+	wuprotos.atlas.proto.ClientEnvironmentTagsProto environment_tags = 6;
+}
+

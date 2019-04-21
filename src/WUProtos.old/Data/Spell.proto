@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message Spell {
-	repeated string charge_up_effect = 1;
-	string id = 2;
-}

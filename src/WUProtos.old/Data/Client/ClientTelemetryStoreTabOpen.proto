@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryStoreTabOpen {
-	string page_id = 1;
-}

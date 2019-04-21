@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message FlooNetworkConfigProto {
+	// ref: Atlas.Proto.FlooNetworkConfigProto/Types/ElectoralVotesPerFlooPoints
+	message ElectoralVotesPerFlooPoints {
+		int64 min_floo_points = 1;
+		int64 electoral_votes = 2;
+	}
+
+	repeated ElectoralVotesPerFlooPoints electoral_votes_per_floo_points = 1;
+	int32 points_per_decay_cycle = 2;
+	int64 decay_cycle_length_ms = 3;
+}
+

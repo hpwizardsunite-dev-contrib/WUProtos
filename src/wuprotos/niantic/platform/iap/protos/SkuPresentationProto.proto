@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.iap.protos;
+
+message SkuPresentationProto {
+	string key = 1;
+	string value = 2;
+}
+
+
+//----- End protos -----
+//------------------------------
+//----- Begin rpc -----
+

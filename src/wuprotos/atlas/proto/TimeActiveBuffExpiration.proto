@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message TimeActiveBuffExpiration {
+	int64 expiry_time_ms = 1;
+}
+

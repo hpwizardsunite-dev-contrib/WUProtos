@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientMapLandmarkProto {
+	string collection_family_id = 1;
+	double poi_latitude = 2;
+	double poi_longitude = 3;
+	repeated double border_latitude = 4;
+	repeated double border_longitude = 5;
+}
+

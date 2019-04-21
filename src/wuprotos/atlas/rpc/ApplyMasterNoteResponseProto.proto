@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message ApplyMasterNoteResponseProto {
+	// ref: Atlas.Rpc.ApplyMasterNoteResponseProto/Types/ApplyMasterNoteResult
+	enum ApplyMasterNoteResult {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		INCORRECT_GESTURE_SEQUENCE = 2;
+		NO_POTION_BREWING = 3;
+		CAULDRON_HAS_COMPLETED_BREWS = 4;
+		MASTER_NOTE_ALREADY_APPLIED = 5;
+	}
+
+	ApplyMasterNoteResult result = 1;
+}
+

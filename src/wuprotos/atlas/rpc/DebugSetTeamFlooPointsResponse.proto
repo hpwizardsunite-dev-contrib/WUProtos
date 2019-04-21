@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/FlooNetworkFortressStatistics.proto";
+message DebugSetTeamFlooPointsResponse {
+	wuprotos.atlas.proto.FlooNetworkFortressStatistics fortress_statistics = 1;
+}
+

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.iap.protos;
+
+import "wuprotos/niantic/platform/iap/protos/AvailableSkuProto.proto";
+import "wuprotos/atlas/rpc/CurrencyQuantityProto.proto";
+message GetAvailableSkusAndBalancesOutProto {
+	// ref: Niantic.Platform.Iap.Protos.GetAvailableSkusAndBalancesOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+
+	repeated AvailableSkuProto available_sku = 1;
+	repeated wuprotos.atlas.rpc.CurrencyQuantityProto balance = 2;
+	string player_token = 3;
+}
+

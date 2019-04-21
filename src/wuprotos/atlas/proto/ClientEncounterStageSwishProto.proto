@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/AudioParameterProto.proto";
+message ClientEncounterStageSwishProto {
+	AudioParameterProto trace_succeeds_fanfare = 1;
+	AudioParameterProto trace_fails_fanfare = 2;
+}
+

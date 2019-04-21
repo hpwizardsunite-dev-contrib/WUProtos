@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/LootRewardProto.proto";
+message LootCollectionProto {
+	repeated LootRewardProto rewards = 1;
+	repeated LootRewardProto escrowed_rewards = 2;
+}
+

@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/BoolLiteral.proto";
+import "wuprotos/atlas/proto/EnemyTagCondition.proto";
+import "wuprotos/atlas/proto/StatsTagCondition.proto";
+import "wuprotos/atlas/proto/BuffCountCondition.proto";
+import "wuprotos/atlas/proto/RuneInChallengeCondition.proto";
+import "wuprotos/atlas/proto/TimeRemainingCondition.proto";
+import "wuprotos/atlas/proto/FocusAmountCondition.proto";
+import "wuprotos/atlas/proto/TeamCompositionCondition.proto";
+import "wuprotos/atlas/proto/TimeOfDayCondition.proto";
+import "wuprotos/atlas/proto/WeatherCondition.proto";
+import "wuprotos/atlas/proto/TeamPropertyCondition.proto";
+import "wuprotos/atlas/proto/EnemiesDefeatedCountCondition.proto";
+message Condition {
+	// ref: Atlas.Proto.Condition/ConditionOneofCase
+
+	BoolLiteral always = 1;
+	EnemyTagCondition enemy_tag_cond = 2;
+	StatsTagCondition stats_tag_cond = 3;
+	BuffCountCondition buff_count_cond = 4;
+	RuneInChallengeCondition rune_in_challenge_cond = 5;
+	TimeRemainingCondition time_remaining_cond = 6;
+	FocusAmountCondition focus_level_cond = 7;
+	TeamCompositionCondition team_composition_cond = 8;
+	TimeOfDayCondition time_of_day_cond = 9;
+	WeatherCondition weather_cond = 10;
+	TeamPropertyCondition team_property_cond = 11;
+	EnemiesDefeatedCountCondition enemies_defeated_cond = 12;
+}
+

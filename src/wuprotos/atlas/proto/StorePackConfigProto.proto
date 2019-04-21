@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/StorePackConfigSize.proto";
+message StorePackConfigProto {
+	int32 priority = 1;
+	string subcategory_id = 2;
+	string icon_path = 3;
+	bool show_quantity_banner = 4;
+	string quantity_override = 5;
+	string prefab_path = 6;
+	string marketing_text = 7;
+	string description_text = 8;
+	bool show_badge = 9;
+	int32 bonus_value = 10;
+	string rarity_id = 11;
+	StorePackConfigSize pack_size = 12;
+	bool show_in_hud = 13;
+	int32 hud_priority = 14;
+	string hud_icon_path = 15;
+	string icon2_path = 16;
+	string popup_image_override = 17;
+	bool hide_pack_on_sold_out = 18;
+}
+

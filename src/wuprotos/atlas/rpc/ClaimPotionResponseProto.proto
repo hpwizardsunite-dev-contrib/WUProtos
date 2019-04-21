@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message ClaimPotionResponseProto {
+	// ref: Atlas.Rpc.ClaimPotionResponseProto/Types/ClaimPotionResult
+	enum ClaimPotionResult {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		EMPTY_SLOT_SELECTED = 2;
+		BREWING_NOT_COMPLETE = 3;
+		INSUFFICIENT_INVENTORY_SPACE_FOR_POTION = 4;
+		CAULDRON_DOES_NOT_CONTAIN_REQUESTED_REWARDS = 5;
+	}
+
+	ClaimPotionResult result = 1;
+	wuprotos.atlas.proto.LootCollectionProto received_rewards = 2;
+	wuprotos.atlas.proto.LootCollectionProto remaining_rewards = 3;
+}
+

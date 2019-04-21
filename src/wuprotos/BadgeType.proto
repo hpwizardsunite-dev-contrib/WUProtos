@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum BadgeType {
+	default_a8ce = 0;
+	port_keys = 1;
+	registry = 2;
+	potions = 3;
+	store = 4;
+	weather = 5;
+	profession = 6;
+	profession_rank = 7;
+	profession_node = 8;
+	settings_help = 9;
+	assignments_a8ce = 10;
+	registry_exploration = 11;
+	registry_challenges = 12;
+	registry_mysteries = 13;
+	registry_events = 14;
+	profile = 15;
+	profile_stock_img = 16;
+	profile_selfie_avatar = 17;
+}
+

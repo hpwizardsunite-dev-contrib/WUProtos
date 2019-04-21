@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum ChoreographyNodeType {
+	character_animation = 0;
+	VFX = 1;
+	event = 2;
+	SFX = 3;
+	haptic = 4;
+	tween = 5;
+}
+

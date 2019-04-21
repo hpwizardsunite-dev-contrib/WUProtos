@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum StorePackConfigSize {
+	SIZE_SMALL = 0;
+	SIZE_MEDIUM = 1;
+	SIZE_LARGE = 2;
+}
+

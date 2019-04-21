@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/QuestType.proto";
+import "wuprotos/atlas/proto/QuestTask.proto";
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message QuestProto {
+	string id = 1;
+	QuestType type = 2;
+	repeated QuestTask tasks = 3;
+	LootCollectionProto rewards = 4;
+	int32 version = 5;
+}
+

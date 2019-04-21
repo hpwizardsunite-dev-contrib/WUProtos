@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/CurrencyQuantityProto.proto";
+message GetCurrencyBalanceResponseProto {
+	// ref: Atlas.Rpc.GetCurrencyBalanceResponseProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+
+	Status status = 1;
+	repeated CurrencyQuantityProto balance = 3;
+}
+

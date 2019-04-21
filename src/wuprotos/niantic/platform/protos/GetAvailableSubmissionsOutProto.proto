@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message GetAvailableSubmissionsOutProto {
+	int32 submissions_left = 1;
+	int32 min_player_level = 2;
+}
+

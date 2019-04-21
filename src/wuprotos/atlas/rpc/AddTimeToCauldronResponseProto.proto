@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message AddTimeToCauldronResponseProto {
+	// ref: Atlas.Rpc.AddTimeToCauldronResponseProto/Types/AddTimeToCauldronResult
+	enum AddTimeToCauldronResult {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		CAULDRON_NOT_FOUND = 2;
+		TIME_ITEM_NOT_FOUND = 3;
+		INVALID_CAULDRON_TYPE = 4;
+		INSUFFICIENT_RESOURCES = 5;
+	}
+
+	AddTimeToCauldronResult result = 1;
+}
+

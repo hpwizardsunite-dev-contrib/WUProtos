@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryBundleDownload {
-    string bundle_name = 1;
-    string bundle_url = 2;
-    double load_time = 3;
-}

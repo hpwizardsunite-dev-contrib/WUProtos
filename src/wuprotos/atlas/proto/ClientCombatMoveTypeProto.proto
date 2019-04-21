@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientCombatPlayerAttackProto.proto";
+import "wuprotos/atlas/proto/ClientCombatPlayerDefendProto.proto";
+import "wuprotos/atlas/proto/ClientCombatPlayerAutoAdvanceProto.proto";
+message ClientCombatMoveTypeProto {
+	// ref: Atlas.Proto.ClientCombatMoveTypeProto/CombatMoveOneofCase
+
+	ClientCombatPlayerAttackProto player_attack = 1;
+	ClientCombatPlayerDefendProto player_defend = 2;
+	ClientCombatPlayerAutoAdvanceProto player_auto_advance = 3;
+	string enemy_action_timeline = 4;
+	string player_succeed_timeline = 5;
+	string player_failed_timeline = 6;
+}
+

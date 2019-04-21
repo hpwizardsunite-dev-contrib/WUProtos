@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.analytics.telemetry;
+
+import "wuprotos/niantic/platform/analytics/telemetry/ClientTelemetryRecordProto.proto";
+message ClientTelemetryBatchProto {
+	// ref: Niantic.Platform.Analytics.Telemetry.ClientTelemetryBatchProto/Types/TelemetryScopeId
+	enum TelemetryScopeId {
+		UNSET = 0;
+		DITTO = 1;
+		GAME = 2;
+	}
+
+	TelemetryScopeId telemetry_scope_id = 1;
+	repeated ClientTelemetryRecordProto events = 2;
+	repeated ClientTelemetryRecordProto metrics = 3;
+	string api_version = 4;
+	string message_version = 5;
+}
+

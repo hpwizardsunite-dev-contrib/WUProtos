@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message WeatherCondition {
+	// ref: Atlas.Proto.WeatherCondition/Types/WeatherType
+	enum WeatherType {
+		UNKNOWN = 0;
+		SUNNY = 1;
+		CLOUDY = 2;
+		RAINING = 3;
+		SNOWING = 4;
+		SLEETING = 5;
+		FULL_MOON = 6;
+		NIGHT_TIME = 7;
+		DAY_TIME = 8;
+		HALF_MOON = 9;
+		QUARTER_MOON = 10;
+	}
+
+	WeatherType weather_condition = 1;
+}
+

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/RangeInt64.proto";
+message RpgstatProto {
+	// ref: Atlas.Proto.RpgstatProto/IconDisplayType
+	enum IconDisplayType {
+		BOTH = 0;
+		PLAYER_VIEW = 1;
+		ENEMY_VIEW = 2;
+		NEITHER = 3;
+	}
+
+	string id = 1;
+	RangeInt64 stat_bounds = 2;
+}
+

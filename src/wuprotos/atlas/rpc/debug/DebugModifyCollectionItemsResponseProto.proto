@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+message DebugModifyCollectionItemsResponseProto {
+	repeated string updated_collection_item_ids = 1;
+}
+

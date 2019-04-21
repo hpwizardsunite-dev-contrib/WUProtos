@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum ESocialNetwork {
+	instagram = 0;
+	facebook = 1;
+	snapchat = 2;
+	anything = 3;
+}
+

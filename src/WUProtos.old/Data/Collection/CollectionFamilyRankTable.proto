@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Collection;
-
-import "WUProtos/Data/Collection/CollectionFamilyRank.proto";
-
-message CollectionFamilyRankTable {
-	string id = 1;
-	repeated .WUProtos.Data.Collection.CollectionFamilyRank rank_data = 2;
-}

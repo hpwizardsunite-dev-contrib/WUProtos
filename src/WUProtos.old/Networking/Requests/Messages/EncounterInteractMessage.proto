@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Networking.Requests.Messages;
-
-import "WUProtos/Data/Encounter/EncounterInteractStageOptions.proto";
-
-message EncounterInteractMessage {
-	bytes encounter_id = 1;
-	.WUProtos.Data.Encounter.EncounterInteractStageOptions stage_options = 2;
-}

@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Collection;
-
-message CollectionFamilyRank {
-	int64 total_xp_req = 1;
-	int32 chest_count = 2;
-	string small_loottable_id = 3;
-	string level_up_loottable_id = 4;
-}

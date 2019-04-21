@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CategoryCapacityType.proto";
+message VaultCategoryProto {
+	repeated string increase_capacity_store_pack_proto_ids = 3;
+	string id = 1;
+	CategoryCapacityType capacity_type = 2;
+}
+

@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Enums;
-
-enum ClientOs {
-    UNKNOWN_OS = 0;
-    IOS = 1;
-    ANDROID = 2;
-    DESKTOP = 3;
-}

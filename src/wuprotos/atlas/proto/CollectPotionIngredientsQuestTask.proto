@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message CollectPotionIngredientsQuestTask {
+	int64 required_potion_ingredient_count = 1;
+}
+

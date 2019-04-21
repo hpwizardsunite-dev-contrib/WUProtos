@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum MixPose {
+	setup = 0;
+	current = 1;
+	current_layered = 2;
+}
+

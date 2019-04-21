@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/MobRewardFocus.proto";
+import "wuprotos/atlas/proto/MobRewardTime.proto";
+import "wuprotos/atlas/proto/MobRewardVictoryPoints.proto";
+message MobReward {
+	// ref: Atlas.Proto.MobReward/RewardOneofCase
+
+	MobRewardFocus focus = 1;
+	MobRewardTime time = 2;
+	MobRewardVictoryPoints victory_points = 3;
+}
+

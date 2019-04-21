@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CategoryShareLocation.proto";
+message ClientTelemetryProfileScreenGrab {
+	CategoryShareLocation screengrab_location = 1;
+}
+

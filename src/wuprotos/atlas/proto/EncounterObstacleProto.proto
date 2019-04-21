@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message EncounterObstacleProto {
+	string id = 1;
+}
+

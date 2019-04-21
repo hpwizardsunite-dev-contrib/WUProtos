@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum UIAnimationState {
+	NOT_STARTED = 0;
+	RUNNING = 1;
+	COMPLETE = 2;
+}
+

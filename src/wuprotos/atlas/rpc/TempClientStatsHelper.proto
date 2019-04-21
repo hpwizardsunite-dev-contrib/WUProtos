@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message TempClientStatsHelper {
+	int64 hp_max_enemy = 3;
+	repeated int64 enemy_damage_unblocked = 4;
+	repeated int64 enemy_damage_blocked = 5;
+	int64 hp_max_player = 6;
+}
+

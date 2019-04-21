@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum CollectionFamilyType {
+	COLLECTION_FAMILY_TYPE_UNKNOWN = 0;
+	NORMAL = 1;
+	APEX = 2;
+}
+

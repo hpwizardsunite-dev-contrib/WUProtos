@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message AcknowledgePunishmentRequestProto {
+	// ref: Atlas.Rpc.AcknowledgePunishmentRequestProto/Types/Punishment
+	enum Punishment {
+		UNKNOWN = 0;
+		WARN = 1;
+		SUSPEND = 2;
+	}
+
+	Punishment punishment = 1;
+}
+

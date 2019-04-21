@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CollectionFamilyRankProto.proto";
+message CollectionFamilyRankTableProto {
+	string id = 1;
+	repeated CollectionFamilyRankProto rank_data = 2;
+}
+

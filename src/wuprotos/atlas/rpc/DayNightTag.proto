@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+enum DayNightTag {
+	ENV_DAY_NIGHT_UNSET = 0;
+	ENV_DAY = 1;
+	ENV_NIGHT = 2;
+	ENV_DAWN = 3;
+	ENV_DUSK = 4;
+}
+

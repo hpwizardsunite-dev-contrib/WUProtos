@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/GmTemplate.proto";
+message GameDataWrapper {
+	repeated GmTemplate messages = 1;
+	int64 basis_batch_id = 2;
+	int64 environment = 3;
+}
+

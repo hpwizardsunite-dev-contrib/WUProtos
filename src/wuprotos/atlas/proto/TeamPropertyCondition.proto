@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+message TeamPropertyCondition {
+	// ref: Atlas.Proto.TeamPropertyCondition/Types/Criteria
+	enum Criteria {
+		UNKNOWN = 0;
+		FRIENDS = 1;
+		NON_FRIENDS = 2;
+		SAME_TEAM = 3;
+		OTHER_TEAM = 4;
+	}
+
+	ComparisonOperator comparison_operator = 1;
+	int32 target_comparison_value = 2;
+	Criteria criteria = 3;
+}
+

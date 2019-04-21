@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+import "wuprotos/com/nianticproject/platform/auth/IdentityProvider.proto";
+message RemoveLoginActionProto {
+	wuprotos.com.nianticproject.platform.auth.IdentityProvider identity_provider = 1;
+}
+

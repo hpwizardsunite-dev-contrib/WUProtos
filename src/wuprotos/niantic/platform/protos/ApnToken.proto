@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message ApnToken {
+	string registration_id = 1;
+	string bundle_identifier = 2;
+	int32 payload_byte_size = 3;
+}
+

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/MasterNoteGesture.proto";
+import "wuprotos/atlas/proto/MasterNoteEffectProto.proto";
+message MasterNoteProto {
+	string id = 1;
+	repeated MasterNoteGesture gestures = 2;
+	MasterNoteEffectProto effect = 3;
+}
+

@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message CollectPotionIngredientsQuestTask {
-	int64 required_potion_ingredient_count = 1;
-}

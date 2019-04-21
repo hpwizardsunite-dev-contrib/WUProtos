@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.googlearcore;
+
+enum SessionConnectionState {
+	uninitialized = 0;
+	connected = 1;
+	missing_configuration = 2;
+	invalid_configuration = 3;
+	user_rejected_needed_permission = 4;
+	connect_to_service_failed = 5;
+}
+

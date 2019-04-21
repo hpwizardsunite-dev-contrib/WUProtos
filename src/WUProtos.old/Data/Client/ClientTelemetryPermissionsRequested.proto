@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryPermissionsRequested {
-	string permission_type = 1;
-	bool granted = 2;
-}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.inventory;
+
+message InventoryItemProto {
+	// ref: Niantic.Platform.Inventory.InventoryItemProto/InventoryItemOneofCase
+
+	int64 modified_timestamp = 1;
+	bytes deleted_item_key = 2;
+	bytes item = 3;
+}
+

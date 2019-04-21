@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Enums;
-
-enum CategoryRandomize {
-    CATEGORY_RANDOMIZE_UNSET = 0;
-    RANDOMIZE_LENS = 1;
-    RANDOMIZE_FILTER_FRAME = 2;
-}

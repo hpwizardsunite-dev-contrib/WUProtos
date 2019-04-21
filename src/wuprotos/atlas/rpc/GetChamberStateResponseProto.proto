@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/ChallengeRpcStatus.proto";
+import "wuprotos/atlas/rpc/ChamberState.proto";
+import "wuprotos/atlas/proto/ClientPlayerSnapshotProto.proto";
+message GetChamberStateResponseProto {
+	ChallengeRpcStatus status = 1;
+	ChamberState state = 2;
+	wuprotos.atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
+	int64 next_call_timestamp = 4;
+}
+

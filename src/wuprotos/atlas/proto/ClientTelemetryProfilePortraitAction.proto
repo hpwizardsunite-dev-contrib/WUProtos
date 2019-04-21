@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ProfileTabSource.proto";
+import "wuprotos/atlas/proto/PortraitType.proto";
+import "wuprotos/atlas/proto/PortraitAction.proto";
+import "wuprotos/atlas/proto/CategoryShareLocation.proto";
+import "wuprotos/atlas/proto/DownloadType.proto";
+message ClientTelemetryProfilePortraitAction {
+	ProfileTabSource baseline_src = 1;
+	PortraitType portrait_format = 2;
+	PortraitAction portrait_action = 3;
+	string portrait_lens_top = 4;
+	string portrait_lens_mid = 5;
+	string portrait_lens_bottom = 6;
+	string portrait_frame = 7;
+	string portrait_filter = 8;
+	repeated string portrait_sticker_ids = 9;
+	int32 portrait_sticker_count = 10;
+	CategoryShareLocation share_source = 11;
+	DownloadType share_type = 12;
+	string share_network = 13;
+	CategoryShareLocation download_source = 14;
+	DownloadType download_type = 15;
+}
+

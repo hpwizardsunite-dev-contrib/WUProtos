@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum AppBackgroundResult {
+	NONE = 0;
+	MAP_STATE = 1;
+	FULL_RESET = 2;
+	DEFAULT = 3;
+}
+

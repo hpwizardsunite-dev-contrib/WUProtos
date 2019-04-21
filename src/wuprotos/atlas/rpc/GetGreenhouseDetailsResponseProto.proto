@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/PoiDetails.proto";
+import "wuprotos/atlas/proto/PoiAccessibility.proto";
+message GetGreenhouseDetailsResponseProto {
+	string partner_id = 1;
+	PoiDetails poi_details = 2;
+	wuprotos.atlas.proto.PoiAccessibility poi_accessibility = 3;
+}
+

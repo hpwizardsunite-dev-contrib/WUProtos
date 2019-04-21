@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientEncounterStagePortkeyProto {
+	string scene_id = 1;
+	string portal_id = 2;
+	string object_placement_id = 3;
+	string portal_placement_id = 4;
+	string portkey_asset = 5;
+}
+

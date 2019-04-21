@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message InstantFinishBrewingResponseProto {
+	// ref: Atlas.Rpc.InstantFinishBrewingResponseProto/Types/InstantFinishBrewingResult
+	enum InstantFinishBrewingResult {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		INSUFFICIENT_RESOURCES = 2;
+		EMPTY_CAULDRON_SELECTED = 3;
+	}
+
+	InstantFinishBrewingResult result = 1;
+}
+

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+import "wuprotos/atlas/proto/Requirements.proto";
+message RecipeProto {
+	string id = 1;
+	LootCollectionProto recipe = 2;
+	LootCollectionProto rewards = 3;
+	int64 time_to_craft = 4;
+	repeated string master_note_gmt_id = 5;
+	bool disabled = 6;
+	repeated Requirements unlock_conditions = 7;
+}
+

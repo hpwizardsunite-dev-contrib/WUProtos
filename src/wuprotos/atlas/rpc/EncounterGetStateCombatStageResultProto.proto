@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/CombatResults.proto";
+message EncounterGetStateCombatStageResultProto {
+	CombatResults results = 1;
+}
+

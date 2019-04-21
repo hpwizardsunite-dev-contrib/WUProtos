@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum PortraitAction {
+	PORTRATE_ACTION_UNSET = 0;
+	PORTRAIT_ACTION_SAVE = 1;
+	PORTRAIT_ACTION_DOWNLOAD = 2;
+	PORTRAIT_ACTION_SHARE = 3;
+}
+

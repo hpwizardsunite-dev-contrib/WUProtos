@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum VFXType {
+	none_ad54 = 0;
+	targeted_start = 1;
+	targeted_end = 2;
+	world_start = 3;
+	world_end = 4;
+	ground_start = 5;
+	ground_end = 6;
+	attach_start_and_end = 7;
+}
+

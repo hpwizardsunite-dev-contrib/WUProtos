@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum CacheableBool {
+	not_set = 0;
+	false_abb6 = 1;
+	true_abb6 = 2;
+}
+

@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-import "WUProtos/Data/Loot/LootCollection.proto";
-
-message StoryboardStep {
-	.WUProtos.Data.Loot.LootCollection rewards = 1;
-}

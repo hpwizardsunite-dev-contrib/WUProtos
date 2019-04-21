@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message CollectionFamilyLevelProto {
+	int64 xp = 1;
+	repeated LootCollectionProto returned_rewards = 2;
+	LootCollectionProto one_time_rewards = 3;
+	string level_desc = 4;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message LevelUpCollectionFamilyResponseProto {
+	bool did_level_up = 1;
+	int32 family_level = 2;
+}
+

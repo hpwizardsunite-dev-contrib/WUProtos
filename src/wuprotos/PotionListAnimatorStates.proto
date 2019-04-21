@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum PotionListAnimatorStates {
+	potion_list__idle = 0;
+	potion_list__opening = 1;
+	potion_list__closing = 2;
+	potion_list__disabling = 3;
+	potion_list__switch_to_recipe = 4;
+}
+

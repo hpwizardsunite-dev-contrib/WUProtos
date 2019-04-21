@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/EncounterStartSwishStageResultProto.proto";
+import "wuprotos/atlas/rpc/EncounterStartCombatStageResultProto.proto";
+import "wuprotos/atlas/rpc/EncounterStartPortkeyStageResultProto.proto";
+message EncounterStartStageResultProto {
+	// ref: Atlas.Rpc.EncounterStartStageResultProto/TypeOneofCase
+
+	EncounterStartSwishStageResultProto swish = 1;
+	EncounterStartCombatStageResultProto combat = 2;
+	EncounterStartPortkeyStageResultProto portkey = 3;
+}
+

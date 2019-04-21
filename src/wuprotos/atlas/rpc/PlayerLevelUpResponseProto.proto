@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message PlayerLevelUpResponseProto {
+	bool did_level_up = 1;
+	int32 new_level = 2;
+	wuprotos.atlas.proto.LootCollectionProto granted_rewards = 3;
+}
+

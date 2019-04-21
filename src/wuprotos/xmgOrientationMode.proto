@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum xmgOrientationMode {
+	landscape_left = 0;
+	portrait = 1;
+	landscape_right = 2;
+	portrait_upside_down = 3;
+}
+

@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/RequirementsQuestTask.proto";
+import "wuprotos/atlas/proto/HookQuestTask.proto";
+message QuestTask {
+	// ref: Atlas.Proto.QuestTask/TypeOneofCase
+
+	RequirementsQuestTask req_task = 1;
+	HookQuestTask hook_task = 2;
+}
+

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message Vector3Proto {
+	float x = 1;
+	float y = 2;
+	float z = 3;
+}
+

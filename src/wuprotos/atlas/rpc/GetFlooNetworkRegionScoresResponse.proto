@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/FlooNetworkRegionScores.proto";
+message GetFlooNetworkRegionScoresResponse {
+	string season_id = 1;
+	string region_id = 2;
+	wuprotos.atlas.proto.FlooNetworkRegionScores scores = 3;
+	string region_name = 4;
+}
+

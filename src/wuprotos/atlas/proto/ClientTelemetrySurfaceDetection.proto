@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetrySurfaceDetection {
+	string encounter_gmt_id = 1;
+	bool found_surface = 2;
+}
+

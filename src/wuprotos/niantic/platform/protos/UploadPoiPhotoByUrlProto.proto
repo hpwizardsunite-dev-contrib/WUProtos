@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message UploadPoiPhotoByUrlProto {
+	string request_id = 1;
+	string image_url = 2;
+}
+
+
+//----- End protos -----
+//------------------------------
+//----- Begin protos -----
+

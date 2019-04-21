@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientConditionalModifiers.proto";
+message ClientBuffProto {
+	string id = 1;
+	string reward_bonus_loc_key = 3;
+	string reward_bonus_icon = 4;
+	string status_icon = 5;
+	string display_name = 6;
+	repeated ClientConditionalModifiers conditional_modifiers = 7;
+}
+

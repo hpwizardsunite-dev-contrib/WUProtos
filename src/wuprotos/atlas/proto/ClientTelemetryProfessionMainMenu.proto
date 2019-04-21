@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientTelemetryProfessionProgress.proto";
+message ClientTelemetryProfessionMainMenu {
+	int32 player_level = 1;
+	string active_profession_gmt_id = 2;
+	repeated ClientTelemetryProfessionProgress profession_progress = 3;
+}
+

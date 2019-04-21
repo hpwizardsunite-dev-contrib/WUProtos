@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-enum AdviceOverlayAlignment {
-    bottom = 0;
-    top = 1;
-}

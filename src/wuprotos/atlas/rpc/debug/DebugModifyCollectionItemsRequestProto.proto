@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+import "wuprotos/atlas/rpc/debug/DebugModifyCollectionItemProto.proto";
+message DebugModifyCollectionItemsRequestProto {
+	repeated DebugModifyCollectionItemProto collection_items = 1;
+}
+

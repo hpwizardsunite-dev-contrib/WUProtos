@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryAssetLoad {
-    string asset_name = 1;
-    double total_load_time = 2;
-    repeated string bundle_name = 3;
-}

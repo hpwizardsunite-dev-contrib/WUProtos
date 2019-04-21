@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+message DailyRewardMonthlyScheduleProto {
+	string id = 1;
+	uint32 number_of_days = 2;
+	LootCollectionProto default_reward = 3;
+}
+

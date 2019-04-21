@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+message AccountCreationDateRequirement {
+	int64 account_creation_date = 1;
+	ComparisonOperator comparison_operator = 2;
+}
+

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/rpc/DayNightTag.proto";
+import "wuprotos/atlas/rpc/MoonPhaseTag.proto";
+message ClientEnvironmentTagsProto {
+	wuprotos.atlas.rpc.DayNightTag day_night = 1;
+	wuprotos.atlas.rpc.MoonPhaseTag moon_phase = 2;
+}
+

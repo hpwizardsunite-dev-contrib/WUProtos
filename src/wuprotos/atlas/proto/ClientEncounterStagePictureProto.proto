@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Vector3Proto.proto";
+message ClientEncounterStagePictureProto {
+	string id = 1;
+	float spawn_scale = 2;
+	float min_scale = 3;
+	float max_scale = 4;
+	Vector3Proto simple_ar_pos_offset = 5;
+}
+

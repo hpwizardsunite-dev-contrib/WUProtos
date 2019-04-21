@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CategoryRandomize.proto";
+message ClientTelemetryProfileButtonRandomize {
+	CategoryRandomize category = 1;
+}
+

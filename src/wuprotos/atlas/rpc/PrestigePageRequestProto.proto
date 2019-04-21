@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message PrestigePageRequestProto {
+	string collection_page_id = 1;
+}
+

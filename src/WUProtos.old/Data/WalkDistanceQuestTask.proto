@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message WalkDistanceQuestTask {
-	int64 required_micrometers_to_walk = 1;
-}

@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Event;
-
-message AnalyticsEvent {
-    string event_name = 1;
-    int64 event_timestamp = 2;
-}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum TriggerType {
+	none_a9a1 = 0;
+	immediate = 1;
+	halting = 2;
+	cooldown = 3;
+}
+

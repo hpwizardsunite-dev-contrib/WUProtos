@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message TemplateVariable {
+	string name = 1;
+	string literal = 2;
+	string key = 3;
+	string lookup_table = 4;
+	bytes byte_value = 5;
+}
+

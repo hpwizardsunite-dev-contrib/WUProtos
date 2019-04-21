@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message PingResponseProto {
+	string user_info = 1;
+	string server_info = 2;
+	string random_response_bytes = 3;
+}
+

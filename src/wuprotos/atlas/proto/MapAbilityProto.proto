@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/MapAbilityTargetType.proto";
+import "wuprotos/atlas/proto/MapAbilityLevelProto.proto";
+message MapAbilityProto {
+	string id = 1;
+	MapAbilityTargetType target_type = 2;
+	string base_buff_gmt_id = 3;
+	float radius = 4;
+	uint32 cooldown_ms = 5;
+	int32 focus_cost = 6;
+	repeated MapAbilityLevelProto map_ability_levels = 7;
+}
+

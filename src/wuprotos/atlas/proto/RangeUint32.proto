@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message RangeUint32 {
+	uint32 min = 1;
+	uint32 max = 2;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.telemetry;
+
+import "wuprotos/niantic/platform/telemetry/TelemetryCommon.proto";
+message PlatformEventData {
+	TelemetryCommon common_telemetry = 1;
+}
+

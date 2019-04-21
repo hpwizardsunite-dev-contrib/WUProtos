@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-import "WUProtos/Enums/CategoryLens.proto";
-
-message ClientTelemetryProfileButtonLens {
-	string pressed_button_id = 1;
-	.WUProtos.Enums.CategoryLens lens_category = 2;
-}

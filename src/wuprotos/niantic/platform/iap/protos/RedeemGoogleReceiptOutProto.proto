@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.iap.protos;
+
+message RedeemGoogleReceiptOutProto {
+	// ref: Niantic.Platform.Iap.Protos.RedeemGoogleReceiptOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+
+	string transaction_token = 1;
+}
+

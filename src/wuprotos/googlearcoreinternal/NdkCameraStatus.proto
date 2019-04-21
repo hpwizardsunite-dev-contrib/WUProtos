@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package wuprotos.googlearcoreinternal;
+
+enum NdkCameraStatus {
+	option allow_alias = true;
+	ok = 0;
+	error_metadata_not_found = -10004;
+	error_invalid_parameter = -10001;
+	error_base = -10000;
+	error_unknown = -10000;
+}
+
+
+//----- End googlearcoreinternal -----
+//------------------------------
+//----- Begin iap -----
+

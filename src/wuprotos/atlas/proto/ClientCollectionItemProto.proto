@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/MysteryItemInfoProto.proto";
+message ClientCollectionItemProto {
+	string id = 1;
+	string name = 2;
+	string return_location = 3;
+	string description = 4;
+	string icon_returned = 5;
+	bool show_in_ui = 6;
+	repeated MysteryItemInfoProto mystery_data = 7;
+	string sticker_placed_storyboard_id = 8;
+}
+

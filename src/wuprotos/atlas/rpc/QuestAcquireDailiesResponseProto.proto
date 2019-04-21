@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message QuestAcquireDailiesResponseProto {
+	repeated string added_quest_gmt_ids = 1;
+	repeated string replaced_quest_gmt_ids = 2;
+	repeated string deleted_quest_gmt_ids = 3;
+}
+

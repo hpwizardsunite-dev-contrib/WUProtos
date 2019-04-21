@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/SharedQualityLevelProto.proto";
+message QualityLevelProto {
+	// ref: Atlas.Proto.QualityLevelProto/AntialiasingSetting
+	enum AntialiasingSetting {
+		off_a33b = 0;
+		msaa2x = 2;
+		msaa4x = 4;
+		msaa8x = 8;
+	}
+
+	// ref: Atlas.Proto.QualityLevelProto/RealtimeShadowsSetting
+	enum RealtimeShadowsSetting {
+		off_a200 = 0;
+		realtime_planar = 1;
+		realtime_planar_and_self_shadowing = 2;
+	}
+
+	// ref: Atlas.Proto.QualityLevelProto/TextureQualitySetting
+	enum TextureQualitySetting {
+		full_res = 0;
+		half_res = 1;
+	}
+
+	string id = 1;
+	SharedQualityLevelProto quality_level = 2;
+}
+

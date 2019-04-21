@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum GestureResetMode {
+	default_a9ea = 0;
+	next_frame = 1;
+	end_of_touch_sequence = 2;
+}
+

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.iap.protos;
+
+import "wuprotos/atlas/rpc/CurrencyQuantityProto.proto";
+import "wuprotos/niantic/platform/iap/protos/GameItemContentProto.proto";
+import "wuprotos/niantic/platform/iap/protos/SkuPresentationProto.proto";
+message AvailableSkuProto {
+	string id = 1;
+	bool is_third_party_vendor_item = 2;
+	repeated wuprotos.atlas.rpc.CurrencyQuantityProto price = 3;
+	repeated wuprotos.atlas.rpc.CurrencyQuantityProto currency_granted = 4;
+	repeated GameItemContentProto game_item_content = 5;
+	repeated SkuPresentationProto presentation_data = 6;
+	bool can_be_purchased = 7;
+}
+

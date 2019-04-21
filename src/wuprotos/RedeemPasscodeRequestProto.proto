@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos;
+
+message RedeemPasscodeRequestProto {
+	string passcode = 1;
+}
+

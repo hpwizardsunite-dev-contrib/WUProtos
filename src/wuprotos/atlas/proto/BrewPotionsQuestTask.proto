@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message BrewPotionsQuestTask {
+	int64 required_brew_count = 1;
+}
+

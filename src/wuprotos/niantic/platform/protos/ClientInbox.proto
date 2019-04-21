@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+import "wuprotos/niantic/platform/protos/TemplateVariable.proto";
+message ClientInbox {
+	// ref: Niantic.Platform.Protos.ClientInbox/Types/Label
+	enum Label {
+		UNSET_LABEL = 0;
+		UNREAD = 1;
+		NEW = 2;
+		IMMEDIATE = 3;
+	}
+
+	// ref: Niantic.Platform.Protos.ClientInbox/Types/Notification
+	message Notification {
+		string notification_id = 1;
+		string title_key = 2;
+		string category = 3;
+		int64 create_timestamp_ms = 4;
+		repeated TemplateVariable variables = 5;
+		repeated ClientInbox.Label labels = 6;
+		int64 expire_time_ms = 7;
+	}
+
+	repeated Notification notifications = 1;
+	repeated TemplateVariable builtin_variables = 2;
+}
+

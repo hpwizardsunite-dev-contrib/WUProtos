@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CollectionFamilyProto.proto";
+message CollectionSubfeatureFamilyOrdersProto {
+	CollectionFamilyProto.SubfeatureType subfeature = 1;
+	repeated string family_ids = 2;
+}
+

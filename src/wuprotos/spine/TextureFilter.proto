@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum TextureFilter {
+	nearest = 0;
+	linear = 1;
+	mip_map = 2;
+	mip_map_nearest_nearest = 3;
+	mip_map_linear_nearest = 4;
+	mip_map_nearest_linear = 5;
+	mip_map_linear_linear = 6;
+}
+

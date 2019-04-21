@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message PlayFortressChallengesQuestTask {
-	int64 required_challenge_count = 1;
-}

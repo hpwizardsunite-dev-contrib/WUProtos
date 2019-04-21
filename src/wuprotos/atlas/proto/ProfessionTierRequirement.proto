@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+message ProfessionTierRequirement {
+	string profession_gmt_id = 1;
+	uint32 profession_tier = 2;
+	ComparisonOperator comparison_operator = 3;
+}
+

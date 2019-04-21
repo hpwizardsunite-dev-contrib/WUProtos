@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/AdditionalSelectionRule.proto";
+message ClientMapAbilityProto {
+	string id = 1;
+	string name = 2;
+	string icon = 3;
+	string description = 4;
+	string effect_sprite = 5;
+	string status_icon = 6;
+	int32 slot = 7;
+	string effect_prefab = 8;
+	AdditionalSelectionRule rule = 9;
+}
+

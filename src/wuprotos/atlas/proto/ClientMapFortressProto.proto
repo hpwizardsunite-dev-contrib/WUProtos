@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientMapFortressProto {
+	string fortress_template_gmt_id = 1;
+	string owning_team_id = 2;
+	int64 electoral_votes = 3;
+	string season_id = 4;
+	string region_id = 5;
+	int64 wc_active_until_ms = 6;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.googlearcoreinternal;
+
+enum ApiPlaneFindingMode {
+	disabled_a9a6 = 0;
+	horizontal = 1;
+}
+

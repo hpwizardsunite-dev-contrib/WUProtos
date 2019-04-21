@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.googlearcore;
+
+enum TrackableHitFlags {
+	none = 0;
+	plane_within_polygon = 1;
+	plane_within_bounds = 2;
+	plane_within_infinity = 4;
+	point_cloud = 8;
+}
+

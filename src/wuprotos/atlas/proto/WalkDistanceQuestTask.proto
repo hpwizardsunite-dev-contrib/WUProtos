@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message WalkDistanceQuestTask {
+	int64 required_micrometers_to_walk = 1;
+}
+

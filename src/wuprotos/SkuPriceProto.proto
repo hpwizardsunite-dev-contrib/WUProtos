@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos;
+
+message SkuPriceProto {
+	string currency_type = 1;
+	int32 price = 2;
+}
+

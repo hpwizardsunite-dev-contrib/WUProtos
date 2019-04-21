@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/PoiDetails.proto";
+import "wuprotos/atlas/proto/PoiAccessibility.proto";
+message GetFortressDetailsResponseProto {
+	// ref: Atlas.Rpc.GetFortressDetailsResponseProto/Types/ChamberPreview
+	message ChamberPreview {
+		string chamber_template_gmt_id = 1;
+		uint32 player_count = 2;
+		int64 start_time_ms = 3;
+	}
+
+	string fortress_template_gmt_id = 1;
+	repeated ChamberPreview chambers = 2;
+	string partner_id = 4;
+	PoiDetails poi_details = 5;
+	wuprotos.atlas.proto.PoiAccessibility poi_accessibility = 6;
+}
+

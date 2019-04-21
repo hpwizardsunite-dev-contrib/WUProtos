@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message PushNotificationRegistryOutProto {
+	// ref: Niantic.Platform.Protos.PushNotificationRegistryOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		NO_CHANGE = 2;
+	}
+
+	Result result = 1;
+}
+

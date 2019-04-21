@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CollectionFamilyType.proto";
+import "wuprotos/atlas/proto/CollectionFamilyLevelProto.proto";
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+import "wuprotos/atlas/proto/Requirements.proto";
+message CollectionFamilyProto {
+	// ref: Atlas.Proto.CollectionFamilyProto/Types/SubfeatureType
+	enum SubfeatureType {
+		UNSET = 0;
+		EXPLORATION = 1;
+		CHALLENGE = 2;
+		MYSTERIES = 3;
+		EVENTS = 4;
+	}
+
+	string id = 1;
+	CollectionFamilyType family_type = 2;
+	repeated string items = 3;
+	repeated CollectionFamilyLevelProto levels = 4;
+	repeated string pages = 5;
+	string family_rune_name = 6;
+	string family_rank_table_id = 7;
+	repeated LootCollectionProto returned_rewards = 8;
+	repeated string rune_id = 9;
+	repeated string apex_items = 10;
+	Requirements unlock_requirements = 11;
+	SubfeatureType subfeature_type = 12;
+}
+

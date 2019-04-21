@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.googlearcoreinternal;
+
+enum ApiLightEstimationMode {
+	disabled_ad50 = 0;
+	ambient_intensity = 1;
+}
+

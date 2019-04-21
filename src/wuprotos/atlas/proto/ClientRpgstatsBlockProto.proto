@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientRpgstatsBlockProto {
+	string id = 1;
+	repeated string relevant_stats = 2;
+}
+

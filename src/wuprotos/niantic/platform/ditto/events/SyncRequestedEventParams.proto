@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.ditto.events;
+
+message SyncRequestedEventParams {
+}
+
+
+//----- End events -----
+//------------------------------
+//----- Begin gamemaster -----
+

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum LanguageCode {
+	en__us = 0;
+	fr__fr = 1;
+	de__de = 2;
+	it__it = 3;
+	es__es = 4;
+	zh__cn = 5;
+	zh__tw = 6;
+	ja__jp = 7;
+	ko__kr = 8;
+	ru__ru = 9;
+	da__dk = 10;
+	nl__nl = 11;
+	no__no = 12;
+	pl__pl = 13;
+	pt__br = 14;
+	es__mx = 15;
+	sv__se = 16;
+	tr__tr = 17;
+	fr__ca = 18;
+	max = 19;
+}
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message CreateOrUpdatePlayerRequestProto {
+	// ref: Atlas.Rpc.CreateOrUpdatePlayerRequestProto/Types/ClientPlayerLocaleProto
+	message ClientPlayerLocaleProto {
+		string country = 1;
+		string language = 2;
+		string timezone = 3;
+	}
+
+	ClientPlayerLocaleProto locale = 1;
+}
+

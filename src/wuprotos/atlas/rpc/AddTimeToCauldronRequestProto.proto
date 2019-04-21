@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message AddTimeToCauldronRequestProto {
+	int64 cauldron_id = 1;
+	string time_item_gmt_id = 2;
+}
+

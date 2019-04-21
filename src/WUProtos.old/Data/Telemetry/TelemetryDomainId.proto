@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Telemetry;
-
-enum TelemetryDomainId {
-	TELEMETRY_NO_DOMAIN_ID = 0;
-	TELEMETRY_DITTO = 1;
-	TELEMETRY_GAME = 2;
-}

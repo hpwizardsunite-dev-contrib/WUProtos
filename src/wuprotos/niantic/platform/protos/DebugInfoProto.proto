@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message DebugInfoProto {
+	double latitude = 1;
+	double longitude = 2;
+}
+

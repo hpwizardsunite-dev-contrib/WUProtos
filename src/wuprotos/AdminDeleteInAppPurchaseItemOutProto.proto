@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos;
+
+message AdminDeleteInAppPurchaseItemOutProto {
+	// ref: AdminDeleteInAppPurchaseItemOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+
+	Status status = 1;
+}
+

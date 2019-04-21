@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ColorProto.proto";
+message StoreRarityProto {
+	string id = 1;
+	ColorProto text_color = 2;
+	string title = 3;
+}
+

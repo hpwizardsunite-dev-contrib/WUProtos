@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message DebugPlayerSelectTeamResponseProto {
+	// ref: Atlas.Rpc.DebugPlayerSelectTeamResponseProto/Types/Result
+	enum Result {
+		UNKNOWN = 0;
+		TEAM_SET = 1;
+		TEAM_ID_INVALID = 2;
+	}
+
+	Result result = 1;
+}
+

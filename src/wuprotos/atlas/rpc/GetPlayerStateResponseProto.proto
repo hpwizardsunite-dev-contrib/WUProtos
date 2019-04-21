@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/proto/ClientPlayerProto.proto";
+message GetPlayerStateResponseProto {
+	wuprotos.atlas.proto.ClientPlayerProto player = 1;
+}
+

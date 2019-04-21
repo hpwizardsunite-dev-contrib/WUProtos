@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message RemoveVaultItemResponseProto {
+	// ref: Atlas.Rpc.RemoveVaultItemResponseProto/Types/Status
+	enum Status {
+		NONE = 0;
+		SUCCESS = 1;
+		VAULT_ITEM_NOT_FOUND = 2;
+	}
+
+	Status status = 1;
+}
+

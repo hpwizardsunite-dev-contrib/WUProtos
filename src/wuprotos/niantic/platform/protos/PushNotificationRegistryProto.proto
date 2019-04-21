@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+import "wuprotos/niantic/platform/protos/ApnToken.proto";
+import "wuprotos/niantic/platform/protos/GcmToken.proto";
+message PushNotificationRegistryProto {
+	ApnToken apn_token = 1;
+	GcmToken gcm_token = 2;
+}
+

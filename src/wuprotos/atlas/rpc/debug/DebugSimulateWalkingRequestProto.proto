@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc.debug;
+
+message DebugSimulateWalkingRequestProto {
+	float distance_simulated_km = 1;
+}
+

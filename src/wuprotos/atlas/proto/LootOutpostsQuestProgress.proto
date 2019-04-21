@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message LootOutpostsQuestProgress {
+	int64 current_outpost_count = 1;
+}
+

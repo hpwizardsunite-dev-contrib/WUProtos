@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/BuffDuration.proto";
+import "wuprotos/atlas/proto/BuffExclusivityGroup.proto";
+import "wuprotos/atlas/proto/ConditionalModifiers.proto";
+message BuffProto {
+	// ref: Atlas.Proto.BuffProto/Types/BuffType
+	enum BuffType {
+		NONE = 0;
+		BUFF = 1;
+		DEBUFF = 2;
+	}
+
+	string id = 1;
+	BuffDuration duration = 3;
+	BuffExclusivityGroup exclusivity_group = 4;
+	BuffType buff_type = 5;
+	repeated ConditionalModifiers conditional_modifiers = 7;
+}
+

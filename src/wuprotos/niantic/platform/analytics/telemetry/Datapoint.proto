@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.analytics.telemetry;
+
+message Datapoint {
+	// ref: Niantic.Platform.Analytics.Telemetry.Datapoint/Types/Kind
+	enum Kind {
+		UNSPECIFIED = 0;
+		GAUGE = 1;
+		DELTA = 2;
+		CUMULATIVE = 3;
+	}
+
+	// ref: Niantic.Platform.Analytics.Telemetry.Datapoint/ValueOneofCase
+
+	int64 long = 1;
+	double double = 2;
+	bool boolean = 3;
+	Kind kind = 4;
+}
+
+
+//----- End telemetry -----
+//------------------------------
+//----- Begin token -----
+

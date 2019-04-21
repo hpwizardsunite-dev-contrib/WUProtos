@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+import "wuprotos/niantic/platform/protos/LoginDetail.proto";
+message ListLoginActionOutProto {
+	bool success = 1;
+	repeated LoginDetail login_detail = 2;
+}
+

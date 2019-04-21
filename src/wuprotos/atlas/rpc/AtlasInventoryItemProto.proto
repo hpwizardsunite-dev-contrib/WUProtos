@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+import "wuprotos/atlas/rpc/PlayerProfileProto.proto";
+import "wuprotos/atlas/rpc/InventoryVaultItemProto.proto";
+import "wuprotos/atlas/rpc/InventoryCollectionItemProto.proto";
+import "wuprotos/atlas/rpc/InventoryCollectionFamilyProto.proto";
+import "wuprotos/atlas/rpc/InventoryWalkboxItemProto.proto";
+import "wuprotos/atlas/rpc/InventoryFeatureFlagsProto.proto";
+import "wuprotos/atlas/rpc/InventoryPortkeyItemProto.proto";
+import "wuprotos/atlas/proto/ActiveBuffListProto.proto";
+import "wuprotos/atlas/rpc/InventoryCollectionPageProto.proto";
+import "wuprotos/atlas/rpc/InventoryVaultCapacityProto.proto";
+import "wuprotos/atlas/rpc/InventoryCauldronProto.proto";
+import "wuprotos/atlas/rpc/InventoryEscrowedRewardsProto.proto";
+import "wuprotos/atlas/rpc/PlayerProfessionsProgressV3Proto.proto";
+import "wuprotos/atlas/rpc/InventoryQuestLogProto.proto";
+import "wuprotos/atlas/rpc/PlayerAchievementProto.proto";
+message AtlasInventoryItemProto {
+	// ref: Atlas.Rpc.AtlasInventoryItemProto/TypeOneofCase
+
+	PlayerProfileProto profile = 1;
+	InventoryVaultItemProto vault_item = 2;
+	InventoryCollectionItemProto collection_item = 3;
+	InventoryCollectionFamilyProto collection_family = 4;
+	InventoryWalkboxItemProto walkbox = 5;
+	InventoryFeatureFlagsProto player_flags = 6;
+	InventoryPortkeyItemProto portkey = 7;
+	wuprotos.atlas.proto.ActiveBuffListProto player_active_buff_list = 8;
+	InventoryCollectionPageProto collection_page = 9;
+	InventoryVaultCapacityProto vault_capacity = 11;
+	InventoryCauldronProto cauldron = 12;
+	InventoryEscrowedRewardsProto escrowed_rewards = 13;
+	PlayerProfessionsProgressV3Proto professions_progress_v3 = 14;
+	InventoryQuestLogProto quest_log = 15;
+	PlayerAchievementProto achievement = 16;
+}
+

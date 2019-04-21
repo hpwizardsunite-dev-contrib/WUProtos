@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CurrencyVaultItemProto.proto";
+import "wuprotos/atlas/proto/StaminaVaultItemProto.proto";
+import "wuprotos/atlas/proto/DarkDetectorVaultItemProto.proto";
+import "wuprotos/atlas/proto/ContainerVaultItemProto.proto";
+import "wuprotos/atlas/proto/RunestoneVaultItemProto.proto";
+import "wuprotos/atlas/proto/PotionVaultItemProto.proto";
+import "wuprotos/atlas/proto/PotionIngredientVaultItemProto.proto";
+import "wuprotos/atlas/proto/EnergyVaultItemProto.proto";
+import "wuprotos/atlas/proto/CauldronTimeItemProto.proto";
+message VaultItemProto {
+	// ref: Atlas.Proto.VaultItemProto/PotionStateEnum
+	enum PotionStateEnum {
+		usable = 0;
+		map_unusable = 1;
+		potion_active = 2;
+		stronger_active = 3;
+		hpalready_full = 4;
+		focus_already_full = 5;
+	}
+
+	// ref: Atlas.Proto.VaultItemProto/VaultItemTypeOneofCase
+
+	string id = 1;
+	CurrencyVaultItemProto currency_item = 2;
+	StaminaVaultItemProto stamina_item = 3;
+	DarkDetectorVaultItemProto detector_item = 4;
+	ContainerVaultItemProto container_item = 5;
+	RunestoneVaultItemProto runestone_item = 6;
+	PotionVaultItemProto potion_item = 7;
+	PotionIngredientVaultItemProto potion_ingredient = 8;
+	int64 cap = 9;
+	EnergyVaultItemProto energy_item = 10;
+	CauldronTimeItemProto cauldron_time_item = 11;
+	int32 relative_value = 100;
+	string vault_category_gmt_id = 101;
+}
+

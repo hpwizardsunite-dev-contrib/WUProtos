@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/CategoryAssetType.proto";
+message ClientTelemetryProfileButtonAssset {
+	string pressed_button_id = 1;
+	bool sticker_add = 2;
+	CategoryAssetType asset_type = 3;
+}
+

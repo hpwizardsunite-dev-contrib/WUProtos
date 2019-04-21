@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/AudioParameterProto.proto";
+message SoundConfigProto {
+	string sound_bank = 1;
+	string sound_event = 2;
+	repeated AudioParameterProto parameters = 3;
+}
+

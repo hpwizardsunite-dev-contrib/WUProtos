@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/StorePackConfigProto.proto";
+import "wuprotos/niantic/platform/iap/IapStoreItem.proto";
+import "wuprotos/atlas/proto/LootCollectionProto.proto";
+import "wuprotos/SkuDataProto.proto";
+import "wuprotos/atlas/proto/Requirements.proto";
+message StorePackProto {
+	// ref: Atlas.Proto.StorePackProto/TimeReqTuple
+	message TimeReqTuple {
+	}
+
+	repeated StorePackConfigProto store_pack_config = 7;
+	string id = 1;
+	wuprotos.niantic.platform.iap.IapStoreItem store_item = 8;
+	LootCollectionProto contents = 2;
+	LootCollectionProto cost = 3;
+	string iap_id = 4;
+	wuprotos.SkuDataProto sku_data = 5;
+	Requirements requirements = 6;
+}
+

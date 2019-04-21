@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-import "WUProtos/Data/Telemetry/PlatformDataId.proto";
-
-message ClientTelemetry {
-	repeated .WUProtos.Data.Telemetry.PlatformDataId data_id = 1;
-	repeated bytes application_data = 2;
-}

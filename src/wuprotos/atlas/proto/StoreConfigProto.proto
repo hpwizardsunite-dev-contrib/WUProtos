@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/StoreCategoryProto.proto";
+import "wuprotos/atlas/proto/StoreRarityProto.proto";
+message StoreConfigProto {
+	repeated StoreCategoryProto store_categories = 3;
+	string id = 1;
+	repeated StoreRarityProto store_rarities = 2;
+}
+

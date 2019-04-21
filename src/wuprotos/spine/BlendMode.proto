@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.spine;
+
+enum BlendMode {
+	normal_a0eb = 0;
+	additive = 1;
+	multiply = 2;
+	screen = 3;
+}
+

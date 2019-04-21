@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientTelemetrySubsystemStartup.proto";
+message ClientTelemetryStartup {
+	string client_version = 2;
+	string device_type = 3;
+	bool first_time = 4;
+	double load_to_tos_login_time = 5;
+	double load_to_map_time = 6;
+	string device_os = 7;
+	string graphics_device_vendor = 8;
+	string graphics_device_name = 9;
+	string graphics_device_type = 10;
+	double graphics_shader_level = 11;
+	repeated ClientTelemetrySubsystemStartup subsystem_load_times = 12;
+}
+

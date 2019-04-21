@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/TimeActiveBuffExpiration.proto";
+import "wuprotos/atlas/proto/ChargesActiveBuffExpiration.proto";
+import "wuprotos/atlas/proto/ProfessionBuffExpiration.proto";
+import "wuprotos/atlas/proto/PermanentBuffExpiration.proto";
+import "wuprotos/atlas/proto/ChallengeBuffExpiration.proto";
+message ActiveBuffExpiration {
+	// ref: Atlas.Proto.ActiveBuffExpiration/TypeOneofCase
+
+	TimeActiveBuffExpiration time = 1;
+	ChargesActiveBuffExpiration charges = 2;
+	ProfessionBuffExpiration profession = 3;
+	PermanentBuffExpiration permanent = 4;
+	ChallengeBuffExpiration challenge = 6;
+}
+

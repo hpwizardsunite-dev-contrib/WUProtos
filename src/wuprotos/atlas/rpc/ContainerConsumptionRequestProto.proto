@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package wuprotos.atlas.rpc;
+
+message ContainerConsumptionRequestProto {
+	string vault_item_id = 1;
+}
+

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetryProfessionProgress {
+	string profession_gmt_id = 1;
+	uint32 rank_points = 2;
+}
+

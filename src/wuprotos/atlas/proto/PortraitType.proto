@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum PortraitType {
+	PORTRAIT_TYPE_UNSET = 0;
+	PORTRAIT_PHOTO = 1;
+	PORTRAIT_VIDEO = 2;
+}
+

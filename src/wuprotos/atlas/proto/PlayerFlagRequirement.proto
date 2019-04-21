@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+message PlayerFlagRequirement {
+	// ref: Atlas.Proto.PlayerFlagRequirement/FlagValueOneofCase
+
+	string player_flag_feature_id = 1;
+	string player_flag_id = 2;
+	ComparisonOperator comparison_operator = 3;
+	bool bval = 4;
+	int64 lval = 5;
+	string sval = 6;
+	float fval = 7;
+}
+

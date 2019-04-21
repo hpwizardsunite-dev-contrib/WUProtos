@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.googlearcore;
+
+enum TrackableQueryFilter {
+	TRACKABLE_QUERY_ALL = 0;
+	TRACKABLE_QUERY_NEW = 1;
+}
+

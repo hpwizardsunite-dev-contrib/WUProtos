@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientStoryboardStep.proto";
+message ClientStoryboardProto {
+	string id = 1;
+	repeated ClientStoryboardStep steps = 2;
+	string trigger_point = 3;
+	int32 priority = 4;
+}
+

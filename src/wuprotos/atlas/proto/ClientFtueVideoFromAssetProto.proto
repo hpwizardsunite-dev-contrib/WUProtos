@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientFtueVideoFromAssetProto {
+	string asset_name_format = 1;
+	string fallback_asset_name_format = 2;
+}
+

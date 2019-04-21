@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientWandLengthProto {
+	string name = 1;
+	string model_path = 2;
+	int32 slidervalue = 3;
+}
+

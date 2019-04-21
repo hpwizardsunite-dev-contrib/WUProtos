@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+enum DevicePlatform {
+	DEVICE_UNKNOWN = 0;
+	DEVICE_IOS = 1;
+	DEVICE_ANDROID = 2;
+}
+

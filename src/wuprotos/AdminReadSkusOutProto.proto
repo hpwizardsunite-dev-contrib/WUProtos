@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos;
+
+import "wuprotos/SkuDataProto.proto";
+message AdminReadSkusOutProto {
+	repeated SkuDataProto sku = 1;
+}
+

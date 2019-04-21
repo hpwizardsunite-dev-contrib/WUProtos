@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Collection;
-
-message CollectionItemPlacedRequirement {
-	string item_gmt_id = 1;
-	bool check_for_current_prestige_only = 2;
-	string page_gmt_id = 3;
-}

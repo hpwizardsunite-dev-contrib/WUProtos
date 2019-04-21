@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+message CollectionFamilyRequirement {
+	string family_id = 1;
+	int32 family_level = 2;
+	ComparisonOperator comparison_operator = 3;
+}
+

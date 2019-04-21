@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum ContinuousGesturePhase {
+	none_a891 = 0;
+	started_a891 = 1;
+	updated = 2;
+	ended_a891 = 3;
+}
+

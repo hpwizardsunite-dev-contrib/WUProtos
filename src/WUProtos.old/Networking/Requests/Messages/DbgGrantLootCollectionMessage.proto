@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Networking.Requests.Messages;
-
-import "WUProtos/Data/Loot/LootCollection.proto";
-
-message DbgGrantLootCollectionMessage {
-    .WUProtos.Data.Loot.LootCollection loot_collection = 1;
-}

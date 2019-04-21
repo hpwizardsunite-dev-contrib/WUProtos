@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.googlearcoreinternal;
+
+enum NdkCameraMetadataType {
+	NDK_METADATA_BYTE = 0;
+	NDK_METADATA_INT32 = 1;
+	NDK_METADATA_FLOAT = 2;
+	NDK_METADATA_INT64 = 3;
+	NDK_METADATA_DOUBLE = 4;
+	NDK_METADATA_RATIONAL = 5;
+	NDK_METADATA_NUM_TYPES  = 6;
+}
+

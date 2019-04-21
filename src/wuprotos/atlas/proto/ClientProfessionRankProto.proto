@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ClientProfessionNodeProto.proto";
+message ClientProfessionRankProto {
+	string name = 2;
+	repeated ClientProfessionNodeProto profession_nodes = 3;
+	string image_unlocked = 4;
+	string image_unlocked_open = 5;
+	string image_locked = 6;
+	string image_locked_open = 7;
+	int32 professin_rank_order = 8;
+}
+

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.protos;
+
+message SubmitNewPoiOutProto {
+	// ref: Niantic.Platform.Protos.SubmitNewPoiOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+		INTERNAL_ERROR = 3;
+		TOO_MANY_RECENT_SUBMISSIONS = 4;
+		INVALID_INPUT = 5;
+		MINOR = 6;
+	}
+
+	Status status = 1;
+	repeated string message = 2;
+}
+

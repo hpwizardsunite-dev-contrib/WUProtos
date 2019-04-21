@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/ComparisonOperator.proto";
+message LevelRequirement {
+	ComparisonOperator comparison_operator = 1;
+	int32 level = 2;
+}
+

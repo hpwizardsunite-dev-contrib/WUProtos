@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientTelemetryException {
+	string exception_type = 1;
+	string stack_trace = 2;
+}
+

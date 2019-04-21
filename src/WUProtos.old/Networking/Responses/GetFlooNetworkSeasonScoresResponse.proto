@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Networking.Responses;
-
-import "WUProtos/Data/FlooNetworkSeasonScores.proto";
-
-message GetFlooNetworkSeasonScoresResponse {
-	string season_id = 1;
-	.WUProtos.Data.FlooNetworkSeasonScores scores = 2;
-}

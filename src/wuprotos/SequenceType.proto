@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum SequenceType {
+	none_a610 = 0;
+	spawn_basic_obstacle = 1;
+	spawn_encounter_target = 2;
+	de_spawn_obstacle = 3;
+	play_choreography_by_file_name = 4;
+	delay_action = 5;
+}
+

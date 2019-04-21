@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package wuprotos.niantic.platform.inventory;
+
+import "wuprotos/niantic/platform/inventory/InventoryItemProto.proto";
+message InventoryProto {
+	repeated InventoryItemProto inventory_item = 1;
+}
+
+
+//----- End inventory -----
+//------------------------------
+//----- Begin platform -----
+

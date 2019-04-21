@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+message ClientDailyRewardProto {
+	bool hide_as_crate = 1;
+	bool make_sparkly = 2;
+}
+

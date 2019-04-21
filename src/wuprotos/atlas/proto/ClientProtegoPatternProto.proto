@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package wuprotos.atlas.proto;
+
+import "wuprotos/atlas/proto/Vector2Proto.proto";
+message ClientProtegoPatternProto {
+	string id = 1;
+	Vector2Proto ui_target_start_pos = 2;
+	float ui_target_start_radius = 3;
+	Vector2Proto ui_target_end_pos = 4;
+	float ui_target_end_radius = 5;
+}
+

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package wuprotos;
+
+enum GestureRecognitionState {
+	option allow_alias = true;
+	ready = 0;
+	started_a870 = 1;
+	in_progress_a870 = 2;
+	failed = 3;
+	ended_a870 = 4;
+	recognized = 4;
+	fail_and_retry = 5;
+}
+

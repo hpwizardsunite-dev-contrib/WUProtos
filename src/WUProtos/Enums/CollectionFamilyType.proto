@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum CollectionFamilyType {
+    COLLECTION_FAMILY_TYPE_UNKNOWN = 0;
+    NORMAL = 1;
+    APEX = 2;
+}

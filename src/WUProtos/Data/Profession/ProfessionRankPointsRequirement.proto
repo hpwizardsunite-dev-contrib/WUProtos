@@ -1,0 +1,10 @@
+syntax = "proto3";
+package WUProtos.Data.Profession;
+
+import "WUProtos/Enums/ComparisonOperator.proto";
+
+message ProfessionRankPointsRequirement {
+	string profession_gmt_id = 1;
+	int32 rank_points = 2;
+	.WUProtos.Enums.ComparisonOperator comparison_operator = 3;
+}

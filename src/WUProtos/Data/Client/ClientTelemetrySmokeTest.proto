@@ -1,0 +1,10 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientTelemetrySmokeTest {
+	string current_bot_program_name = 1;
+	double time_start = 2;
+	double time_end = 3;
+	double time_delta = 4;
+	int32 smoke_test_count = 5;
+}

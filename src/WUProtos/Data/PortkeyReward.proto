@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message PortkeyReward {
+	string portkey_id = 1;
+}

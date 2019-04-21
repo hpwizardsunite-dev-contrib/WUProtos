@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientTelemetrySettingsAuthUpdated {
+	string primary_auth_channel = 1;
+	string secondary_auth_channel = 2;
+	string platform = 3;
+}

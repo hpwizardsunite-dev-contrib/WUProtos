@@ -1,0 +1,15 @@
+syntax = "proto3";
+package WUProtos.Data.Encounter;
+
+import "WUProtos/Data/Encounter/EncounterStage.proto";
+
+message Encounter {
+	repeated string encounter_searching_idle_timelines = 1;
+	string id = 2;
+	repeated string encounter_assets = 3;
+	string collection_item_reward_gmt_id = 4;
+	repeated .WUProtos.Data.Encounter.EncounterStage stages = 5;
+	int32 collection_item_reward_shards = 6;
+	string collection_family_gmt_id = 7;
+	string affinity_profession_id = 8;
+}

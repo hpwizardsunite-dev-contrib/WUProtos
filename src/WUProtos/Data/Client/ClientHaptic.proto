@@ -1,0 +1,11 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientHaptic {
+    string id = 1;
+    repeated int32 ioswait_timings = 2;
+    repeated int32 ioshaptic_types = 3;
+    repeated int32 android_wait_timings = 4;
+    repeated int32 android_amplitudes = 5;
+    repeated int32 android_durations = 6;
+}

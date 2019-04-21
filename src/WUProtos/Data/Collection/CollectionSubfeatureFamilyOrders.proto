@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data.Collection;
+
+import "WUProtos/Data/Collection/CollectionFamily.proto";
+
+message CollectionSubfeatureFamilyOrders {
+	.WUProtos.Data.Collection.CollectionFamily.SubfeatureType subfeature = 1;
+	repeated string family_ids = 2;
+}

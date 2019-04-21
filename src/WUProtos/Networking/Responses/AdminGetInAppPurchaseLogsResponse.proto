@@ -1,0 +1,10 @@
+syntax = "proto3";
+package WUProtos.Networking.Responses;
+
+import "WUProtos/Data/Player/PlayerInAppPurchaseLog.proto";
+import "WUProtos/Data/BalanceSnapshotEntry.proto";
+
+message AdminGetInAppPurchaseLogsResponse {
+	repeated .WUProtos.Data.Player.PlayerInAppPurchaseLog log = 1;
+	repeated .WUProtos.Data.BalanceSnapshotEntry current_balance = 2;
+}

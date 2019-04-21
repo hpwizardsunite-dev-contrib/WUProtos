@@ -1,0 +1,18 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Color.proto";
+
+message ClientRecipe {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+    string icon = 4;
+    string model = 5;
+    string collect_fx = 6;
+    string crafting_fx = 7;
+    string reveal_fx = 8;
+    .WUProtos.Data.Color primary_color = 9;
+    .WUProtos.Data.Color secondary_color = 10;
+    int32 index = 11;
+}

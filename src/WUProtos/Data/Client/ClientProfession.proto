@@ -1,0 +1,22 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Client/ClientProfessionRank.proto";
+
+message ClientProfession {
+    string id = 1;
+    repeated .WUProtos.Data.Client.ClientProfessionRank profession_ranks = 2;
+    string name = 3;
+    string desc = 4;
+    string icon = 5;
+    string mentor_name = 6;
+    string mentor_desc = 7;
+    string mentor_icon = 8;
+    string screen_background = 9;
+    string icon_stamp = 10;
+    string screen_background_header = 11;
+    bool show_coming_soon = 12;
+    string icon_highlighted = 13;
+    bool show_profession_rank_meter = 14;
+    string profession_activated_sfx = 15;
+}

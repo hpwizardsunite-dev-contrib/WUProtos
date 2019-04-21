@@ -1,0 +1,20 @@
+syntax = "proto3";
+package WUProtos.Data.Profession;
+
+import "WUProtos/Data/Requirements.proto";
+import "WUProtos/Data/Loot/LootCollection.proto";
+
+message ProfessionNodeLevel {
+	string buff_gmt_id = 1;
+	.WUProtos.Data.Requirements prerequisite = 2;
+	.WUProtos.Data.Loot.LootCollection cost = 3;
+	repeated string map_abilities = 4;
+	uint32 rank_points = 5;
+
+	enum Purpose {
+		none = 0;
+		buff = 1;
+		learn_new_map_ability = 2;
+		upgrade_map_ability = 3;
+	}
+}

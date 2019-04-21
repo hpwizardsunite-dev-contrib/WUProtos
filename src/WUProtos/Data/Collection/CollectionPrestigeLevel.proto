@@ -1,0 +1,15 @@
+syntax = "proto3";
+package WUProtos.Data.Collection;
+
+import "WUProtos/Data/Color.proto";
+
+message CollectionPrestigeLevel {
+	string border_image = 1;
+	string name = 2;
+	.WUProtos.Data.Color color = 3;
+	bool is_metallic = 4;
+	string frame_mesh = 5;
+	string normal_map = 6;
+	string albedo_map = 7;
+	float roughness = 8;
+}

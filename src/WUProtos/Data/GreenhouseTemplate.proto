@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message GreenhouseTemplate {
+	string id = 1;
+}

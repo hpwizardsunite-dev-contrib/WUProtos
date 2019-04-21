@@ -1,0 +1,14 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Color.proto";
+
+message ClientTeamControl {
+    string id = 1;
+    string team_name = 2;
+    string team_icon = 3;
+    .WUProtos.Data.Color team_color = 4;
+    string team_header_icon = 5;
+    string team_banner = 6;
+    string team_flag = 7;
+}

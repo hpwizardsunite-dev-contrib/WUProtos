@@ -1,0 +1,23 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/StoryboardGenericDialogStep.proto";
+import "WUProtos/Data/StoryboardPauseStep.proto";
+import "WUProtos/Data/StoryboardAdviceOverlayStep.proto";
+import "WUProtos/Data/StoryboardAdviceInterjectionStep.proto";
+import "WUProtos/Data/StoryboardConversationInterjectionStep.proto";
+
+message ClientStoryboardStep {
+    string custom_state = 1;
+
+    oneof Data {
+        .WUProtos.Data.StoryboardGenericDialogStep generic_dialog = 2;
+        .WUProtos.Data.StoryboardPauseStep pause = 3;
+        .WUProtos.Data.StoryboardAdviceOverlayStep advice_overlay = 4;
+        .WUProtos.Data.StoryboardAdviceInterjectionStep advice_interjection = 5;
+        .WUProtos.Data.StoryboardConversationInterjectionStep conversation_interjection = 6;
+    }
+
+    string call_to_action_asset = 7;
+    string call_to_action_button_identifier = 8;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum CategoryLens {
+    CATEGORY_LENS_UNSET = 0;
+    CATEGORY_LENS_TOP = 1;
+    CATEGORY_LENS_MIDDLE = 2;
+    CATEGORY_LENS_BOTTOM = 3;
+}

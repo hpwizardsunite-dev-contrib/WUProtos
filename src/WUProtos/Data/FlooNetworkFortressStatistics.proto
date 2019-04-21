@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message FlooNetworkFortressStatistics {
+	int64 electoral_votes = 2;
+	string owning_team_id = 3;
+}

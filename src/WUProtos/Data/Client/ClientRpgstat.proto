@@ -1,0 +1,13 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientRpgstat {
+    string id = 1;
+    string tooltip = 2;
+    bool percentage = 3;
+    bool show_ui = 4;
+    string stat_name = 5;
+    int32 display_threshold = 6;
+    string icon_display_type = 7;
+    string info_desc = 8;
+}

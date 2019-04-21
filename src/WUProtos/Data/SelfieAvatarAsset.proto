@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/Requirements.proto";
+
+message SelfieAvatarAsset {
+	string id = 1;
+	.WUProtos.Data.Requirements unlock_conditions = 2;
+}

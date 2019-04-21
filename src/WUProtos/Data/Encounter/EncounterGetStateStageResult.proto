@@ -1,0 +1,12 @@
+syntax = "proto3";
+package WUProtos.Data.Encounter;
+
+import "WUProtos/Data/Encounter/EncounterGetStateSwishStageResult.proto";
+import "WUProtos/Data/Encounter/EncounterGetStateCombatStageResult.proto";
+
+message EncounterGetStateStageResult {
+	oneof Type {
+		.WUProtos.Data.Encounter.EncounterGetStateSwishStageResult swish = 1;
+		.WUProtos.Data.Encounter.EncounterGetStateCombatStageResult combat = 2;
+	}
+}

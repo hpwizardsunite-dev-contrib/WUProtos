@@ -1,0 +1,14 @@
+syntax = "proto3";
+package WUProtos.Data.Buff;
+
+import "WUProtos/Data/VaultItemActiveBuffSource.proto";
+import "WUProtos/Data/Profession/ProfessionActiveBuffSource.proto";
+import "WUProtos/Data/MapAbilityActiveBuffSource.proto";
+
+message ActiveBuffSource {
+    oneof Type {
+        .WUProtos.Data.VaultItemActiveBuffSource vault_item = 1;
+        .WUProtos.Data.Profession.ProfessionActiveBuffSource profession = 2;
+        .WUProtos.Data.MapAbilityActiveBuffSource map_ability = 3;
+    }
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Networking.Requests.Messages;
+
+import "WUProtos/Data/Event/AnalyticsEvents.proto";
+
+message PushAnalyticsEventsMessage {
+	.WUProtos.Data.Event.AnalyticsEvents events = 1;
+}

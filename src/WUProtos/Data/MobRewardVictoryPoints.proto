@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message MobRewardVictoryPoints {
+	int32 quantity = 1;
+}

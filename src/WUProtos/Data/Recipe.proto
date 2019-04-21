@@ -1,0 +1,15 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/Loot/LootCollection.proto";
+import "WUProtos/Data/Requirements.proto";
+
+message Recipe {
+	string id = 1;
+	.WUProtos.Data.Loot.LootCollection recipe = 2;
+	.WUProtos.Data.Loot.LootCollection rewards = 3;
+	int64 time_to_craft = 4;
+	repeated string master_note_gmt_id = 5;
+	bool disabled = 6;
+	repeated .WUProtos.Data.Requirements unlock_conditions = 7;
+}

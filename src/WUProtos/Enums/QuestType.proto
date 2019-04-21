@@ -1,0 +1,11 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum QuestType {
+    QUEST_TYPE_UNKNOWN = 0;
+    QUEST_TYPE_NONREPEATABLE = 1;
+    QUEST_TYPE_REPEATABLE = 2;
+    QUEST_TYPE_DAILY = 3;
+    QUEST_TYPE_EVENT = 4;
+    QUEST_TYPE_ACHIEVEMENT = 5;
+}

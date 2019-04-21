@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Inventory;
+
+import "WUProtos/Data/Loot/LootCollection.proto";
+
+message InventoryEscrowedRewards {
+	.WUProtos.Data.Loot.LootCollection rewards = 1;
+}

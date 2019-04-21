@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/AudioParameter.proto";
+
+message ClientEncounterStageSwish {
+    .WUProtos.Data.AudioParameter trace_succeeds_fanfare = 1;
+    .WUProtos.Data.AudioParameter trace_fails_fanfare = 2;
+}

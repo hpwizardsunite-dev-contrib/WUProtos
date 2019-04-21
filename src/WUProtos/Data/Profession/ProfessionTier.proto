@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Profession;
+
+message ProfessionTier {
+	uint32 rank_points_upper_bound = 1;
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Color.proto";
+import "WUProtos/Data/SoundConfig.proto";
+
+message ClientVaultItem {
+	string id = 1;
+	string name = 2;
+	string icon = 3;
+	string prefab = 4;
+	int64 rarity = 5;
+	string description = 6;
+	bool show_in_vault_item_menu = 8;
+	bool deletable = 9;
+	bool show_in_rewards_flow = 10;
+	.WUProtos.Data.Color color = 11;
+	string background = 12;
+	int32 ordering = 13;
+	.WUProtos.Data.SoundConfig reward_sound = 14;
+	int32 reward_sound_priority = 15;
+	string spine_animated_icon = 16;
+}

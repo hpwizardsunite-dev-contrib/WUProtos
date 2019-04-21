@@ -1,0 +1,17 @@
+syntax = "proto3";
+package WUProtos.Data.Encounter;
+
+message EncounterInteractSwishStageResult {
+	Status status = 1;
+	double success_rate = 2;
+	double flee_rate = 3;
+
+	enum Status {
+		SWISH_INTERACT_RESULT_UNKNOWN = 0;
+		SWISH_INTERACT_RESULT_SUCCESS = 1;
+		SWISH_INTERACT_RESULT_RESIST = 2;
+		SWISH_INTERACT_RESULT_FLED = 3;
+		SWISH_INTERACT_RESULT_OUT_OF_ENERGY = 4;
+		SWISH_INTERACT_RESULT_ERROR = 5;
+	}
+}

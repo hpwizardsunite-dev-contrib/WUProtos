@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/AudioParameter.proto";
+
+message MusicConfig {
+	int32 music_location = 1;
+	repeated .WUProtos.Data.AudioParameter parameters = 2;
+}

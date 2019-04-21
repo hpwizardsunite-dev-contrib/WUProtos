@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message TempFlooNetworkConfig {
+	int32 points_per_button_press = 1;
+	int64 button_press_cooldown_ms = 2;
+}

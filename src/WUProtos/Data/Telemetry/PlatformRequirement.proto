@@ -1,0 +1,10 @@
+syntax = "proto3";
+package WUProtos.Data.Telemetry;
+
+import "WUProtos/Enums/DevicePlatform.proto";
+import "WUProtos/Enums/EqualityOperator.proto";
+
+message PlatformRequirement {
+	.WUProtos.Enums.DevicePlatform platform = 1;
+	.WUProtos.Enums.EqualityOperator operator = 2;
+}

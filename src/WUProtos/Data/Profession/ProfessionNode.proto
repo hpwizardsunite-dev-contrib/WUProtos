@@ -1,0 +1,14 @@
+syntax = "proto3";
+package WUProtos.Data.Profession;
+
+import "WUProtos/Data/Requirements.proto";
+import "WUProtos/Data/Profession/ProfessionNodeLevel.proto";
+
+message ProfessionNode {
+	uint32 potential_rank_points = 1;
+	string id = 2;
+	repeated .WUProtos.Data.Requirements edges = 3;
+	repeated .WUProtos.Data.Profession.ProfessionNodeLevel levels = 4;
+	uint32 row_pos = 5;
+	uint32 col_pos = 6;
+}

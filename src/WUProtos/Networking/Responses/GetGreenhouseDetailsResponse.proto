@@ -1,0 +1,11 @@
+syntax = "proto3";
+package WUProtos.Networking.Responses;
+
+import "WUProtos/Data/PoiDetails.proto";
+import "WUProtos/Enums/PoiAccessibility.proto";
+
+message GetGreenhouseDetailsResponse {
+	string partner_id = 1;
+	.WUProtos.Data.PoiDetails poi_details = 2;
+	.WUProtos.Enums.PoiAccessibility poi_accessibility = 3;
+}

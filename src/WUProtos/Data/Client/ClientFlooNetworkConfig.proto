@@ -1,0 +1,10 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientFlooNetworkConfig {
+    repeated ElectoralVotesPerFlooPoints electoral_votes_per_floo_points = 1;
+
+    message ElectoralVotesPerFlooPoints {
+        repeated string fortress_prefabs = 1;
+    }
+}

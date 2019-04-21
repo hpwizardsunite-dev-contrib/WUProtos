@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum CauldronType {
+    CAULDRON_UNKNOWN = 0;
+    CAULDRON_NORMAL = 1;
+    CAULDRON_RENTAL = 2;
+}

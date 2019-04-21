@@ -1,0 +1,14 @@
+syntax = "proto3";
+package WUProtos.Inventory;
+
+message InventoryCollectionItem {
+	string id = 1;
+	int32 times_encountered = 2;
+	int32 times_returned = 3;
+	bool first_time_rewards_collected = 4;
+	string found_location = 5;
+	int64 found_time = 6;
+	bool placed = 8;
+	int32 current_returned = 9;
+	uint32 shards = 10;
+}

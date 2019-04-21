@@ -1,0 +1,10 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientCollectionPage {
+    string id = 1;
+    string name = 2;
+    string page_prefab = 3;
+    string icon_bg = 4;
+    bool show_in_ui = 5;
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Client/ClientEncounterStageSwish.proto";
+import "WUProtos/Data/Client/ClientEncounterStageCombat.proto";
+import "WUProtos/Data/Client/ClientEncounterStagePortkey.proto";
+import "WUProtos/Data/Client/ClientEncounterStagePicture.proto";
+import "WUProtos/Data/Client/ClientSequenceData.proto";
+
+message ClientEncounterStage {
+    oneof Type {
+        .WUProtos.Data.Client.ClientEncounterStageSwish swish = 1;
+        .WUProtos.Data.Client.ClientEncounterStageCombat combat = 2;
+        .WUProtos.Data.Client.ClientEncounterStagePortkey portkey = 3;
+        .WUProtos.Data.Client.ClientEncounterStagePicture picture = 4;
+    }
+
+    float disappear_delay = 5;
+    string intro_text = 6;
+    repeated .WUProtos.Data.Client.ClientSequenceData stage_setup_sequence = 7;
+    repeated .WUProtos.Data.Client.ClientSequenceData stage_completion_sequence = 8;
+    string spell_aim_layout = 9;
+    repeated string idle_loop_timelines = 10;
+    string rng_intro_timeline = 11;
+    string rng_loop_timeline = 12;
+    string spell_failed_timeline = 13;
+    repeated string combat_spell_list = 14;
+}

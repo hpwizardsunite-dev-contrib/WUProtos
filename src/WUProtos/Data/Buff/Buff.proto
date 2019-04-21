@@ -1,0 +1,20 @@
+syntax = "proto3";
+package WUProtos.Data.Buff;
+
+import "WUProtos/Data/Buff/BuffDuration.proto";
+import "WUProtos/Data/Buff/BuffExclusivityGroup.proto";
+import "WUProtos/Data/ConditionalModifiers.proto";
+
+message Buff {
+     string id = 1;
+    .WUProtos.Data.Buff.BuffDuration duration = 3;
+    .WUProtos.Data.Buff.BuffExclusivityGroup exclusivity_group = 4;
+    BuffType buff_type = 5;
+    repeated .WUProtos.Data.ConditionalModifiers conditional_modifiers = 7;
+
+    enum BuffType {
+        NONE = 0;
+        BUFF = 1;
+        DEBUFF = 2;
+    }
+}

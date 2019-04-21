@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message FastCompletionChallengeBonus {
+	int32 completion_time_sec = 1;
+}

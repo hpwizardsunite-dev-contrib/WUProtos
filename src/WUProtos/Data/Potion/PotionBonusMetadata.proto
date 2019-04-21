@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Potion;
+
+message PotionBonusMetadata {
+	string potion_id = 1;
+}

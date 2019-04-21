@@ -1,0 +1,15 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Enums/MapAbilityTargetType.proto";
+import "WUProtos/Data/MapAbilityLevel.proto";
+
+message MapAbility {
+	string id = 1;
+	.WUProtos.Enums.MapAbilityTargetType target_type = 2;
+	string base_buff_gmt_id = 3;
+	float radius = 4;
+	uint32 cooldown_ms = 5;
+	int32 focus_cost = 6;
+	repeated .WUProtos.Data.MapAbilityLevel map_ability_levels = 7;
+}

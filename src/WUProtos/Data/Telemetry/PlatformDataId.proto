@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data.Telemetry;
+
+import "WUProtos/Data/Telemetry/TelemetryDomainId.proto";
+
+message PlatformDataId {
+	int32 telemetry_id = 1;
+	.WUProtos.Data.Telemetry.TelemetryDomainId telemetry_domain_id = 2;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package WUProtos.Data.Encounter;
+
+import "WUProtos/Data/Combat/CombatState.proto";
+import "WUProtos/Data/Combat/CombatEnemyStats.proto";
+
+message EncounterStageCombat {
+	repeated .WUProtos.Data.Combat.CombatState state_graph_nodes = 1;
+	.WUProtos.Data.Combat.CombatEnemyStats enemy_stats = 2;
+	repeated string enemy_ranks = 3;
+}

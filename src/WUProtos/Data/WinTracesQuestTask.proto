@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message WinTracesQuestTask {
+	int64 required_trace_count = 1;
+}

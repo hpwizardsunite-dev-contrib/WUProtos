@@ -1,0 +1,18 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/TriggerPoint.proto";
+import "WUProtos/Data/Requirements.proto";
+import "WUProtos/Data/StoryboardStep.proto";
+import "WUProtos/Enums/StoryboardResetMode.proto";
+
+message Storyboard {
+	.WUProtos.Data.TriggerPoint trigger_point = 1;
+	string id = 2;
+	.WUProtos.Data.Requirements start_reqs = 3;
+	string step_flag_gmt_id = 4;
+	string complete_flag_gmt_id = 5;
+	repeated .WUProtos.Data.StoryboardStep storyboard_steps = 6;
+	.WUProtos.Enums.StoryboardResetMode reset_mode = 7;
+	.WUProtos.Data.Requirements reset_reqs = 8;
+}

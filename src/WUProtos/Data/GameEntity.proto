@@ -1,0 +1,20 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/Client/ClientMapPoi.proto";
+import "WUProtos/Data/Client/ClientMapTrace.proto";
+import "WUProtos/Data/Client/ClientMapLandmark.proto";
+import "WUProtos/Data/Client/ClientMapPotionIngredient.proto";
+import "WUProtos/Data/Client/ClientWeather.proto";
+import "WUProtos/Data/Client/ClientEnvironmentTags.proto";
+
+message GameEntity {
+	oneof Type {
+		.WUProtos.Data.Client.ClientMapPoi poi = 1;
+		.WUProtos.Data.Client.ClientMapTrace trace = 2;
+		.WUProtos.Data.Client.ClientMapLandmark landmark = 3;
+		.WUProtos.Data.Client.ClientMapPotionIngredient potion_ingredient = 4;
+		.WUProtos.Data.Client.ClientWeather weather = 5;
+		.WUProtos.Data.Client.ClientEnvironmentTags environment_tags = 6;
+	}
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientTelemetryStopwatch {
+	string event_name = 1;
+	double min = 2;
+	double max = 3;
+	double average = 4;
+}

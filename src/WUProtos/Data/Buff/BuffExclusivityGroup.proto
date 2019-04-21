@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data.Buff;
+
+message BuffExclusivityGroup {
+    string exclusivity_group = 1;
+    int32 exclusivity_priority = 2;
+}

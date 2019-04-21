@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message DarkDetectorVaultItem {
+	int64 duration = 1;
+}

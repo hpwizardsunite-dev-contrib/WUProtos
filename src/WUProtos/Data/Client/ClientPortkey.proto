@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientPortkey {
+    string id = 1;
+    string name = 2;
+    string icon = 3;
+    string localized_complete_text = 4;
+}

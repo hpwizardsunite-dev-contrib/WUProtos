@@ -1,0 +1,10 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Enums/ComparisonOperator.proto";
+
+message TeamCompositionCondition {
+	.WUProtos.Enums.ComparisonOperator comparison_operator = 1;
+	int32 target_comparison_value = 2;
+	string profession_id = 3;
+}

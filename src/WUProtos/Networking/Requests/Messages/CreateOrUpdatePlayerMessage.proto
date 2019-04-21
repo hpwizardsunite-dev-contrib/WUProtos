@@ -1,0 +1,12 @@
+syntax = "proto3";
+package WUProtos.Networking.Requests.Messages;
+
+message CreateOrUpdatePlayerMessage {
+	ClientPlayerLocale locale = 1;
+
+	message ClientPlayerLocale {
+		string country = 1;
+		string language = 2;
+		string timezone = 3;
+	}
+}

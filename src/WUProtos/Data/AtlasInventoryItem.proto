@@ -1,0 +1,38 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/Player/PlayerProfile.proto";
+import "WUProtos/Data/Player/PlayerProfessionsProgressV3.proto";
+import "WUProtos/Data/Player/PlayerAchievement.proto";
+import "WUProtos/Inventory/InventoryVaultItem.proto";
+import "WUProtos/Inventory/InventoryCollectionItem.proto";
+import "WUProtos/Inventory/InventoryCollectionFamily.proto";
+import "WUProtos/Inventory/InventoryWalkboxItem.proto";
+import "WUProtos/Inventory/InventoryFeatureFlags.proto";
+import "WUProtos/Inventory/InventoryPortkeyItem.proto";
+import "WUProtos/Inventory/InventoryCollectionPage.proto";
+import "WUProtos/Inventory/InventoryVaultCapacity.proto";
+import "WUProtos/Inventory/InventoryCauldron.proto";
+import "WUProtos/Inventory/InventoryEscrowedRewards.proto";
+import "WUProtos/Inventory/InventoryQuestLog.proto";
+import "WUProtos/Data/Buff/ActiveBuffList.proto";
+
+message AtlasInventoryItem {
+	oneof Type {
+		.WUProtos.Data.Player.PlayerProfile profile = 1;
+		.WUProtos.Inventory.InventoryVaultItem vault_item = 2;
+		.WUProtos.Inventory.InventoryCollectionItem collection_item = 3;
+		.WUProtos.Inventory.InventoryCollectionFamily collection_family = 4;
+		.WUProtos.Inventory.InventoryWalkboxItem walkbox = 5;
+		.WUProtos.Inventory.InventoryFeatureFlags player_flags = 6;
+		.WUProtos.Inventory.InventoryPortkeyItem portkey = 7;
+		.WUProtos.Data.Buff.ActiveBuffList player_active_buff_list = 8;
+		.WUProtos.Inventory.InventoryCollectionPage collection_page = 9;
+		.WUProtos.Inventory.InventoryVaultCapacity vault_capacity = 11;
+		.WUProtos.Inventory.InventoryCauldron cauldron = 12;
+		.WUProtos.Inventory.InventoryEscrowedRewards escrowed_rewards = 13;
+		.WUProtos.Data.Player.PlayerProfessionsProgressV3 professions_progress_v3 = 14;
+		.WUProtos.Inventory.InventoryQuestLog quest_log = 15;
+		.WUProtos.Data.Player.PlayerAchievement achievement = 16;
+	}
+}

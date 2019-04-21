@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data.Event;
+
+import "WUProtos/Data/Requirements.proto";
+
+message Event {
+	string id = 1;
+	.WUProtos.Data.Requirements activation_reqs = 2;
+}

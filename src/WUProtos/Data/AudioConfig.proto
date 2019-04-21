@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/MusicConfig.proto";
+
+message AudioConfig {
+    string music_event = 1;
+    repeated .WUProtos.Data.MusicConfig music_config = 2;
+}

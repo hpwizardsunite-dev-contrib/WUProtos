@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message OutpostMenu {
+	int64 menu_timestamp = 2;
+}

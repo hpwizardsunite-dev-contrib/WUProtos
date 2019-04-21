@@ -1,0 +1,13 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientTelemetryPotionsMasterNoteAttempt {
+	string potion_name_id = 1;
+	string cauldron_id = 2;
+	string master_note_id = 3;
+	int32 gesture_count = 4;
+	repeated string gesture_steps = 5;
+	bool master_note_start = 6;
+	int32 gesture_attempt_step = 7;
+	bool gesture_success = 8;
+}

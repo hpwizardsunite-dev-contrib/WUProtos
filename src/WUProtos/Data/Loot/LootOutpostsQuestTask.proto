@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Loot;
+
+message LootOutpostsQuestTask {
+	int64 required_outposts_count = 1;
+}

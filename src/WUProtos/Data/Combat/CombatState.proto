@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Data.Combat;
+
+import "WUProtos/Data/Combat/CombatMoveType.proto";
+
+message CombatState {
+	repeated .WUProtos.Data.Combat.CombatMoveType possible_moves = 1;
+}

@@ -1,0 +1,18 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Client/ClientTelemetryRecord.proto";
+
+message ClientTelemetryBatch {
+	TelemetryScopeId telemetry_scope_id = 1;
+	repeated .WUProtos.Data.Client.ClientTelemetryRecord events = 2;
+	repeated .WUProtos.Data.Client.ClientTelemetryRecord metrics = 3;
+	string api_version = 4;
+	string message_version = 5;
+
+	enum TelemetryScopeId {
+		UNSET = 0;
+		DITTO = 1;
+		GAME = 2;
+	}
+}

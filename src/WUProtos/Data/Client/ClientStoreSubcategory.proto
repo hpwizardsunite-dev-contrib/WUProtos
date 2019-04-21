@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientStoreSubcategory {
+    string id = 1;
+    int32 priority = 2;
+}

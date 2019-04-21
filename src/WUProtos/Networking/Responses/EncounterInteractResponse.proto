@@ -1,0 +1,19 @@
+syntax = "proto3";
+package WUProtos.Networking.Responses;
+
+import "WUProtos/Data/Encounter/EncounterInteractStatus.proto";
+import "WUProtos/Data/Encounter/EncounterInteractStageResult.proto";
+
+message EncounterInteractResponse {
+	.WUProtos.Data.Encounter.EncounterInteractStatus status = 1;
+	.WUProtos.Data.Encounter.EncounterInteractStageResult stage = 2;
+	EncounterType encounter_type = 3;
+
+	enum EncounterType {
+		UNKNOWN = 0;
+		TRACE_SWISH = 1;
+		TRACE_COMBAT = 2;
+		WC_COMBAT = 3;
+		INGREDIENT = 4;
+	}
+}

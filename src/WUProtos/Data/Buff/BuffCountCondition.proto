@@ -1,0 +1,13 @@
+syntax = "proto3";
+package WUProtos.Data.Buff;
+
+import "WUProtos/Enums/ComparisonOperator.proto";
+import "WUProtos/Enums/ConditionTargetType.proto";
+
+message BuffCountCondition {
+    string target_type = 1;
+    .WUProtos.Enums.ComparisonOperator comparison_operator = 2;
+    int32 target_comparison_value = 3;
+    bool look_for_buffs = 4;
+    .WUProtos.Enums.ConditionTargetType condition_target_type = 5;
+}

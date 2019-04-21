@@ -1,0 +1,17 @@
+syntax = "proto3";
+package WUProtos.Networking.Responses;
+
+import "WUProtos/Data/AvailableSku.proto";
+import "WUProtos/Data/CurrencyQuantity.proto";
+
+message GetAvailableSkusAndBalancesResponse {
+	repeated .WUProtos.Data.AvailableSku available_sku = 1;
+	repeated .WUProtos.Data.CurrencyQuantity balance = 2;
+	string player_token = 3;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientTelemetryStickerDetails {
+	string collection_id = 1;
+}

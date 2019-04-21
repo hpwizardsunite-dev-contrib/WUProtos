@@ -1,0 +1,24 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Client/ClientEncounterStage.proto";
+import "WUProtos/Data/AudioParameter.proto";
+import "WUProtos/Data/Color.proto";
+
+message ClientEncounter {
+    string id = 1;
+    string encounter_searching_timeline = 2;
+    repeated string encounter_searching_idle_timelines = 3;
+    string encounter_flee_timeline = 4;
+    string encounter_target = 5;
+    repeated .WUProtos.Data.Client.ClientEncounterStage stages = 6;
+    string encounter_target_layout = 7;
+    string search_target_layout = 8;
+    repeated string encounter_assets = 9;
+    string encounter_map_sprite = 10;
+    repeated .WUProtos.Data.AudioParameter encounter_music_params = 11;
+    string name = 12;
+    string encounter_map_sprite_frame = 13;
+    .WUProtos.Data.Color map_health_bar_color = 14;
+    .WUProtos.Data.Color hud_health_bar_color = 15;
+}

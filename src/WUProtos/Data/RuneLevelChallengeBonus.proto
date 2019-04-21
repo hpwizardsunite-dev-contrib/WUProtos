@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message RuneLevelChallengeBonus {
+	int32 rune_lvl = 1;
+}

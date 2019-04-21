@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Loot;
+
+message LootTableReward {
+	string loot_table_id = 1;
+}

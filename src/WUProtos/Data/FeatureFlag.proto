@@ -1,0 +1,13 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message FeatureFlag {
+	oneof DefaultValue {
+		string id = 1;
+		string feature_id = 2;
+		bool bval = 3;
+		int64 lval = 4;
+		string sval = 5;
+		float fval = 6;
+	}
+}

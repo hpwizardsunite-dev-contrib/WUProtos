@@ -1,0 +1,24 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message Rpgstat {
+	string id = 1;
+	RangeInt64 stat_bounds = 2;
+
+	enum IconDisplayType {
+		BOTH = 0;
+		PLAYER_VIEW = 1;
+		ENEMY_VIEW = 2;
+		NEITHER = 3;
+	}
+
+	message RangeInt64 {
+		int64 min = 1;
+		int64 max = 2;
+	}
+
+	message RangeUint32 {
+		uint32 min = 1;
+		uint32 max = 2;
+	}
+}

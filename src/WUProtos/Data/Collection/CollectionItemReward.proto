@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data.Collection;
+
+message CollectionItemReward {
+	string item_id = 1;
+	uint32 shard_count = 2;
+}

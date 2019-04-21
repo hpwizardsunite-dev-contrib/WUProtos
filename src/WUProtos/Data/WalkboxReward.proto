@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message WalkboxReward {
+	string walkbox_template_id = 1;
+}

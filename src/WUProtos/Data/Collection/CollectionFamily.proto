@@ -1,0 +1,30 @@
+syntax = "proto3";
+package WUProtos.Data.Collection;
+
+import "WUProtos/Enums/CollectionFamilyType.proto";
+import "WUProtos/Data/Collection/CollectionFamilyLevel.proto";
+import "WUProtos/Data/Loot/LootCollection.proto";
+import "WUProtos/Data/Requirements.proto";
+
+message CollectionFamily {
+	string id = 1;
+	.WUProtos.Enums.CollectionFamilyType family_type = 2;
+	repeated string items = 3;
+	repeated .WUProtos.Data.Collection.CollectionFamilyLevel levels = 4;
+	repeated string pages = 5;
+	string family_rune_name = 6;
+	string family_rank_table_id = 7;
+	repeated .WUProtos.Data.Loot.LootCollection returned_rewards = 8;
+	repeated string rune_id = 9;
+	repeated string apex_items = 10;
+	.WUProtos.Data.Requirements unlock_requirements = 11;
+	SubfeatureType subfeature_type = 12;
+
+	enum SubfeatureType {
+		UNSET = 0;
+		EXPLORATION = 1;
+		CHALLENGE = 2;
+		MYSTERIES = 3;
+		EVENTS = 4;
+	}
+}

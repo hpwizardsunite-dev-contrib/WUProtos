@@ -1,0 +1,11 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/Requirements.proto";
+
+message DeepLink {
+	string id = 1;
+	string category = 2;
+	.WUProtos.Data.Requirements requirements = 3;
+	string item = 4;
+}

@@ -1,0 +1,40 @@
+syntax = "proto3";
+package WUProtos.Data.Loot;
+
+import "WUProtos/Data/VaultItemLootReward.proto";
+import "WUProtos/Data/Collection/CollectionFamilyLootReward.proto";
+import "WUProtos/Data/Collection/CollectionItemReward.proto";
+import "WUProtos/Data/WalkboxReward.proto";
+import "WUProtos/Data/PortkeyReward.proto";
+import "WUProtos/Data/Loot/LootTableReward.proto";
+import "WUProtos/Data/VaultCapacityLootReward.proto";
+import "WUProtos/Data/GenericRunestoneReward.proto";
+import "WUProtos/Data/Potion/PotionReward.proto";
+import "WUProtos/Data/PortkeyCollectibleReward.proto";
+import "WUProtos/Data/GenericCollectionFamilyLootReward.proto";
+import "WUProtos/Data/CauldronReward.proto";
+import "WUProtos/Data/CurrencyReward.proto";
+import "WUProtos/Data/QuestReward.proto";
+import "WUProtos/Data/BonusMetadata.proto";
+
+message LootReward {
+	oneof RewardData {
+		.WUProtos.Data.VaultItemLootReward item_reward = 1;
+		.WUProtos.Data.Collection.CollectionFamilyLootReward collection_family_reward = 2;
+		.WUProtos.Data.Collection.CollectionItemReward collection_reward = 3;
+		.WUProtos.Data.WalkboxReward walkbox_reward = 4;
+		.WUProtos.Data.PortkeyReward portkey_reward = 5;
+		.WUProtos.Data.Loot.LootTableReward loot_table_reward = 6;
+		.WUProtos.Data.VaultCapacityLootReward vault_capacity_reward = 7;
+		.WUProtos.Data.GenericRunestoneReward generic_runestone = 8;
+		.WUProtos.Data.Potion.PotionReward potion_reward = 9;
+		.WUProtos.Data.PortkeyCollectibleReward portkey_collectible = 10;
+		.WUProtos.Data.GenericCollectionFamilyLootReward generic_collection_family_reward = 11;
+		.WUProtos.Data.CauldronReward cauldron_reward = 12;
+		.WUProtos.Data.CurrencyReward currency_reward = 13;
+		.WUProtos.Data.QuestReward quest_reward = 14;
+	}
+
+	int64 amount = 15;
+	.WUProtos.Data.BonusMetadata bonus_metadata = 101;
+}

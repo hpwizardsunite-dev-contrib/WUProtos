@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Client/ClientMapPoi.proto";
+
+message ClientPlayerChallengeState {
+    string fortress_id = 1;
+    .WUProtos.Data.Client.ClientMapPoi fortress_poi = 2;
+}

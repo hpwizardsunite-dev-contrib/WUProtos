@@ -1,0 +1,18 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Client/ClientCombatPlayerAttack.proto";
+import "WUProtos/Data/Client/ClientCombatPlayerAutoAdvance.proto";
+import "WUProtos/Data/Client/ClientCombatPlayerDefend.proto";
+
+message ClientCombatMoveType {
+    oneof CombatMove {
+        .WUProtos.Data.Client.ClientCombatPlayerAttack player_attack = 1;
+        .WUProtos.Data.Client.ClientCombatPlayerDefend player_defend = 2;
+        .WUProtos.Data.Client.ClientCombatPlayerAutoAdvance player_auto_advance = 3;
+    }
+
+    string enemy_action_timeline = 4;
+    string player_succeed_timeline = 5;
+    string player_failed_timeline = 6;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message CollectPotionIngredientsQuestProgress {
+	int64 current_potion_ingredient_count = 1;
+}

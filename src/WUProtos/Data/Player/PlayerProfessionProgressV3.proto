@@ -1,0 +1,22 @@
+syntax = "proto3";
+package WUProtos.Data.Player;
+
+import "WUProtos/Data/Loot/LootCollection.proto";
+
+message PlayerProfessionProgressV3 {
+	uint32 rank_points = 2;
+
+	message NodeProgressV3 {
+		uint32 level = 1;
+		int64 last_updated_timestamp = 2;
+		.WUProtos.Data.Loot.LootCollection unlocked_levels_cost = 3;
+	}
+
+	message RankProgressV3 {
+		message NodeProgressV3 {
+			uint32 level = 1;
+			int64 last_updated_timestamp = 2;
+			.WUProtos.Data.Loot.LootCollection unlocked_levels_cost = 3;
+		}
+	}
+}

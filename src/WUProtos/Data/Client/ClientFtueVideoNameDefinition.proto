@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientFtueVideoNameDefinition {
+    string name_format = 1;
+}

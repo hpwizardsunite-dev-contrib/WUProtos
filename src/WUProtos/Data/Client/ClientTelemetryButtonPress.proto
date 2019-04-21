@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientTelemetryButtonPress {
+    string pressed_button_id = 1;
+}

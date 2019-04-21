@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/Requirements.proto";
+
+message RequirementsQuestTask {
+	.WUProtos.Data.Requirements reqs = 1;
+}

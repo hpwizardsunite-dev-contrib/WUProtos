@@ -1,0 +1,11 @@
+syntax = "proto3";
+package WUProtos.Data.Profession;
+
+import "WUProtos/Enums/ComparisonOperator.proto";
+
+message ProfessionNodeRequirement {
+	string profession_node_id = 1;
+	uint32 profession_node_level = 2;
+	.WUProtos.Enums.ComparisonOperator comparison_operator = 3;
+	string profession_rank_id = 5;
+}

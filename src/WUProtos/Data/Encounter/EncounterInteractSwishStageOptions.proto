@@ -1,0 +1,13 @@
+syntax = "proto3";
+package WUProtos.Data.Encounter;
+
+message EncounterInteractSwishStageOptions {
+	repeated string energy_gmt_id = 1;
+	bool is_client_hit = 2;
+	float accuracy_bonus = 3;
+	float professions_rps_match = 4;
+	bool coerce_spellcast_success = 100;
+	bool coerce_spellcast_failure = 101;
+	bool coerce_flee = 102;
+	bool coerce_no_flee = 103;
+}

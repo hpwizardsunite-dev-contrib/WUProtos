@@ -1,0 +1,11 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Enums/CombatPhaseOutcome.proto";
+
+message ClientTelemetryCombatGameOffensiveLockOnAttempt {
+    int32 player_level = 1;
+    string encounter_id = 2;
+    string node_location = 3;
+    .WUProtos.Enums.CombatPhaseOutcome outcome = 4;
+}

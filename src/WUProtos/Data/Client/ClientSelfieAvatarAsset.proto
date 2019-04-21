@@ -1,0 +1,46 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Requirements.proto";
+
+message ClientSelfieAvatarAsset {
+    string id = 1;
+    repeated .WUProtos.Data.Requirements unlock_conditions = 2;
+    string asset_script_name = 3;
+    string icon = 4;
+    SelfieAvatarAssetType asset_type = 5;
+    SelfieAvatarLensType lens_type = 6;
+    bool visible = 7;
+    SelfieAvatarMediaSupportedType media_supported_type = 8;
+    bool animated = 9;
+    string store_pack_id = 10;
+    int32 order_id = 11;
+    bool is_full_body_lens = 12;
+    bool is_empty_asset = 13;
+    bool show_badge = 14;
+    .WUProtos.Data.Requirements visibility_conditions = 15;
+    string stock_asset_name = 16;
+
+    enum SelfieAvatarAssetType {
+        UNKNOWN_ASSET_TYPE = 0;
+        LENSE = 1;
+        FILTER = 2;
+        FRAME = 3;
+        STICKER = 4;
+        STOCK = 5;
+    }
+
+    enum SelfieAvatarLensType {
+        UNKNOWN_LENS_TYPE = 0;
+        HEAD = 1;
+        FACE = 2;
+        NECK = 3;
+    }
+
+    enum SelfieAvatarMediaSupportedType {
+        UNKNOWN_MEDIA_TYPE = 0;
+        ALL = 1;
+        VIDEO = 2;
+        PHOTO = 3;
+    }
+}

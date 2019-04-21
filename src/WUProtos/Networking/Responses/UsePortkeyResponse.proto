@@ -1,0 +1,18 @@
+syntax = "proto3";
+package WUProtos.Networking.Responses;
+
+import "WUProtos/Data/Loot/LootCollection.proto";
+import "WUProtos/Data/PortkeyBonusGameNodeRewards.proto";
+
+message UsePortkeyResponse {
+	Status status = 1;
+	.WUProtos.Data.Loot.LootCollection portkey_rewards = 2;
+	repeated .WUProtos.Data.PortkeyBonusGameNodeRewards all_bonus_nodes_rewards = 4;
+
+	enum Status {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+		ERROR = 2;
+		INVALID_PORTKEY = 3;
+	}
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Player;
+
+message PlayerCountChallengeBonus {
+	int32 number_of_players = 1;
+}

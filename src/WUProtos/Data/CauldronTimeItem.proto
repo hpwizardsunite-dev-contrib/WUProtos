@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message CauldronTimeItem {
+    int64 availability_time = 1;
+}

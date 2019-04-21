@@ -1,0 +1,14 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/MobRewardFocus.proto";
+import "WUProtos/Data/MobRewardTime.proto";
+import "WUProtos/Data/MobRewardVictoryPoints.proto";
+
+message MobReward {
+	oneof Reward {
+		.WUProtos.Data.MobRewardFocus focus = 1;
+		.WUProtos.Data.MobRewardTime time = 2;
+		.WUProtos.Data.MobRewardVictoryPoints victory_points = 3;
+	}
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message TimeActiveBuffExpiration {
+	int64 expiry_time_ms = 1;
+}

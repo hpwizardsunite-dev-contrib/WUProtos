@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message WinTracesQuestProgress {
+	int64 current_trace_count = 1;
+}

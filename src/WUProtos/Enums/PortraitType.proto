@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum PortraitType {
+    PORTRAIT_TYPE_UNSET = 0;
+    PORTRAIT_PHOTO = 1;
+    PORTRAIT_VIDEO = 2;
+}

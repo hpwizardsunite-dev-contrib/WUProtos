@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum BonusReceiver {
+    BONUS_RECEIVER_UNKNOWN = 0;
+    TEAM = 1;
+    PLAYER = 2;
+}

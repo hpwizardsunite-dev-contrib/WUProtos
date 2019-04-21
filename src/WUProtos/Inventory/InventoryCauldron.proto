@@ -1,0 +1,14 @@
+syntax = "proto3";
+package WUProtos.Inventory;
+
+import "WUProtos/Inventory/InventoryCauldronSlot.proto";
+
+message InventoryCauldron {
+	string iprotoid = 1;
+	int64 id = 2;
+	string template_id = 3;
+	repeated .WUProtos.Inventory.InventoryCauldronSlot cauldron_slot = 4;
+	int64 brewing_start_timestamp = 5;
+	int64 availability_start_timestamp = 6;
+	int64 availability_time = 7;
+}

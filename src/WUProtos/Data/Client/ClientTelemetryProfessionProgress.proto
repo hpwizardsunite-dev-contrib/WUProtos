@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientTelemetryProfessionProgress {
+	string profession_gmt_id = 1;
+	uint32 rank_points = 2;
+}

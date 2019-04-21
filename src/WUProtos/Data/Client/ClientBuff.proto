@@ -1,0 +1,13 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Client/ClientConditionalModifiers.proto";
+
+message ClientBuff {
+    string id = 1;
+    string reward_bonus_loc_key = 3;
+    string reward_bonus_icon = 4;
+    string status_icon = 5;
+    string display_name = 6;
+    repeated .WUProtos.Data.Client.ClientConditionalModifiers conditional_modifiers = 7;
+}

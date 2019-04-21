@@ -1,0 +1,14 @@
+syntax = "proto3";
+package WUProtos.Networking.Responses;
+
+import "WUProtos/Data/Loot/LootCollection.proto";
+
+message CheckWalkboxesResponse {
+	repeated OpenedWalkboxProto opened_walkboxes = 1;
+
+	message OpenedWalkboxProto {
+		string walkbox_gmt_template = 1;
+		.WUProtos.Data.Loot.LootCollection rewards = 2;
+		repeated int64 portkey_ids = 3;
+	}
+}

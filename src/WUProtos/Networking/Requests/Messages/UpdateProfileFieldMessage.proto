@@ -1,0 +1,13 @@
+syntax = "proto3";
+package WUProtos.Networking.Requests.Messages;
+
+import "WUProtos/Enums/ProfileFieldOperation.proto";
+
+message UpdateProfileFieldMessage {
+	repeated ProfileFieldUpdate updates = 1;
+
+	message ProfileFieldUpdate {
+		.WUProtos.Enums.ProfileFieldOperation operation = 1;
+		string value = 2;
+	}
+}

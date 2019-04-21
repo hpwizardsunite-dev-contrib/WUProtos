@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message EnemyTagCondition {
+	string rank_tag = 1;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum CategoryAssetType {
+    CATEGORY_ASSET_TYPE_UNSET = 0;
+    CATEGORY_ASSET_LENS = 1;
+    CATEGORY_ASSET_FILTER = 2;
+    CATEGORY_ASSET_FRAME = 3;
+    CATEGORY_ASSET_STICKER = 4;
+}

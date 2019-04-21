@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data.Player;
+
+import "WUProtos/Enums/ComparisonOperator.proto";
+
+message PlayerAccountAgeRequirement {
+	int64 account_age_in_seconds = 1;
+	.WUProtos.Enums.ComparisonOperator comparison_operator = 2;
+}

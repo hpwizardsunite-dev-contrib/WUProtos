@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data.Loot;
+
+import "WUProtos/Data/Loot/LootReward.proto";
+
+message LootCollection {
+	repeated .WUProtos.Data.Loot.LootReward rewards = 1;
+	repeated .WUProtos.Data.Loot.LootReward escrowed_rewards = 2;
+}

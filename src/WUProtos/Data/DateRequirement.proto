@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Enums/ComparisonOperator.proto";
+
+message DateRequirement {
+	int64 epoch_date_in_seconds = 1;
+	.WUProtos.Enums.ComparisonOperator comparison_operator = 2;
+}

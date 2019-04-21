@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data.Encounter;
+
+message EncounterSoundBanks {
+	string encounter_type = 1;
+	repeated string sound_banks = 2;
+}

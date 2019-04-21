@@ -1,0 +1,27 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/SharedQualityLevel.proto";
+
+message QualityLevel {
+	string id = 1;
+	.WUProtos.Data.SharedQualityLevel quality_level = 2;
+
+	enum AntialiasingSetting {
+		off = 0;
+		msaa2x = 2;
+		msaa4x = 4;
+		msaa8x = 8;
+	}
+
+	enum RealtimeShadowsSetting {
+		off = 0;
+		realtime_planar = 1;
+		realtime_planar_and_self_shadowing = 2;
+	}
+
+	enum TextureQualitySetting {
+		full_res = 0;
+		half_res = 1;
+	}
+}

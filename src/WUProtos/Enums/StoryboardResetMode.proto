@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum StoryboardResetMode {
+    STORYBOARD_RESET_UNKNOWN = 0;
+    STORYBOARD_RESET_NOT_ALLOWED = 1;
+    STORYBOARD_RESET_WHEN_INCOMPLETE = 2;
+    STORYBOARD_RESET_WHEN_COMPLETE = 3;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Loot;
+
+message LootOutpostsQuestProgress {
+	int64 current_outpost_count = 1;
+}

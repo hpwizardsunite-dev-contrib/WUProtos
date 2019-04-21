@@ -1,0 +1,12 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientTelemetryStorePopupOpen {
+	string pack_id = 1;
+	bool player_can_afford = 2;
+	repeated string currency_type = 3;
+	repeated int64 cost = 4;
+	repeated int64 player_wallet = 5;
+	double real_money_cost = 6;
+	string real_money_currency_code = 7;
+}

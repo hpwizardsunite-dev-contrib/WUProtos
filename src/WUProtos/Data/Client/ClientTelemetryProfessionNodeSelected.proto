@@ -1,0 +1,11 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Client/ClientTelemetryProfessionProgress.proto";
+
+message ClientTelemetryProfessionNodeSelected {
+	int32 player_level = 1;
+	string active_profession_gmt_id = 2;
+	repeated .WUProtos.Data.Client.ClientTelemetryProfessionProgress profession_progress = 3;
+	string node_id = 4;
+}

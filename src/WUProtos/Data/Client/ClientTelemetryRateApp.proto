@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientTelemetryRateApp {
+	bool having_fun_response = 1;
+	string platform = 2;
+	string client_version = 3;
+}

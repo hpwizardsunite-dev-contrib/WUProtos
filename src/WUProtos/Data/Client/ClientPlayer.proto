@@ -1,0 +1,14 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Client/ClientPlayerMapState.proto";
+import "WUProtos/Data/Client/ClientPlayerChallengeState.proto";
+
+message ClientPlayer {
+    int64 creation_time_ms = 1;
+
+    oneof State {
+        .WUProtos.Data.Client.ClientPlayerMapState map = 2;
+        .WUProtos.Data.Client.ClientPlayerChallengeState challenge = 3;
+    }
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Enums/ProfileTabSource.proto";
+import "WUProtos/Enums/PortraitType.proto";
+import "WUProtos/Enums/PortraitAction.proto";
+import "WUProtos/Enums/CategoryShareLocation.proto";
+import "WUProtos/Enums/DownloadType.proto";
+
+message ClientTelemetryProfilePortraitAction {
+	.WUProtos.Enums.ProfileTabSource baseline_src = 1;
+	.WUProtos.Enums.PortraitType portrait_format = 2;
+	.WUProtos.Enums.PortraitAction portrait_action = 3;
+	string portrait_lens_top = 4;
+	string portrait_lens_mid = 5;
+	string portrait_lens_bottom = 6;
+	string portrait_frame = 7;
+	string portrait_filter = 8;
+	repeated string portrait_sticker_ids = 9;
+	int32 portrait_sticker_count = 10;
+	.WUProtos.Enums.CategoryShareLocation share_source = 11;
+	.WUProtos.Enums.DownloadType share_type = 12;
+	string share_network = 13;
+	.WUProtos.Enums.CategoryShareLocation download_source = 14;
+	.WUProtos.Enums.DownloadType download_type = 15;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Player;
+
+message PlayerRatioChallengeBonus {
+	float threshold = 1;
+}

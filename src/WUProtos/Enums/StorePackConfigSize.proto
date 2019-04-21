@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum StorePackConfigSize {
+    SIZE_SMALL = 0;
+    SIZE_MEDIUM = 1;
+    SIZE_LARGE = 2;
+}

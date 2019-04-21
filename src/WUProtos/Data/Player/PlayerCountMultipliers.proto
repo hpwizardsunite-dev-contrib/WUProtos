@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Player;
+
+message PlayerCountMultipliers {
+	repeated float multipliers = 1;
+}

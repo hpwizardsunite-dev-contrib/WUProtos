@@ -1,0 +1,12 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/SoundConfig.proto";
+
+message SpeechBubble {
+	string character_portrait_image = 1;
+	string character_name_lockey = 2;
+	string bubble_prefab_name = 3;
+	string bubble_content_lockey = 4;
+	.WUProtos.Data.SoundConfig sound_config = 5;
+}

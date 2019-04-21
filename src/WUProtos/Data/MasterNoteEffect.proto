@@ -1,0 +1,15 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message MasterNoteEffect {
+	string id = 1;
+	MasterNoteEffectType effect_type = 2;
+	int64 power = 3;
+
+	enum MasterNoteEffectType {
+		UNSET = 0;
+		BREW_SPEED_STATIC = 1;
+		BREW_SPEED_PERCENT = 2;
+		BREW_YIELD_STATIC = 3;
+	}
+}

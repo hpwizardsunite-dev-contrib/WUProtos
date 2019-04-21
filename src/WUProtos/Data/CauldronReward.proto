@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message CauldronReward {
+    string template_id = 1;
+    int64 cauldron_id = 2;
+    int64 availability_time = 3;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Data.Encounter;
+
+import "WUProtos/Data/Combat/CombatResults.proto";
+
+message EncounterGetStateCombatStageResult {
+	.WUProtos.Data.Combat.CombatResults results = 1;
+}

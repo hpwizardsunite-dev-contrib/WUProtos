@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Data/Loot/LootCollection.proto";
+
+message ContainerVaultItem {
+	.WUProtos.Data.Loot.LootCollection contents = 1;
+	bool auto_consume = 2;
+}

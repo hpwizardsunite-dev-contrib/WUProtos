@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message FlooNetworkRegionScores {
+	string season_id = 1;
+	string region_id = 2;
+}

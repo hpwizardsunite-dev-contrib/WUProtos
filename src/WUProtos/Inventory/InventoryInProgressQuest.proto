@@ -1,0 +1,11 @@
+syntax = "proto3";
+package WUProtos.Inventory;
+
+import "WUProtos/Data/QuestProgress.proto";
+
+message InventoryInProgressQuest {
+	string quest_gmt_id = 1;
+	repeated .WUProtos.Data.QuestProgress progress_per_task = 2;
+	int32 version = 3;
+	int64 start_day_since_epoch_if_daily = 4;
+}

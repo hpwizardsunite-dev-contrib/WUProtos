@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Enums/ComparisonOperator.proto";
+
+message AccountCreationDateRequirement {
+    int64 account_creation_date = 1;
+    .WUProtos.Enums.ComparisonOperator comparison_operator = 2;
+}

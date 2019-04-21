@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+message ClientDarkDetectorAmplifier {
+    int32 num_slots = 1;
+}

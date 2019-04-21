@@ -1,10 +1,11 @@
 syntax = "proto3";
 package WUProtos.Data.Potion;
 
-import "WUProtos/Data/Loot/LootCollection.proto";
+//TODO: this need observation
+//import "WUProtos/Data/Loot/LootCollection.proto";
 
 message PotionReward {
-	.WUProtos.Data.Loot.LootCollection rewards = 1;
+	//.WUProtos.Data.Loot.LootCollection rewards = 1;
 	int64 time_to_brew = 2;
 	int64 cauldron_id = 3;
 	string recipe_gmt_id = 4;

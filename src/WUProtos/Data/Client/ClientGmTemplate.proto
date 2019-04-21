@@ -5,6 +5,7 @@ import "WUProtos/Data/Client/ClientCollectionFamily.proto";
 import "WUProtos/Data/Client/ClientCollectionItem.proto";
 import "WUProtos/Data/Client/ClientWalkboxTemplate.proto";
 import "WUProtos/Data/Client/ClientEncounter.proto";
+import "WUProtos/Data/Client/ClientEncounterType.proto";
 import "WUProtos/Data/Client/ClientPortkey.proto";
 import "WUProtos/Data/Client/ClientVaultItem.proto";
 import "WUProtos/Data/Client/ClientGameConfig.proto";

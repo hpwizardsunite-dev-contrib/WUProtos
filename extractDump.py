@@ -1,4 +1,4 @@
-# Credits to Celandro Pokebattle.com for this script.
+# Credits to Celandro https://www.pokebattler.com/ for this script.
 
 import os
 

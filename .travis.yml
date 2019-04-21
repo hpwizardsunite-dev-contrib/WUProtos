@@ -15,6 +15,7 @@ install:
   - popd
   - export PATH=/tmp/bin:$PATH
 script:
+  - chmod +x ./compile.py
   - ./compile.py python --generate_desc --include_imports --include_source_info
   # Compile Single need revision
   #- ./compile_single.py -d -o out2

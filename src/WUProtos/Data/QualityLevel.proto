@@ -15,7 +15,7 @@ message QualityLevel {
 	}
 
 	enum RealtimeShadowsSetting {
-		off = 0;
+		offf = 0;
 		realtime_planar = 1;
 		realtime_planar_and_self_shadowing = 2;
 	}

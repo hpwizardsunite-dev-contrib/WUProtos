@@ -1,9 +1,11 @@
 syntax = "proto3";
 package WUProtos.Networking.Responses;
 
+import "WUProtos/Data/GmTemplate.proto";
+
 message DownloadGmTemplatesResponse {
-    Result result = 1;
-    repeated ClientGameMasterTemplate template = 2;
+    Result result = 2;
+    repeated WUProtos.Data.GmTemplate template = 1;
     repeated string deleted_template = 3;
     uint64 batch_id = 4;
     int32 page_offset = 5;

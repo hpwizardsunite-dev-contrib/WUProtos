@@ -51,14 +51,13 @@ import "WUProtos/Data/Version.proto";
 message GmTemplate {
 	oneof MessageType {
 		.WUProtos.Data.Collection.CollectionFamily collection_family = 1;
-		.WUProtos.Data.Collection.CollectionItem collection_item = 2;
 		.WUProtos.Data.Encounter.Encounter encounter = 3;
 		.WUProtos.Data.Encounter.EncounterObstacle encounter_obstacle = 4;
 		.WUProtos.Data.Spell spell = 5;
 		.WUProtos.Data.VaultItem vault_item = 6;
-		.WUProtos.Data.GameConfig game_config = 7;
+		// .WUProtos.Data.GameConfig game_config = 7;
 		.WUProtos.Data.Player.PlayerLevel player_level = 8;
-		.WUProtos.Data.StorePack store_pack = 9;
+		// .WUProtos.Data.StorePack store_pack = 9;
 		.WUProtos.Data.WalkboxTemplate walkbox_template = 10;
 		.WUProtos.Data.FeatureFlag feature_flag = 11;
 		.WUProtos.Data.Portkey portkey = 12;
@@ -69,7 +68,7 @@ message GmTemplate {
 		.WUProtos.Data.ProtegoPattern protego_pattern = 17;
 		.WUProtos.Data.Collection.CollectionPage collection_page = 18;
 		.WUProtos.Data.TeamControl team_control = 19;
-		.WUProtos.Data.StoreConfig store_config = 20;
+		// .WUProtos.Data.StoreConfig store_config = 20;
 		.WUProtos.Data.StoreSubcategory store_subcategory = 21;
 		.WUProtos.Data.Haptic haptic = 22;
 		.WUProtos.Data.Encounter.EncounterType encounter_type = 23;
@@ -83,7 +82,7 @@ message GmTemplate {
 		.WUProtos.Data.MapAbility map_ability = 31;
 		.WUProtos.Data.Recipe recipe = 32;
 		.WUProtos.Data.Challenge.ChallengeBonus challenge_bonus = 33;
-		.WUProtos.Data.Storyboard storyboard = 34;
+		// .WUProtos.Data.Storyboard storyboard = 34;
 		.WUProtos.Data.MasterNote master_note = 35;
 		.WUProtos.Data.Cauldron cauldron = 36;
 		.WUProtos.Data.Rpgstat rpgstat = 37;

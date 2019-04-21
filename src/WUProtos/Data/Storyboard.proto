@@ -7,8 +7,8 @@ import "WUProtos/Data/StoryboardStep.proto";
 import "WUProtos/Enums/StoryboardResetMode.proto";
 
 message Storyboard {
-	.WUProtos.Data.TriggerPoint trigger_point = 1;
-	string id = 2;
+	string id = 1;
+	.WUProtos.Data.TriggerPoint trigger_point = 2;
 	.WUProtos.Data.Requirements start_reqs = 3;
 	string step_flag_gmt_id = 4;
 	string complete_flag_gmt_id = 5;

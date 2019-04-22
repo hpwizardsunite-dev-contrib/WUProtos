@@ -35,6 +35,6 @@ message LootReward {
 		.WUProtos.Data.QuestReward quest_reward = 14;
 	}
 
-	int64 amount = 15;
+	//int64 amount = 15; // not sure this is needed according dynspy viewer 
 	.WUProtos.Data.BonusMetadata bonus_metadata = 101;
 }

@@ -30,11 +30,11 @@ import "WUProtos/Data/BonusCategory.proto";
 import "WUProtos/Data/VaultCategory.proto";
 import "WUProtos/Data/ProfileConfig.proto";
 import "WUProtos/Data/Collection/CollectionFamilyRankTable.proto";
-import "WUProtos/Data/MapIngredient.proto";
-import "WUProtos/Data/MapAbility.proto";
+import "WUProtos/Map/MapIngredient.proto";
+import "WUProtos/Map/MapAbility.proto";
 import "WUProtos/Data/Recipe.proto";
 import "WUProtos/Data/Challenge/ChallengeBonus.proto";
-import "WUProtos/Data/Storyboard.proto";
+import "WUProtos/Data/Storyboard/Storyboard.proto";
 import "WUProtos/Data/MasterNote.proto";
 import "WUProtos/Data/Cauldron.proto";
 import "WUProtos/Data/Rpgstat.proto";
@@ -46,7 +46,6 @@ import "WUProtos/Data/Quest.proto";
 import "WUProtos/Data/DeepLink.proto";
 import "WUProtos/Data/Event/Event.proto";
 import "WUProtos/Data/GreenhouseTemplate.proto";
-import "WUProtos/Data/Version.proto";
 
 message GmTemplate {
 	oneof MessageType {
@@ -78,11 +77,11 @@ message GmTemplate {
 		.WUProtos.Data.VaultCategory vault_category = 27;
 		.WUProtos.Data.ProfileConfig profile_config = 28;
 		.WUProtos.Data.Collection.CollectionFamilyRankTable collection_family_rank_table = 29;
-		.WUProtos.Data.MapIngredient map_ingredient = 30;
-		.WUProtos.Data.MapAbility map_ability = 31;
+		.WUProtos.Map.MapIngredient map_ingredient = 30;
+		.WUProtos.Map.MapAbility map_ability = 31;
 		.WUProtos.Data.Recipe recipe = 32;
 		.WUProtos.Data.Challenge.ChallengeBonus challenge_bonus = 33;
-		// .WUProtos.Data.Storyboard storyboard = 34;
+		// .WUProtos.Data.Storyboard.Storyboard storyboard = 34;
 		.WUProtos.Data.MasterNote master_note = 35;
 		.WUProtos.Data.Cauldron cauldron = 36;
 		.WUProtos.Data.Rpgstat rpgstat = 37;
@@ -94,6 +93,12 @@ message GmTemplate {
 		.WUProtos.Data.DeepLink deep_link = 43;
 		.WUProtos.Data.Event.Event event = 44;
 		.WUProtos.Data.GreenhouseTemplate greenhouse_template = 45;
-		.WUProtos.Data.Version version = 46;
+		Version version = 46;
+	}
+
+	message Version {
+		string id = 1;
+		string data_version = 2;
+		string data_branch = 3;
 	}
 }

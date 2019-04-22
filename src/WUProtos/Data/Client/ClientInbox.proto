@@ -1,11 +1,9 @@
 syntax = "proto3";
 package WUProtos.Data.Client;
 
-import "WUProtos/Data/TemplateVariable.proto";
-
 message ClientInbox {
 	repeated Notification notifications = 1;
-	repeated .WUProtos.Data.TemplateVariable builtin_variables = 2;
+	repeated TemplateVariable builtin_variables = 2;
 
 	enum Label {
 		UNSET_LABEL = 0;
@@ -19,8 +17,16 @@ message ClientInbox {
 		string title_key = 2;
 		string category = 3;
 		int64 create_timestamp_ms = 4;
-		repeated .WUProtos.Data.TemplateVariable variables = 5;
+		repeated TemplateVariable variables = 5;
 		repeated ClientInbox.Label labels = 6;
 		int64 expire_time_ms = 7;
+	}
+
+	message TemplateVariable {
+		string name = 1;
+		string literal = 2;
+		string key = 3;
+		string lookup_table = 4;
+		bytes byte_value = 5;
 	}
 }

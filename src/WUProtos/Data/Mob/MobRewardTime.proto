@@ -1,5 +1,5 @@
 syntax = "proto3";
-package WUProtos.Data;
+package WUProtos.Data.Mob;
 
 message MobRewardTime {
 	int64 time_ms = 1;

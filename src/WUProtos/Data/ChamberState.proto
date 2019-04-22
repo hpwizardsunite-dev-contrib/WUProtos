@@ -3,7 +3,7 @@ package WUProtos.Data;
 
 import "WUProtos/Enums/ChallengeFinishStatus.proto";
 import "WUProtos/Data/Loot/LootCollection.proto";
-import "WUProtos/Data/MapCoordinate.proto";
+import "WUProtos/Map/MapCoordinate.proto";
 import "WUProtos/Data/ChamberMobState.proto";
 import "WUProtos/Data/ChamberPlayerState.proto";
 
@@ -31,7 +31,7 @@ message ChamberState {
 			float radius = 3;
 			int64 casting_timestamp = 4;
 			int64 ending_timestamp = 5;
-			.WUProtos.Data.MapCoordinate map_coordinate = 6;
+			.WUProtos.Map.MapCoordinate map_coordinate = 6;
 			int32 map_ability_level = 7;
 			bytes target_mob_id = 8;
 			string target_player_nickname = 9;
@@ -49,7 +49,7 @@ message ChamberState {
 		float radius = 3;
 		int64 casting_timestamp = 4;
 		int64 ending_timestamp = 5;
-		.WUProtos.Data.MapCoordinate map_coordinate = 6;
+		.WUProtos.Map.MapCoordinate map_coordinate = 6;
 		int32 map_ability_level = 7;
 		bytes target_mob_id = 8;
 		string target_player_nickname = 9;

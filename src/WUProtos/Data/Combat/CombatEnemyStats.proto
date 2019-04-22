@@ -2,4 +2,11 @@ syntax = "proto3";
 package WUProtos.Data.Combat;
 
 message CombatEnemyStats {
+
+    repeated StatDefinition stat = 2;
+
+    message StatDefinition {
+        string id = 1;
+        int32 amount = 2;
+    }
 }

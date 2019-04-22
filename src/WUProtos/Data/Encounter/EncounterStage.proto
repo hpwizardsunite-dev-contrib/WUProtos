@@ -3,6 +3,7 @@ package WUProtos.Data.Encounter;
 
 import "WUProtos/Data/Encounter/EncounterStageSwish.proto";
 import "WUProtos/Data/Encounter/EncounterStageCombat.proto";
+import "WUProtos/Data/Client/ClientSequenceData.proto";
 import "WUProtos/Data/Client/ClientCombatState.proto";
 import "WUProtos/Data/Encounter/EncounterStagePortkey.proto";
 import "WUProtos/Data/Encounter/EncounterStagePicture.proto";

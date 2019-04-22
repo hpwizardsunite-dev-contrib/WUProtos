@@ -1,7 +1,7 @@
 syntax = "proto3";
 package WUProtos.Data.Buff;
 
-import "WUProtos/Data/buff/TimeBuffDuration.proto";
+import "WUProtos/Data/Buff/TimeBuffDuration.proto";
 import "WUProtos/Data/ChargesBuffDuration.proto";
 import "WUProtos/Data/Profession/ProfessionBuffDuration.proto";
 import "WUProtos/Data/Buff/PermanentBuffDuration.proto";

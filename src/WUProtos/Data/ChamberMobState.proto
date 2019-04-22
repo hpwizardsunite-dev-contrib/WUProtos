@@ -2,7 +2,7 @@ syntax = "proto3";
 package WUProtos.Data;
 
 import "WUProtos/Data/Buff/ActiveBuffList.proto";
-import "WUProtos/Data/MobReward.proto";
+import "WUProtos/Data/Mob/MobReward.proto";
 
 message ChamberMobState {
 	bytes mob_id = 1;
@@ -14,6 +14,6 @@ message ChamberMobState {
 	double x = 9;
 	double y = 10;
 	.WUProtos.Data.Buff.ActiveBuffList active_buff_list = 11;
-	repeated .WUProtos.Data.MobReward rewards = 12;
+	repeated .WUProtos.Data.Mob.MobReward rewards = 12;
 	int64 time_to_spawn = 101;
 }

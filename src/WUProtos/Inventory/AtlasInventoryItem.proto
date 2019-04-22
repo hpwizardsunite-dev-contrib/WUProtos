@@ -1,5 +1,5 @@
 syntax = "proto3";
-package WUProtos.Data;
+package WUProtos.Inventory;
 
 import "WUProtos/Data/Player/PlayerProfile.proto";
 import "WUProtos/Data/Player/PlayerProfessionsProgressV3.proto";

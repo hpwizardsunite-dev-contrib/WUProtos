@@ -1,12 +1,15 @@
 syntax = "proto3";
 package WUProtos.Data.Client;
 
-import "WUProtos/Data/Vector2.proto";
-
 message ClientProtegoPattern {
     string id = 1;
-    .WUProtos.Data.Vector2 ui_target_start_pos = 2;
+    Vector2 ui_target_start_pos = 2;
     float ui_target_start_radius = 3;
-    .WUProtos.Data.Vector2 ui_target_end_pos = 4;
+    Vector2 ui_target_end_pos = 4;
     float ui_target_end_radius = 5;
+
+    message Vector2 {
+        float x = 1;
+        float y = 2;
+    }
 }

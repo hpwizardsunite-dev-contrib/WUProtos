@@ -1,5 +1,5 @@
 syntax = "proto3";
-package WUProtos.Data;
+package WUProtos.Map;
 
 message MapCoordinate {
 	double latitude = 1;

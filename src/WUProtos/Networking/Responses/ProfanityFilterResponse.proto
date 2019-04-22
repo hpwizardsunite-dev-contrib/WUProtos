@@ -1,5 +1,5 @@
 syntax = "proto3";
-package WUProtos.Data;
+package WUProtos.Networking.Responses;
 
 message ProfanityFilterResponse {
 	repeated Status status = 1;

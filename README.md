@@ -106,3 +106,4 @@ If you don't want to compile WUProtos but instead use it directly, check out the
 
 | Language              | Source                                                         | Status |
 |-----------------------|----------------------------------------------------------------|--------|
+| Java                  | https://github.com/hpwizardsunite-dev-contrib/WUProtos-Java    |  OK    |

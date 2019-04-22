@@ -18,5 +18,5 @@ enum PlatformRequestType {
     PROXY_SOCIAL_ACTION = 5012;                  // Implemented
     CLIENT_TELEMETRY = 5013;                     // Implemented
     GET_AVAILABLE_SUBMISSIONS = 5014;            // Implemented
-    GET_SIGNED_URL_FOR_PHOTO_UPLOAD = 5015;      // ???
+    GET_SIGNED_URL_FOR_PHOTO_UPLOAD = 5015;      // Implemented
 }

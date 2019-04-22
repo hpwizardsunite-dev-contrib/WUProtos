@@ -1,7 +1,6 @@
 syntax = "proto3";
 package WUProtos.Data.Client;
 
-import "WUProtos/Data/AdditionalSelectionRule.proto";
 
 message ClientMapAbility {
     string id = 1;
@@ -12,5 +11,12 @@ message ClientMapAbility {
     string status_icon = 6;
     int32 slot = 7;
     string effect_prefab = 8;
-    .WUProtos.Data.AdditionalSelectionRule rule = 9;
+    AdditionalSelectionRule rule = 9;
+
+    enum AdditionalSelectionRule {
+        none_additional_selection = 0;
+        no_if_max_health = 1;
+        no_if_max_focus = 2;
+        no_if_alive = 3;
+    }
 }

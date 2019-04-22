@@ -1,7 +1,7 @@
 syntax = "proto3";
 package WUProtos.Networking.Responses;
 
-message DownloadGmTemplatesResponse {
+message DownloadGameMasterTemplatesResponse {
     Result result = 1;
     repeated ClientGameMasterTemplate template = 2;
     repeated string deleted_template = 3;

@@ -2,11 +2,15 @@ syntax = "proto3";
 package WUProtos.Data.Storyboard;
 
 import "WUProtos/Data/SpeechBubble.proto";
-import "WUProtos/Data/AdviceOverlayAlignment.proto";
 
 message StoryboardAdviceOverlayStep {
 	.WUProtos.Data.SpeechBubble speech_bubble = 1;
 	bool requires_scrim = 2;
-	.WUProtos.Data.AdviceOverlayAlignment alignment = 3;
+	AdviceOverlayAlignment alignment = 3;
 	bool show_continue_action_text = 4;
+
+	enum AdviceOverlayAlignment {
+		bottom = 0;
+		top = 1;
+	}
 }

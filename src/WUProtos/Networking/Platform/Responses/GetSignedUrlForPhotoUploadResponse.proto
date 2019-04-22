@@ -1,7 +1,7 @@
 syntax = "proto3";
-package WUProtos.Networking.Responses;
+package WUProtos.Networking.Platform.Responses;
 
-message GetUploadUrlResponse {
+message GetSignedUrlForPhotoUploadResponse {
 	Status status = 1;
 	string signed_url = 2;
 	string supporting_image_signed_url = 3;

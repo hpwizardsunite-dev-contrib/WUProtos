@@ -5,7 +5,5 @@ import "WUProtos/Data/StoreCategory.proto";
 import "WUProtos/Data/StoreRarity.proto";
 
 message StoreConfig {
-	repeated .WUProtos.Data.StoreCategory store_categories = 1;
-	string id = 2;
-	repeated .WUProtos.Data.StoreRarity store_rarities = 3;
+	string id = 1;
 }

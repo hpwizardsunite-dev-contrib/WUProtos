@@ -7,18 +7,11 @@ import "WUProtos/Data/SkuData.proto";
 import "WUProtos/Data/Requirements.proto";
 
 message StorePack {
-	repeated .WUProtos.Data.StorePackConfig store_pack_config = 1;
-	string id = 2;
-	IapStoreItem store_item = 3;
-	.WUProtos.Data.Loot.LootCollection contents = 4;
-	.WUProtos.Data.Loot.LootCollection cost = 5;
-	string iap_id = 6;
-	.WUProtos.Data.SkuData sku_data = 7;
-	.WUProtos.Data.Requirements requirements = 8;
+	string id = 1;
+	.WUProtos.Data.Loot.LootCollection contents = 2;
+	.WUProtos.Data.Loot.LootCollection cost = 3;
+	string iap_id = 4;
+	.WUProtos.Data.SkuData sku_data = 5;
+	.WUProtos.Data.Requirements requirements = 6;
 
-	message TimeReqTuple {
-	}
-
-	message IapStoreItem {
-	}
 }

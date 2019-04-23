@@ -2,6 +2,7 @@ syntax = "proto3";
 package WUProtos.Data;
 
 import "WUProtos/Data/Requirements.proto";
+import "WUProtos/Data/Player/PlayerCountMultipliers.proto";
 
 message ChamberTemplate {
     string id = 1;
@@ -12,5 +13,6 @@ message ChamberTemplate {
     uint32 player_cap = 6;
     int64 duration_ms = 7;
     int64 knockout_time_ms = 10;
+    map <int32, .WUProtos.Data.Player.PlayerCountMultipliers> player_count_multipliers = 11;
     uint32 base_chamber_rating = 12;
 }

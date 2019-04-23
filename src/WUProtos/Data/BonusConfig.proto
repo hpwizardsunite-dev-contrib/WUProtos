@@ -4,16 +4,6 @@ package WUProtos.Data;
 import "WUProtos/Data/Loot/LootCollection.proto";
 
 message BonusConfig {
-    string id = 1;
-    repeated BonusTier swish_game_accuracy_reward = 2;
-    repeated float accuracy_tiers = 3;
-    .WUProtos.Data.Loot.LootCollection first_time_success_reward = 4;
-    repeated string accuracy_tier_bonus_id = 5;
-    .WUProtos.Data.Loot.LootCollection life_time_first_success_reward = 6;
-    repeated string accuracy_tier_bonus_text = 7;
-
-    message BonusTier {
-        float tier_threshold = 1;
-        .WUProtos.Data.Loot.LootCollection bonus = 2;
-    }
+    float tier_threshold = 1;
+    .WUProtos.Data.Loot.LootCollection bonus = 2;
 }

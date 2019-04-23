@@ -1,7 +1,6 @@
 syntax = "proto3";
 package WUProtos.Data.Collection;
 
-import "WUProtos/Data/MysteryItemInfo.proto";
 import "WUProtos/Data/Loot/LootCollection.proto";
 import "WUProtos/Data/Requirements.proto";
 

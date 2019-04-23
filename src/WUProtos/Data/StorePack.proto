@@ -1,7 +1,6 @@
 syntax = "proto3";
 package WUProtos.Data;
 
-import "WUProtos/Data/StorePackConfig.proto";
 import "WUProtos/Data/Loot/LootCollection.proto";
 import "WUProtos/Data/SkuData.proto";
 import "WUProtos/Data/Requirements.proto";

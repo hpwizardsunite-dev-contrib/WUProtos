@@ -13,7 +13,7 @@ message SharedQualityLevel {
 	bool billboards_face_camera_position = 9;
 	int32 realtime_shadows = 10;
 	bool ar_azimuth_blurring = 11;
-	map<string, QualityLevelOverrides> gamemode_overrides = 13;
+	map<string, .WUProtos.Data.QualityLevelOverrides> gamemode_overrides = 13;
 	int32 ar_encounter_particle_cap = 14;
 	int32 locked_encounter_particle_cap = 15;
 	int32 menu_particle_cap = 16;

@@ -5,5 +5,5 @@ import "WUProtos/Data/Combat/CombatGrowth.proto";
 
 message CombatEnemyStats {
     map<string, int64> stat = 2;
-    map<string, CombatGrowth> stat_growth = 3;
+    map<string, .WUProtos.Data.Combat.CombatGrowth> stat_growth = 3;
 }

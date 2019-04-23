@@ -8,5 +8,5 @@ message DailyRewardMonthlySchedule {
 	string id = 1;
 	uint32 number_of_days = 2;
 	.WUProtos.Data.Loot.LootCollection default_reward = 3;
-	map<int32, DailyReward> daily_rewards = 4;
+	map<int32, .WUProtos.Data.DailyReward> daily_rewards = 4;
 }

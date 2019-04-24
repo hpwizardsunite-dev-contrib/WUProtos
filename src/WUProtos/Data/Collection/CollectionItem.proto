@@ -1,19 +1,17 @@
 syntax = "proto3";
 package WUProtos.Data.Collection;
 
-import "WUProtos/Data/MysteryItemInfo.proto";
 import "WUProtos/Data/Loot/LootCollection.proto";
 import "WUProtos/Data/Requirements.proto";
 
 message CollectionItem {
-	repeated .WUProtos.Data.MysteryItemInfo mystery_data = 1;
-	string id = 2;
-	string family_id = 3;
-	int32 shard_count = 4;
-	int32 rarity = 5;
-	.WUProtos.Data.Loot.LootCollection one_time_rewards = 6;
-	string page_id = 7;
-	.WUProtos.Data.Requirements unlock_requirements = 8;
-	repeated int32 shard_counts = 9;
+	string id = 1;
+	string family_id = 2;
+	int32 shard_count = 3;
+	int32 rarity = 4;
+	.WUProtos.Data.Loot.LootCollection one_time_rewards = 5;
+	string page_id = 6;
+	.WUProtos.Data.Requirements unlock_requirements = 7;
+	repeated int32 shard_counts = 8;
 	bool sticker_disabled = 10;
 }

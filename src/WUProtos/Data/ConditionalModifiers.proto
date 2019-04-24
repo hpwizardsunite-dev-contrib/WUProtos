@@ -5,4 +5,5 @@ import "WUProtos/Data/Conditions.proto";
 
 message ConditionalModifiers {
 	.WUProtos.Data.Conditions conditions = 1;
+	map<string, int64> modifiers = 2;
 }

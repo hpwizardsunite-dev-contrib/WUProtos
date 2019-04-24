@@ -2,4 +2,5 @@ syntax = "proto3";
 package WUProtos.Inventory;
 
 message InventoryVaultCapacity {
+    map<string, int64> category_capacity = 1;
 }

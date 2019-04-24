@@ -26,6 +26,9 @@ message PlayerProfile {
 	repeated string unlocked_selfie_asset_ids = 20;
 	int64 total_swish_success_spell = 21;
 	repeated string discovered_potions_master_note_ids = 22;
+	map<string, int64> master_note_discovery_status = 23;
+	map<string, int64> swish_spellcasts = 24;
+	map<string, int64> store_pack_purchased = 25;
 	.WUProtos.Data.EmailOpts email_opts = 26;
 
 	message WandOptions {

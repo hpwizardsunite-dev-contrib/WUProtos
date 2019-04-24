@@ -3,6 +3,7 @@ package WUProtos.Data.Client;
 
 import "WUProtos/Data/Client/ClientFtueVideoFallbackDefinition.proto";
 import "WUProtos/Data/Client/ClientFtueVideoNameDefinition.proto";
+import "WUProtos/Data/Client/ClientFtueVideoQualityMapping.proto";
 
 message ClientFtueVideoConfig {
     oneof VideoSource {
@@ -11,4 +12,5 @@ message ClientFtueVideoConfig {
     }
 
     repeated string quality_buckets = 3;
+    map<string, .WUProtos.Data.Client.ClientFtueVideoQualityMapping> quality_mappings = 4;
 }

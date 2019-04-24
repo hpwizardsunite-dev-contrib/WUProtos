@@ -19,4 +19,5 @@ message ClientProfession {
     string icon_highlighted = 13;
     bool show_profession_rank_meter = 14;
     string profession_activated_sfx = 15;
+    map<string, .WUProtos.Data.Client.ClientProfessionRank> profession_ranks_map = 16;
 }

@@ -6,5 +6,6 @@ message EncounterStartCombatStageResult {
 	repeated int64 enemy_damage_unblocked = 2;
 	repeated int64 enemy_damage_blocked = 3;
 	int64 hp_max_player = 4;
+	map<string, int64> player_damage_per_energy = 5;
 	float player_crit_multiplier = 6;
 }

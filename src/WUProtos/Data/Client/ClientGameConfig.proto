@@ -42,6 +42,7 @@ message ClientGameConfig {
     repeated .WUProtos.Data.Collection.CollectionSubfeaturePrestigeLevels subfeature_prestige_levels = 26;
     .WUProtos.Data.Client.ClientBonusConfig bonus_config = 27;
     string portkey_wrackspurt_collection_haptic_key = 28;
+    map<string, string> parkmode_bgs = 29;
     int32 potion_masternote_unlock_treshold = 30;
     repeated .WUProtos.Data.Collection.CollectionSubfeatureFamilyOrders subfeature_family_orders = 31;
     repeated .WUProtos.Data.BatterySaverProfile battery_saver_profiles = 32;

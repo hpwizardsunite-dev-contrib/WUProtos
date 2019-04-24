@@ -2,8 +2,11 @@ syntax = "proto3";
 package WUProtos.Data;
 
 message TempClientStatsHelper {
+	map<string, int64> player_active_stats = 1;
+	map<string, int64> enemy_active_stats = 2;
 	int64 hp_max_enemy = 3;
 	repeated int64 enemy_damage_unblocked = 4;
 	repeated int64 enemy_damage_blocked = 5;
 	int64 hp_max_player = 6;
+	map<string, int64> player_damage_per_energy = 7;
 }

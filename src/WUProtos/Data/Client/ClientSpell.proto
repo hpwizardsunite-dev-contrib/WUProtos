@@ -5,6 +5,8 @@ message ClientSpell {
     string id = 1;
     string name = 2;
     repeated string charge_up_effect = 3;
+    map<string, string> timelines = 4;
+    map<string, string> critical_hits = 5;
     string pattern = 6;
     string glyph_image = 7;
     string protego_player_succeed_tl = 8;

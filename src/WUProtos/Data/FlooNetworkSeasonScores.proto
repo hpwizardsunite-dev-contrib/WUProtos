@@ -3,4 +3,5 @@ package WUProtos.Data;
 
 message FlooNetworkSeasonScores {
 	string season_id = 1;
+	map<string, int64> points_per_team = 2;
 }

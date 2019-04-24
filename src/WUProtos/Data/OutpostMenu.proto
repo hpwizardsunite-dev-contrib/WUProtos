@@ -1,6 +1,9 @@
 syntax = "proto3";
 package WUProtos.Data;
 
+import "WUProtos/Data/Loot/LootReward.proto";
+
 message OutpostMenu {
+	map<int64, .WUProtos.Data.Loot.LootReward> menu_options = 1;
 	int64 menu_timestamp = 2;
 }

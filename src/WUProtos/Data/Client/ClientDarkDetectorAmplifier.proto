@@ -1,6 +1,9 @@
 syntax = "proto3";
 package WUProtos.Data.Client;
 
+import "WUProtos/Data/Client/ClientDarkDetector.proto";
+
 message ClientDarkDetectorAmplifier {
     int32 num_slots = 1;
+    map<int32, .WUProtos.Data.Client.ClientDarkDetector> active_dark_detectors = 2;
 }

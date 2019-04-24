@@ -2,4 +2,8 @@ syntax = "proto3";
 package WUProtos.Data.Player;
 
 message PlayerLifetimeMetricsConfig {
+    map<string, string> collected_item_gmt_id = 1;
+    map<string, string> collected_category_gmt_id = 2;
+    map<string, string> used_item_gmt_id = 3;
+    map<string, string> used_category_gmt_id = 4;
 }

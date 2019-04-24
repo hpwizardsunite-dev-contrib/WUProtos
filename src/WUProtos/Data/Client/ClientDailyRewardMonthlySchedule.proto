@@ -1,6 +1,9 @@
 syntax = "proto3";
 package WUProtos.Data.Client;
 
+import "WUProtos/Data/Client/ClientDailyReward.proto";
+
 message ClientDailyRewardMonthlySchedule {
     string id = 1;
+    map<uint32, .WUProtos.Data.Client.ClientDailyReward> daily_rewards = 2;
 }

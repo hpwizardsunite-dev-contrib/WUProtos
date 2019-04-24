@@ -10,4 +10,5 @@ message ClientRpgstat {
     int32 display_threshold = 6;
     string icon_display_type = 7;
     string info_desc = 8;
+    map<string, string> icons = 9;
 }

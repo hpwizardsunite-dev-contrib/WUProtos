@@ -5,6 +5,7 @@ import "WUProtos/Data/Buff/ActiveBuffList.proto";
 
 message ChamberPlayerState {
 	string nickname = 1;
+	map<string, int64> runestone_contributions = 2;
 
 	oneof State {
 		PlayerWaitingState waiting = 3;

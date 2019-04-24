@@ -444,14 +444,14 @@ message ProxyResponseProto {
 //------------------------------
 //----- Begin proto -----
 
-// ref: Atlas.Proto.ActiveEngagement
+// ref: ActiveEngagement
 enum ActiveEngagement {
 	ACTIVE_ENGAGEMENT_UNSET = 0;
 	MOB_IS_ENGAGED = 1;
 	MOB_IS_FREE = 2;
 }
 
-// ref: Atlas.Proto.AdditionalSelectionRule
+// ref: AdditionalSelectionRule
 enum AdditionalSelectionRule {
 	none = 0;
 	no_if_max_health = 1;
@@ -459,13 +459,13 @@ enum AdditionalSelectionRule {
 	no_if_alive = 3;
 }
 
-// ref: Atlas.Proto.AdviceOverlayAlignment
+// ref: AdviceOverlayAlignment
 enum AdviceOverlayAlignment {
 	bottom = 0;
 	top = 1;
 }
 
-// ref: Atlas.Proto.ARMode
+// ref: ARMode
 enum ARMode {
 	AR_MODE_UNSET = 0;
 	advanced = 1;
@@ -473,14 +473,14 @@ enum ARMode {
 	park = 3;
 }
 
-// ref: Atlas.Proto.BonusReceiver
+// ref: BonusReceiver
 enum BonusReceiver {
 	BONUS_RECEIVER_UNKNOWN = 0;
 	TEAM = 1;
 	PLAYER = 2;
 }
 
-// ref: Atlas.Proto.BonusTargetReward
+// ref: BonusTargetReward
 enum BonusTargetReward {
 	BONUS_TARGET_REWARD_UNKNOWN = 0;
 	CHALLENGE_COLLECTIBLE_SHARDS = 1;
@@ -490,14 +490,14 @@ enum BonusTargetReward {
 	ADVERSARY_COLLECTIBLE_SHARDS = 5;
 }
 
-// ref: Atlas.Proto.BoolLiteral
+// ref: BoolLiteral
 enum BoolLiteral {
 	BOOL_UNKNOWN = 0;
 	TRUE = 1;
 	FALSE = 2;
 }
 
-// ref: Atlas.Proto.CategoryAssetType
+// ref: CategoryAssetType
 enum CategoryAssetType {
 	CATEGORY_ASSET_TYPE_UNSET = 0;
 	CATEGORY_ASSET_LENS = 1;
@@ -506,14 +506,14 @@ enum CategoryAssetType {
 	CATEGORY_ASSET_STICKER = 4;
 }
 
-// ref: Atlas.Proto.CategoryCapacityType
+// ref: CategoryCapacityType
 enum CategoryCapacityType {
 	CAGETORY_CAPACITY_TYPE_UNSET = 0;
 	DEFAULT = 1;
 	INFINITE = 2;
 }
 
-// ref: Atlas.Proto.CategoryLens
+// ref: CategoryLens
 enum CategoryLens {
 	CATEGORY_LENS_UNSET = 0;
 	CATEGORY_LENS_TOP = 1;
@@ -521,35 +521,35 @@ enum CategoryLens {
 	CATEGORY_LENS_BOTTOM = 3;
 }
 
-// ref: Atlas.Proto.CategoryRandomize
+// ref: CategoryRandomize
 enum CategoryRandomize {
 	CATEGORY_RANDOMIZE_UNSET = 0;
 	RANDOMIZE_LENS = 1;
 	RANDOMIZE_FILTER_FRAME = 2;
 }
 
-// ref: Atlas.Proto.CategoryShareLocation
+// ref: CategoryShareLocation
 enum CategoryShareLocation {
 	CATEGORY_SHARE_LOCATION_UNSET = 0;
 	CATEGORY_SAVE_PASSPORT = 1;
 	CATEGORY_SAVE_SELFIE_FLOW = 2;
 }
 
-// ref: Atlas.Proto.CauldronType
+// ref: CauldronType
 enum CauldronType {
 	CAULDRON_UNKNOWN = 0;
 	CAULDRON_NORMAL = 1;
 	CAULDRON_RENTAL = 2;
 }
 
-// ref: Atlas.Proto.CollectionFamilyType
+// ref: CollectionFamilyType
 enum CollectionFamilyType {
 	COLLECTION_FAMILY_TYPE_UNKNOWN = 0;
 	NORMAL = 1;
 	APEX = 2;
 }
 
-// ref: Atlas.Proto.CombatPhaseOutcome
+// ref: CombatPhaseOutcome
 enum CombatPhaseOutcome {
 	COMBAT_PHASE_OUTCOME_UNKNOWN = 0;
 	SUCCEED = 1;
@@ -557,7 +557,7 @@ enum CombatPhaseOutcome {
 	FAIL_TIME = 3;
 }
 
-// ref: Atlas.Proto.ComparisonOperator
+// ref: ComparisonOperator
 enum ComparisonOperator {
 	COMPARISON_UNKNOWN = 0;
 	EQUAL = 1;
@@ -567,35 +567,35 @@ enum ComparisonOperator {
 	LESS_OR_EQUAL = 5;
 }
 
-// ref: Atlas.Proto.ConditionTargetType
+// ref: ConditionTargetType
 enum ConditionTargetType {
 	CONDITION_TARGET_TYPE_UNSET = 0;
 	SELF = 1;
 	OPPONENT = 2;
 }
 
-// ref: Atlas.Proto.DevicePlatform
+// ref: DevicePlatform
 enum DevicePlatform {
 	DEVICE_UNKNOWN = 0;
 	DEVICE_IOS = 1;
 	DEVICE_ANDROID = 2;
 }
 
-// ref: Atlas.Proto.DownloadType
+// ref: DownloadType
 enum DownloadType {
 	DOWNLOAD_TYPE_UNSET = 0;
 	PORTRAIT_DOWNLOAD_PASSPORT = 1;
 	PORTRAIT_DOWNLOAD_PHOTO = 2;
 }
 
-// ref: Atlas.Proto.EqualityOperator
+// ref: EqualityOperator
 enum EqualityOperator {
 	EQUALITY_OPERATOR_UNSET = 0;
 	IS_EQUAL = 1;
 	IS_NOT_EQUAL = 2;
 }
 
-// ref: Atlas.Proto.GrowthType
+// ref: GrowthType
 enum GrowthType {
 	GROWTH_TYPE_UNSET = 0;
 	LINEAR = 1;
@@ -603,13 +603,13 @@ enum GrowthType {
 	EXPONENTIAL = 3;
 }
 
-// ref: Atlas.Proto.LexiconMetricIds
+// ref: LexiconMetricIds
 enum LexiconMetricIds {
 	UNSET_METRIC_ID = 0;
 	GENERIC_METRIC_ID = 1;
 }
 
-// ref: Atlas.Proto.MapAbilityTargetType
+// ref: MapAbilityTargetType
 enum MapAbilityTargetType {
 	TARGET_NONE = 0;
 	TARGET_CHOOSE_ONE = 1;
@@ -626,7 +626,7 @@ enum MapAbilityTargetType {
 	TARGET_CHOOSE_FRIEND_NOT_SELF = 12;
 }
 
-// ref: Atlas.Proto.MasterNoteGesture
+// ref: MasterNoteGesture
 enum MasterNoteGesture {
 	GESTURE_NONE = 0;
 	GESTURE_HORIZONTAL = 1;
@@ -639,7 +639,7 @@ enum MasterNoteGesture {
 	GESTURE_SHAKE = 8;
 }
 
-// ref: Atlas.Proto.MobRewardRecipient
+// ref: MobRewardRecipient
 enum MobRewardRecipient {
 	MOB_REWARD_RECIPIENT_UNSET = 0;
 	MOB_REWARD_RECIPIENT_PLAYER = 1;
@@ -647,7 +647,7 @@ enum MobRewardRecipient {
 	MOB_REWARD_RECIPIENT_RANDOM_PLAYER = 3;
 }
 
-// ref: Atlas.Proto.PoiAccessibility
+// ref: PoiAccessibility
 enum PoiAccessibility {
 	UNKNOWN_POI_STATE = 0;
 	POI_OPEN = 1;
@@ -655,7 +655,7 @@ enum PoiAccessibility {
 	POI_CLOSING = 3;
 }
 
-// ref: Atlas.Proto.PortraitAction
+// ref: PortraitAction
 enum PortraitAction {
 	PORTRATE_ACTION_UNSET = 0;
 	PORTRAIT_ACTION_SAVE = 1;
@@ -663,14 +663,14 @@ enum PortraitAction {
 	PORTRAIT_ACTION_SHARE = 3;
 }
 
-// ref: Atlas.Proto.PortraitType
+// ref: PortraitType
 enum PortraitType {
 	PORTRAIT_TYPE_UNSET = 0;
 	PORTRAIT_PHOTO = 1;
 	PORTRAIT_VIDEO = 2;
 }
 
-// ref: Atlas.Proto.PotionConsumableScenario
+// ref: PotionConsumableScenario
 enum PotionConsumableScenario {
 	UNKNOWN_CONSUMABLE_SCENARIO = 0;
 	OVERWORLD = 1;
@@ -680,7 +680,7 @@ enum PotionConsumableScenario {
 	WC_ENCOUNTER = 5;
 }
 
-// ref: Atlas.Proto.ProfileTabSource
+// ref: ProfileTabSource
 enum ProfileTabSource {
 	PROFILE_TAB_SOURCE_UNSET = 0;
 	TAB_NEW = 1;
@@ -689,7 +689,7 @@ enum ProfileTabSource {
 	TAB_GALLERY = 4;
 }
 
-// ref: Atlas.Proto.QuestType
+// ref: QuestType
 enum QuestType {
 	QUEST_TYPE_UNKNOWN = 0;
 	QUEST_TYPE_NONREPEATABLE = 1;
@@ -699,7 +699,7 @@ enum QuestType {
 	QUEST_TYPE_ACHIEVEMENT = 5;
 }
 
-// ref: Atlas.Proto.StatType
+// ref: StatType
 enum StatType {
 	STAT_UNKNOWN = 0;
 	STAT_COMBAT_HP = 1;
@@ -727,14 +727,14 @@ enum StatType {
 	STAT_COMBAT_FOCUS_TRANSFER = 23;
 }
 
-// ref: Atlas.Proto.StorePackConfigSize
+// ref: StorePackConfigSize
 enum StorePackConfigSize {
 	SIZE_SMALL = 0;
 	SIZE_MEDIUM = 1;
 	SIZE_LARGE = 2;
 }
 
-// ref: Atlas.Proto.StoryboardResetMode
+// ref: StoryboardResetMode
 enum StoryboardResetMode {
 	STORYBOARD_RESET_UNKNOWN = 0;
 	STORYBOARD_RESET_NOT_ALLOWED = 1;
@@ -742,21 +742,21 @@ enum StoryboardResetMode {
 	STORYBOARD_RESET_WHEN_COMPLETE = 3;
 }
 
-// ref: Atlas.Proto.AccountCreationDateRequirement
+// ref: AccountCreationDateRequirement
 message AccountCreationDateRequirement {
 	int64 account_creation_date = 1;
 	ComparisonOperator comparison_operator = 2;
 }
 
-// ref: Atlas.Proto.ActiveArModeRequirement
+// ref: ActiveArModeRequirement
 message ActiveArModeRequirement {
 	ARMode ar_mode = 1;
 	EqualityOperator operator = 2;
 }
 
-// ref: Atlas.Proto.ActiveBuffExpiration
+// ref: ActiveBuffExpiration
 message ActiveBuffExpiration {
-	// ref: Atlas.Proto.ActiveBuffExpiration/TypeOneofCase
+	// ref: ActiveBuffExpiration/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		time = 1;
@@ -773,12 +773,12 @@ message ActiveBuffExpiration {
 	ChallengeBuffExpiration challenge = 6;
 }
 
-// ref: Atlas.Proto.ActiveBuffListProto
+// ref: ActiveBuffListProto
 message ActiveBuffListProto {
 	repeated ActiveBuffProto buffs = 1;
 }
 
-// ref: Atlas.Proto.ActiveBuffProto
+// ref: ActiveBuffProto
 message ActiveBuffProto {
 	string gmt_buff_id = 1;
 	ActiveBuffExpiration expiration = 2;
@@ -786,9 +786,9 @@ message ActiveBuffProto {
 	int64 start_time_ms = 5;
 }
 
-// ref: Atlas.Proto.ActiveBuffSource
+// ref: ActiveBuffSource
 message ActiveBuffSource {
-	// ref: Atlas.Proto.ActiveBuffSource/TypeOneofCase
+	// ref: ActiveBuffSource/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		vault_item = 1;
@@ -801,21 +801,21 @@ message ActiveBuffSource {
 	MapAbilityActiveBuffSource map_ability = 3;
 }
 
-// ref: Atlas.Proto.AnalyticsEventProto
+// ref: AnalyticsEventProto
 message AnalyticsEventProto {
 	string event_name = 1;
 	int64 event_timestamp = 2;
-	//map<string, ???> event_metadata = 3;
+	map<string, string> event_metadata = 3;
 }
 
-// ref: Atlas.Proto.AnalyticsEventsProto
+// ref: AnalyticsEventsProto
 message AnalyticsEventsProto {
 	repeated AnalyticsEventProto event = 1;
 }
 
-// ref: Atlas.Proto.AudioConfigProto
+// ref: AudioConfigProto
 message AudioConfigProto {
-	// ref: Atlas.Proto.AudioConfigProto/MusicPlayLocation
+	// ref: AudioConfigProto/MusicPlayLocation
 	enum MusicPlayLocation {
 		loading_screen = 0;
 		map = 1;
@@ -830,35 +830,35 @@ message AudioConfigProto {
 	repeated MusicConfigProto music_config = 2;
 }
 
-// ref: Atlas.Proto.AudioParameterProto
+// ref: AudioParameterProto
 message AudioParameterProto {
 	string param_name = 1;
 	float param_value = 2;
 }
 
-// ref: Atlas.Proto.BatterySaverProfile
+// ref: BatterySaverProfile
 message BatterySaverProfile {
 	repeated string profiles = 1;
 	string name = 2;
 }
 
-// ref: Atlas.Proto.BonusCategoryProto
+// ref: BonusCategoryProto
 message BonusCategoryProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.BonusConfigProto
+// ref: BonusConfigProto
 message BonusConfigProto {
-	// ref: Atlas.Proto.BonusConfigProto/Types/BonusTier
+	// ref: BonusConfigProto/Types/BonusTier
 	message BonusTier {
 		float tier_threshold = 1;
 		LootCollectionProto bonus = 2;
 	}
 }
 
-// ref: Atlas.Proto.BonusMetadataProto
+// ref: BonusMetadataProto
 message BonusMetadataProto {
-	// ref: Atlas.Proto.BonusMetadataProto/MetadataTypeOneofCase
+	// ref: BonusMetadataProto/MetadataTypeOneofCase
 	enum MetadataTypeOneofCase {
 		none = 0;
 		potion = 1;
@@ -881,17 +881,17 @@ message BonusMetadataProto {
 	ChallengeChamberBonusMetadataProto challenge_chamber_bonus = 8;
 }
 
-// ref: Atlas.Proto.BrewPotionsQuestProgress
+// ref: BrewPotionsQuestProgress
 message BrewPotionsQuestProgress {
 	int64 current_brew_count = 1;
 }
 
-// ref: Atlas.Proto.BrewPotionsQuestTask
+// ref: BrewPotionsQuestTask
 message BrewPotionsQuestTask {
 	int64 required_brew_count = 1;
 }
 
-// ref: Atlas.Proto.BuffCountCondition
+// ref: BuffCountCondition
 message BuffCountCondition {
 	string target_type = 1;
 	ComparisonOperator comparison_operator = 2;
@@ -900,9 +900,9 @@ message BuffCountCondition {
 	ConditionTargetType condition_target_type = 5;
 }
 
-// ref: Atlas.Proto.BuffDuration
+// ref: BuffDuration
 message BuffDuration {
-	// ref: Atlas.Proto.BuffDuration/TypeOneofCase
+	// ref: BuffDuration/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		time = 1;
@@ -921,15 +921,15 @@ message BuffDuration {
 	ChallengeBuffDuration challenge = 6;
 }
 
-// ref: Atlas.Proto.BuffExclusivityGroup
+// ref: BuffExclusivityGroup
 message BuffExclusivityGroup {
 	string exclusivity_group = 1;
 	int32 exclusivity_priority = 2;
 }
 
-// ref: Atlas.Proto.BuffProto
+// ref: BuffProto
 message BuffProto {
-	// ref: Atlas.Proto.BuffProto/Types/BuffType
+	// ref: BuffProto/Types/BuffType
 	enum BuffType {
 		NONE = 0;
 		BUFF = 1;
@@ -940,37 +940,37 @@ message BuffProto {
 	BuffDuration duration = 3;
 	BuffExclusivityGroup exclusivity_group = 4;
 	BuffType buff_type = 5;
-	//map<string, ???> modifiers = 6;
+	map<string, int64> modifiers = 6;
 	repeated ConditionalModifiers conditional_modifiers = 7;
 }
 
-// ref: Atlas.Proto.CauldronProto
+// ref: CauldronProto
 message CauldronProto {
 	string id = 1;
 	CauldronType type = 2;
 	float discount = 3;
 }
 
-// ref: Atlas.Proto.CauldronRewardProto
+// ref: CauldronRewardProto
 message CauldronRewardProto {
 	string template_id = 1;
 	int64 cauldron_id = 2;
 	int64 availability_time = 3;
 }
 
-// ref: Atlas.Proto.CauldronTimeItemProto
+// ref: CauldronTimeItemProto
 message CauldronTimeItemProto {
 	int64 availability_time = 1;
 }
 
-// ref: Atlas.Proto.ChallengeBonusMetadataProto
+// ref: ChallengeBonusMetadataProto
 message ChallengeBonusMetadataProto {
 	string challenge_bonus_gmt_id = 1;
 }
 
-// ref: Atlas.Proto.ChallengeBonusProto
+// ref: ChallengeBonusProto
 message ChallengeBonusProto {
-	// ref: Atlas.Proto.ChallengeBonusProto/BonusKindOneofCase
+	// ref: ChallengeBonusProto/BonusKindOneofCase
 	enum BonusKindOneofCase {
 		none = 0;
 		player_count = 20;
@@ -991,34 +991,34 @@ message ChallengeBonusProto {
 	PlayerRatioChallengeBonusProto player_ratio = 24;
 }
 
-// ref: Atlas.Proto.ChallengeBuffDuration
+// ref: ChallengeBuffDuration
 message ChallengeBuffDuration {
 }
 
-// ref: Atlas.Proto.ChallengeBuffExpiration
+// ref: ChallengeBuffExpiration
 message ChallengeBuffExpiration {
 }
 
-// ref: Atlas.Proto.ChallengeChamberBonusMetadataProto
+// ref: ChallengeChamberBonusMetadataProto
 message ChallengeChamberBonusMetadataProto {
 	string chamber_template_gmt_id = 1;
 }
 
-// ref: Atlas.Proto.ChallengeLootTableProto
+// ref: ChallengeLootTableProto
 message ChallengeLootTableProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.ChallengeSpawnLogicProto
+// ref: ChallengeSpawnLogicProto
 message ChallengeSpawnLogicProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.ChamberTemplateProto
+// ref: ChamberTemplateProto
 message ChamberTemplateProto {
-	//map<int32, ???> runestone_difficulties = 1;
+	map<int32, int32> runestone_difficulties = 1;
 	string id = 1;
-	//map<string, ???> parkmode_bgs = 2;
+	map<string, string> parkmode_bgs = 2;
 	Requirements unlock_requirements = 2;
 	Requirements visibility_requirements = 3;
 	uint32 min_runestone_level = 4;
@@ -1026,23 +1026,23 @@ message ChamberTemplateProto {
 	uint32 player_cap = 6;
 	int64 duration_ms = 7;
 	int64 knockout_time_ms = 10;
-	//map<int32, ???> player_count_multipliers = 11;
+	map<int32, PlayerCountMultipliers> player_count_multipliers = 11;
 	uint32 base_chamber_rating = 12;
 }
 
-// ref: Atlas.Proto.ChargesActiveBuffExpiration
+// ref: ChargesActiveBuffExpiration
 message ChargesActiveBuffExpiration {
 	bytes encounter_id = 1;
 	int32 remaining_charges = 2;
 }
 
-// ref: Atlas.Proto.ChargesBuffDuration
+// ref: ChargesBuffDuration
 message ChargesBuffDuration {
 	int32 num_charges = 1;
 	bool is_override = 2;
 }
 
-// ref: Atlas.Proto.ClientBadgeProto
+// ref: ClientBadgeProto
 message ClientBadgeProto {
 	string name = 1;
 	string icon = 2;
@@ -1052,7 +1052,7 @@ message ClientBadgeProto {
 	Requirements unlock_conditions = 6;
 }
 
-// ref: Atlas.Proto.ClientBonusCategoryProto
+// ref: ClientBonusCategoryProto
 message ClientBonusCategoryProto {
 	string id = 1;
 	ColorProto color = 2;
@@ -1060,7 +1060,7 @@ message ClientBonusCategoryProto {
 	string background_image = 4;
 }
 
-// ref: Atlas.Proto.ClientBonusConfigProto
+// ref: ClientBonusConfigProto
 message ClientBonusConfigProto {
 	string id = 1;
 	repeated float accuracy_tier = 2;
@@ -1072,7 +1072,7 @@ message ClientBonusConfigProto {
 	string life_time_bonus_text = 8;
 }
 
-// ref: Atlas.Proto.ClientBuffProto
+// ref: ClientBuffProto
 message ClientBuffProto {
 	string id = 1;
 	string reward_bonus_loc_key = 3;
@@ -1082,30 +1082,30 @@ message ClientBuffProto {
 	repeated ClientConditionalModifiers conditional_modifiers = 7;
 }
 
-// ref: Atlas.Proto.ClientCauldronProto
+// ref: ClientCauldronProto
 message ClientCauldronProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.ClientChallengeBonusProto
+// ref: ClientChallengeBonusProto
 message ClientChallengeBonusProto {
 	string id = 1;
 	string display_text = 2;
 	string icon = 3;
 }
 
-// ref: Atlas.Proto.ClientChamberTemplateProto
+// ref: ClientChamberTemplateProto
 message ClientChamberTemplateProto {
 	string id = 1;
 	string name = 2;
 	float challenge_leaving_warning_radius = 3;
 	string arena_scene = 4;
 	int32 base_difficulty = 5;
-	//map<int32, ???> runestone_difficulties = 6;
-	//map<string, ???> parkmode_bgs = 7;
+	map<int32, int32> runestone_difficulties = 6;
+	map<string, string> parkmode_bgs = 7;
 }
 
-// ref: Atlas.Proto.ClientCollectionFamilyProto
+// ref: ClientCollectionFamilyProto
 message ClientCollectionFamilyProto {
 	string id = 1;
 	string name = 3;
@@ -1124,7 +1124,7 @@ message ClientCollectionFamilyProto {
 	SoundConfigProto sound = 17;
 }
 
-// ref: Atlas.Proto.ClientCollectionItemProto
+// ref: ClientCollectionItemProto
 message ClientCollectionItemProto {
 	string id = 1;
 	string name = 2;
@@ -1136,7 +1136,7 @@ message ClientCollectionItemProto {
 	string sticker_placed_storyboard_id = 8;
 }
 
-// ref: Atlas.Proto.ClientCollectionPageProto
+// ref: ClientCollectionPageProto
 message ClientCollectionPageProto {
 	string id = 1;
 	string name = 2;
@@ -1145,7 +1145,7 @@ message ClientCollectionPageProto {
 	bool show_in_ui = 5;
 }
 
-// ref: Atlas.Proto.ClientCombatEnemyTraitProto
+// ref: ClientCombatEnemyTraitProto
 message ClientCombatEnemyTraitProto {
 	string id = 1;
 	string name = 2;
@@ -1153,9 +1153,9 @@ message ClientCombatEnemyTraitProto {
 	string description = 4;
 }
 
-// ref: Atlas.Proto.ClientCombatMoveTypeProto
+// ref: ClientCombatMoveTypeProto
 message ClientCombatMoveTypeProto {
-	// ref: Atlas.Proto.ClientCombatMoveTypeProto/CombatMoveOneofCase
+	// ref: ClientCombatMoveTypeProto/CombatMoveOneofCase
 	enum CombatMoveOneofCase {
 		none = 0;
 		player_attack = 1;
@@ -1171,62 +1171,62 @@ message ClientCombatMoveTypeProto {
 	string player_failed_timeline = 6;
 }
 
-// ref: Atlas.Proto.ClientCombatPlayerAttackProto
+// ref: ClientCombatPlayerAttackProto
 message ClientCombatPlayerAttackProto {
 	string enemy_bone_name = 1;
 	float ui_target_radius = 2;
 	float reticle_time_to_fill = 3;
 }
 
-// ref: Atlas.Proto.ClientCombatPlayerAutoAdvanceProto
+// ref: ClientCombatPlayerAutoAdvanceProto
 message ClientCombatPlayerAutoAdvanceProto {
 }
 
-// ref: Atlas.Proto.ClientCombatPlayerDefendPatternProto
+// ref: ClientCombatPlayerDefendPatternProto
 message ClientCombatPlayerDefendPatternProto {
 	int32 weight = 1;
 	string protego_pattern = 2;
 }
 
-// ref: Atlas.Proto.ClientCombatPlayerDefendProto
+// ref: ClientCombatPlayerDefendProto
 message ClientCombatPlayerDefendProto {
 	repeated ClientCombatPlayerDefendPatternProto pattern_list = 1;
 }
 
-// ref: Atlas.Proto.ClientCombatStateProto
+// ref: ClientCombatStateProto
 message ClientCombatStateProto {
 	repeated ClientCombatMoveTypeProto possible_moves = 1;
 }
 
-// ref: Atlas.Proto.ClientConditionalModifier
+// ref: ClientConditionalModifier
 message ClientConditionalModifier {
 	string desc = 1;
 }
 
-// ref: Atlas.Proto.ClientConditionalModifiers
+// ref: ClientConditionalModifiers
 message ClientConditionalModifiers {
-	//map<string, ???> modifiers = 2;
+	map<string, ClientConditionalModifier> modifiers = 2;
 }
 
-// ref: Atlas.Proto.ClientDailyRewardMonthlyScheduleProto
+// ref: ClientDailyRewardMonthlyScheduleProto
 message ClientDailyRewardMonthlyScheduleProto {
 	string id = 1;
-	//map<uint32, ???> daily_rewards = 2;
+	map<uint32, ClientDailyRewardProto> daily_rewards = 2;
 }
 
-// ref: Atlas.Proto.ClientDailyRewardProto
+// ref: ClientDailyRewardProto
 message ClientDailyRewardProto {
 	bool hide_as_crate = 1;
 	bool make_sparkly = 2;
 }
 
-// ref: Atlas.Proto.ClientDarkDetectorAmplifierProto
+// ref: ClientDarkDetectorAmplifierProto
 message ClientDarkDetectorAmplifierProto {
 	int32 num_slots = 1;
-	//map<int32, ???> active_dark_detectors = 2;
+	map<int32, ClientDarkDetectorProto> active_dark_detectors = 2;
 }
 
-// ref: Atlas.Proto.ClientDarkDetectorProto
+// ref: ClientDarkDetectorProto
 message ClientDarkDetectorProto {
 	string dark_detector_gmt_id = 1;
 	int64 end_time_ms = 2;
@@ -1234,7 +1234,7 @@ message ClientDarkDetectorProto {
 	string deploying_player_nickname = 4;
 }
 
-// ref: Atlas.Proto.ClientEncounterProto
+// ref: ClientEncounterProto
 message ClientEncounterProto {
 	string id = 1;
 	string encounter_searching_timeline = 2;
@@ -1253,7 +1253,7 @@ message ClientEncounterProto {
 	ColorProto hud_health_bar_color = 15;
 }
 
-// ref: Atlas.Proto.ClientEncounterStageCombatProto
+// ref: ClientEncounterStageCombatProto
 message ClientEncounterStageCombatProto {
 	repeated ClientCombatStateProto state_graph_nodes = 1;
 	repeated ClientCombatEnemyTraitProto enemy_traits = 2;
@@ -1261,7 +1261,7 @@ message ClientEncounterStageCombatProto {
 	string enemy_flavor_text = 4;
 }
 
-// ref: Atlas.Proto.ClientEncounterStagePictureProto
+// ref: ClientEncounterStagePictureProto
 message ClientEncounterStagePictureProto {
 	string id = 1;
 	float spawn_scale = 2;
@@ -1270,7 +1270,7 @@ message ClientEncounterStagePictureProto {
 	Vector3Proto simple_ar_pos_offset = 5;
 }
 
-// ref: Atlas.Proto.ClientEncounterStagePortkeyProto
+// ref: ClientEncounterStagePortkeyProto
 message ClientEncounterStagePortkeyProto {
 	string scene_id = 1;
 	string portal_id = 2;
@@ -1279,9 +1279,9 @@ message ClientEncounterStagePortkeyProto {
 	string portkey_asset = 5;
 }
 
-// ref: Atlas.Proto.ClientEncounterStageProto
+// ref: ClientEncounterStageProto
 message ClientEncounterStageProto {
-	// ref: Atlas.Proto.ClientEncounterStageProto/TypeOneofCase
+	// ref: ClientEncounterStageProto/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		swish = 1;
@@ -1306,13 +1306,13 @@ message ClientEncounterStageProto {
 	repeated string combat_spell_list = 14;
 }
 
-// ref: Atlas.Proto.ClientEncounterStageSwishProto
+// ref: ClientEncounterStageSwishProto
 message ClientEncounterStageSwishProto {
 	AudioParameterProto trace_succeeds_fanfare = 1;
 	AudioParameterProto trace_fails_fanfare = 2;
 }
 
-// ref: Atlas.Proto.ClientEncounterTypeProto
+// ref: ClientEncounterTypeProto
 message ClientEncounterTypeProto {
 	string id = 1;
 	bool show_in_look_in = 2;
@@ -1321,9 +1321,9 @@ message ClientEncounterTypeProto {
 	string conditional_tag_stat_desc = 5;
 }
 
-// ref: Atlas.Proto.ClientFlooNetworkConfigProto
+// ref: ClientFlooNetworkConfigProto
 message ClientFlooNetworkConfigProto {
-	// ref: Atlas.Proto.ClientFlooNetworkConfigProto/Types/ElectoralVotesPerFlooPoints
+	// ref: ClientFlooNetworkConfigProto/Types/ElectoralVotesPerFlooPoints
 	message ElectoralVotesPerFlooPoints {
 		repeated string fortress_prefabs = 1;
 	}
@@ -1331,9 +1331,9 @@ message ClientFlooNetworkConfigProto {
 	repeated ElectoralVotesPerFlooPoints electoral_votes_per_floo_points = 1;
 }
 
-// ref: Atlas.Proto.ClientFtueVideoConfigProto
+// ref: ClientFtueVideoConfigProto
 message ClientFtueVideoConfigProto {
-	// ref: Atlas.Proto.ClientFtueVideoConfigProto/VideoSourceOneofCase
+	// ref: ClientFtueVideoConfigProto/VideoSourceOneofCase
 	enum VideoSourceOneofCase {
 		none = 0;
 		from_assets = 1;
@@ -1343,33 +1343,33 @@ message ClientFtueVideoConfigProto {
 	ClientFtueVideoFallbackDefinitionProto from_assets = 1;
 	ClientFtueVideoNameDefinitionProto from_url = 2;
 	repeated string quality_buckets = 3;
-	//map<string, ???> quality_mappings = 4;
+	map<string, ClientFtueVideoQualityMappingProto> quality_mappings = 4;
 }
 
-// ref: Atlas.Proto.ClientFtueVideoFallbackDefinitionProto
+// ref: ClientFtueVideoFallbackDefinitionProto
 message ClientFtueVideoFallbackDefinitionProto {
 	repeated ClientFtueVideoNameDefinitionProto name_definitions = 1;
 }
 
-// ref: Atlas.Proto.ClientFtueVideoFromAssetProto
+// ref: ClientFtueVideoFromAssetProto
 message ClientFtueVideoFromAssetProto {
 	string asset_name_format = 1;
 	string fallback_asset_name_format = 2;
 }
 
-// ref: Atlas.Proto.ClientFtueVideoFromUrlProto
+// ref: ClientFtueVideoFromUrlProto
 message ClientFtueVideoFromUrlProto {
 	string url_format = 1;
 }
 
-// ref: Atlas.Proto.ClientFtueVideoNameDefinitionProto
+// ref: ClientFtueVideoNameDefinitionProto
 message ClientFtueVideoNameDefinitionProto {
 	string name_format = 1;
 }
 
-// ref: Atlas.Proto.ClientFtueVideoQualityMappingProto
+// ref: ClientFtueVideoQualityMappingProto
 message ClientFtueVideoQualityMappingProto {
-	// ref: Atlas.Proto.ClientFtueVideoQualityMappingProto/Types/Measure
+	// ref: ClientFtueVideoQualityMappingProto/Types/Measure
 	enum Measure {
 		camera_pixel_width = 0;
 		camera_pixel_height = 1;
@@ -1382,7 +1382,7 @@ message ClientFtueVideoQualityMappingProto {
 	int32 upper_bound = 3;
 }
 
-// ref: Atlas.Proto.ClientGameConfigProto
+// ref: ClientGameConfigProto
 message ClientGameConfigProto {
 	string id = 1;
 	ColorProto target_glyph_color = 2;
@@ -1411,7 +1411,7 @@ message ClientGameConfigProto {
 	repeated CollectionSubfeaturePrestigeLevelsProto subfeature_prestige_levels = 26;
 	ClientBonusConfigProto bonus_config = 27;
 	string portkey_wrackspurt_collection_haptic_key = 28;
-	//map<string, ???> parkmode_bgs = 29;
+	map<string, string> parkmode_bgs = 29;
 	int32 potion_masternote_unlock_treshold = 30;
 	repeated CollectionSubfeatureFamilyOrdersProto subfeature_family_orders = 31;
 	repeated BatterySaverProfile battery_saver_profiles = 32;
@@ -1470,14 +1470,14 @@ message ClientGameConfigProto {
 	string ar_core_storyboard_trigger = 89;
 }
 
-// ref: Atlas.Proto.ClientGameDataWrapper
+// ref: ClientGameDataWrapper
 message ClientGameDataWrapper {
 	repeated ClientGmTemplate messages = 1;
 }
 
-// ref: Atlas.Proto.ClientGmTemplate
+// ref: ClientGmTemplate
 message ClientGmTemplate {
-	// ref: Atlas.Proto.ClientGmTemplate/MessageTypeOneofCase
+	// ref: ClientGmTemplate/MessageTypeOneofCase
 	enum MessageTypeOneofCase {
 		none = 0;
 		collection_family = 1;
@@ -1552,7 +1552,7 @@ message ClientGmTemplate {
 	ClientEncounterTypeProto encounter_type = 35;
 }
 
-// ref: Atlas.Proto.ClientHapticProto
+// ref: ClientHapticProto
 message ClientHapticProto {
 	string id = 1;
 	repeated int32 ioswait_timings = 2;
@@ -1562,7 +1562,7 @@ message ClientHapticProto {
 	repeated int32 android_durations = 6;
 }
 
-// ref: Atlas.Proto.ClientHouseProto
+// ref: ClientHouseProto
 message ClientHouseProto {
 	string name = 1;
 	string description = 2;
@@ -1575,7 +1575,7 @@ message ClientHouseProto {
 	string intro_sound_select = 9;
 }
 
-// ref: Atlas.Proto.ClientMapAbilityProto
+// ref: ClientMapAbilityProto
 message ClientMapAbilityProto {
 	string id = 1;
 	string name = 2;
@@ -1588,7 +1588,7 @@ message ClientMapAbilityProto {
 	AdditionalSelectionRule rule = 9;
 }
 
-// ref: Atlas.Proto.ClientMapFortressProto
+// ref: ClientMapFortressProto
 message ClientMapFortressProto {
 	string fortress_template_gmt_id = 1;
 	string owning_team_id = 2;
@@ -1598,19 +1598,19 @@ message ClientMapFortressProto {
 	int64 wc_active_until_ms = 6;
 }
 
-// ref: Atlas.Proto.ClientMapGreenhouseProto
+// ref: ClientMapGreenhouseProto
 message ClientMapGreenhouseProto {
 	int64 next_loot_time = 1;
 	string greenhouse_template_gmt_id = 2;
 }
 
-// ref: Atlas.Proto.ClientMapIngredientProto
+// ref: ClientMapIngredientProto
 message ClientMapIngredientProto {
 	string id = 1;
 	string prefab = 2;
 }
 
-// ref: Atlas.Proto.ClientMapLandmarkProto
+// ref: ClientMapLandmarkProto
 message ClientMapLandmarkProto {
 	string collection_family_id = 1;
 	double poi_latitude = 2;
@@ -1619,16 +1619,16 @@ message ClientMapLandmarkProto {
 	repeated double border_longitude = 5;
 }
 
-// ref: Atlas.Proto.ClientMapOutpostProto
+// ref: ClientMapOutpostProto
 message ClientMapOutpostProto {
 	int64 next_loot_time = 1;
 	ClientDarkDetectorAmplifierProto dark_detector_amplifier = 2;
 	string outpost_template_gmt_id = 3;
 }
 
-// ref: Atlas.Proto.ClientMapPoiProto
+// ref: ClientMapPoiProto
 message ClientMapPoiProto {
-	// ref: Atlas.Proto.ClientMapPoiProto/TypeOneofCase
+	// ref: ClientMapPoiProto/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		outpost = 6;
@@ -1647,7 +1647,7 @@ message ClientMapPoiProto {
 	PoiAccessibility poi_accessibility = 9;
 }
 
-// ref: Atlas.Proto.ClientMapPotionIngredientProto
+// ref: ClientMapPotionIngredientProto
 message ClientMapPotionIngredientProto {
 	string ingredient_gmt_id = 1;
 	double latitude = 2;
@@ -1656,9 +1656,9 @@ message ClientMapPotionIngredientProto {
 	int64 expiry_time_ms = 5;
 }
 
-// ref: Atlas.Proto.ClientMapTraceProto
+// ref: ClientMapTraceProto
 message ClientMapTraceProto {
-	// ref: Atlas.Proto.ClientMapTraceProto/Types/Source
+	// ref: ClientMapTraceProto/Types/Source
 	enum Source {
 		UNKNOWN = 0;
 		STANDARD = 1;
@@ -1673,33 +1673,33 @@ message ClientMapTraceProto {
 	int64 expiry_time_ms = 6;
 }
 
-// ref: Atlas.Proto.ClientMasterNoteProto
+// ref: ClientMasterNoteProto
 message ClientMasterNoteProto {
 	string id = 1;
 	string name = 2;
 	string description = 3;
 }
 
-// ref: Atlas.Proto.ClientOutpostTemplateProto
+// ref: ClientOutpostTemplateProto
 message ClientOutpostTemplateProto {
 	string id = 1;
 	string interior = 2;
 	string exterior = 3;
 }
 
-// ref: Atlas.Proto.ClientPlayerChallengeState
+// ref: ClientPlayerChallengeState
 message ClientPlayerChallengeState {
 	string fortress_id = 1;
 	ClientMapPoiProto fortress_poi = 2;
 }
 
-// ref: Atlas.Proto.ClientPlayerMapState
+// ref: ClientPlayerMapState
 message ClientPlayerMapState {
 }
 
-// ref: Atlas.Proto.ClientPlayerProto
+// ref: ClientPlayerProto
 message ClientPlayerProto {
-	// ref: Atlas.Proto.ClientPlayerProto/StateOneofCase
+	// ref: ClientPlayerProto/StateOneofCase
 	enum StateOneofCase {
 		none = 0;
 		map = 2;
@@ -1711,13 +1711,13 @@ message ClientPlayerProto {
 	ClientPlayerChallengeState challenge = 3;
 }
 
-// ref: Atlas.Proto.ClientPlayerSnapshotProto
+// ref: ClientPlayerSnapshotProto
 message ClientPlayerSnapshotProto {
-	//map<string, ???> vault_items = 1;
+	map<string, int64> vault_items = 1;
 	repeated ActiveBuffProto buffs = 2;
 }
 
-// ref: Atlas.Proto.ClientPortkeyProto
+// ref: ClientPortkeyProto
 message ClientPortkeyProto {
 	string id = 1;
 	string name = 2;
@@ -1725,12 +1725,12 @@ message ClientPortkeyProto {
 	string localized_complete_text = 4;
 }
 
-// ref: Atlas.Proto.ClientProfessionNodeLevelProto
+// ref: ClientProfessionNodeLevelProto
 message ClientProfessionNodeLevelProto {
 	bool is_grant_new_map_ability = 1;
 }
 
-// ref: Atlas.Proto.ClientProfessionNodeProto
+// ref: ClientProfessionNodeProto
 message ClientProfessionNodeProto {
 	string name = 1;
 	string icon = 2;
@@ -1740,7 +1740,7 @@ message ClientProfessionNodeProto {
 	string completed_icon = 6;
 }
 
-// ref: Atlas.Proto.ClientProfessionProto
+// ref: ClientProfessionProto
 message ClientProfessionProto {
 	string id = 1;
 	repeated ClientProfessionRankProto profession_ranks = 2;
@@ -1757,12 +1757,12 @@ message ClientProfessionProto {
 	string icon_highlighted = 13;
 	bool show_profession_rank_meter = 14;
 	string profession_activated_sfx = 15;
-	//map<string, ???> profession_ranks_map = 16;
+	map<string, ClientProfessionRankProto> profession_ranks_map = 16;
 }
 
-// ref: Atlas.Proto.ClientProfessionRankProto
+// ref: ClientProfessionRankProto
 message ClientProfessionRankProto {
-	//map<string, ???> profession_nodes_map = 1;
+	map<string, ClientProfessionNodeProto> profession_nodes_map = 1;
 	string name = 2;
 	repeated ClientProfessionNodeProto profession_nodes = 3;
 	string image_unlocked = 4;
@@ -1772,20 +1772,20 @@ message ClientProfessionRankProto {
 	int32 professin_rank_order = 8;
 }
 
-// ref: Atlas.Proto.ClientProfileConfigProto
+// ref: ClientProfileConfigProto
 message ClientProfileConfigProto {
 	string id = 1;
-	//map<string, ???> titles = 2;
-	//map<string, ???> badges = 3;
-	//map<string, ???> houses = 4;
-	//map<string, ???> themes = 5;
-	//map<string, ???> wand_cores = 6;
-	//map<string, ???> wand_woods = 7;
-	//map<string, ???> wand_flexibilities = 8;
-	//map<string, ???> wand_lengths = 9;
+	map<string, ClientTitleProto> titles = 2;
+	map<string, ClientBadgeProto> badges = 3;
+	map<string, ClientHouseProto> houses = 4;
+	map<string, ClientThemeProto> themes = 5;
+	map<string, ClientWandCoreProto> wand_cores = 6;
+	map<string, ClientWandWoodProto> wand_woods = 7;
+	map<string, ClientWandFlexibilityProto> wand_flexibilities = 8;
+	map<string, ClientWandLengthProto> wand_lengths = 9;
 }
 
-// ref: Atlas.Proto.ClientProtegoPatternProto
+// ref: ClientProtegoPatternProto
 message ClientProtegoPatternProto {
 	string id = 1;
 	Vector2Proto ui_target_start_pos = 2;
@@ -1794,7 +1794,7 @@ message ClientProtegoPatternProto {
 	float ui_target_end_radius = 5;
 }
 
-// ref: Atlas.Proto.ClientQuestProto
+// ref: ClientQuestProto
 message ClientQuestProto {
 	string id = 1;
 	int32 sort_order = 2;
@@ -1802,7 +1802,7 @@ message ClientQuestProto {
 	string quest_desc_loc_key = 4;
 }
 
-// ref: Atlas.Proto.ClientRecipeProto
+// ref: ClientRecipeProto
 message ClientRecipeProto {
 	string id = 1;
 	string name = 2;
@@ -1817,7 +1817,7 @@ message ClientRecipeProto {
 	int32 index = 11;
 }
 
-// ref: Atlas.Proto.ClientRpgstatProto
+// ref: ClientRpgstatProto
 message ClientRpgstatProto {
 	string id = 1;
 	string tooltip = 2;
@@ -1827,18 +1827,18 @@ message ClientRpgstatProto {
 	int32 display_threshold = 6;
 	string icon_display_type = 7;
 	string info_desc = 8;
-	//map<string, ???> icons = 9;
+	map<string, string> icons = 9;
 }
 
-// ref: Atlas.Proto.ClientRpgstatsBlockProto
+// ref: ClientRpgstatsBlockProto
 message ClientRpgstatsBlockProto {
 	string id = 1;
 	repeated string relevant_stats = 2;
 }
 
-// ref: Atlas.Proto.ClientSelfieAvatarAssetProto
+// ref: ClientSelfieAvatarAssetProto
 message ClientSelfieAvatarAssetProto {
-	// ref: Atlas.Proto.ClientSelfieAvatarAssetProto/Types/SelfieAvatarAssetType
+	// ref: ClientSelfieAvatarAssetProto/Types/SelfieAvatarAssetType
 	enum SelfieAvatarAssetType {
 		UNKNOWN_ASSET_TYPE = 0;
 		LENSE = 1;
@@ -1848,7 +1848,7 @@ message ClientSelfieAvatarAssetProto {
 		STOCK = 5;
 	}
 
-	// ref: Atlas.Proto.ClientSelfieAvatarAssetProto/Types/SelfieAvatarLensType
+	// ref: ClientSelfieAvatarAssetProto/Types/SelfieAvatarLensType
 	enum SelfieAvatarLensType {
 		UNKNOWN_LENS_TYPE = 0;
 		HEAD = 1;
@@ -1856,7 +1856,7 @@ message ClientSelfieAvatarAssetProto {
 		NECK = 3;
 	}
 
-	// ref: Atlas.Proto.ClientSelfieAvatarAssetProto/Types/SelfieAvatarMediaSupportedType
+	// ref: ClientSelfieAvatarAssetProto/Types/SelfieAvatarMediaSupportedType
 	enum SelfieAvatarMediaSupportedType {
 		UNKNOWN_MEDIA_TYPE = 0;
 		ALL = 1;
@@ -1882,7 +1882,7 @@ message ClientSelfieAvatarAssetProto {
 	string stock_asset_name = 16;
 }
 
-// ref: Atlas.Proto.ClientSequenceDataProto
+// ref: ClientSequenceDataProto
 message ClientSequenceDataProto {
 	int32 sequence_type = 1;
 	string obstacle = 2;
@@ -1893,13 +1893,13 @@ message ClientSequenceDataProto {
 	string sequence_layout_node = 7;
 }
 
-// ref: Atlas.Proto.ClientSpellProto
+// ref: ClientSpellProto
 message ClientSpellProto {
 	string id = 1;
 	string name = 2;
 	repeated string charge_up_effect = 3;
-	//map<string, ???> timelines = 4;
-	//map<string, ???> critical_hits = 5;
+	map<string, string> timelines = 4;
+	map<string, string> critical_hits = 5;
 	string pattern = 6;
 	string glyph_image = 7;
 	string protego_player_succeed_tl = 8;
@@ -1912,7 +1912,7 @@ message ClientSpellProto {
 	string spell_rng_fail_tl = 15;
 }
 
-// ref: Atlas.Proto.ClientStoreConfigProto
+// ref: ClientStoreConfigProto
 message ClientStoreConfigProto {
 	string id = 1;
 	repeated StoreCategoryProto store_categories = 2;
@@ -1920,7 +1920,7 @@ message ClientStoreConfigProto {
 	string default_store_pack_icon_path = 4;
 }
 
-// ref: Atlas.Proto.ClientStorePackProto
+// ref: ClientStorePackProto
 message ClientStorePackProto {
 	string id = 1;
 	bool show_in_inline_buy = 2;
@@ -1931,13 +1931,13 @@ message ClientStorePackProto {
 	int32 max_reward_item_count = 7;
 }
 
-// ref: Atlas.Proto.ClientStoreSubcategoryProto
+// ref: ClientStoreSubcategoryProto
 message ClientStoreSubcategoryProto {
 	string id = 1;
 	int32 priority = 2;
 }
 
-// ref: Atlas.Proto.ClientStoryboardProto
+// ref: ClientStoryboardProto
 message ClientStoryboardProto {
 	string id = 1;
 	repeated ClientStoryboardStep steps = 2;
@@ -1945,9 +1945,9 @@ message ClientStoryboardProto {
 	int32 priority = 4;
 }
 
-// ref: Atlas.Proto.ClientStoryboardStep
+// ref: ClientStoryboardStep
 message ClientStoryboardStep {
-	// ref: Atlas.Proto.ClientStoryboardStep/DataOneofCase
+	// ref: ClientStoryboardStep/DataOneofCase
 	enum DataOneofCase {
 		none = 0;
 		generic_dialog = 2;
@@ -1967,7 +1967,7 @@ message ClientStoryboardStep {
 	string call_to_action_button_identifier = 8;
 }
 
-// ref: Atlas.Proto.ClientTeamControlProto
+// ref: ClientTeamControlProto
 message ClientTeamControlProto {
 	string id = 1;
 	string team_name = 2;
@@ -1978,31 +1978,31 @@ message ClientTeamControlProto {
 	string team_flag = 7;
 }
 
-// ref: Atlas.Proto.ClientTelemetryAssetLoad
+// ref: ClientTelemetryAssetLoad
 message ClientTelemetryAssetLoad {
 	string asset_name = 1;
 	double total_load_time = 2;
 	repeated string bundle_name = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetryAvatarInteract
+// ref: ClientTelemetryAvatarInteract
 message ClientTelemetryAvatarInteract {
 	int64 player_level = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryBundleDownload
+// ref: ClientTelemetryBundleDownload
 message ClientTelemetryBundleDownload {
 	string bundle_name = 1;
 	string bundle_url = 2;
 	double load_time = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetryButtonPress
+// ref: ClientTelemetryButtonPress
 message ClientTelemetryButtonPress {
 	string pressed_button_id = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryCombatGameOffensiveLockOnAttempt
+// ref: ClientTelemetryCombatGameOffensiveLockOnAttempt
 message ClientTelemetryCombatGameOffensiveLockOnAttempt {
 	int32 player_level = 1;
 	string encounter_id = 2;
@@ -2010,7 +2010,7 @@ message ClientTelemetryCombatGameOffensiveLockOnAttempt {
 	CombatPhaseOutcome outcome = 4;
 }
 
-// ref: Atlas.Proto.ClientTelemetryCombatGameOffensiveTraceAttempt
+// ref: ClientTelemetryCombatGameOffensiveTraceAttempt
 message ClientTelemetryCombatGameOffensiveTraceAttempt {
 	int32 player_level = 1;
 	string encounter_id = 2;
@@ -2019,26 +2019,26 @@ message ClientTelemetryCombatGameOffensiveTraceAttempt {
 	int32 checkpoint_fail_round = 5;
 }
 
-// ref: Atlas.Proto.ClientTelemetryCombatGameOutOfEnergyDialogShown
+// ref: ClientTelemetryCombatGameOutOfEnergyDialogShown
 message ClientTelemetryCombatGameOutOfEnergyDialogShown {
 	int32 player_level = 1;
 	string encounter_id = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryCombatGameOutOfEnergyPurchaseButton
+// ref: ClientTelemetryCombatGameOutOfEnergyPurchaseButton
 message ClientTelemetryCombatGameOutOfEnergyPurchaseButton {
 	int32 player_level = 1;
 	string encounter_id = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryCombatGamePotionButton
+// ref: ClientTelemetryCombatGamePotionButton
 message ClientTelemetryCombatGamePotionButton {
 	int32 player_level = 1;
 	string encounter_id = 2;
 	int32 attempt = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetryCombatGameProtegoCastAttempt
+// ref: ClientTelemetryCombatGameProtegoCastAttempt
 message ClientTelemetryCombatGameProtegoCastAttempt {
 	int32 player_level = 1;
 	string encounter_id = 2;
@@ -2047,31 +2047,31 @@ message ClientTelemetryCombatGameProtegoCastAttempt {
 	int32 checkpoint_fail_round = 5;
 }
 
-// ref: Atlas.Proto.ClientTelemetryDeeplinkTriggered
+// ref: ClientTelemetryDeeplinkTriggered
 message ClientTelemetryDeeplinkTriggered {
 	string link = 1;
 	bool rejected = 2;
 	string rejection_reason = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetryDescriptionClickthrough
+// ref: ClientTelemetryDescriptionClickthrough
 message ClientTelemetryDescriptionClickthrough {
 	string outpost_id = 1;
 	string partner_id = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryEncounterStart
+// ref: ClientTelemetryEncounterStart
 message ClientTelemetryEncounterStart {
 	bool battery_saver_on = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryEnvironmentalTagSevereWeatherAcknowledged
+// ref: ClientTelemetryEnvironmentalTagSevereWeatherAcknowledged
 message ClientTelemetryEnvironmentalTagSevereWeatherAcknowledged {
 	int32 player_level = 1;
 	string warning_severity = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryEnvironmentalTagsUIEntered
+// ref: ClientTelemetryEnvironmentalTagsUIEntered
 message ClientTelemetryEnvironmentalTagsUIEntered {
 	int32 player_level = 1;
 	string warning_severity = 2;
@@ -2080,88 +2080,88 @@ message ClientTelemetryEnvironmentalTagsUIEntered {
 	string time_of_day_tag = 5;
 }
 
-// ref: Atlas.Proto.ClientTelemetryException
+// ref: ClientTelemetryException
 message ClientTelemetryException {
 	string exception_type = 1;
 	string stack_trace = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryFamilyDetails
+// ref: ClientTelemetryFamilyDetails
 message ClientTelemetryFamilyDetails {
 	string family_id = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryGreenhouseInteract
+// ref: ClientTelemetryGreenhouseInteract
 message ClientTelemetryGreenhouseInteract {
 	POIInteract common_data = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryHyperlinkClickthrough
+// ref: ClientTelemetryHyperlinkClickthrough
 message ClientTelemetryHyperlinkClickthrough {
 	string url = 1;
 	string outpost_id = 2;
 	string partner_id = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetryImpression
+// ref: ClientTelemetryImpression
 message ClientTelemetryImpression {
 	string outpost_id = 1;
 	string partner_id = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryLandmarkInteract
+// ref: ClientTelemetryLandmarkInteract
 message ClientTelemetryLandmarkInteract {
 	string landmark_type = 1;
 	POIInteract common_data = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryLoginComplete
+// ref: ClientTelemetryLoginComplete
 message ClientTelemetryLoginComplete {
 	string auth_provider_id = 1;
 	string auth_status = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryLoginStart
+// ref: ClientTelemetryLoginStart
 message ClientTelemetryLoginStart {
 	string auth_provider_id = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryOutpostInteract
+// ref: ClientTelemetryOutpostInteract
 message ClientTelemetryOutpostInteract {
 	string outpost_type = 1;
 	POIInteract common_data = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryPermissionsCheckFailed
+// ref: ClientTelemetryPermissionsCheckFailed
 message ClientTelemetryPermissionsCheckFailed {
 	string permission_type = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryPermissionsRequested
+// ref: ClientTelemetryPermissionsRequested
 message ClientTelemetryPermissionsRequested {
 	string permission_type = 1;
 	bool granted = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryPortkeysAdvancedARCheck
+// ref: ClientTelemetryPortkeysAdvancedARCheck
 message ClientTelemetryPortkeysAdvancedARCheck {
 	bool advanced_ar_on = 1;
 	string portkey_id = 2;
 	ARMode ar_mode = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetryPortkeysOutOfBoundsReached
+// ref: ClientTelemetryPortkeysOutOfBoundsReached
 message ClientTelemetryPortkeysOutOfBoundsReached {
 	string portkey_id = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryPortkeysWrackspurtTapped
+// ref: ClientTelemetryPortkeysWrackspurtTapped
 message ClientTelemetryPortkeysWrackspurtTapped {
 	string wrackspurt_id = 1;
 	string portkey_id = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryPotionsMasterNoteAttempt
+// ref: ClientTelemetryPotionsMasterNoteAttempt
 message ClientTelemetryPotionsMasterNoteAttempt {
 	string potion_name_id = 1;
 	string cauldron_id = 2;
@@ -2173,14 +2173,14 @@ message ClientTelemetryPotionsMasterNoteAttempt {
 	bool gesture_success = 8;
 }
 
-// ref: Atlas.Proto.ClientTelemetryProfessionMainMenu
+// ref: ClientTelemetryProfessionMainMenu
 message ClientTelemetryProfessionMainMenu {
 	int32 player_level = 1;
 	string active_profession_gmt_id = 2;
 	repeated ClientTelemetryProfessionProgress profession_progress = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetryProfessionNodeSelected
+// ref: ClientTelemetryProfessionNodeSelected
 message ClientTelemetryProfessionNodeSelected {
 	int32 player_level = 1;
 	string active_profession_gmt_id = 2;
@@ -2188,31 +2188,31 @@ message ClientTelemetryProfessionNodeSelected {
 	string node_id = 4;
 }
 
-// ref: Atlas.Proto.ClientTelemetryProfessionProgress
+// ref: ClientTelemetryProfessionProgress
 message ClientTelemetryProfessionProgress {
 	string profession_gmt_id = 1;
 	uint32 rank_points = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryProfileButtonAssset
+// ref: ClientTelemetryProfileButtonAssset
 message ClientTelemetryProfileButtonAssset {
 	string pressed_button_id = 1;
 	bool sticker_add = 2;
 	CategoryAssetType asset_type = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetryProfileButtonLens
+// ref: ClientTelemetryProfileButtonLens
 message ClientTelemetryProfileButtonLens {
 	string pressed_button_id = 1;
 	CategoryLens lens_category = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetryProfileButtonRandomize
+// ref: ClientTelemetryProfileButtonRandomize
 message ClientTelemetryProfileButtonRandomize {
 	CategoryRandomize category = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryProfilePortraitAction
+// ref: ClientTelemetryProfilePortraitAction
 message ClientTelemetryProfilePortraitAction {
 	ProfileTabSource baseline_src = 1;
 	PortraitType portrait_format = 2;
@@ -2231,45 +2231,45 @@ message ClientTelemetryProfilePortraitAction {
 	DownloadType download_type = 15;
 }
 
-// ref: Atlas.Proto.ClientTelemetryProfileScreenGrab
+// ref: ClientTelemetryProfileScreenGrab
 message ClientTelemetryProfileScreenGrab {
 	CategoryShareLocation screengrab_location = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryRateApp
+// ref: ClientTelemetryRateApp
 message ClientTelemetryRateApp {
 	bool having_fun_response = 1;
 	string platform = 2;
 	string client_version = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetryRegistryInfo
+// ref: ClientTelemetryRegistryInfo
 message ClientTelemetryRegistryInfo {
 }
 
-// ref: Atlas.Proto.ClientTelemetryRewardsFlow
+// ref: ClientTelemetryRewardsFlow
 message ClientTelemetryRewardsFlow {
 	bool skipped_long_rewards = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetrySettingsARModeToggled
+// ref: ClientTelemetrySettingsARModeToggled
 message ClientTelemetrySettingsARModeToggled {
 	ARMode ar_mode = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetrySettingsAuthUpdated
+// ref: ClientTelemetrySettingsAuthUpdated
 message ClientTelemetrySettingsAuthUpdated {
 	string primary_auth_channel = 1;
 	string secondary_auth_channel = 2;
 	string platform = 3;
 }
 
-// ref: Atlas.Proto.ClientTelemetrySettingsBatteryModeToggled
+// ref: ClientTelemetrySettingsBatteryModeToggled
 message ClientTelemetrySettingsBatteryModeToggled {
 	bool battery_mode = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetrySmokeTest
+// ref: ClientTelemetrySmokeTest
 message ClientTelemetrySmokeTest {
 	string current_bot_program_name = 1;
 	double time_start = 2;
@@ -2278,7 +2278,7 @@ message ClientTelemetrySmokeTest {
 	int32 smoke_test_count = 5;
 }
 
-// ref: Atlas.Proto.ClientTelemetryStartup
+// ref: ClientTelemetryStartup
 message ClientTelemetryStartup {
 	string client_version = 2;
 	string device_type = 3;
@@ -2293,12 +2293,12 @@ message ClientTelemetryStartup {
 	repeated ClientTelemetrySubsystemStartup subsystem_load_times = 12;
 }
 
-// ref: Atlas.Proto.ClientTelemetryStickerDetails
+// ref: ClientTelemetryStickerDetails
 message ClientTelemetryStickerDetails {
 	string collection_id = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryStopwatch
+// ref: ClientTelemetryStopwatch
 message ClientTelemetryStopwatch {
 	string event_name = 1;
 	double min = 2;
@@ -2306,7 +2306,7 @@ message ClientTelemetryStopwatch {
 	double average = 4;
 }
 
-// ref: Atlas.Proto.ClientTelemetryStorePopupOpen
+// ref: ClientTelemetryStorePopupOpen
 message ClientTelemetryStorePopupOpen {
 	string pack_id = 1;
 	bool player_can_afford = 2;
@@ -2317,26 +2317,26 @@ message ClientTelemetryStorePopupOpen {
 	string real_money_currency_code = 7;
 }
 
-// ref: Atlas.Proto.ClientTelemetryStoreTabOpen
+// ref: ClientTelemetryStoreTabOpen
 message ClientTelemetryStoreTabOpen {
 	string page_id = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetrySubsystemStartup
+// ref: ClientTelemetrySubsystemStartup
 message ClientTelemetrySubsystemStartup {
 	string system_name = 1;
 	float load_time = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetrySurfaceDetection
+// ref: ClientTelemetrySurfaceDetection
 message ClientTelemetrySurfaceDetection {
 	string encounter_gmt_id = 1;
 	bool found_surface = 2;
 }
 
-// ref: Atlas.Proto.ClientTelemetrySwishSpellGameEnd
+// ref: ClientTelemetrySwishSpellGameEnd
 message ClientTelemetrySwishSpellGameEnd {
-	// ref: Atlas.Proto.ClientTelemetrySwishSpellGameEnd/Types/FailReason
+	// ref: ClientTelemetrySwishSpellGameEnd/Types/FailReason
 	enum FailReason {
 		none = 0;
 		timer = 1;
@@ -2356,7 +2356,7 @@ message ClientTelemetrySwishSpellGameEnd {
 	string encounter_proto_id = 10;
 }
 
-// ref: Atlas.Proto.ClientTelemetrySwishSpellGameStart
+// ref: ClientTelemetrySwishSpellGameStart
 message ClientTelemetrySwishSpellGameStart {
 	string encounter_id = 1;
 	int32 attempt_number = 2;
@@ -2366,17 +2366,17 @@ message ClientTelemetrySwishSpellGameStart {
 	ARMode ar_mode = 6;
 }
 
-// ref: Atlas.Proto.ClientTelemetryVaultItemImpression
+// ref: ClientTelemetryVaultItemImpression
 message ClientTelemetryVaultItemImpression {
 	string vault_item_id = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryVaultTabImpression
+// ref: ClientTelemetryVaultTabImpression
 message ClientTelemetryVaultTabImpression {
 	string category_name = 1;
 }
 
-// ref: Atlas.Proto.ClientTelemetryWizardingChallengeMoreInfo
+// ref: ClientTelemetryWizardingChallengeMoreInfo
 message ClientTelemetryWizardingChallengeMoreInfo {
 	int32 mob_level = 1;
 	string mob_affinity = 2;
@@ -2385,7 +2385,7 @@ message ClientTelemetryWizardingChallengeMoreInfo {
 	ActiveEngagement is_mob_already_engaged = 5;
 }
 
-// ref: Atlas.Proto.ClientTelemetryWizardingChallengeSelectMob
+// ref: ClientTelemetryWizardingChallengeSelectMob
 message ClientTelemetryWizardingChallengeSelectMob {
 	int32 mob_level = 1;
 	string mob_affinity = 2;
@@ -2396,12 +2396,12 @@ message ClientTelemetryWizardingChallengeSelectMob {
 	string player_engagement_with_mob = 7;
 }
 
-// ref: Atlas.Proto.ClientThemeProto
+// ref: ClientThemeProto
 message ClientThemeProto {
 	string icon = 1;
 }
 
-// ref: Atlas.Proto.ClientTitleProto
+// ref: ClientTitleProto
 message ClientTitleProto {
 	string name = 1;
 	string unlocked_description = 2;
@@ -2411,7 +2411,7 @@ message ClientTitleProto {
 	Requirements unlock_conditions = 6;
 }
 
-// ref: Atlas.Proto.ClientVaultCategoryProto
+// ref: ClientVaultCategoryProto
 message ClientVaultCategoryProto {
 	string id = 1;
 	string name = 2;
@@ -2426,7 +2426,7 @@ message ClientVaultCategoryProto {
 	string store_item_icon = 11;
 }
 
-// ref: Atlas.Proto.ClientVaultItemProto
+// ref: ClientVaultItemProto
 message ClientVaultItemProto {
 	string id = 1;
 	string name = 2;
@@ -2445,7 +2445,7 @@ message ClientVaultItemProto {
 	string spine_animated_icon = 16;
 }
 
-// ref: Atlas.Proto.ClientWalkboxTemplateProto
+// ref: ClientWalkboxTemplateProto
 message ClientWalkboxTemplateProto {
 	string id = 1;
 	string name = 2;
@@ -2453,14 +2453,14 @@ message ClientWalkboxTemplateProto {
 	string unlocked_icon = 4;
 }
 
-// ref: Atlas.Proto.ClientWandCoreProto
+// ref: ClientWandCoreProto
 message ClientWandCoreProto {
 	string name = 1;
 	string icon = 2;
 	string sound_select = 3;
 }
 
-// ref: Atlas.Proto.ClientWandFlexibilityProto
+// ref: ClientWandFlexibilityProto
 message ClientWandFlexibilityProto {
 	string name = 1;
 	string icon = 2;
@@ -2473,14 +2473,14 @@ message ClientWandFlexibilityProto {
 	float curveheight = 9;
 }
 
-// ref: Atlas.Proto.ClientWandLengthProto
+// ref: ClientWandLengthProto
 message ClientWandLengthProto {
 	string name = 1;
 	string model_path = 2;
 	int32 slidervalue = 3;
 }
 
-// ref: Atlas.Proto.ClientWandWoodProto
+// ref: ClientWandWoodProto
 message ClientWandWoodProto {
 	string name = 1;
 	string btn_icon = 2;
@@ -2489,7 +2489,7 @@ message ClientWandWoodProto {
 	string material = 5;
 }
 
-// ref: Atlas.Proto.CollectionFamilyLevelProto
+// ref: CollectionFamilyLevelProto
 message CollectionFamilyLevelProto {
 	int64 xp = 1;
 	repeated LootCollectionProto returned_rewards = 2;
@@ -2497,15 +2497,15 @@ message CollectionFamilyLevelProto {
 	string level_desc = 4;
 }
 
-// ref: Atlas.Proto.CollectionFamilyLootRewardProto
+// ref: CollectionFamilyLootRewardProto
 message CollectionFamilyLootRewardProto {
 	string family_id = 1;
 	int32 amount = 2;
 }
 
-// ref: Atlas.Proto.CollectionFamilyProto
+// ref: CollectionFamilyProto
 message CollectionFamilyProto {
-	// ref: Atlas.Proto.CollectionFamilyProto/Types/SubfeatureType
+	// ref: CollectionFamilyProto/Types/SubfeatureType
 	enum SubfeatureType {
 		UNSET = 0;
 		EXPLORATION = 1;
@@ -2528,7 +2528,7 @@ message CollectionFamilyProto {
 	SubfeatureType subfeature_type = 12;
 }
 
-// ref: Atlas.Proto.CollectionFamilyRankProto
+// ref: CollectionFamilyRankProto
 message CollectionFamilyRankProto {
 	int64 total_xp_req = 1;
 	int32 chest_count = 2;
@@ -2536,27 +2536,27 @@ message CollectionFamilyRankProto {
 	string level_up_loottable_id = 4;
 }
 
-// ref: Atlas.Proto.CollectionFamilyRankTableProto
+// ref: CollectionFamilyRankTableProto
 message CollectionFamilyRankTableProto {
 	string id = 1;
 	repeated CollectionFamilyRankProto rank_data = 2;
 }
 
-// ref: Atlas.Proto.CollectionFamilyRequirement
+// ref: CollectionFamilyRequirement
 message CollectionFamilyRequirement {
 	string family_id = 1;
 	int32 family_level = 2;
 	ComparisonOperator comparison_operator = 3;
 }
 
-// ref: Atlas.Proto.CollectionItemPlacedRequirement
+// ref: CollectionItemPlacedRequirement
 message CollectionItemPlacedRequirement {
 	string item_gmt_id = 1;
 	bool check_for_current_prestige_only = 2;
 	string page_gmt_id = 3;
 }
 
-// ref: Atlas.Proto.CollectionItemProto
+// ref: CollectionItemProto
 message CollectionItemProto {
 	repeated MysteryItemInfoProto mystery_data = 1;
 	string id = 2;
@@ -2570,27 +2570,27 @@ message CollectionItemProto {
 	bool sticker_disabled = 10;
 }
 
-// ref: Atlas.Proto.CollectionItemRequirement
+// ref: CollectionItemRequirement
 message CollectionItemRequirement {
 	string item_id = 1;
 	ComparisonOperator comparison_operator = 2;
 	int32 shards = 3;
 }
 
-// ref: Atlas.Proto.CollectionItemRewardProto
+// ref: CollectionItemRewardProto
 message CollectionItemRewardProto {
 	string item_id = 1;
 	uint32 shard_count = 2;
 }
 
-// ref: Atlas.Proto.CollectionPageLevelRequirement
+// ref: CollectionPageLevelRequirement
 message CollectionPageLevelRequirement {
 	string page_gmt_id = 1;
 	int32 level = 2;
 	ComparisonOperator comparison_operator = 3;
 }
 
-// ref: Atlas.Proto.CollectionPageProto
+// ref: CollectionPageProto
 message CollectionPageProto {
 	string id = 1;
 	string family_id = 2;
@@ -2599,7 +2599,7 @@ message CollectionPageProto {
 	Requirements unlock_requirements = 5;
 }
 
-// ref: Atlas.Proto.CollectionPrestigeLevelProto
+// ref: CollectionPrestigeLevelProto
 message CollectionPrestigeLevelProto {
 	string border_image = 1;
 	string name = 2;
@@ -2611,29 +2611,29 @@ message CollectionPrestigeLevelProto {
 	float roughness = 8;
 }
 
-// ref: Atlas.Proto.CollectionSubfeatureFamilyOrdersProto
+// ref: CollectionSubfeatureFamilyOrdersProto
 message CollectionSubfeatureFamilyOrdersProto {
 	CollectionFamilyProto.SubfeatureType subfeature = 1;
 	repeated string family_ids = 2;
 }
 
-// ref: Atlas.Proto.CollectionSubfeaturePrestigeLevelsProto
+// ref: CollectionSubfeaturePrestigeLevelsProto
 message CollectionSubfeaturePrestigeLevelsProto {
 	CollectionFamilyProto.SubfeatureType subfeature = 1;
 	repeated CollectionPrestigeLevelProto prestige_levels = 2;
 }
 
-// ref: Atlas.Proto.CollectPotionIngredientsQuestProgress
+// ref: CollectPotionIngredientsQuestProgress
 message CollectPotionIngredientsQuestProgress {
 	int64 current_potion_ingredient_count = 1;
 }
 
-// ref: Atlas.Proto.CollectPotionIngredientsQuestTask
+// ref: CollectPotionIngredientsQuestTask
 message CollectPotionIngredientsQuestTask {
 	int64 required_potion_ingredient_count = 1;
 }
 
-// ref: Atlas.Proto.ColorProto
+// ref: ColorProto
 message ColorProto {
 	float r = 1;
 	float g = 2;
@@ -2641,21 +2641,21 @@ message ColorProto {
 	float a = 4;
 }
 
-// ref: Atlas.Proto.CombatEnemyStatsProto
+// ref: CombatEnemyStatsProto
 message CombatEnemyStatsProto {
-	//map<string, ???> stat_block = 2;
-	//map<string, ???> stat_growth = 3;
+	map<string, int64> stat_block = 2;
+	map<string, CombatGrowthProto> stat_growth = 3;
 }
 
-// ref: Atlas.Proto.CombatGrowthProto
+// ref: CombatGrowthProto
 message CombatGrowthProto {
 	GrowthType grow_type = 1;
 	float growth_adjustment = 2;
 }
 
-// ref: Atlas.Proto.CombatMoveTypeProto
+// ref: CombatMoveTypeProto
 message CombatMoveTypeProto {
-	// ref: Atlas.Proto.CombatMoveTypeProto/CombatMoveOneofCase
+	// ref: CombatMoveTypeProto/CombatMoveOneofCase
 	enum CombatMoveOneofCase {
 		none = 0;
 		player_attack = 1;
@@ -2668,26 +2668,26 @@ message CombatMoveTypeProto {
 	CombatPlayerAutoAdvanceProto player_auto_advance = 3;
 }
 
-// ref: Atlas.Proto.CombatPlayerAttackProto
+// ref: CombatPlayerAttackProto
 message CombatPlayerAttackProto {
 }
 
-// ref: Atlas.Proto.CombatPlayerAutoAdvanceProto
+// ref: CombatPlayerAutoAdvanceProto
 message CombatPlayerAutoAdvanceProto {
 }
 
-// ref: Atlas.Proto.CombatPlayerDefendProto
+// ref: CombatPlayerDefendProto
 message CombatPlayerDefendProto {
 }
 
-// ref: Atlas.Proto.CombatStateProto
+// ref: CombatStateProto
 message CombatStateProto {
 	repeated CombatMoveTypeProto possible_moves = 1;
 }
 
-// ref: Atlas.Proto.Condition
+// ref: Condition
 message Condition {
-	// ref: Atlas.Proto.Condition/ConditionOneofCase
+	// ref: Condition/ConditionOneofCase
 	enum ConditionOneofCase {
 		none = 0;
 		always = 1;
@@ -2718,58 +2718,58 @@ message Condition {
 	EnemiesDefeatedCountCondition enemies_defeated_cond = 12;
 }
 
-// ref: Atlas.Proto.ConditionalModifiers
+// ref: ConditionalModifiers
 message ConditionalModifiers {
 	Conditions conditions = 1;
-	//map<string, ???> modifiers = 2;
+	map<string, int64> modifiers = 2;
 }
 
-// ref: Atlas.Proto.Conditions
+// ref: Conditions
 message Conditions {
 	repeated Condition conds = 1;
 }
 
-// ref: Atlas.Proto.ContainerVaultItemProto
+// ref: ContainerVaultItemProto
 message ContainerVaultItemProto {
 	LootCollectionProto contents = 1;
 	bool auto_consume = 2;
 }
 
-// ref: Atlas.Proto.CurrencyRewardProto
+// ref: CurrencyRewardProto
 message CurrencyRewardProto {
 	string currency_id = 1;
 	int64 amount = 2;
 }
 
-// ref: Atlas.Proto.CurrencyVaultItemProto
+// ref: CurrencyVaultItemProto
 message CurrencyVaultItemProto {
 }
 
-// ref: Atlas.Proto.DailyRewardMonthlyScheduleProto
+// ref: DailyRewardMonthlyScheduleProto
 message DailyRewardMonthlyScheduleProto {
 	string id = 1;
 	uint32 number_of_days = 2;
 	LootCollectionProto default_reward = 3;
-	//map<uint32, ???> daily_rewards = 4;
+	map<uint32, DailyRewardProto> daily_rewards = 4;
 }
 
-// ref: Atlas.Proto.DailyRewardProto
+// ref: DailyRewardProto
 message DailyRewardProto {
 	LootCollectionProto reward = 1;
 }
 
-// ref: Atlas.Proto.DarkDetectorVaultItemProto
+// ref: DarkDetectorVaultItemProto
 message DarkDetectorVaultItemProto {
 	int64 duration = 1;
 }
 
-// ref: Atlas.Proto.DateRequirement
+// ref: DateRequirement
 message DateRequirement {
 	int64 epoch_date_in_seconds = 1;
 	ComparisonOperator comparison_operator = 2;
 }
 
-// ref: Atlas.Proto.DeepLinkProto
+// ref: DeepLinkProto
 message DeepLinkProto {
 	string id = 1;
 	string category = 2;
@@ -2777,88 +2777,88 @@ message DeepLinkProto {
 	string item = 4;
 }
 
-// ref: Atlas.Proto.DefaultProfileProto
+// ref: DefaultProfileProto
 message DefaultProfileProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.DefeatedMobCountChallengeBonusProto
+// ref: DefeatedMobCountChallengeBonusProto
 message DefeatedMobCountChallengeBonusProto {
 	float threshold = 1;
 }
 
-// ref: Atlas.Proto.DisabledFeatureConfigProto
+// ref: DisabledFeatureConfigProto
 message DisabledFeatureConfigProto {
 	string id = 1;
 	Requirements failed_reqs = 2;
 }
 
-// ref: Atlas.Proto.DoEncounterHookQuestProgress
+// ref: DoEncounterHookQuestProgress
 message DoEncounterHookQuestProgress {
 	int64 current_win_count = 1;
 }
 
-// ref: Atlas.Proto.DoEncounterHookQuestTask
+// ref: DoEncounterHookQuestTask
 message DoEncounterHookQuestTask {
 	string encounter_gmt_id = 1;
 	int64 required_win_count = 2;
 }
 
-// ref: Atlas.Proto.DoubleRange
+// ref: DoubleRange
 message DoubleRange {
 	double avg = 1;
 	double min = 2;
 	double max = 3;
 }
 
-// ref: Atlas.Proto.EmailOptsProto
+// ref: EmailOptsProto
 message EmailOptsProto {
 	bool send_update_emails = 1;
 	bool send_wb_marketing_emails = 2;
 	int64 email_opts_last_updated_ms = 3;
 }
 
-// ref: Atlas.Proto.EncounterObstacleProto
+// ref: EncounterObstacleProto
 message EncounterObstacleProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.EncounterProto
+// ref: EncounterProto
 message EncounterProto {
 	repeated string encounter_searching_idle_timelines = 1;
-	string id = 2;
-	repeated string encounter_assets = 3;
-	string collection_item_reward_gmt_id = 4;
-	repeated EncounterStageProto stages = 5;
-	int32 collection_item_reward_shards = 6;
-	string collection_family_gmt_id = 7;
-	string affinity_profession_id = 8;
+	string id = 1;
+	repeated string encounter_assets = 2;
+	string collection_item_reward_gmt_id = 2;
+	repeated EncounterStageProto stages = 3;
+	int32 collection_item_reward_shards = 4;
+	string collection_family_gmt_id = 5;
+	string affinity_profession_id = 6;
 }
 
-// ref: Atlas.Proto.EncounterSoundBanks
+// ref: EncounterSoundBanks
 message EncounterSoundBanks {
 	string encounter_type = 1;
 	repeated string sound_banks = 2;
 }
 
-// ref: Atlas.Proto.EncounterStageCombatProto
+// ref: EncounterStageCombatProto
 message EncounterStageCombatProto {
 	repeated CombatStateProto state_graph_nodes = 1;
 	CombatEnemyStatsProto enemy_stats = 2;
 	repeated string enemy_ranks = 3;
 }
 
-// ref: Atlas.Proto.EncounterStagePictureProto
+// ref: EncounterStagePictureProto
 message EncounterStagePictureProto {
 }
 
-// ref: Atlas.Proto.EncounterStagePortkeyProto
+// ref: EncounterStagePortkeyProto
 message EncounterStagePortkeyProto {
 }
 
-// ref: Atlas.Proto.EncounterStageProto
+// ref: EncounterStageProto
 message EncounterStageProto {
-	// ref: Atlas.Proto.EncounterStageProto/TypeOneofCase
+	// ref: EncounterStageProto/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		swish = 1;
@@ -2868,65 +2868,65 @@ message EncounterStageProto {
 	}
 
 	repeated string combat_spell_list = 1;
-	EncounterStageSwishProto swish = 2;
-	repeated ClientSequenceDataProto stage_setup_sequence = 3;
-	EncounterStageCombatProto combat = 4;
-	repeated ClientSequenceDataProto stage_completion_sequence = 5;
-	EncounterStagePortkeyProto portkey = 6;
-	repeated string idle_loop_timelines = 7;
-	EncounterStagePictureProto picture = 8;
-	repeated ClientCombatStateProto state_graph_nodes = 9;
-	string spell_gmt_id = 10;
-	repeated ClientCombatEnemyTraitProto combat_enemy_traits = 11;
-	repeated ClientEncounterTypeProto enemy_rank_tags = 12;
+	EncounterStageSwishProto swish = 1;
+	repeated ClientSequenceDataProto stage_setup_sequence = 2;
+	EncounterStageCombatProto combat = 2;
+	repeated ClientSequenceDataProto stage_completion_sequence = 3;
+	EncounterStagePortkeyProto portkey = 3;
+	repeated string idle_loop_timelines = 4;
+	EncounterStagePictureProto picture = 4;
+	repeated ClientCombatStateProto state_graph_nodes = 5;
+	string spell_gmt_id = 5;
+	repeated ClientCombatEnemyTraitProto combat_enemy_traits = 6;
+	repeated ClientEncounterTypeProto enemy_rank_tags = 7;
 }
 
-// ref: Atlas.Proto.EncounterStageSwishProto
+// ref: EncounterStageSwishProto
 message EncounterStageSwishProto {
 	float base_win_rate = 1;
 }
 
-// ref: Atlas.Proto.EncounterTypeProto
+// ref: EncounterTypeProto
 message EncounterTypeProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.EnemiesDefeatedCountCondition
+// ref: EnemiesDefeatedCountCondition
 message EnemiesDefeatedCountCondition {
 	ComparisonOperator comparison_operator = 1;
 	int32 target_comparison_value = 2;
 }
 
-// ref: Atlas.Proto.EnemyTagCondition
+// ref: EnemyTagCondition
 message EnemyTagCondition {
 	string rank_tag = 1;
 }
 
-// ref: Atlas.Proto.EnergyVaultItemProto
+// ref: EnergyVaultItemProto
 message EnergyVaultItemProto {
 	float impact = 1;
 	int32 spell_effect = 2;
 }
 
-// ref: Atlas.Proto.EventProto
+// ref: EventProto
 message EventProto {
 	string id = 1;
 	Requirements activation_reqs = 2;
 }
 
-// ref: Atlas.Proto.EventRequirement
+// ref: EventRequirement
 message EventRequirement {
 	string event_id = 1;
 }
 
-// ref: Atlas.Proto.FastCompletionChallengeBonusProto
+// ref: FastCompletionChallengeBonusProto
 message FastCompletionChallengeBonusProto {
 	int32 completion_time_sec = 1;
 }
 
-// ref: Atlas.Proto.FeatureFlagProto
+// ref: FeatureFlagProto
 message FeatureFlagProto {
-	// ref: Atlas.Proto.FeatureFlagProto/DefaultValueOneofCase
+	// ref: FeatureFlagProto/DefaultValueOneofCase
 	enum DefaultValueOneofCase {
 		none = 0;
 		bval = 3;
@@ -2943,18 +2943,18 @@ message FeatureFlagProto {
 	float fval = 6;
 }
 
-// ref: Atlas.Proto.FeatureFlagRequirement
+// ref: FeatureFlagRequirement
 message FeatureFlagRequirement {
 	string feature_flag_id = 1;
 }
 
-// ref: Atlas.Proto.FirstTimeCollectionBonusMetadataProto
+// ref: FirstTimeCollectionBonusMetadataProto
 message FirstTimeCollectionBonusMetadataProto {
 }
 
-// ref: Atlas.Proto.FlooNetworkConfigProto
+// ref: FlooNetworkConfigProto
 message FlooNetworkConfigProto {
-	// ref: Atlas.Proto.FlooNetworkConfigProto/Types/ElectoralVotesPerFlooPoints
+	// ref: FlooNetworkConfigProto/Types/ElectoralVotesPerFlooPoints
 	message ElectoralVotesPerFlooPoints {
 		int64 min_floo_points = 1;
 		int64 electoral_votes = 2;
@@ -2965,41 +2965,41 @@ message FlooNetworkConfigProto {
 	int64 decay_cycle_length_ms = 3;
 }
 
-// ref: Atlas.Proto.FlooNetworkFortressStatistics
+// ref: FlooNetworkFortressStatistics
 message FlooNetworkFortressStatistics {
-	//map<string, ???> points_per_team = 1;
+	map<string, int64> points_per_team = 1;
 	int64 electoral_votes = 2;
 	string owning_team_id = 3;
 }
 
-// ref: Atlas.Proto.FlooNetworkRegionScores
+// ref: FlooNetworkRegionScores
 message FlooNetworkRegionScores {
 	string season_id = 1;
 	string region_id = 2;
-	//map<string, ???> points_per_team = 3;
+	map<string, int64> points_per_team = 3;
 }
 
-// ref: Atlas.Proto.FlooNetworkSeasonScores
+// ref: FlooNetworkSeasonScores
 message FlooNetworkSeasonScores {
 	string season_id = 1;
-	//map<string, ???> points_per_team = 2;
+	map<string, int64> points_per_team = 2;
 }
 
-// ref: Atlas.Proto.FocusAmountCondition
+// ref: FocusAmountCondition
 message FocusAmountCondition {
 	ComparisonOperator comparison_operator = 1;
 	int32 target_comparison_value = 2;
 }
 
-// ref: Atlas.Proto.FortressTemplateProto
+// ref: FortressTemplateProto
 message FortressTemplateProto {
 	string id = 1;
 	repeated string chamber_gmt_ids = 2;
 }
 
-// ref: Atlas.Proto.GameConfigProto
+// ref: GameConfigProto
 message GameConfigProto {
-	// ref: Atlas.Proto.GameConfigProto/ChallengeSoundContext
+	// ref: GameConfigProto/ChallengeSoundContext
 	enum ChallengeSoundContext {
 		THIRTY_SECONDS = 0;
 		PLAYER_WINS_BATTLE = 1;
@@ -3018,11 +3018,11 @@ message GameConfigProto {
 	int32 map_update_rate = 3;
 	repeated int64 floo_contribution_button_values = 4;
 	int32 map_event_update_rate = 4;
-	//map<string, ???> ftue_video_quality_mappings = 5;
+	map<string, ClientFtueVideoQualityMappingProto> ftue_video_quality_mappings = 5;
 	int32 map_puzzle_update_rate = 5;
 	repeated string ftue_video_quality_buckets = 6;
 	float try_again_bonus_per_failure = 6;
-	//map<string, ???> parkmode_bgs = 7;
+	map<string, string> parkmode_bgs = 7;
 	float ar_mode_range = 7;
 	int32 ar_mode_max_encounters = 8;
 	int32 event_cool_down_duration = 9;
@@ -3045,14 +3045,14 @@ message GameConfigProto {
 	float map_unsafe_move_speed_mps = 26;
 	int32 portkey_num_wrackspurts_to_collect = 27;
 	int32 portkey_num_wrackspurts_in_env = 28;
-	//map<string, ???> player_stats_base = 30;
-	//map<string, ???> player_profession_affinity_strength = 31;
-	//map<string, ???> enemy_affinity_profession_strength = 32;
+	map<string, int64> player_stats_base = 30;
+	map<string, string> player_profession_affinity_strength = 31;
+	map<string, string> enemy_affinity_profession_strength = 32;
 	int32 cauldrons_num_queue_slots = 33;
 	repeated float swish_game_accuracy_tiers = 34;
 	float cauldrons_instant_finish_cost_per_second = 35;
 	string cauldrons_instant_finish_currency_id = 36;
-	//map<int32, ???> rune_ratings = 37;
+	map<int32, uint32> rune_ratings = 37;
 	string tutorial_encounter_id = 38;
 	string tutorial_encounter_feature_flag_id = 39;
 	BonusConfigProto bonus_config = 40;
@@ -3061,7 +3061,7 @@ message GameConfigProto {
 	repeated string daily_quest_gmt_ids = 43;
 	string cap_player_level_gmt_id = 44;
 	int64 greenhouse_cool_down_ms = 45;
-	//map<int32, ???> player_level_override = 46;
+	map<int32, int32> player_level_override = 46;
 	int64 inn_cool_down_ms = 47;
 	int64 inn_menu_staleness_threshold_ms = 48;
 	string daily_reward_schedule_gmt_id = 49;
@@ -3069,27 +3069,27 @@ message GameConfigProto {
 	int64 wc_encounter_interact_timeout_ms = 51;
 }
 
-// ref: Atlas.Proto.GameDataWrapper
+// ref: GameDataWrapper
 message GameDataWrapper {
 	repeated GmTemplate messages = 1;
 	int64 basis_batch_id = 2;
 	int64 environment = 3;
 }
 
-// ref: Atlas.Proto.GenericCollectionFamilyLootRewardProto
+// ref: GenericCollectionFamilyLootRewardProto
 message GenericCollectionFamilyLootRewardProto {
 	int32 amount = 1;
 }
 
-// ref: Atlas.Proto.GenericRunestoneRewardProto
+// ref: GenericRunestoneRewardProto
 message GenericRunestoneRewardProto {
 	int32 rank = 1;
 	int64 amount = 2;
 }
 
-// ref: Atlas.Proto.GmTemplate
+// ref: GmTemplate
 message GmTemplate {
-	// ref: Atlas.Proto.GmTemplate/MessageTypeOneofCase
+	// ref: GmTemplate/MessageTypeOneofCase
 	enum MessageTypeOneofCase {
 		none = 0;
 		collection_family = 1;
@@ -3188,12 +3188,12 @@ message GmTemplate {
 	VersionProto version = 46;
 }
 
-// ref: Atlas.Proto.GreenhouseTemplateProto
+// ref: GreenhouseTemplateProto
 message GreenhouseTemplateProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.HapticProto
+// ref: HapticProto
 message HapticProto {
 	repeated int32 ioswait_timings = 1;
 	string id = 1;
@@ -3203,21 +3203,21 @@ message HapticProto {
 	repeated int32 android_durations = 5;
 }
 
-// ref: Atlas.Proto.HasPortkeyRequirement
+// ref: HasPortkeyRequirement
 message HasPortkeyRequirement {
 	ComparisonOperator comparison_operator = 1;
 	int32 qty = 2;
 }
 
-// ref: Atlas.Proto.HasWalkboxRequirement
+// ref: HasWalkboxRequirement
 message HasWalkboxRequirement {
 	ComparisonOperator comparison_operator = 1;
 	int32 qty = 2;
 }
 
-// ref: Atlas.Proto.HookQuestProgress
+// ref: HookQuestProgress
 message HookQuestProgress {
-	// ref: Atlas.Proto.HookQuestProgress/TypeOneofCase
+	// ref: HookQuestProgress/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		do_encounter = 1;
@@ -3238,9 +3238,9 @@ message HookQuestProgress {
 	PlayFortressChallengesQuestProgress play_fortress_challenges = 7;
 }
 
-// ref: Atlas.Proto.HookQuestTask
+// ref: HookQuestTask
 message HookQuestTask {
-	// ref: Atlas.Proto.HookQuestTask/TypeOneofCase
+	// ref: HookQuestTask/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		do_encounter = 1;
@@ -3261,19 +3261,19 @@ message HookQuestTask {
 	PlayFortressChallengesQuestTask play_fortress_challenges = 7;
 }
 
-// ref: Atlas.Proto.InstantBuffDuration
+// ref: InstantBuffDuration
 message InstantBuffDuration {
 }
 
-// ref: Atlas.Proto.LevelRequirement
+// ref: LevelRequirement
 message LevelRequirement {
 	ComparisonOperator comparison_operator = 1;
 	int32 level = 2;
 }
 
-// ref: Atlas.Proto.LexiconApprovedClientTelemetryProto
+// ref: LexiconApprovedClientTelemetryProto
 message LexiconApprovedClientTelemetryProto {
-	// ref: Atlas.Proto.LexiconApprovedClientTelemetryProto/TelemetryDataOneofCase
+	// ref: LexiconApprovedClientTelemetryProto/TelemetryDataOneofCase
 	enum TelemetryDataOneofCase {
 		none = 0;
 		startup = 1;
@@ -3393,25 +3393,25 @@ message LexiconApprovedClientTelemetryProto {
 	niantic.platform.telemetry.PlatformServerData server_data = 1001;
 }
 
-// ref: Atlas.Proto.LootCollectionProto
+// ref: LootCollectionProto
 message LootCollectionProto {
 	repeated LootRewardProto rewards = 1;
 	repeated LootRewardProto escrowed_rewards = 2;
 }
 
-// ref: Atlas.Proto.LootOutpostsQuestProgress
+// ref: LootOutpostsQuestProgress
 message LootOutpostsQuestProgress {
 	int64 current_outpost_count = 1;
 }
 
-// ref: Atlas.Proto.LootOutpostsQuestTask
+// ref: LootOutpostsQuestTask
 message LootOutpostsQuestTask {
 	int64 required_outposts_count = 1;
 }
 
-// ref: Atlas.Proto.LootRewardProto
+// ref: LootRewardProto
 message LootRewardProto {
-	// ref: Atlas.Proto.LootRewardProto/RewardDataOneofCase
+	// ref: LootRewardProto/RewardDataOneofCase
 	enum RewardDataOneofCase {
 		none = 0;
 		item_reward = 1;
@@ -3449,18 +3449,18 @@ message LootRewardProto {
 	BonusMetadataProto bonus_metadata = 101;
 }
 
-// ref: Atlas.Proto.LootTableRewardProto
+// ref: LootTableRewardProto
 message LootTableRewardProto {
 	string loot_table_id = 1;
 }
 
-// ref: Atlas.Proto.MapAbilityActiveBuffSource
+// ref: MapAbilityActiveBuffSource
 message MapAbilityActiveBuffSource {
 	string map_ability_gmt_id = 1;
 	uint32 map_ability_level = 2;
 }
 
-// ref: Atlas.Proto.MapAbilityLevelProto
+// ref: MapAbilityLevelProto
 message MapAbilityLevelProto {
 	MapAbilityTargetType target_type = 1;
 	float radius = 2;
@@ -3469,7 +3469,7 @@ message MapAbilityLevelProto {
 	string buff_gmt_id = 5;
 }
 
-// ref: Atlas.Proto.MapAbilityProto
+// ref: MapAbilityProto
 message MapAbilityProto {
 	string id = 1;
 	MapAbilityTargetType target_type = 2;
@@ -3480,16 +3480,16 @@ message MapAbilityProto {
 	repeated MapAbilityLevelProto map_ability_levels = 7;
 }
 
-// ref: Atlas.Proto.MapIngredientProto
+// ref: MapIngredientProto
 message MapIngredientProto {
 	string id = 1;
 	LootCollectionProto loot = 2;
 	LootCollectionProto cost = 3;
 }
 
-// ref: Atlas.Proto.MasterNoteEffectProto
+// ref: MasterNoteEffectProto
 message MasterNoteEffectProto {
-	// ref: Atlas.Proto.MasterNoteEffectProto/Types/MasterNoteEffectType
+	// ref: MasterNoteEffectProto/Types/MasterNoteEffectType
 	enum MasterNoteEffectType {
 		UNSET = 0;
 		BREW_SPEED_STATIC = 1;
@@ -3502,16 +3502,16 @@ message MasterNoteEffectProto {
 	int64 power = 3;
 }
 
-// ref: Atlas.Proto.MasterNoteProto
+// ref: MasterNoteProto
 message MasterNoteProto {
 	string id = 1;
 	repeated MasterNoteGesture gestures = 2;
 	MasterNoteEffectProto effect = 3;
 }
 
-// ref: Atlas.Proto.MobReward
+// ref: MobReward
 message MobReward {
-	// ref: Atlas.Proto.MobReward/RewardOneofCase
+	// ref: MobReward/RewardOneofCase
 	enum RewardOneofCase {
 		none = 0;
 		focus = 1;
@@ -3524,34 +3524,34 @@ message MobReward {
 	MobRewardVictoryPoints victory_points = 3;
 }
 
-// ref: Atlas.Proto.MobRewardFocus
+// ref: MobRewardFocus
 message MobRewardFocus {
 	int32 quantity = 1;
 	MobRewardRecipient recipient = 2;
 }
 
-// ref: Atlas.Proto.MobRewardSet
+// ref: MobRewardSet
 message MobRewardSet {
 	repeated MobReward rewards = 1;
 }
 
-// ref: Atlas.Proto.MobRewardTime
+// ref: MobRewardTime
 message MobRewardTime {
 	int64 time_ms = 1;
 }
 
-// ref: Atlas.Proto.MobRewardVictoryPoints
+// ref: MobRewardVictoryPoints
 message MobRewardVictoryPoints {
 	int32 quantity = 1;
 }
 
-// ref: Atlas.Proto.MusicConfigProto
+// ref: MusicConfigProto
 message MusicConfigProto {
 	int32 music_location = 1;
 	repeated AudioParameterProto parameters = 2;
 }
 
-// ref: Atlas.Proto.MysteryItemInfoProto
+// ref: MysteryItemInfoProto
 message MysteryItemInfoProto {
 	string name = 1;
 	string description = 2;
@@ -3559,12 +3559,12 @@ message MysteryItemInfoProto {
 	string placed_storyboard_id = 4;
 }
 
-// ref: Atlas.Proto.OutpostTemplateProto
+// ref: OutpostTemplateProto
 message OutpostTemplateProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.PerformanceSnapshotProto
+// ref: PerformanceSnapshotProto
 message PerformanceSnapshotProto {
 	repeated DoubleRange frame_metric_ranges = 1;
 	repeated double on_demand_metrics = 2;
@@ -3573,15 +3573,15 @@ message PerformanceSnapshotProto {
 	string label = 5;
 }
 
-// ref: Atlas.Proto.PermanentBuffDuration
+// ref: PermanentBuffDuration
 message PermanentBuffDuration {
 }
 
-// ref: Atlas.Proto.PermanentBuffExpiration
+// ref: PermanentBuffExpiration
 message PermanentBuffExpiration {
 }
 
-// ref: Atlas.Proto.PermissionsConfigLocalDataProto
+// ref: PermissionsConfigLocalDataProto
 message PermissionsConfigLocalDataProto {
 	string id = 1;
 	bool first_play = 2;
@@ -3590,7 +3590,7 @@ message PermissionsConfigLocalDataProto {
 	bool permission_granted = 5;
 }
 
-// ref: Atlas.Proto.PermissionsConfigStaticDataProto
+// ref: PermissionsConfigStaticDataProto
 message PermissionsConfigStaticDataProto {
 	string id = 1;
 	string initial_prompt = 2;
@@ -3600,36 +3600,36 @@ message PermissionsConfigStaticDataProto {
 	bool begging_enabled = 6;
 }
 
-// ref: Atlas.Proto.PermissionsConfigStaticList
+// ref: PermissionsConfigStaticList
 message PermissionsConfigStaticList {
 	repeated PermissionsConfigStaticDataProto list = 1;
 }
 
-// ref: Atlas.Proto.PlatformRequirement
+// ref: PlatformRequirement
 message PlatformRequirement {
 	DevicePlatform platform = 1;
 	EqualityOperator operator = 2;
 }
 
-// ref: Atlas.Proto.PlayerAccountAgeRequirement
+// ref: PlayerAccountAgeRequirement
 message PlayerAccountAgeRequirement {
 	int64 account_age_in_seconds = 1;
 	ComparisonOperator comparison_operator = 2;
 }
 
-// ref: Atlas.Proto.PlayerCountChallengeBonusProto
+// ref: PlayerCountChallengeBonusProto
 message PlayerCountChallengeBonusProto {
 	int32 number_of_players = 1;
 }
 
-// ref: Atlas.Proto.PlayerCountMultipliers
+// ref: PlayerCountMultipliers
 message PlayerCountMultipliers {
 	repeated float multipliers = 1;
 }
 
-// ref: Atlas.Proto.PlayerFlagRequirement
+// ref: PlayerFlagRequirement
 message PlayerFlagRequirement {
-	// ref: Atlas.Proto.PlayerFlagRequirement/FlagValueOneofCase
+	// ref: PlayerFlagRequirement/FlagValueOneofCase
 	enum FlagValueOneofCase {
 		none = 0;
 		bval = 4;
@@ -3647,67 +3647,67 @@ message PlayerFlagRequirement {
 	float fval = 7;
 }
 
-// ref: Atlas.Proto.PlayerLevelProto
+// ref: PlayerLevelProto
 message PlayerLevelProto {
 	string id = 1;
 	int32 required_xp = 2;
 }
 
-// ref: Atlas.Proto.PlayerLifetimeMetricsConfig
+// ref: PlayerLifetimeMetricsConfig
 message PlayerLifetimeMetricsConfig {
-	//map<string, ???> collected_item_gmt_id = 1;
-	//map<string, ???> collected_category_gmt_id = 2;
-	//map<string, ???> used_item_gmt_id = 3;
-	//map<string, ???> used_category_gmt_id = 4;
+	map<string, string> collected_item_gmt_id = 1;
+	map<string, string> collected_category_gmt_id = 2;
+	map<string, string> used_item_gmt_id = 3;
+	map<string, string> used_category_gmt_id = 4;
 }
 
-// ref: Atlas.Proto.PlayerRatioChallengeBonusProto
+// ref: PlayerRatioChallengeBonusProto
 message PlayerRatioChallengeBonusProto {
 	float threshold = 1;
 }
 
-// ref: Atlas.Proto.PlayFortressChallengesQuestProgress
+// ref: PlayFortressChallengesQuestProgress
 message PlayFortressChallengesQuestProgress {
 	int64 current_challenge_count = 1;
 }
 
-// ref: Atlas.Proto.PlayFortressChallengesQuestTask
+// ref: PlayFortressChallengesQuestTask
 message PlayFortressChallengesQuestTask {
 	int64 required_challenge_count = 1;
 }
 
-// ref: Atlas.Proto.POIInteract
+// ref: POIInteract
 message POIInteract {
 	double distance_from_poimeters = 1;
 }
 
-// ref: Atlas.Proto.PortkeyCollectibleRewardProto
+// ref: PortkeyCollectibleRewardProto
 message PortkeyCollectibleRewardProto {
 	string collection_item_id = 1;
 }
 
-// ref: Atlas.Proto.PortkeyProto
+// ref: PortkeyProto
 message PortkeyProto {
 	string id = 1;
 	string portkey_encounter_id = 2;
 }
 
-// ref: Atlas.Proto.PortkeyRewardProto
+// ref: PortkeyRewardProto
 message PortkeyRewardProto {
 	string portkey_id = 1;
 }
 
-// ref: Atlas.Proto.PotionBonusMetadataProto
+// ref: PotionBonusMetadataProto
 message PotionBonusMetadataProto {
 	string potion_id = 1;
 }
 
-// ref: Atlas.Proto.PotionIngredientVaultItemProto
+// ref: PotionIngredientVaultItemProto
 message PotionIngredientVaultItemProto {
 	LootCollectionProto cost = 1;
 }
 
-// ref: Atlas.Proto.PotionRewardProto
+// ref: PotionRewardProto
 message PotionRewardProto {
 	LootCollectionProto rewards = 1;
 	int64 time_to_brew = 2;
@@ -3715,31 +3715,31 @@ message PotionRewardProto {
 	string recipe_gmt_id = 4;
 }
 
-// ref: Atlas.Proto.PotionVaultItemProto
+// ref: PotionVaultItemProto
 message PotionVaultItemProto {
 	repeated PotionConsumableScenario consumable_scenario = 3;
 	repeated string applied_buff_gmt_id = 4;
 }
 
-// ref: Atlas.Proto.ProfessionActiveBuffSource
+// ref: ProfessionActiveBuffSource
 message ProfessionActiveBuffSource {
 	string profession_gmt_id = 1;
 	string profession_gmt_node_id = 2;
 	uint32 profession_node_level = 3;
 }
 
-// ref: Atlas.Proto.ProfessionBuffDuration
+// ref: ProfessionBuffDuration
 message ProfessionBuffDuration {
 }
 
-// ref: Atlas.Proto.ProfessionBuffExpiration
+// ref: ProfessionBuffExpiration
 message ProfessionBuffExpiration {
 	string profession_gmt_id = 1;
 }
 
-// ref: Atlas.Proto.ProfessionNodeLevelProto
+// ref: ProfessionNodeLevelProto
 message ProfessionNodeLevelProto {
-	// ref: Atlas.Proto.ProfessionNodeLevelProto/Purpose
+	// ref: ProfessionNodeLevelProto/Purpose
 	enum Purpose {
 		none = 0;
 		buff = 1;
@@ -3754,17 +3754,17 @@ message ProfessionNodeLevelProto {
 	uint32 rank_points = 5;
 }
 
-// ref: Atlas.Proto.ProfessionNodeProto
+// ref: ProfessionNodeProto
 message ProfessionNodeProto {
 	uint32 potential_rank_points = 1;
-	string id = 1;
-	repeated Requirements edges = 2;
-	repeated ProfessionNodeLevelProto levels = 3;
-	uint32 row_pos = 4;
-	uint32 col_pos = 5;
+	string id = 2;
+	repeated Requirements edges = 3;
+	repeated ProfessionNodeLevelProto levels = 4;
+	uint32 row_pos = 5;
+	uint32 col_pos = 6;
 }
 
-// ref: Atlas.Proto.ProfessionNodeRequirement
+// ref: ProfessionNodeRequirement
 message ProfessionNodeRequirement {
 	string profession_node_id = 1;
 	uint32 profession_node_level = 2;
@@ -3772,99 +3772,99 @@ message ProfessionNodeRequirement {
 	string profession_rank_id = 5;
 }
 
-// ref: Atlas.Proto.ProfessionProto
+// ref: ProfessionProto
 message ProfessionProto {
 	string id = 1;
 	repeated Requirements requirements = 3;
 	bool show_in_ui = 4;
-	//map<string, ???> profession_ranks_map = 5;
+	map<string, ProfessionRankProto> profession_ranks_map = 5;
 	repeated ProfessionTierProto profession_tiers = 6;
 }
 
-// ref: Atlas.Proto.ProfessionRankPointsRequirement
+// ref: ProfessionRankPointsRequirement
 message ProfessionRankPointsRequirement {
 	string profession_gmt_id = 1;
 	int32 rank_points = 2;
 	ComparisonOperator comparison_operator = 3;
 }
 
-// ref: Atlas.Proto.ProfessionRankProto
+// ref: ProfessionRankProto
 message ProfessionRankProto {
 	uint32 potential_rank_points = 1;
 	repeated Requirements requirements = 2;
-	//map<string, ???> profession_nodes_map = 3;
+	map<string, ProfessionNodeProto> profession_nodes_map = 3;
 	bool show_in_ui = 4;
 	string id = 5;
 }
 
-// ref: Atlas.Proto.ProfessionRequirement
+// ref: ProfessionRequirement
 message ProfessionRequirement {
 	string profession_gmt_id = 1;
 }
 
-// ref: Atlas.Proto.ProfessionTierProto
+// ref: ProfessionTierProto
 message ProfessionTierProto {
 	uint32 rank_points_upper_bound = 1;
 }
 
-// ref: Atlas.Proto.ProfessionTierRequirement
+// ref: ProfessionTierRequirement
 message ProfessionTierRequirement {
 	string profession_gmt_id = 1;
 	uint32 profession_tier = 2;
 	ComparisonOperator comparison_operator = 3;
 }
 
-// ref: Atlas.Proto.ProfessionTotalNodeLevelRequirement
+// ref: ProfessionTotalNodeLevelRequirement
 message ProfessionTotalNodeLevelRequirement {
 	string profession_gmt_id = 1;
 	int32 num_profession_node_levels = 2;
 	ComparisonOperator comparison_operator = 3;
 }
 
-// ref: Atlas.Proto.ProfileConfigProto
+// ref: ProfileConfigProto
 message ProfileConfigProto {
-	//map<string, ???> titles = 1;
-	string id = 1;
-	//map<string, ???> badges = 2;
-	//map<string, ???> houses = 3;
-	//map<string, ???> themes = 4;
-	//map<string, ???> wand_cores = 5;
-	//map<string, ???> wand_woods = 6;
-	//map<string, ???> wand_flexibilities = 7;
-	//map<string, ???> wand_lengths = 8;
+	map<string, ClientTitleProto> titles = 1;
+	string id = 2;
+	map<string, ClientBadgeProto> badges = 3;
+	map<string, ClientHouseProto> houses = 4;
+	map<string, ClientThemeProto> themes = 5;
+	map<string, ClientWandCoreProto> wand_cores = 6;
+	map<string, ClientWandWoodProto> wand_woods = 7;
+	map<string, ClientWandFlexibilityProto> wand_flexibilities = 8;
+	map<string, ClientWandLengthProto> wand_lengths = 9;
 }
 
-// ref: Atlas.Proto.ProtegoPatternProto
+// ref: ProtegoPatternProto
 message ProtegoPatternProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.PushAnalyticsEventsRequest
+// ref: PushAnalyticsEventsRequest
 message PushAnalyticsEventsRequest {
 	AnalyticsEventsProto events = 1;
 }
 
-// ref: Atlas.Proto.PushAnalyticsEventsResponse
+// ref: PushAnalyticsEventsResponse
 message PushAnalyticsEventsResponse {
 }
 
-// ref: Atlas.Proto.PushPerformanceMetricsRequest
+// ref: PushPerformanceMetricsRequest
 message PushPerformanceMetricsRequest {
 	PerformanceSnapshotProto performance_snapshot = 1;
 }
 
-// ref: Atlas.Proto.PushPerformanceMetricsResponse
+// ref: PushPerformanceMetricsResponse
 message PushPerformanceMetricsResponse {
 }
 
-// ref: Atlas.Proto.QualityLevelOverridesProto
+// ref: QualityLevelOverridesProto
 message QualityLevelOverridesProto {
 	int32 target_fps = 1;
 }
 
-// ref: Atlas.Proto.QualityLevelProto
+// ref: QualityLevelProto
 message QualityLevelProto {
-	// ref: Atlas.Proto.QualityLevelProto/AntialiasingSetting
+	// ref: QualityLevelProto/AntialiasingSetting
 	enum AntialiasingSetting {
 		off = 0;
 		msaa2x = 2;
@@ -3872,14 +3872,14 @@ message QualityLevelProto {
 		msaa8x = 8;
 	}
 
-	// ref: Atlas.Proto.QualityLevelProto/RealtimeShadowsSetting
+	// ref: QualityLevelProto/RealtimeShadowsSetting
 	enum RealtimeShadowsSetting {
 		off = 0;
 		realtime_planar = 1;
 		realtime_planar_and_self_shadowing = 2;
 	}
 
-	// ref: Atlas.Proto.QualityLevelProto/TextureQualitySetting
+	// ref: QualityLevelProto/TextureQualitySetting
 	enum TextureQualitySetting {
 		full_res = 0;
 		half_res = 1;
@@ -3889,14 +3889,14 @@ message QualityLevelProto {
 	SharedQualityLevelProto quality_level = 2;
 }
 
-// ref: Atlas.Proto.QuestCompletedRequirement
+// ref: QuestCompletedRequirement
 message QuestCompletedRequirement {
 	string quest_gmt_id = 1;
 }
 
-// ref: Atlas.Proto.QuestProgress
+// ref: QuestProgress
 message QuestProgress {
-	// ref: Atlas.Proto.QuestProgress/TypeOneofCase
+	// ref: QuestProgress/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		req_progress = 1;
@@ -3907,7 +3907,7 @@ message QuestProgress {
 	HookQuestProgress hook_progress = 2;
 }
 
-// ref: Atlas.Proto.QuestProto
+// ref: QuestProto
 message QuestProto {
 	string id = 1;
 	QuestType type = 2;
@@ -3916,14 +3916,14 @@ message QuestProto {
 	int32 version = 5;
 }
 
-// ref: Atlas.Proto.QuestRewardProto
+// ref: QuestRewardProto
 message QuestRewardProto {
 	string quest_gmt_id = 1;
 }
 
-// ref: Atlas.Proto.QuestTask
+// ref: QuestTask
 message QuestTask {
-	// ref: Atlas.Proto.QuestTask/TypeOneofCase
+	// ref: QuestTask/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		req_task = 1;
@@ -3934,19 +3934,19 @@ message QuestTask {
 	HookQuestTask hook_task = 2;
 }
 
-// ref: Atlas.Proto.RangeInt64
+// ref: RangeInt64
 message RangeInt64 {
 	int64 min = 1;
 	int64 max = 2;
 }
 
-// ref: Atlas.Proto.RangeUint32
+// ref: RangeUint32
 message RangeUint32 {
 	uint32 min = 1;
 	uint32 max = 2;
 }
 
-// ref: Atlas.Proto.RecipeProto
+// ref: RecipeProto
 message RecipeProto {
 	string id = 1;
 	LootCollectionProto recipe = 2;
@@ -3957,9 +3957,9 @@ message RecipeProto {
 	repeated Requirements unlock_conditions = 7;
 }
 
-// ref: Atlas.Proto.Requirement
+// ref: Requirement
 message Requirement {
-	// ref: Atlas.Proto.Requirement/RequirementOneofCase
+	// ref: Requirement/RequirementOneofCase
 	enum RequirementOneofCase {
 		none = 0;
 		bool_literal_req = 1;
@@ -4014,23 +4014,23 @@ message Requirement {
 	AccountCreationDateRequirement account_creation_date_requirement = 24;
 }
 
-// ref: Atlas.Proto.Requirements
+// ref: Requirements
 message Requirements {
 	repeated Requirement reqs = 1;
 }
 
-// ref: Atlas.Proto.RequirementsQuestProgress
+// ref: RequirementsQuestProgress
 message RequirementsQuestProgress {
 }
 
-// ref: Atlas.Proto.RequirementsQuestTask
+// ref: RequirementsQuestTask
 message RequirementsQuestTask {
 	Requirements reqs = 1;
 }
 
-// ref: Atlas.Proto.RpgstatProto
+// ref: RpgstatProto
 message RpgstatProto {
-	// ref: Atlas.Proto.RpgstatProto/IconDisplayType
+	// ref: RpgstatProto/IconDisplayType
 	enum IconDisplayType {
 		BOTH = 0;
 		PLAYER_VIEW = 1;
@@ -4042,40 +4042,40 @@ message RpgstatProto {
 	RangeInt64 stat_bounds = 2;
 }
 
-// ref: Atlas.Proto.RpgstatsBlockProto
+// ref: RpgstatsBlockProto
 message RpgstatsBlockProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.RuneInChallengeCondition
+// ref: RuneInChallengeCondition
 message RuneInChallengeCondition {
 	string vault_item_id = 1;
 }
 
-// ref: Atlas.Proto.RuneLevelChallengeBonusProto
+// ref: RuneLevelChallengeBonusProto
 message RuneLevelChallengeBonusProto {
 	int32 rune_lvl = 1;
 }
 
-// ref: Atlas.Proto.RunestoneVaultItemProto
+// ref: RunestoneVaultItemProto
 message RunestoneVaultItemProto {
 	int32 quality = 1;
 	bool is_boss = 2;
 	string collection_family_gmt_id = 3;
 }
 
-// ref: Atlas.Proto.SelfieAvatarAssetProto
+// ref: SelfieAvatarAssetProto
 message SelfieAvatarAssetProto {
 	string id = 1;
 	Requirements unlock_conditions = 2;
 }
 
-// ref: Atlas.Proto.ShardConversionBonusMetadataProto
+// ref: ShardConversionBonusMetadataProto
 message ShardConversionBonusMetadataProto {
 	int32 amount = 1;
 }
 
-// ref: Atlas.Proto.SharedQualityLevelProto
+// ref: SharedQualityLevelProto
 message SharedQualityLevelProto {
 	string name = 1;
 	int32 texture_quality = 2;
@@ -4086,7 +4086,7 @@ message SharedQualityLevelProto {
 	bool billboards_face_camera_position = 9;
 	int32 realtime_shadows = 10;
 	bool ar_azimuth_blurring = 11;
-	//map<string, ???> gamemode_overrides = 13;
+	map<string, QualityLevelOverridesProto> gamemode_overrides = 13;
 	int32 ar_encounter_particle_cap = 14;
 	int32 locked_encounter_particle_cap = 15;
 	int32 menu_particle_cap = 16;
@@ -4098,14 +4098,14 @@ message SharedQualityLevelProto {
 	bool force_simple_ar = 22;
 }
 
-// ref: Atlas.Proto.SoundConfigProto
+// ref: SoundConfigProto
 message SoundConfigProto {
 	string sound_bank = 1;
 	string sound_event = 2;
 	repeated AudioParameterProto parameters = 3;
 }
 
-// ref: Atlas.Proto.SpeechBubble
+// ref: SpeechBubble
 message SpeechBubble {
 	string character_portrait_image = 1;
 	string character_name_lockey = 2;
@@ -4114,26 +4114,26 @@ message SpeechBubble {
 	SoundConfigProto sound_config = 5;
 }
 
-// ref: Atlas.Proto.SpellGameBonusMetadataProto
+// ref: SpellGameBonusMetadataProto
 message SpellGameBonusMetadataProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.SpellProto
+// ref: SpellProto
 message SpellProto {
 	repeated string charge_up_effect = 1;
-	string id = 1;
-	//map<string, ???> timelines = 2;
-	//map<string, ???> critical_hits = 3;
+	string id = 2;
+	map<string, string> timelines = 3;
+	map<string, string> critical_hits = 4;
 }
 
-// ref: Atlas.Proto.StaminaVaultItemProto
+// ref: StaminaVaultItemProto
 message StaminaVaultItemProto {
 	float impact = 1;
 	int32 spell_effect = 2;
 }
 
-// ref: Atlas.Proto.StatsTagCondition
+// ref: StatsTagCondition
 message StatsTagCondition {
 	string target_type = 1;
 	string target_stat = 2;
@@ -4143,7 +4143,7 @@ message StatsTagCondition {
 	ConditionTargetType condition_target_type = 6;
 }
 
-// ref: Atlas.Proto.StoreCategoryProto
+// ref: StoreCategoryProto
 message StoreCategoryProto {
 	string icon_path = 1;
 	string title = 2;
@@ -4157,14 +4157,14 @@ message StoreCategoryProto {
 	bool enabled = 10;
 }
 
-// ref: Atlas.Proto.StoreConfigProto
+// ref: StoreConfigProto
 message StoreConfigProto {
 	repeated StoreCategoryProto store_categories = 1;
-	string id = 1;
-	repeated StoreRarityProto store_rarities = 2;
+	string id = 2;
+	repeated StoreRarityProto store_rarities = 3;
 }
 
-// ref: Atlas.Proto.StorePackConfigProto
+// ref: StorePackConfigProto
 message StorePackConfigProto {
 	int32 priority = 1;
 	string subcategory_id = 2;
@@ -4186,42 +4186,42 @@ message StorePackConfigProto {
 	bool hide_pack_on_sold_out = 18;
 }
 
-// ref: Atlas.Proto.StorePackProto
+// ref: StorePackProto
 message StorePackProto {
-	// ref: Atlas.Proto.StorePackProto/TimeReqTuple
+	// ref: StorePackProto/TimeReqTuple
 	message TimeReqTuple {
 	}
 
 	repeated StorePackConfigProto store_pack_config = 1;
-	string id = 1;
-	niantic.platform.iap.IapStoreItem store_item = 2;
-	LootCollectionProto contents = 2;
-	LootCollectionProto cost = 3;
-	string iap_id = 4;
-	proto.SkuDataProto sku_data = 5;
-	Requirements requirements = 6;
+	string id = 2;
+	IapStoreItem store_item = 3;
+	LootCollectionProto contents = 4;
+	LootCollectionProto cost = 5;
+	string iap_id = 6;
+	SkuDataProto sku_data = 7;
+	Requirements requirements = 8;
 }
 
-// ref: Atlas.Proto.StorePackQuantityRequirement
+// ref: StorePackQuantityRequirement
 message StorePackQuantityRequirement {
 	string store_pack_id = 1;
 	ComparisonOperator comparison_operator = 2;
 	int64 qty = 3;
 }
 
-// ref: Atlas.Proto.StoreRarityProto
+// ref: StoreRarityProto
 message StoreRarityProto {
 	string id = 1;
 	ColorProto text_color = 2;
 	string title = 3;
 }
 
-// ref: Atlas.Proto.StoreSubcategoryProto
+// ref: StoreSubcategoryProto
 message StoreSubcategoryProto {
 	string id = 1;
 }
 
-// ref: Atlas.Proto.StoryboardAdviceInterjectionStep
+// ref: StoryboardAdviceInterjectionStep
 message StoryboardAdviceInterjectionStep {
 	string character_portrait_image = 1;
 	string character_name_lockey = 2;
@@ -4231,7 +4231,7 @@ message StoryboardAdviceInterjectionStep {
 	string button_lockey = 6;
 }
 
-// ref: Atlas.Proto.StoryboardAdviceOverlayStep
+// ref: StoryboardAdviceOverlayStep
 message StoryboardAdviceOverlayStep {
 	SpeechBubble speech_bubble = 1;
 	bool requires_scrim = 2;
@@ -4239,55 +4239,55 @@ message StoryboardAdviceOverlayStep {
 	bool show_continue_action_text = 4;
 }
 
-// ref: Atlas.Proto.StoryboardConversationInterjectionStep
+// ref: StoryboardConversationInterjectionStep
 message StoryboardConversationInterjectionStep {
 	repeated SpeechBubble conversation = 1;
 }
 
-// ref: Atlas.Proto.StoryboardGenericDialogStep
+// ref: StoryboardGenericDialogStep
 message StoryboardGenericDialogStep {
 	string title = 1;
 	string text = 2;
 	string button_text = 3;
 }
 
-// ref: Atlas.Proto.StoryboardPauseStep
+// ref: StoryboardPauseStep
 message StoryboardPauseStep {
 }
 
-// ref: Atlas.Proto.StoryboardProto
+// ref: StoryboardProto
 message StoryboardProto {
-	proto.TriggerPoint trigger_point = 1;
-	string id = 1;
-	Requirements start_reqs = 2;
-	string step_flag_gmt_id = 3;
-	string complete_flag_gmt_id = 4;
-	repeated StoryboardStepProto storyboard_steps = 5;
-	StoryboardResetMode reset_mode = 6;
-	Requirements reset_reqs = 7;
+	TriggerPoint trigger_point = 1;
+	string id = 2;
+	Requirements start_reqs = 3;
+	string step_flag_gmt_id = 4;
+	string complete_flag_gmt_id = 5;
+	repeated StoryboardStepProto storyboard_steps = 6;
+	StoryboardResetMode reset_mode = 7;
+	Requirements reset_reqs = 8;
 }
 
-// ref: Atlas.Proto.StoryboardStepProto
+// ref: StoryboardStepProto
 message StoryboardStepProto {
 	LootCollectionProto rewards = 1;
 }
 
-// ref: Atlas.Proto.TeamCompositionCondition
+// ref: TeamCompositionCondition
 message TeamCompositionCondition {
 	ComparisonOperator comparison_operator = 1;
 	int32 target_comparison_value = 2;
 	string profession_id = 3;
 }
 
-// ref: Atlas.Proto.TeamControlProto
+// ref: TeamControlProto
 message TeamControlProto {
 	string id = 1;
 	string team_name = 2;
 }
 
-// ref: Atlas.Proto.TeamPropertyCondition
+// ref: TeamPropertyCondition
 message TeamPropertyCondition {
-	// ref: Atlas.Proto.TeamPropertyCondition/Types/Criteria
+	// ref: TeamPropertyCondition/Types/Criteria
 	enum Criteria {
 		UNKNOWN = 0;
 		FRIENDS = 1;
@@ -4301,63 +4301,63 @@ message TeamPropertyCondition {
 	Criteria criteria = 3;
 }
 
-// ref: Atlas.Proto.TempFlooNetworkConfigProto
+// ref: TempFlooNetworkConfigProto
 message TempFlooNetworkConfigProto {
 	int32 points_per_button_press = 1;
 	int64 button_press_cooldown_ms = 2;
-	//map<string, ???> stamina_requirements = 3;
+	map<string, int64> stamina_requirements = 3;
 }
 
-// ref: Atlas.Proto.TimeActiveBuffExpiration
+// ref: TimeActiveBuffExpiration
 message TimeActiveBuffExpiration {
 	int64 expiry_time_ms = 1;
 }
 
-// ref: Atlas.Proto.TimeBuffDuration
+// ref: TimeBuffDuration
 message TimeBuffDuration {
 	int64 time_ms = 1;
 	bool is_override = 2;
 }
 
-// ref: Atlas.Proto.TimeOfDayCondition
+// ref: TimeOfDayCondition
 message TimeOfDayCondition {
 	int64 starting_daily_timestamp = 1;
 	int64 ending_daily_timestamp = 2;
 }
 
-// ref: Atlas.Proto.TimeRemainingCondition
+// ref: TimeRemainingCondition
 message TimeRemainingCondition {
 	ComparisonOperator comparison_operator = 1;
 	int64 target_comparison_value = 2;
 }
 
-// ref: Atlas.Proto.VaultCapacityLootRewardProto
+// ref: VaultCapacityLootRewardProto
 message VaultCapacityLootRewardProto {
 	string vault_category_gmt_id = 1;
 	int64 amount = 2;
 }
 
-// ref: Atlas.Proto.VaultCategoryProto
+// ref: VaultCategoryProto
 message VaultCategoryProto {
 	repeated string increase_capacity_store_pack_proto_ids = 1;
-	string id = 1;
-	CategoryCapacityType capacity_type = 2;
+	string id = 2;
+	CategoryCapacityType capacity_type = 3;
 }
 
-// ref: Atlas.Proto.VaultItemActiveBuffSource
+// ref: VaultItemActiveBuffSource
 message VaultItemActiveBuffSource {
 	string vault_item_gmt_id = 1;
 }
 
-// ref: Atlas.Proto.VaultItemLootRewardProto
+// ref: VaultItemLootRewardProto
 message VaultItemLootRewardProto {
 	string item_id = 1;
 	int64 amount = 2;
 }
 
-// ref: Atlas.Proto.VaultItemProto
+// ref: VaultItemProto
 message VaultItemProto {
-	// ref: Atlas.Proto.VaultItemProto/PotionStateEnum
+	// ref: VaultItemProto/PotionStateEnum
 	enum PotionStateEnum {
 		usable = 0;
 		map_unusable = 1;
@@ -4367,7 +4367,7 @@ message VaultItemProto {
 		focus_already_full = 5;
 	}
 
-	// ref: Atlas.Proto.VaultItemProto/VaultItemTypeOneofCase
+	// ref: VaultItemProto/VaultItemTypeOneofCase
 	enum VaultItemTypeOneofCase {
 		none = 0;
 		currency_item = 2;
@@ -4396,57 +4396,57 @@ message VaultItemProto {
 	string vault_category_gmt_id = 101;
 }
 
-// ref: Atlas.Proto.VaultItemRequirement
+// ref: VaultItemRequirement
 message VaultItemRequirement {
 	string item_id = 1;
 	ComparisonOperator comparison_operator = 2;
 	int64 qty = 3;
 }
 
-// ref: Atlas.Proto.Vector2Proto
+// ref: Vector2Proto
 message Vector2Proto {
 	float x = 1;
 	float y = 2;
 }
 
-// ref: Atlas.Proto.Vector3Proto
+// ref: Vector3Proto
 message Vector3Proto {
 	float x = 1;
 	float y = 2;
 	float z = 3;
 }
 
-// ref: Atlas.Proto.VersionProto
+// ref: VersionProto
 message VersionProto {
 	string id = 1;
 	string data_version = 2;
 	string data_branch = 3;
 }
 
-// ref: Atlas.Proto.WalkboxRewardProto
+// ref: WalkboxRewardProto
 message WalkboxRewardProto {
 	string walkbox_template_id = 1;
 }
 
-// ref: Atlas.Proto.WalkboxTemplateProto
+// ref: WalkboxTemplateProto
 message WalkboxTemplateProto {
 	string id = 1;
 	float required_distance_km = 2;
 }
 
-// ref: Atlas.Proto.WalkDistanceQuestProgress
+// ref: WalkDistanceQuestProgress
 message WalkDistanceQuestProgress {
 	int64 current_micrometers_walked = 1;
 }
 
-// ref: Atlas.Proto.WalkDistanceQuestTask
+// ref: WalkDistanceQuestTask
 message WalkDistanceQuestTask {
 	int64 required_micrometers_to_walk = 1;
 }
 
-// ref: Atlas.Proto.WeatherCondition
+// ref: WeatherCondition
 message WeatherCondition {
-	// ref: Atlas.Proto.WeatherCondition/Types/WeatherType
+	// ref: WeatherCondition/Types/WeatherType
 	enum WeatherType {
 		UNKNOWN = 0;
 		SUNNY = 1;
@@ -4464,17 +4464,17 @@ message WeatherCondition {
 	WeatherType weather_condition = 1;
 }
 
-// ref: Atlas.Proto.WinTracesQuestProgress
+// ref: WinTracesQuestProgress
 message WinTracesQuestProgress {
 	int64 current_trace_count = 1;
 }
 
-// ref: Atlas.Proto.WinTracesQuestTask
+// ref: WinTracesQuestTask
 message WinTracesQuestTask {
 	int64 required_trace_count = 1;
 }
 
-// ref: Atlas.Proto.WrackspurtBonusMetadataProto
+// ref: WrackspurtBonusMetadataProto
 message WrackspurtBonusMetadataProto {
 	float multiplier = 1;
 }
@@ -4843,7 +4843,7 @@ message WeatherAlertSettingsProto {
 	}
 
 	bool warn_weather = 1;
-	niantic.rpc.WeatherAlertProto.Severity default_severity = 2;
+	WeatherAlertProto.Severity default_severity = 2;
 	repeated AlertIgnoreSettings ignores = 3;
 	repeated AlertEnforceSettings enforces = 4;
 }
@@ -4852,18 +4852,18 @@ message WeatherAlertSettingsProto {
 message WeatherSettingsProto {
 	// ref: WeatherSettingsProto/Types/GameplayWeatherSettingsProto/Types/ConditionMapSettings
 	message ConditionMapSettings {
-		niantic.rpc.GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
+		GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
 		repeated string provider_enums = 2;
 	}
 
 	// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/DisplayLevelSettings
 	message DisplayLevelSettings {
 		repeated string condition_enums = 1;
-		niantic.rpc.DisplayWeatherProto.DisplayLevel cloud_level = 2;
-		niantic.rpc.DisplayWeatherProto.DisplayLevel rain_level = 3;
-		niantic.rpc.DisplayWeatherProto.DisplayLevel snow_level = 4;
-		niantic.rpc.DisplayWeatherProto.DisplayLevel fog_level = 5;
-		niantic.rpc.DisplayWeatherProto.DisplayLevel special_effect_level = 6;
+		DisplayWeatherProto.DisplayLevel cloud_level = 2;
+		DisplayWeatherProto.DisplayLevel rain_level = 3;
+		DisplayWeatherProto.DisplayLevel snow_level = 4;
+		DisplayWeatherProto.DisplayLevel fog_level = 5;
+		DisplayWeatherProto.DisplayLevel special_effect_level = 6;
 	}
 
 	// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto
@@ -4871,11 +4871,11 @@ message WeatherSettingsProto {
 		// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/DisplayLevelSettings
 		message DisplayLevelSettings {
 			repeated string condition_enums = 1;
-			niantic.rpc.DisplayWeatherProto.DisplayLevel cloud_level = 2;
-			niantic.rpc.DisplayWeatherProto.DisplayLevel rain_level = 3;
-			niantic.rpc.DisplayWeatherProto.DisplayLevel snow_level = 4;
-			niantic.rpc.DisplayWeatherProto.DisplayLevel fog_level = 5;
-			niantic.rpc.DisplayWeatherProto.DisplayLevel special_effect_level = 6;
+			DisplayWeatherProto.DisplayLevel cloud_level = 2;
+			DisplayWeatherProto.DisplayLevel rain_level = 3;
+			DisplayWeatherProto.DisplayLevel snow_level = 4;
+			DisplayWeatherProto.DisplayLevel fog_level = 5;
+			DisplayWeatherProto.DisplayLevel special_effect_level = 6;
 		}
 
 		// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/WindLevelSettings
@@ -4893,7 +4893,7 @@ message WeatherSettingsProto {
 	message GameplayWeatherSettingsProto {
 		// ref: WeatherSettingsProto/Types/GameplayWeatherSettingsProto/Types/ConditionMapSettings
 		message ConditionMapSettings {
-			niantic.rpc.GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
+			GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
 			repeated string provider_enums = 2;
 		}
 
@@ -4962,7 +4962,7 @@ message AddLoginActionOutProto {
 
 // ref: Niantic.Platform.Protos.AddLoginActionProto
 message AddLoginActionProto {
-	com.nianticproject.platform.auth.IdentityProvider identity_provider = 1;
+	IdentityProvider identity_provider = 1;
 	bytes inner_message = 2;
 }
 
@@ -5059,7 +5059,7 @@ message ListLoginActionOutProto {
 
 // ref: Niantic.Platform.Protos.LoginDetail
 message LoginDetail {
-	com.nianticproject.platform.auth.IdentityProvider identity_provider = 1;
+	IdentityProvider identity_provider = 1;
 	string email = 2;
 }
 
@@ -5139,7 +5139,7 @@ message RemoveLoginActionOutProto {
 
 // ref: Niantic.Platform.Protos.RemoveLoginActionProto
 message RemoveLoginActionProto {
-	com.nianticproject.platform.auth.IdentityProvider identity_provider = 1;
+	IdentityProvider identity_provider = 1;
 }
 
 // ref: Niantic.Platform.Protos.SubmitNewPoiOutProto
@@ -5530,7 +5530,7 @@ message AddDarkDetectorResponseProto {
 	}
 
 	Result result = 1;
-	atlas.proto.ClientDarkDetectorAmplifierProto dark_detector_amplifier = 2;
+	ClientDarkDetectorAmplifierProto dark_detector_amplifier = 2;
 	string partner_id = 5;
 }
 
@@ -5586,7 +5586,7 @@ message ApplyKeyToWalkboxResponseProto {
 // ref: Atlas.Rpc.ApplyMasterNoteRequestProto
 message ApplyMasterNoteRequestProto {
 	int64 cauldron_id = 1;
-	repeated atlas.proto.MasterNoteGesture gesture = 2;
+	repeated MasterNoteGesture gesture = 2;
 }
 
 // ref: Atlas.Rpc.ApplyMasterNoteResponseProto
@@ -5633,7 +5633,7 @@ message AtlasInventoryItemProto {
 	InventoryWalkboxItemProto walkbox = 5;
 	InventoryFeatureFlagsProto player_flags = 6;
 	InventoryPortkeyItemProto portkey = 7;
-	atlas.proto.ActiveBuffListProto player_active_buff_list = 8;
+	ActiveBuffListProto player_active_buff_list = 8;
 	InventoryCollectionPageProto collection_page = 9;
 	InventoryVaultCapacityProto vault_capacity = 11;
 	InventoryCauldronProto cauldron = 12;
@@ -5703,7 +5703,7 @@ message BuyStorePackResponseProto {
 	}
 
 	Status status = 1;
-	atlas.proto.LootCollectionProto rewards = 2;
+	LootCollectionProto rewards = 2;
 }
 
 // ref: Atlas.Rpc.ChamberMobState
@@ -5716,8 +5716,8 @@ message ChamberMobState {
 	bytes encounter_ticket = 8;
 	double x = 9;
 	double y = 10;
-	atlas.proto.ActiveBuffListProto active_buff_list = 11;
-	repeated atlas.proto.MobReward rewards = 12;
+	ActiveBuffListProto active_buff_list = 11;
+	repeated MobReward rewards = 12;
 	int64 time_to_spawn = 101;
 }
 
@@ -5812,12 +5812,12 @@ message ChamberPlayerState {
 	}
 
 	string nickname = 1;
-	//map<string, ???> runestone_contributions = 2;
+	map<string, int64> runestone_contributions = 2;
 	PlayerWaitingState waiting = 3;
 	PlayerInProgressState in_progress = 4;
 	PlayerFinishedState finished = 5;
 	PlayerProfessionInfo profession_info = 6;
-	atlas.proto.ActiveBuffListProto active_buff_list = 7;
+	ActiveBuffListProto active_buff_list = 7;
 }
 
 // ref: Atlas.Rpc.ChamberState
@@ -5833,7 +5833,7 @@ message ChamberState {
 	// ref: Atlas.Rpc.ChamberState/Types/FinishedState
 	message FinishedState {
 		ChallengeFinishStatus finish_status = 1;
-		atlas.proto.LootCollectionProto rewards = 2;
+		LootCollectionProto rewards = 2;
 	}
 
 	// ref: Atlas.Rpc.ChamberState/Types/InProgressState
@@ -5892,7 +5892,7 @@ message CheckWalkboxesResponseProto {
 	// ref: Atlas.Rpc.CheckWalkboxesResponseProto/Types/OpenedWalkboxProto
 	message OpenedWalkboxProto {
 		string walkbox_gmt_template = 1;
-		atlas.proto.LootCollectionProto rewards = 2;
+		LootCollectionProto rewards = 2;
 		repeated int64 portkey_ids = 3;
 	}
 
@@ -5912,7 +5912,7 @@ message ClaimChamberRewardsRequestProto {
 message ClaimChamberRewardsResponseProto {
 	ChallengeRpcStatus status = 1;
 	ChamberState state = 2;
-	atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
+	ClientPlayerSnapshotProto player_snapshot = 3;
 }
 
 // ref: Atlas.Rpc.ClaimDailyRewardRequestProto
@@ -5924,7 +5924,7 @@ message ClaimDailyRewardResponseProto {
 	uint64 time_until_next_claim = 1;
 	string daily_reward_monthly_schedule_id = 2;
 	uint32 days_claimed_this_month = 3;
-	atlas.proto.LootCollectionProto reward = 4;
+	LootCollectionProto reward = 4;
 }
 
 // ref: Atlas.Rpc.ClaimPlayerNicknameRequestProto
@@ -5949,7 +5949,7 @@ message ClaimPlayerNicknameResponseProto {
 message ClaimPotionRequestProto {
 	int64 cauldron_id = 1;
 	int32 cauldron_slot = 2;
-	atlas.proto.LootCollectionProto requested_rewards = 3;
+	LootCollectionProto requested_rewards = 3;
 }
 
 // ref: Atlas.Rpc.ClaimPotionResponseProto
@@ -5965,17 +5965,17 @@ message ClaimPotionResponseProto {
 	}
 
 	ClaimPotionResult result = 1;
-	atlas.proto.LootCollectionProto received_rewards = 2;
-	atlas.proto.LootCollectionProto remaining_rewards = 3;
+	LootCollectionProto received_rewards = 2;
+	LootCollectionProto remaining_rewards = 3;
 }
 
-// ref: Atlas.Proto.ClientEnvironmentTagsProto
+// ref: ClientEnvironmentTagsProto
 message ClientEnvironmentTagsProto {
 	DayNightTag day_night = 1;
 	MoonPhaseTag moon_phase = 2;
 }
 
-// ref: Atlas.Proto.ClientEnvironmentTagsProto
+// ref: ClientEnvironmentTagsProto
 message ClientEnvironmentTagsProto {
 	DayNightTag day_night = 1;
 	MoonPhaseTag moon_phase = 2;
@@ -5999,7 +5999,7 @@ message CollectIngredientResponseProto {
 	}
 
 	CollectIngredientResult result = 1;
-	atlas.proto.LootCollectionProto rewards = 2;
+	LootCollectionProto rewards = 2;
 }
 
 // ref: Atlas.Rpc.CombatResults
@@ -6034,7 +6034,7 @@ message ContainerConsumptionResponseProto {
 	}
 
 	Status status = 1;
-	atlas.proto.LootCollectionProto container_contents = 2;
+	LootCollectionProto container_contents = 2;
 }
 
 // ref: Atlas.Rpc.ContributeFlooPowderToFortressRequest
@@ -6059,14 +6059,14 @@ message ContributeFlooPowderToFortressResponse {
 	}
 
 	Result result = 1;
-	atlas.proto.FlooNetworkFortressStatistics fortress_statistics = 2;
+	FlooNetworkFortressStatistics fortress_statistics = 2;
 }
 
 // ref: Atlas.Rpc.CraftPotionRequestProto
 message CraftPotionRequestProto {
 	string recipe_gmt_id = 1;
 	int64 cauldron_id = 2;
-	atlas.proto.LootCollectionProto ingredients_to_purchase = 3;
+	LootCollectionProto ingredients_to_purchase = 3;
 }
 
 // ref: Atlas.Rpc.CraftPotionResponseProto
@@ -6086,7 +6086,7 @@ message CraftPotionResponseProto {
 	}
 
 	CraftPotionResult result = 1;
-	atlas.proto.LootCollectionProto rewards = 2;
+	LootCollectionProto rewards = 2;
 }
 
 // ref: Atlas.Rpc.CreateOrUpdatePlayerRequestProto
@@ -6159,7 +6159,7 @@ message DebugSetTeamFlooPointsRequest {
 
 // ref: Atlas.Rpc.DebugSetTeamFlooPointsResponse
 message DebugSetTeamFlooPointsResponse {
-	atlas.proto.FlooNetworkFortressStatistics fortress_statistics = 1;
+	FlooNetworkFortressStatistics fortress_statistics = 1;
 }
 
 // ref: Atlas.Rpc.EchoRequestProto
@@ -6394,8 +6394,8 @@ message EncounterInteractStatusProto {
 
 	// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/Win
 	message Win {
-		atlas.proto.LootCollectionProto rewards = 1;
-		atlas.proto.LootCollectionProto one_time_rewards = 2;
+		LootCollectionProto rewards = 1;
+		LootCollectionProto one_time_rewards = 2;
 	}
 
 	Continue continue = 1;
@@ -6441,7 +6441,7 @@ message EncounterStartCombatStageResultProto {
 	repeated int64 enemy_damage_unblocked = 2;
 	repeated int64 enemy_damage_blocked = 3;
 	int64 hp_max_player = 4;
-	//map<string, ???> player_damage_per_energy = 5;
+	map<string, int64> player_damage_per_energy = 5;
 	float player_crit_multiplier = 6;
 }
 
@@ -6536,9 +6536,9 @@ message EncounterUsePotionResponseProto {
 	CombatResults maybe_updated_combat_results = 2;
 }
 
-// ref: Atlas.Proto.GameEntityProto
+// ref: GameEntityProto
 message GameEntityProto {
-	// ref: Atlas.Proto.GameEntityProto/TypeOneofCase
+	// ref: GameEntityProto/TypeOneofCase
 	enum TypeOneofCase {
 		none = 0;
 		poi = 1;
@@ -6549,11 +6549,11 @@ message GameEntityProto {
 		environment_tags = 6;
 	}
 
-	atlas.proto.ClientMapPoiProto poi = 1;
-	atlas.proto.ClientMapTraceProto trace = 2;
-	atlas.proto.ClientMapLandmarkProto landmark = 3;
-	atlas.proto.ClientMapPotionIngredientProto potion_ingredient = 4;
-	niantic.rpc.ClientWeatherProto weather = 5;
+	ClientMapPoiProto poi = 1;
+	ClientMapTraceProto trace = 2;
+	ClientMapLandmarkProto landmark = 3;
+	ClientMapPotionIngredientProto potion_ingredient = 4;
+	ClientWeatherProto weather = 5;
 	ClientEnvironmentTagsProto environment_tags = 6;
 }
 
@@ -6570,7 +6570,7 @@ message GetAllStorePacksResponseProto {
 		ERROR = 2;
 	}
 
-	repeated atlas.proto.StorePackProto store_pack = 1;
+	repeated StorePackProto store_pack = 1;
 	Status status = 2;
 }
 
@@ -6582,7 +6582,7 @@ message GetChamberStateRequestProto {
 message GetChamberStateResponseProto {
 	ChallengeRpcStatus status = 1;
 	ChamberState state = 2;
-	atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
+	ClientPlayerSnapshotProto player_snapshot = 3;
 	int64 next_call_timestamp = 4;
 }
 
@@ -6613,7 +6613,7 @@ message GetFlooNetworkRegionScoresRequest {
 message GetFlooNetworkRegionScoresResponse {
 	string season_id = 1;
 	string region_id = 2;
-	atlas.proto.FlooNetworkRegionScores scores = 3;
+	FlooNetworkRegionScores scores = 3;
 	string region_name = 4;
 }
 
@@ -6625,7 +6625,7 @@ message GetFlooNetworkSeasonScoresRequest {
 // ref: Atlas.Rpc.GetFlooNetworkSeasonScoresResponse
 message GetFlooNetworkSeasonScoresResponse {
 	string season_id = 1;
-	atlas.proto.FlooNetworkSeasonScores scores = 2;
+	FlooNetworkSeasonScores scores = 2;
 }
 
 // ref: Atlas.Rpc.GetFortressDetailsRequestProto
@@ -6648,7 +6648,7 @@ message GetFortressDetailsResponseProto {
 	repeated ChamberPreview chambers = 2;
 	string partner_id = 4;
 	PoiDetails poi_details = 5;
-	atlas.proto.PoiAccessibility poi_accessibility = 6;
+	PoiAccessibility poi_accessibility = 6;
 }
 
 // ref: Atlas.Rpc.GetFortressFlooNetworkStatisticsRequest
@@ -6660,7 +6660,7 @@ message GetFortressFlooNetworkStatisticsRequest {
 
 // ref: Atlas.Rpc.GetFortressFlooNetworkStatisticsResponse
 message GetFortressFlooNetworkStatisticsResponse {
-	atlas.proto.FlooNetworkFortressStatistics fortress_statistics = 1;
+	FlooNetworkFortressStatistics fortress_statistics = 1;
 	int64 temp_next_add_pts_timestamp_ms = 2;
 }
 
@@ -6675,14 +6675,14 @@ message GetGreenhouseDetailsRequestProto {
 message GetGreenhouseDetailsResponseProto {
 	string partner_id = 1;
 	PoiDetails poi_details = 2;
-	atlas.proto.PoiAccessibility poi_accessibility = 3;
+	PoiAccessibility poi_accessibility = 3;
 }
 
 // ref: Atlas.Rpc.GetLexiconInventoryResponseProto
 message GetLexiconInventoryResponseProto {
 	bool success = 1;
-	niantic.platform.inventory.InventoryDeltaProto inventory_delta = 2;
-	//map<string, ???> volatile_vault_deltas = 3;
+	InventoryDeltaProto inventory_delta = 2;
+	map<string, int64> volatile_vault_deltas = 3;
 }
 
 // ref: Atlas.Rpc.GetOutpostDetailsRequestProto
@@ -6698,7 +6698,7 @@ message GetOutpostDetailsResponseProto {
 	OutpostMenu current_menu = 2;
 	string partner_id = 3;
 	PoiDetails poi_details = 4;
-	atlas.proto.PoiAccessibility poi_accessibility = 5;
+	PoiAccessibility poi_accessibility = 5;
 }
 
 // ref: Atlas.Rpc.GetPlayerFeatureListRequestProto
@@ -6708,7 +6708,7 @@ message GetPlayerFeatureListRequestProto {
 // ref: Atlas.Rpc.GetPlayerFeatureListResponseProto
 message GetPlayerFeatureListResponseProto {
 	repeated string enabled_feature_list = 1;
-	repeated atlas.proto.DisabledFeatureConfigProto disabled_feature_list = 2;
+	repeated DisabledFeatureConfigProto disabled_feature_list = 2;
 }
 
 // ref: Atlas.Rpc.GetPlayerStateRequestProto
@@ -6717,7 +6717,7 @@ message GetPlayerStateRequestProto {
 
 // ref: Atlas.Rpc.GetPlayerStateResponseProto
 message GetPlayerStateResponseProto {
-	atlas.proto.ClientPlayerProto player = 1;
+	ClientPlayerProto player = 1;
 }
 
 // ref: Atlas.Rpc.GetServerTimeRequestProto
@@ -6744,7 +6744,7 @@ message GetStorePackInfoResponseProto {
 		ERROR = 2;
 	}
 
-	atlas.proto.StorePackProto store_pack = 1;
+	StorePackProto store_pack = 1;
 	Status status = 2;
 }
 
@@ -6768,7 +6768,7 @@ message GiveAwayGreenhouseResponseProto {
 	}
 
 	Status status = 1;
-	atlas.proto.LootCollectionProto loot = 2;
+	LootCollectionProto loot = 2;
 	int64 next_loot_time = 3;
 }
 
@@ -6792,18 +6792,18 @@ message InstantFinishBrewingResponseProto {
 
 // ref: Atlas.Rpc.InventoryCauldronProto
 message InventoryCauldronProto {
-	string iproto._id = 1;
-	int64 id = 1;
-	string template_id = 2;
-	repeated InventoryCauldronSlotProto cauldron_slot = 3;
-	int64 brewing_start_timestamp = 4;
-	int64 availability_start_timestamp = 5;
-	int64 availability_time = 6;
+	string i_id = 1;
+	int64 id = 2;
+	string template_id = 3;
+	repeated InventoryCauldronSlotProto cauldron_slot = 4;
+	int64 brewing_start_timestamp = 5;
+	int64 availability_start_timestamp = 6;
+	int64 availability_time = 7;
 }
 
 // ref: Atlas.Rpc.InventoryCauldronSlotProto
 message InventoryCauldronSlotProto {
-	atlas.proto.LootCollectionProto rewards = 1;
+	LootCollectionProto rewards = 1;
 	int64 time_to_brew = 2;
 	string recipe_gmt_id = 3;
 	bool master_note_applied = 4;
@@ -6849,7 +6849,7 @@ message InventoryCompletedQuestProto {
 
 // ref: Atlas.Rpc.InventoryEscrowedRewardsProto
 message InventoryEscrowedRewardsProto {
-	atlas.proto.LootCollectionProto rewards = 1;
+	LootCollectionProto rewards = 1;
 }
 
 // ref: Atlas.Rpc.InventoryFeatureFlagProto
@@ -6879,7 +6879,7 @@ message InventoryFeatureFlagsProto {
 // ref: Atlas.Rpc.InventoryInProgressQuestProto
 message InventoryInProgressQuestProto {
 	string quest_gmt_id = 1;
-	repeated atlas.proto.QuestProgress progress_per_task = 2;
+	repeated QuestProgress progress_per_task = 2;
 	int32 version = 3;
 	int64 start_day_since_epoch_if_daily = 4;
 }
@@ -6899,7 +6899,7 @@ message InventoryQuestLogProto {
 
 // ref: Atlas.Rpc.InventoryVaultCapacityProto
 message InventoryVaultCapacityProto {
-	//map<string, ???> category_capacity = 1;
+	map<string, int64> category_capacity = 1;
 }
 
 // ref: Atlas.Rpc.InventoryVaultItemProto
@@ -6938,7 +6938,7 @@ message JoinChamberRequestProto {
 message JoinChamberResponseProto {
 	ChallengeRpcStatus status = 1;
 	ChamberState state = 2;
-	atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
+	ClientPlayerSnapshotProto player_snapshot = 3;
 	string partner_id = 4;
 	uint64 fortress_cooldown_left_ms = 5;
 }
@@ -6988,7 +6988,7 @@ message LootOutpostResponseProto {
 	Status status = 1;
 	int64 awarded_food_key = 2;
 	int64 next_loot_time = 3;
-	atlas.proto.LootCollectionProto loot = 4;
+	LootCollectionProto loot = 4;
 	string partner_id = 5;
 }
 
@@ -7061,14 +7061,14 @@ message OpenFamilyChestRequestProto {
 // ref: Atlas.Rpc.OpenFamilyChestResponseProto
 message OpenFamilyChestResponseProto {
 	int32 family_level = 1;
-	repeated atlas.proto.LootCollectionProto chest_reward = 2;
+	repeated LootCollectionProto chest_reward = 2;
 	int32 family_xp = 3;
 	int32 current_chests_opened = 4;
 }
 
 // ref: Atlas.Rpc.OptIntoEmailsRequestProto
 message OptIntoEmailsRequestProto {
-	atlas.proto.EmailOptsProto email_opts = 1;
+	EmailOptsProto email_opts = 1;
 }
 
 // ref: Atlas.Rpc.OptIntoEmailsResponseProto
@@ -7085,7 +7085,7 @@ message OptIntoEmailsResponseProto {
 
 // ref: Atlas.Rpc.OutpostMenu
 message OutpostMenu {
-	//map<int64, ???> menu_options = 1;
+	map<int64, LootRewardProto> menu_options = 1;
 	int64 menu_timestamp = 2;
 }
 
@@ -7105,7 +7105,7 @@ message PlaceItemResponseProto {
 
 	Status status = 1;
 	string collection_item_id = 2;
-	repeated atlas.proto.LootCollectionProto completion_rewards = 3;
+	repeated LootCollectionProto completion_rewards = 3;
 }
 
 // ref: Atlas.Rpc.PlayerAchievementProto
@@ -7129,7 +7129,7 @@ message PlayerLevelUpRequestProto {
 message PlayerLevelUpResponseProto {
 	bool did_level_up = 1;
 	int32 new_level = 2;
-	atlas.proto.LootCollectionProto granted_rewards = 3;
+	LootCollectionProto granted_rewards = 3;
 }
 
 // ref: Atlas.Rpc.PlayerProfessionProgressV3Proto
@@ -7138,7 +7138,7 @@ message PlayerProfessionProgressV3Proto {
 	message NodeProgressV3 {
 		uint32 level = 1;
 		int64 last_updated_timestamp = 2;
-		atlas.proto.LootCollectionProto unlocked_levels_cost = 3;
+		LootCollectionProto unlocked_levels_cost = 3;
 	}
 
 	// ref: Atlas.Rpc.PlayerProfessionProgressV3Proto/Types/RankProgressV3
@@ -7147,19 +7147,19 @@ message PlayerProfessionProgressV3Proto {
 		message NodeProgressV3 {
 			uint32 level = 1;
 			int64 last_updated_timestamp = 2;
-			atlas.proto.LootCollectionProto unlocked_levels_cost = 3;
+			LootCollectionProto unlocked_levels_cost = 3;
 		}
 
-		//map<string, ???> node_progress = 1;
+		map<string, NodeProgressV3> node_progress = 1;
 	}
 
 	uint32 rank_points = 2;
-	//map<string, ???> rank_progress_map = 3;
+	map<string, RankProgressV3> rank_progress_map = 3;
 }
 
 // ref: Atlas.Rpc.PlayerProfessionsProgressV3Proto
 message PlayerProfessionsProgressV3Proto {
-	//map<string, ???> profession_progress = 1;
+	map<string, PlayerProfessionProgressV3Proto> profession_progress = 1;
 }
 
 // ref: Atlas.Rpc.PlayerProfileProto
@@ -7194,10 +7194,10 @@ message PlayerProfileProto {
 	repeated string unlocked_selfie_asset_ids = 20;
 	int64 total_swish_success_spell = 21;
 	repeated string discovered_potions_master_note_ids = 22;
-	//map<string, ???> master_note_discovery_status = 23;
-	//map<string, ???> swish_spellcasts = 24;
-	//map<string, ???> store_pack_purchased = 25;
-	atlas.proto.EmailOptsProto email_opts = 26;
+	map<string, int64> master_note_discovery_status = 23;
+	map<string, int64> swish_spellcasts = 24;
+	map<string, int64> store_pack_purchased = 25;
+	EmailOptsProto email_opts = 26;
 }
 
 // ref: Atlas.Rpc.PlayerSelectTeamRequestProto
@@ -7232,7 +7232,7 @@ message PortkeyBonusGameNodeRewards {
 
 // ref: Atlas.Rpc.PortkeyBonusGameRewardTuple
 message PortkeyBonusGameRewardTuple {
-	atlas.proto.LootRewardProto reward = 1;
+	LootRewardProto reward = 1;
 	float multiplier = 2;
 	string category_proto_id = 3;
 }
@@ -7382,7 +7382,7 @@ message ReleaseEscrowedRewardsResponseProto {
 	}
 
 	Status status = 1;
-	atlas.proto.LootCollectionProto claimed_rewards = 2;
+	LootCollectionProto claimed_rewards = 2;
 }
 
 // ref: Atlas.Rpc.RemoveVaultItemRequestProto
@@ -7423,7 +7423,7 @@ message SetRunestonesRequestProto {
 message SetRunestonesResponseProto {
 	ChallengeRpcStatus status = 1;
 	ChamberState state = 2;
-	atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
+	ClientPlayerSnapshotProto player_snapshot = 3;
 	string fortress_id = 4;
 	string partner_id = 5;
 }
@@ -7469,7 +7469,7 @@ message StoryboardDoStepResponse {
 	}
 
 	Status status = 1;
-	atlas.proto.LootCollectionProto rewards = 2;
+	LootCollectionProto rewards = 2;
 }
 
 // ref: Atlas.Rpc.StoryboardSkipRequest
@@ -7491,13 +7491,13 @@ message StoryboardSkipResponse {
 
 // ref: Atlas.Rpc.TempClientStatsHelper
 message TempClientStatsHelper {
-	//map<string, ???> player_active_stats = 1;
-	//map<string, ???> enemy_active_stats = 2;
+	map<string, int64> player_active_stats = 1;
+	map<string, int64> enemy_active_stats = 2;
 	int64 hp_max_enemy = 3;
 	repeated int64 enemy_damage_unblocked = 4;
 	repeated int64 enemy_damage_blocked = 5;
 	int64 hp_max_player = 6;
-	//map<string, ???> player_damage_per_energy = 7;
+	map<string, int64> player_damage_per_energy = 7;
 }
 
 // ref: Atlas.Rpc.UpdateProfileFieldRequestProto
@@ -7540,7 +7540,7 @@ message UsePortkeyResponseProto {
 	}
 
 	Status status = 1;
-	atlas.proto.LootCollectionProto portkey_rewards = 2;
+	LootCollectionProto portkey_rewards = 2;
 	repeated PortkeyBonusGameNodeRewards all_bonus_nodes_rewards = 4;
 }
 

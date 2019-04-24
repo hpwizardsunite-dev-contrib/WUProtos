@@ -4,7 +4,9 @@ package WUProtos.Data.Player;
 import "WUProtos/Data/Loot/LootCollection.proto";
 
 message PlayerProfessionProgressV3 {
+	map<string, NodeProgressV3> node_progress = 1;
 	uint32 rank_points = 2;
+	map<string, RankProgressV3> rank_progress_map = 3;
 
 	message NodeProgressV3 {
 		uint32 level = 1;

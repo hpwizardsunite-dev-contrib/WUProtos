@@ -1017,14 +1017,14 @@ message ChallengeSpawnLogicProto {
 // ref: ChamberTemplateProto
 message ChamberTemplateProto {
 	map<int32, int32> runestone_difficulties = 1;
-	string id = 1;
-	map<string, string> parkmode_bgs = 2;
-	Requirements unlock_requirements = 2;
-	Requirements visibility_requirements = 3;
-	uint32 min_runestone_level = 4;
-	uint32 max_runestone_level = 5;
-	uint32 player_cap = 6;
-	int64 duration_ms = 7;
+	string id = 2;
+	map<string, string> parkmode_bgs = 3;
+	Requirements unlock_requirements = 4;
+	Requirements visibility_requirements = 5;
+	uint32 min_runestone_level = 6;
+	uint32 max_runestone_level = 7;
+	uint32 player_cap = 8;
+	int64 duration_ms = 9;
 	int64 knockout_time_ms = 10;
 	map<int32, PlayerCountMultipliers> player_count_multipliers = 11;
 	uint32 base_chamber_rating = 12;
@@ -2826,13 +2826,13 @@ message EncounterObstacleProto {
 // ref: EncounterProto
 message EncounterProto {
 	repeated string encounter_searching_idle_timelines = 1;
-	string id = 1;
-	repeated string encounter_assets = 2;
-	string collection_item_reward_gmt_id = 2;
-	repeated EncounterStageProto stages = 3;
-	int32 collection_item_reward_shards = 4;
-	string collection_family_gmt_id = 5;
-	string affinity_profession_id = 6;
+	string id = 2;
+	repeated string encounter_assets = 3;
+	string collection_item_reward_gmt_id = 4;
+	repeated EncounterStageProto stages = 5;
+	int32 collection_item_reward_shards = 6;
+	string collection_family_gmt_id = 7;
+	string affinity_profession_id = 8;
 }
 
 // ref: EncounterSoundBanks
@@ -2868,17 +2868,17 @@ message EncounterStageProto {
 	}
 
 	repeated string combat_spell_list = 1;
-	EncounterStageSwishProto swish = 1;
-	repeated ClientSequenceDataProto stage_setup_sequence = 2;
-	EncounterStageCombatProto combat = 2;
-	repeated ClientSequenceDataProto stage_completion_sequence = 3;
-	EncounterStagePortkeyProto portkey = 3;
-	repeated string idle_loop_timelines = 4;
-	EncounterStagePictureProto picture = 4;
-	repeated ClientCombatStateProto state_graph_nodes = 5;
-	string spell_gmt_id = 5;
-	repeated ClientCombatEnemyTraitProto combat_enemy_traits = 6;
-	repeated ClientEncounterTypeProto enemy_rank_tags = 7;
+	EncounterStageSwishProto swish = 2;
+	repeated ClientSequenceDataProto stage_setup_sequence = 3;
+	EncounterStageCombatProto combat = 4;
+	repeated ClientSequenceDataProto stage_completion_sequence = 5;
+	EncounterStagePortkeyProto portkey = 6;
+	repeated string idle_loop_timelines = 7;
+	EncounterStagePictureProto picture = 8;
+	repeated ClientCombatStateProto state_graph_nodes = 9;
+	string spell_gmt_id = 10;
+	repeated ClientCombatEnemyTraitProto combat_enemy_traits = 11;
+	repeated ClientEncounterTypeProto enemy_rank_tags = 12;
 }
 
 // ref: EncounterStageSwishProto
@@ -3011,62 +3011,62 @@ message GameConfigProto {
 	}
 
 	repeated string rewards_vessel_by_rarity = 1;
-	string id = 1;
-	repeated float swish_scoring_thresholds = 2;
-	float pickup_range = 2;
-	repeated float swish_scoring_bonuses = 3;
-	int32 map_update_rate = 3;
-	repeated int64 floo_contribution_button_values = 4;
-	int32 map_event_update_rate = 4;
-	map<string, ClientFtueVideoQualityMappingProto> ftue_video_quality_mappings = 5;
-	int32 map_puzzle_update_rate = 5;
-	repeated string ftue_video_quality_buckets = 6;
-	float try_again_bonus_per_failure = 6;
-	map<string, string> parkmode_bgs = 7;
-	float ar_mode_range = 7;
-	int32 ar_mode_max_encounters = 8;
-	int32 event_cool_down_duration = 9;
-	int32 combat_stun_time = 10;
-	int32 professions_min_level = 11;
-	float accuracy_min_bonus = 12;
-	float accuracy_max_bonus = 13;
-	float encounter_min_base_win_rate = 14;
-	float encounter_max_base_win_rate = 15;
-	int32 player_level_cap = 16;
-	float level_bonus_weight = 17;
-	float gameplay_bonus_weight = 18;
-	float gameplay_bonus_min = 19;
-	float gameplay_bonus_max = 20;
-	float professions_rps_non_match_impact = 21;
-	float professions_rps_match_impact = 22;
-	int64 pub_menu_refresh_interval_seconds = 23;
-	FlooNetworkConfigProto floo_network_config = 24;
-	TempFlooNetworkConfigProto temp_floo_network_config = 25;
-	float map_unsafe_move_speed_mps = 26;
-	int32 portkey_num_wrackspurts_to_collect = 27;
-	int32 portkey_num_wrackspurts_in_env = 28;
-	map<string, int64> player_stats_base = 30;
-	map<string, string> player_profession_affinity_strength = 31;
-	map<string, string> enemy_affinity_profession_strength = 32;
-	int32 cauldrons_num_queue_slots = 33;
-	repeated float swish_game_accuracy_tiers = 34;
-	float cauldrons_instant_finish_cost_per_second = 35;
-	string cauldrons_instant_finish_currency_id = 36;
-	map<int32, uint32> rune_ratings = 37;
-	string tutorial_encounter_id = 38;
-	string tutorial_encounter_feature_flag_id = 39;
-	BonusConfigProto bonus_config = 40;
-	int32 max_walkbox_capacity = 41;
-	string challenge_collection_family_id = 42;
-	repeated string daily_quest_gmt_ids = 43;
-	string cap_player_level_gmt_id = 44;
-	int64 greenhouse_cool_down_ms = 45;
-	map<int32, int32> player_level_override = 46;
-	int64 inn_cool_down_ms = 47;
-	int64 inn_menu_staleness_threshold_ms = 48;
-	string daily_reward_schedule_gmt_id = 49;
-	int64 wc_encounter_first_interact_timeout_ms = 50;
-	int64 wc_encounter_interact_timeout_ms = 51;
+	string id = 2;
+	repeated float swish_scoring_thresholds = 3;
+	float pickup_range = 4;
+	repeated float swish_scoring_bonuses = 5;
+	int32 map_update_rate = 6;
+	repeated int64 floo_contribution_button_values = 7;
+	int32 map_event_update_rate = 8;
+	map<string, ClientFtueVideoQualityMappingProto> ftue_video_quality_mappings = 9;
+	int32 map_puzzle_update_rate = 10;
+	repeated string ftue_video_quality_buckets = 11;
+	float try_again_bonus_per_failure = 12;
+	map<string, string> parkmode_bgs = 13;
+	float ar_mode_range = 14;
+	int32 ar_mode_max_encounters = 15;
+	int32 event_cool_down_duration = 16;
+	int32 combat_stun_time = 17;
+	int32 professions_min_level = 18;
+	float accuracy_min_bonus = 19;
+	float accuracy_max_bonus = 20;
+	float encounter_min_base_win_rate = 21;
+	float encounter_max_base_win_rate = 22;
+	int32 player_level_cap = 23;
+	float level_bonus_weight = 24;
+	float gameplay_bonus_weight = 25;
+	float gameplay_bonus_min = 26;
+	float gameplay_bonus_max = 27;
+	float professions_rps_non_match_impact = 28;
+	float professions_rps_match_impact = 29;
+	int64 pub_menu_refresh_interval_seconds = 30;
+	FlooNetworkConfigProto floo_network_config = 31;
+	TempFlooNetworkConfigProto temp_floo_network_config = 32;
+	float map_unsafe_move_speed_mps = 33;
+	int32 portkey_num_wrackspurts_to_collect = 34;
+	int32 portkey_num_wrackspurts_in_env = 35;
+	map<string, int64> player_stats_base = 36;
+	map<string, string> player_profession_affinity_strength = 37;
+	map<string, string> enemy_affinity_profession_strength = 38;
+	int32 cauldrons_num_queue_slots = 39;
+	repeated float swish_game_accuracy_tiers = 40;
+	float cauldrons_instant_finish_cost_per_second = 41;
+	string cauldrons_instant_finish_currency_id = 42;
+	map<int32, uint32> rune_ratings = 43;
+	string tutorial_encounter_id = 44;
+	string tutorial_encounter_feature_flag_id = 45;
+	BonusConfigProto bonus_config = 46;
+	int32 max_walkbox_capacity = 47;
+	string challenge_collection_family_id = 48;
+	repeated string daily_quest_gmt_ids = 49;
+	string cap_player_level_gmt_id = 50;
+	int64 greenhouse_cool_down_ms = 51;
+	map<int32, int32> player_level_override = 52;
+	int64 inn_cool_down_ms = 53;
+	int64 inn_menu_staleness_threshold_ms = 54;
+	string daily_reward_schedule_gmt_id = 55;
+	int64 wc_encounter_first_interact_timeout_ms = 56;
+	int64 wc_encounter_interact_timeout_ms = 57;
 }
 
 // ref: GameDataWrapper
@@ -3196,11 +3196,11 @@ message GreenhouseTemplateProto {
 // ref: HapticProto
 message HapticProto {
 	repeated int32 ioswait_timings = 1;
-	string id = 1;
-	repeated int32 ioshaptic_types = 2;
-	repeated int32 android_wait_timings = 3;
-	repeated int32 android_amplitudes = 4;
-	repeated int32 android_durations = 5;
+	string id = 2;
+	repeated int32 ioshaptic_types = 3;
+	repeated int32 android_wait_timings = 4;
+	repeated int32 android_amplitudes = 5;
+	repeated int32 android_durations = 6;
 }
 
 // ref: HasPortkeyRequirement
@@ -3390,7 +3390,7 @@ message LexiconApprovedClientTelemetryProto {
 	ClientTelemetryStoreTabOpen store_tab_open = 54;
 	ClientTelemetryVaultItemImpression vault_popup_open = 55;
 	ClientTelemetryVaultTabImpression vault_tab_open = 56;
-	niantic.platform.telemetry.PlatformServerData server_data = 1001;
+	PlatformServerData server_data = 1001;
 }
 
 // ref: LootCollectionProto
@@ -3431,21 +3431,21 @@ message LootRewardProto {
 	}
 
 	string id = 1;
-	VaultItemLootRewardProto item_reward = 1;
-	int64 amount = 2;
-	CollectionFamilyLootRewardProto collection_family_reward = 2;
-	CollectionItemRewardProto collection_reward = 3;
-	WalkboxRewardProto walkbox_reward = 4;
-	PortkeyRewardProto portkey_reward = 5;
-	LootTableRewardProto loot_table_reward = 6;
-	VaultCapacityLootRewardProto vault_capacity_reward = 7;
-	GenericRunestoneRewardProto generic_runestone = 8;
-	PotionRewardProto potion_reward = 9;
-	PortkeyCollectibleRewardProto portkey_collectible = 10;
-	GenericCollectionFamilyLootRewardProto generic_collection_family_reward = 11;
-	CauldronRewardProto cauldron_reward = 12;
-	CurrencyRewardProto currency_reward = 13;
-	QuestRewardProto quest_reward = 14;
+	VaultItemLootRewardProto item_reward = 2;
+	int64 amount = 3;
+	CollectionFamilyLootRewardProto collection_family_reward = 4;
+	CollectionItemRewardProto collection_reward = 5;
+	WalkboxRewardProto walkbox_reward = 6;
+	PortkeyRewardProto portkey_reward = 7;
+	LootTableRewardProto loot_table_reward = 8;
+	VaultCapacityLootRewardProto vault_capacity_reward = 9;
+	GenericRunestoneRewardProto generic_runestone = 10;
+	PotionRewardProto potion_reward = 11;
+	PortkeyCollectibleRewardProto portkey_collectible = 12;
+	GenericCollectionFamilyLootRewardProto generic_collection_family_reward = 13;
+	CauldronRewardProto cauldron_reward = 14;
+	CurrencyRewardProto currency_reward = 15;
+	QuestRewardProto quest_reward = 16;
 	BonusMetadataProto bonus_metadata = 101;
 }
 

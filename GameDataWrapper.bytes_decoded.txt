@@ -79778,117 +79778,117 @@ messages {
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_accio"
+    id: "proto_spell_accio"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_aguamenti"
+    id: "proto_spell_aguamenti"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_alohomora"
+    id: "proto_spell_alohomora"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_arrestomomentum"
+    id: "proto_spell_arrestomomentum"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_arrestomomentum_tutorial"
+    id: "proto_spell_arrestomomentum_tutorial"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_bombarda"
+    id: "proto_spell_bombarda"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_combat_01"
+    id: "proto_spell_combat_01"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_combat_02"
+    id: "proto_spell_combat_02"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_combat_03"
+    id: "proto_spell_combat_03"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_combat_04"
+    id: "proto_spell_combat_04"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_combat_05"
+    id: "proto_spell_combat_05"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_combat_06"
+    id: "proto_spell_combat_06"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_combat_stupefy"
+    id: "proto_spell_combat_stupefy"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_diffindo"
+    id: "proto_spell_diffindo"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_diffindo_tutorial"
+    id: "proto_spell_diffindo_tutorial"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_ebublio"
+    id: "proto_spell_ebublio"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_expectopatronum"
+    id: "proto_spell_expectopatronum"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_finite"
+    id: "proto_spell_finite"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_flipendo"
+    id: "proto_spell_flipendo"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_incendio"
+    id: "proto_spell_incendio"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_meteolojinxrecanto"
+    id: "proto_spell_meteolojinxrecanto"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_riddikulus"
+    id: "proto_spell_riddikulus"
   }
 }
 messages {
   spell {
-    charge_up_effect: "proto_spell_rng"
+    id: "proto_spell_rng"
   }
 }
 messages {

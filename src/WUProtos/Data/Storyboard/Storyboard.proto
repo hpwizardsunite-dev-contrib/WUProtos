@@ -6,14 +6,13 @@ import "WUProtos/Data/Storyboard/StoryboardStep.proto";
 import "WUProtos/Enums/StoryboardResetMode.proto";
 
 message Storyboard {
-	TriggerPoint trigger_point = 1;
-	string id = 2;
-	.WUProtos.Data.Requirements start_reqs = 3;
-	string step_flag_gmt_id = 4;
-	string complete_flag_gmt_id = 5;
-	repeated .WUProtos.Data.Storyboard.StoryboardStep storyboard_steps = 6;
-	.WUProtos.Enums.StoryboardResetMode reset_mode = 7;
-	.WUProtos.Data.Requirements reset_reqs = 8;
+	string id = 1;
+	.WUProtos.Data.Requirements start_reqs = 2;
+	string step_flag_gmt_id = 3;
+	string complete_flag_gmt_id = 4;
+	repeated .WUProtos.Data.Storyboard.StoryboardStep storyboard_steps = 5;
+	.WUProtos.Enums.StoryboardResetMode reset_mode = 6;
+	.WUProtos.Data.Requirements reset_reqs = 7;
 
 	enum TriggerPoint {
 		none = 0;

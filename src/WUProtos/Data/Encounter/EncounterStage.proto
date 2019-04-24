@@ -3,12 +3,8 @@ package WUProtos.Data.Encounter;
 
 import "WUProtos/Data/Encounter/EncounterStageSwish.proto";
 import "WUProtos/Data/Encounter/EncounterStageCombat.proto";
-import "WUProtos/Data/Client/ClientSequenceData.proto";
-import "WUProtos/Data/Client/ClientCombatState.proto";
 import "WUProtos/Data/Encounter/EncounterStagePortkey.proto";
 import "WUProtos/Data/Encounter/EncounterStagePicture.proto";
-import "WUProtos/Data/Client/ClientCombatEnemyTrait.proto";
-import "WUProtos/Data/Client/ClientEncounterType.proto";
 
 message EncounterStage {
 	oneof Type {
@@ -18,12 +14,5 @@ message EncounterStage {
 		.WUProtos.Data.Encounter.EncounterStagePicture picture = 4;
 	}
 
-	repeated string combat_spell_list = 5;
-	repeated .WUProtos.Data.Client.ClientSequenceData stage_setup_sequence = 6;
-	repeated .WUProtos.Data.Client.ClientSequenceData stage_completion_sequence = 7;
-	repeated string idle_loop_timelines = 8;
-	repeated .WUProtos.Data.Client.ClientCombatState state_graph_nodes = 9;
-	string spell_gmt_id = 10;
-	repeated .WUProtos.Data.Client.ClientCombatEnemyTrait combat_enemy_traits = 11;
-	repeated .WUProtos.Data.Client.ClientEncounterType enemy_rank_tags = 12;
+	string spell_gmt_id = 5;
 }

@@ -10,6 +10,7 @@ message Buff {
     .WUProtos.Data.Buff.BuffDuration duration = 3;
     .WUProtos.Data.Buff.BuffExclusivityGroup exclusivity_group = 4;
     BuffType buff_type = 5;
+    map<string, int64> modifiers = 6;
     repeated .WUProtos.Data.ConditionalModifiers conditional_modifiers = 7;
 
     enum BuffType {

@@ -805,6 +805,7 @@ message ActiveBuffSource {
 message AnalyticsEventProto {
 	string event_name = 1;
 	int64 event_timestamp = 2;
+	//map<string, ???> event_metadata = 3;
 }
 
 // ref: Atlas.Proto.AnalyticsEventsProto
@@ -853,14 +854,6 @@ message BonusConfigProto {
 		float tier_threshold = 1;
 		LootCollectionProto bonus = 2;
 	}
-
-	string id = 1;
-	repeated BonusTier swish_game_accuracy_reward = 2;
-	repeated float accuracy_tiers = 3;
-	LootCollectionProto first_time_success_reward = 4;
-	repeated string accuracy_tier_bonus_id = 5;
-	LootCollectionProto life_time_first_success_reward = 6;
-	repeated string accuracy_tier_bonus_text = 7;
 }
 
 // ref: Atlas.Proto.BonusMetadataProto
@@ -947,6 +940,7 @@ message BuffProto {
 	BuffDuration duration = 3;
 	BuffExclusivityGroup exclusivity_group = 4;
 	BuffType buff_type = 5;
+	//map<string, ???> modifiers = 6;
 	repeated ConditionalModifiers conditional_modifiers = 7;
 }
 
@@ -1022,7 +1016,9 @@ message ChallengeSpawnLogicProto {
 
 // ref: Atlas.Proto.ChamberTemplateProto
 message ChamberTemplateProto {
+	//map<int32, ???> runestone_difficulties = 1;
 	string id = 1;
+	//map<string, ???> parkmode_bgs = 2;
 	Requirements unlock_requirements = 2;
 	Requirements visibility_requirements = 3;
 	uint32 min_runestone_level = 4;
@@ -1030,6 +1026,7 @@ message ChamberTemplateProto {
 	uint32 player_cap = 6;
 	int64 duration_ms = 7;
 	int64 knockout_time_ms = 10;
+	//map<int32, ???> player_count_multipliers = 11;
 	uint32 base_chamber_rating = 12;
 }
 
@@ -1104,6 +1101,8 @@ message ClientChamberTemplateProto {
 	float challenge_leaving_warning_radius = 3;
 	string arena_scene = 4;
 	int32 base_difficulty = 5;
+	//map<int32, ???> runestone_difficulties = 6;
+	//map<string, ???> parkmode_bgs = 7;
 }
 
 // ref: Atlas.Proto.ClientCollectionFamilyProto
@@ -1206,11 +1205,13 @@ message ClientConditionalModifier {
 
 // ref: Atlas.Proto.ClientConditionalModifiers
 message ClientConditionalModifiers {
+	//map<string, ???> modifiers = 2;
 }
 
 // ref: Atlas.Proto.ClientDailyRewardMonthlyScheduleProto
 message ClientDailyRewardMonthlyScheduleProto {
 	string id = 1;
+	//map<uint32, ???> daily_rewards = 2;
 }
 
 // ref: Atlas.Proto.ClientDailyRewardProto
@@ -1222,6 +1223,7 @@ message ClientDailyRewardProto {
 // ref: Atlas.Proto.ClientDarkDetectorAmplifierProto
 message ClientDarkDetectorAmplifierProto {
 	int32 num_slots = 1;
+	//map<int32, ???> active_dark_detectors = 2;
 }
 
 // ref: Atlas.Proto.ClientDarkDetectorProto
@@ -1341,6 +1343,7 @@ message ClientFtueVideoConfigProto {
 	ClientFtueVideoFallbackDefinitionProto from_assets = 1;
 	ClientFtueVideoNameDefinitionProto from_url = 2;
 	repeated string quality_buckets = 3;
+	//map<string, ???> quality_mappings = 4;
 }
 
 // ref: Atlas.Proto.ClientFtueVideoFallbackDefinitionProto
@@ -1408,6 +1411,7 @@ message ClientGameConfigProto {
 	repeated CollectionSubfeaturePrestigeLevelsProto subfeature_prestige_levels = 26;
 	ClientBonusConfigProto bonus_config = 27;
 	string portkey_wrackspurt_collection_haptic_key = 28;
+	//map<string, ???> parkmode_bgs = 29;
 	int32 potion_masternote_unlock_treshold = 30;
 	repeated CollectionSubfeatureFamilyOrdersProto subfeature_family_orders = 31;
 	repeated BatterySaverProfile battery_saver_profiles = 32;
@@ -1709,6 +1713,7 @@ message ClientPlayerProto {
 
 // ref: Atlas.Proto.ClientPlayerSnapshotProto
 message ClientPlayerSnapshotProto {
+	//map<string, ???> vault_items = 1;
 	repeated ActiveBuffProto buffs = 2;
 }
 
@@ -1752,10 +1757,12 @@ message ClientProfessionProto {
 	string icon_highlighted = 13;
 	bool show_profession_rank_meter = 14;
 	string profession_activated_sfx = 15;
+	//map<string, ???> profession_ranks_map = 16;
 }
 
 // ref: Atlas.Proto.ClientProfessionRankProto
 message ClientProfessionRankProto {
+	//map<string, ???> profession_nodes_map = 1;
 	string name = 2;
 	repeated ClientProfessionNodeProto profession_nodes = 3;
 	string image_unlocked = 4;
@@ -1768,6 +1775,14 @@ message ClientProfessionRankProto {
 // ref: Atlas.Proto.ClientProfileConfigProto
 message ClientProfileConfigProto {
 	string id = 1;
+	//map<string, ???> titles = 2;
+	//map<string, ???> badges = 3;
+	//map<string, ???> houses = 4;
+	//map<string, ???> themes = 5;
+	//map<string, ???> wand_cores = 6;
+	//map<string, ???> wand_woods = 7;
+	//map<string, ???> wand_flexibilities = 8;
+	//map<string, ???> wand_lengths = 9;
 }
 
 // ref: Atlas.Proto.ClientProtegoPatternProto
@@ -1812,6 +1827,7 @@ message ClientRpgstatProto {
 	int32 display_threshold = 6;
 	string icon_display_type = 7;
 	string info_desc = 8;
+	//map<string, ???> icons = 9;
 }
 
 // ref: Atlas.Proto.ClientRpgstatsBlockProto
@@ -1882,6 +1898,8 @@ message ClientSpellProto {
 	string id = 1;
 	string name = 2;
 	repeated string charge_up_effect = 3;
+	//map<string, ???> timelines = 4;
+	//map<string, ???> critical_hits = 5;
 	string pattern = 6;
 	string glyph_image = 7;
 	string protego_player_succeed_tl = 8;
@@ -2625,6 +2643,8 @@ message ColorProto {
 
 // ref: Atlas.Proto.CombatEnemyStatsProto
 message CombatEnemyStatsProto {
+	//map<string, ???> stat_block = 2;
+	//map<string, ???> stat_growth = 3;
 }
 
 // ref: Atlas.Proto.CombatGrowthProto
@@ -2701,6 +2721,7 @@ message Condition {
 // ref: Atlas.Proto.ConditionalModifiers
 message ConditionalModifiers {
 	Conditions conditions = 1;
+	//map<string, ???> modifiers = 2;
 }
 
 // ref: Atlas.Proto.Conditions
@@ -2729,6 +2750,7 @@ message DailyRewardMonthlyScheduleProto {
 	string id = 1;
 	uint32 number_of_days = 2;
 	LootCollectionProto default_reward = 3;
+	//map<uint32, ???> daily_rewards = 4;
 }
 
 // ref: Atlas.Proto.DailyRewardProto
@@ -2945,6 +2967,7 @@ message FlooNetworkConfigProto {
 
 // ref: Atlas.Proto.FlooNetworkFortressStatistics
 message FlooNetworkFortressStatistics {
+	//map<string, ???> points_per_team = 1;
 	int64 electoral_votes = 2;
 	string owning_team_id = 3;
 }
@@ -2953,11 +2976,13 @@ message FlooNetworkFortressStatistics {
 message FlooNetworkRegionScores {
 	string season_id = 1;
 	string region_id = 2;
+	//map<string, ???> points_per_team = 3;
 }
 
 // ref: Atlas.Proto.FlooNetworkSeasonScores
 message FlooNetworkSeasonScores {
 	string season_id = 1;
+	//map<string, ???> points_per_team = 2;
 }
 
 // ref: Atlas.Proto.FocusAmountCondition
@@ -2986,42 +3011,48 @@ message GameConfigProto {
 	}
 
 	repeated string rewards_vessel_by_rarity = 1;
-	string id = 2;
-	repeated float swish_scoring_thresholds = 3;
-	float pickup_range = 4;
-	repeated float swish_scoring_bonuses = 5;
-	int32 map_update_rate = 6;
-	repeated int64 floo_contribution_button_values = 7;
-	int32 map_event_update_rate = 8;
-	repeated string ftue_video_quality_buckets = 9;
-	int32 map_puzzle_update_rate = 10;
-	float try_again_bonus_per_failure = 11;
-	float ar_mode_range = 12;
-	int32 ar_mode_max_encounters = 13;
-	int32 event_cool_down_duration = 14;
-	int32 combat_stun_time = 15;
-	int32 professions_min_level = 16;
-	float accuracy_min_bonus = 17;
-	float accuracy_max_bonus = 18;
-	float encounter_min_base_win_rate = 19;
-	float encounter_max_base_win_rate = 20;
-	int32 player_level_cap = 21;
-	float level_bonus_weight = 22;
-	float gameplay_bonus_weight = 23;
-	float gameplay_bonus_min = 24;
-	float gameplay_bonus_max = 25;
-	float professions_rps_non_match_impact = 26;
-	float professions_rps_match_impact = 27;
-	int64 pub_menu_refresh_interval_seconds = 28;
-	FlooNetworkConfigProto floo_network_config = 29;
-	TempFlooNetworkConfigProto temp_floo_network_config = 30;
-	float map_unsafe_move_speed_mps = 31;
-	int32 portkey_num_wrackspurts_to_collect = 32;
-	int32 portkey_num_wrackspurts_in_env = 33;
-	int32 cauldrons_num_queue_slots = 34;
-	repeated float swish_game_accuracy_tiers = 35;
-	float cauldrons_instant_finish_cost_per_second = 36;
-	string cauldrons_instant_finish_currency_id = 37;
+	string id = 1;
+	repeated float swish_scoring_thresholds = 2;
+	float pickup_range = 2;
+	repeated float swish_scoring_bonuses = 3;
+	int32 map_update_rate = 3;
+	repeated int64 floo_contribution_button_values = 4;
+	int32 map_event_update_rate = 4;
+	//map<string, ???> ftue_video_quality_mappings = 5;
+	int32 map_puzzle_update_rate = 5;
+	repeated string ftue_video_quality_buckets = 6;
+	float try_again_bonus_per_failure = 6;
+	//map<string, ???> parkmode_bgs = 7;
+	float ar_mode_range = 7;
+	int32 ar_mode_max_encounters = 8;
+	int32 event_cool_down_duration = 9;
+	int32 combat_stun_time = 10;
+	int32 professions_min_level = 11;
+	float accuracy_min_bonus = 12;
+	float accuracy_max_bonus = 13;
+	float encounter_min_base_win_rate = 14;
+	float encounter_max_base_win_rate = 15;
+	int32 player_level_cap = 16;
+	float level_bonus_weight = 17;
+	float gameplay_bonus_weight = 18;
+	float gameplay_bonus_min = 19;
+	float gameplay_bonus_max = 20;
+	float professions_rps_non_match_impact = 21;
+	float professions_rps_match_impact = 22;
+	int64 pub_menu_refresh_interval_seconds = 23;
+	FlooNetworkConfigProto floo_network_config = 24;
+	TempFlooNetworkConfigProto temp_floo_network_config = 25;
+	float map_unsafe_move_speed_mps = 26;
+	int32 portkey_num_wrackspurts_to_collect = 27;
+	int32 portkey_num_wrackspurts_in_env = 28;
+	//map<string, ???> player_stats_base = 30;
+	//map<string, ???> player_profession_affinity_strength = 31;
+	//map<string, ???> enemy_affinity_profession_strength = 32;
+	int32 cauldrons_num_queue_slots = 33;
+	repeated float swish_game_accuracy_tiers = 34;
+	float cauldrons_instant_finish_cost_per_second = 35;
+	string cauldrons_instant_finish_currency_id = 36;
+	//map<int32, ???> rune_ratings = 37;
 	string tutorial_encounter_id = 38;
 	string tutorial_encounter_feature_flag_id = 39;
 	BonusConfigProto bonus_config = 40;
@@ -3030,11 +3061,12 @@ message GameConfigProto {
 	repeated string daily_quest_gmt_ids = 43;
 	string cap_player_level_gmt_id = 44;
 	int64 greenhouse_cool_down_ms = 45;
-	int64 inn_cool_down_ms = 46;
-	int64 inn_menu_staleness_threshold_ms = 47;
-	string daily_reward_schedule_gmt_id = 48;
-	int64 wc_encounter_first_interact_timeout_ms = 49;
-	int64 wc_encounter_interact_timeout_ms = 50;
+	//map<int32, ???> player_level_override = 46;
+	int64 inn_cool_down_ms = 47;
+	int64 inn_menu_staleness_threshold_ms = 48;
+	string daily_reward_schedule_gmt_id = 49;
+	int64 wc_encounter_first_interact_timeout_ms = 50;
+	int64 wc_encounter_interact_timeout_ms = 51;
 }
 
 // ref: Atlas.Proto.GameDataWrapper
@@ -3164,11 +3196,11 @@ message GreenhouseTemplateProto {
 // ref: Atlas.Proto.HapticProto
 message HapticProto {
 	repeated int32 ioswait_timings = 1;
-	string id = 2;
-	repeated int32 ioshaptic_types = 3;
-	repeated int32 android_wait_timings = 4;
-	repeated int32 android_amplitudes = 5;
-	repeated int32 android_durations = 6;
+	string id = 1;
+	repeated int32 ioshaptic_types = 2;
+	repeated int32 android_wait_timings = 3;
+	repeated int32 android_amplitudes = 4;
+	repeated int32 android_durations = 5;
 }
 
 // ref: Atlas.Proto.HasPortkeyRequirement
@@ -3358,7 +3390,7 @@ message LexiconApprovedClientTelemetryProto {
 	ClientTelemetryStoreTabOpen store_tab_open = 54;
 	ClientTelemetryVaultItemImpression vault_popup_open = 55;
 	ClientTelemetryVaultTabImpression vault_tab_open = 56;
-	PlatformServerData server_data = 1001;
+	niantic.platform.telemetry.PlatformServerData server_data = 1001;
 }
 
 // ref: Atlas.Proto.LootCollectionProto
@@ -3399,21 +3431,21 @@ message LootRewardProto {
 	}
 
 	string id = 1;
-	VaultItemLootRewardProto item_reward = 2;
-	int64 amount = 3;
-	CollectionFamilyLootRewardProto collection_family_reward = 4;
-	CollectionItemRewardProto collection_reward = 5;
-	WalkboxRewardProto walkbox_reward = 6;
-	PortkeyRewardProto portkey_reward = 7;
-	LootTableRewardProto loot_table_reward = 8;
-	VaultCapacityLootRewardProto vault_capacity_reward = 9;
-	GenericRunestoneRewardProto generic_runestone = 10;
-	PotionRewardProto potion_reward = 11;
-	PortkeyCollectibleRewardProto portkey_collectible = 12;
-	GenericCollectionFamilyLootRewardProto generic_collection_family_reward = 13;
-	CauldronRewardProto cauldron_reward = 14;
-	CurrencyRewardProto currency_reward = 15;
-	QuestRewardProto quest_reward = 16;
+	VaultItemLootRewardProto item_reward = 1;
+	int64 amount = 2;
+	CollectionFamilyLootRewardProto collection_family_reward = 2;
+	CollectionItemRewardProto collection_reward = 3;
+	WalkboxRewardProto walkbox_reward = 4;
+	PortkeyRewardProto portkey_reward = 5;
+	LootTableRewardProto loot_table_reward = 6;
+	VaultCapacityLootRewardProto vault_capacity_reward = 7;
+	GenericRunestoneRewardProto generic_runestone = 8;
+	PotionRewardProto potion_reward = 9;
+	PortkeyCollectibleRewardProto portkey_collectible = 10;
+	GenericCollectionFamilyLootRewardProto generic_collection_family_reward = 11;
+	CauldronRewardProto cauldron_reward = 12;
+	CurrencyRewardProto currency_reward = 13;
+	QuestRewardProto quest_reward = 14;
 	BonusMetadataProto bonus_metadata = 101;
 }
 
@@ -3623,6 +3655,10 @@ message PlayerLevelProto {
 
 // ref: Atlas.Proto.PlayerLifetimeMetricsConfig
 message PlayerLifetimeMetricsConfig {
+	//map<string, ???> collected_item_gmt_id = 1;
+	//map<string, ???> collected_category_gmt_id = 2;
+	//map<string, ???> used_item_gmt_id = 3;
+	//map<string, ???> used_category_gmt_id = 4;
 }
 
 // ref: Atlas.Proto.PlayerRatioChallengeBonusProto
@@ -3721,11 +3757,11 @@ message ProfessionNodeLevelProto {
 // ref: Atlas.Proto.ProfessionNodeProto
 message ProfessionNodeProto {
 	uint32 potential_rank_points = 1;
-	string id = 2;
-	repeated Requirements edges = 3;
-	repeated ProfessionNodeLevelProto levels = 4;
-	uint32 row_pos = 5;
-	uint32 col_pos = 6;
+	string id = 1;
+	repeated Requirements edges = 2;
+	repeated ProfessionNodeLevelProto levels = 3;
+	uint32 row_pos = 4;
+	uint32 col_pos = 5;
 }
 
 // ref: Atlas.Proto.ProfessionNodeRequirement
@@ -3741,6 +3777,7 @@ message ProfessionProto {
 	string id = 1;
 	repeated Requirements requirements = 3;
 	bool show_in_ui = 4;
+	//map<string, ???> profession_ranks_map = 5;
 	repeated ProfessionTierProto profession_tiers = 6;
 }
 
@@ -3755,6 +3792,7 @@ message ProfessionRankPointsRequirement {
 message ProfessionRankProto {
 	uint32 potential_rank_points = 1;
 	repeated Requirements requirements = 2;
+	//map<string, ???> profession_nodes_map = 3;
 	bool show_in_ui = 4;
 	string id = 5;
 }
@@ -3785,7 +3823,15 @@ message ProfessionTotalNodeLevelRequirement {
 
 // ref: Atlas.Proto.ProfileConfigProto
 message ProfileConfigProto {
+	//map<string, ???> titles = 1;
 	string id = 1;
+	//map<string, ???> badges = 2;
+	//map<string, ???> houses = 3;
+	//map<string, ???> themes = 4;
+	//map<string, ???> wand_cores = 5;
+	//map<string, ???> wand_woods = 6;
+	//map<string, ???> wand_flexibilities = 7;
+	//map<string, ???> wand_lengths = 8;
 }
 
 // ref: Atlas.Proto.ProtegoPatternProto
@@ -4040,6 +4086,7 @@ message SharedQualityLevelProto {
 	bool billboards_face_camera_position = 9;
 	int32 realtime_shadows = 10;
 	bool ar_azimuth_blurring = 11;
+	//map<string, ???> gamemode_overrides = 13;
 	int32 ar_encounter_particle_cap = 14;
 	int32 locked_encounter_particle_cap = 15;
 	int32 menu_particle_cap = 16;
@@ -4075,7 +4122,9 @@ message SpellGameBonusMetadataProto {
 // ref: Atlas.Proto.SpellProto
 message SpellProto {
 	repeated string charge_up_effect = 1;
-	string id = 2;
+	string id = 1;
+	//map<string, ???> timelines = 2;
+	//map<string, ???> critical_hits = 3;
 }
 
 // ref: Atlas.Proto.StaminaVaultItemProto
@@ -4111,8 +4160,8 @@ message StoreCategoryProto {
 // ref: Atlas.Proto.StoreConfigProto
 message StoreConfigProto {
 	repeated StoreCategoryProto store_categories = 1;
-	string id = 2;
-	repeated StoreRarityProto store_rarities = 3;
+	string id = 1;
+	repeated StoreRarityProto store_rarities = 2;
 }
 
 // ref: Atlas.Proto.StorePackConfigProto
@@ -4144,13 +4193,13 @@ message StorePackProto {
 	}
 
 	repeated StorePackConfigProto store_pack_config = 1;
-	string id = 2;
-	IapStoreItem store_item = 3;
-	LootCollectionProto contents = 4;
-	LootCollectionProto cost = 5;
-	string iap_id = 6;
-	SkuDataProto sku_data = 7;
-	Requirements requirements = 8;
+	string id = 1;
+	niantic.platform.iap.IapStoreItem store_item = 2;
+	LootCollectionProto contents = 2;
+	LootCollectionProto cost = 3;
+	string iap_id = 4;
+	proto.SkuDataProto sku_data = 5;
+	Requirements requirements = 6;
 }
 
 // ref: Atlas.Proto.StorePackQuantityRequirement
@@ -4208,7 +4257,7 @@ message StoryboardPauseStep {
 
 // ref: Atlas.Proto.StoryboardProto
 message StoryboardProto {
-	TriggerPoint trigger_point = 1;
+	proto.TriggerPoint trigger_point = 1;
 	string id = 1;
 	Requirements start_reqs = 2;
 	string step_flag_gmt_id = 3;
@@ -4256,6 +4305,7 @@ message TeamPropertyCondition {
 message TempFlooNetworkConfigProto {
 	int32 points_per_button_press = 1;
 	int64 button_press_cooldown_ms = 2;
+	//map<string, ???> stamina_requirements = 3;
 }
 
 // ref: Atlas.Proto.TimeActiveBuffExpiration
@@ -4290,8 +4340,8 @@ message VaultCapacityLootRewardProto {
 // ref: Atlas.Proto.VaultCategoryProto
 message VaultCategoryProto {
 	repeated string increase_capacity_store_pack_proto_ids = 1;
-	string id = 2;
-	CategoryCapacityType capacity_type = 3;
+	string id = 1;
+	CategoryCapacityType capacity_type = 2;
 }
 
 // ref: Atlas.Proto.VaultItemActiveBuffSource
@@ -4793,7 +4843,7 @@ message WeatherAlertSettingsProto {
 	}
 
 	bool warn_weather = 1;
-	WeatherAlertProto.Severity default_severity = 2;
+	niantic.rpc.WeatherAlertProto.Severity default_severity = 2;
 	repeated AlertIgnoreSettings ignores = 3;
 	repeated AlertEnforceSettings enforces = 4;
 }
@@ -4802,18 +4852,18 @@ message WeatherAlertSettingsProto {
 message WeatherSettingsProto {
 	// ref: WeatherSettingsProto/Types/GameplayWeatherSettingsProto/Types/ConditionMapSettings
 	message ConditionMapSettings {
-		GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
+		niantic.rpc.GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
 		repeated string provider_enums = 2;
 	}
 
 	// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/DisplayLevelSettings
 	message DisplayLevelSettings {
 		repeated string condition_enums = 1;
-		DisplayWeatherProto.DisplayLevel cloud_level = 2;
-		DisplayWeatherProto.DisplayLevel rain_level = 3;
-		DisplayWeatherProto.DisplayLevel snow_level = 4;
-		DisplayWeatherProto.DisplayLevel fog_level = 5;
-		DisplayWeatherProto.DisplayLevel special_effect_level = 6;
+		niantic.rpc.DisplayWeatherProto.DisplayLevel cloud_level = 2;
+		niantic.rpc.DisplayWeatherProto.DisplayLevel rain_level = 3;
+		niantic.rpc.DisplayWeatherProto.DisplayLevel snow_level = 4;
+		niantic.rpc.DisplayWeatherProto.DisplayLevel fog_level = 5;
+		niantic.rpc.DisplayWeatherProto.DisplayLevel special_effect_level = 6;
 	}
 
 	// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto
@@ -4821,11 +4871,11 @@ message WeatherSettingsProto {
 		// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/DisplayLevelSettings
 		message DisplayLevelSettings {
 			repeated string condition_enums = 1;
-			DisplayWeatherProto.DisplayLevel cloud_level = 2;
-			DisplayWeatherProto.DisplayLevel rain_level = 3;
-			DisplayWeatherProto.DisplayLevel snow_level = 4;
-			DisplayWeatherProto.DisplayLevel fog_level = 5;
-			DisplayWeatherProto.DisplayLevel special_effect_level = 6;
+			niantic.rpc.DisplayWeatherProto.DisplayLevel cloud_level = 2;
+			niantic.rpc.DisplayWeatherProto.DisplayLevel rain_level = 3;
+			niantic.rpc.DisplayWeatherProto.DisplayLevel snow_level = 4;
+			niantic.rpc.DisplayWeatherProto.DisplayLevel fog_level = 5;
+			niantic.rpc.DisplayWeatherProto.DisplayLevel special_effect_level = 6;
 		}
 
 		// ref: WeatherSettingsProto/Types/DisplayWeatherSettingsProto/Types/WindLevelSettings
@@ -4843,7 +4893,7 @@ message WeatherSettingsProto {
 	message GameplayWeatherSettingsProto {
 		// ref: WeatherSettingsProto/Types/GameplayWeatherSettingsProto/Types/ConditionMapSettings
 		message ConditionMapSettings {
-			GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
+			niantic.rpc.GameplayWeatherProto.WeatherCondition gameplay_condition = 1;
 			repeated string provider_enums = 2;
 		}
 
@@ -4912,7 +4962,7 @@ message AddLoginActionOutProto {
 
 // ref: Niantic.Platform.Protos.AddLoginActionProto
 message AddLoginActionProto {
-	IdentityProvider identity_provider = 1;
+	com.nianticproject.platform.auth.IdentityProvider identity_provider = 1;
 	bytes inner_message = 2;
 }
 
@@ -5009,7 +5059,7 @@ message ListLoginActionOutProto {
 
 // ref: Niantic.Platform.Protos.LoginDetail
 message LoginDetail {
-	IdentityProvider identity_provider = 1;
+	com.nianticproject.platform.auth.IdentityProvider identity_provider = 1;
 	string email = 2;
 }
 
@@ -5089,7 +5139,7 @@ message RemoveLoginActionOutProto {
 
 // ref: Niantic.Platform.Protos.RemoveLoginActionProto
 message RemoveLoginActionProto {
-	IdentityProvider identity_provider = 1;
+	com.nianticproject.platform.auth.IdentityProvider identity_provider = 1;
 }
 
 // ref: Niantic.Platform.Protos.SubmitNewPoiOutProto
@@ -5480,7 +5530,7 @@ message AddDarkDetectorResponseProto {
 	}
 
 	Result result = 1;
-	ClientDarkDetectorAmplifierProto dark_detector_amplifier = 2;
+	atlas.proto.ClientDarkDetectorAmplifierProto dark_detector_amplifier = 2;
 	string partner_id = 5;
 }
 
@@ -5536,7 +5586,7 @@ message ApplyKeyToWalkboxResponseProto {
 // ref: Atlas.Rpc.ApplyMasterNoteRequestProto
 message ApplyMasterNoteRequestProto {
 	int64 cauldron_id = 1;
-	repeated MasterNoteGesture gesture = 2;
+	repeated atlas.proto.MasterNoteGesture gesture = 2;
 }
 
 // ref: Atlas.Rpc.ApplyMasterNoteResponseProto
@@ -5583,7 +5633,7 @@ message AtlasInventoryItemProto {
 	InventoryWalkboxItemProto walkbox = 5;
 	InventoryFeatureFlagsProto player_flags = 6;
 	InventoryPortkeyItemProto portkey = 7;
-	ActiveBuffListProto player_active_buff_list = 8;
+	atlas.proto.ActiveBuffListProto player_active_buff_list = 8;
 	InventoryCollectionPageProto collection_page = 9;
 	InventoryVaultCapacityProto vault_capacity = 11;
 	InventoryCauldronProto cauldron = 12;
@@ -5653,7 +5703,7 @@ message BuyStorePackResponseProto {
 	}
 
 	Status status = 1;
-	LootCollectionProto rewards = 2;
+	atlas.proto.LootCollectionProto rewards = 2;
 }
 
 // ref: Atlas.Rpc.ChamberMobState
@@ -5666,8 +5716,8 @@ message ChamberMobState {
 	bytes encounter_ticket = 8;
 	double x = 9;
 	double y = 10;
-	ActiveBuffListProto active_buff_list = 11;
-	repeated MobReward rewards = 12;
+	atlas.proto.ActiveBuffListProto active_buff_list = 11;
+	repeated atlas.proto.MobReward rewards = 12;
 	int64 time_to_spawn = 101;
 }
 
@@ -5762,11 +5812,12 @@ message ChamberPlayerState {
 	}
 
 	string nickname = 1;
+	//map<string, ???> runestone_contributions = 2;
 	PlayerWaitingState waiting = 3;
 	PlayerInProgressState in_progress = 4;
 	PlayerFinishedState finished = 5;
 	PlayerProfessionInfo profession_info = 6;
-	ActiveBuffListProto active_buff_list = 7;
+	atlas.proto.ActiveBuffListProto active_buff_list = 7;
 }
 
 // ref: Atlas.Rpc.ChamberState
@@ -5782,7 +5833,7 @@ message ChamberState {
 	// ref: Atlas.Rpc.ChamberState/Types/FinishedState
 	message FinishedState {
 		ChallengeFinishStatus finish_status = 1;
-		LootCollectionProto rewards = 2;
+		atlas.proto.LootCollectionProto rewards = 2;
 	}
 
 	// ref: Atlas.Rpc.ChamberState/Types/InProgressState
@@ -5841,7 +5892,7 @@ message CheckWalkboxesResponseProto {
 	// ref: Atlas.Rpc.CheckWalkboxesResponseProto/Types/OpenedWalkboxProto
 	message OpenedWalkboxProto {
 		string walkbox_gmt_template = 1;
-		LootCollectionProto rewards = 2;
+		atlas.proto.LootCollectionProto rewards = 2;
 		repeated int64 portkey_ids = 3;
 	}
 
@@ -5861,7 +5912,7 @@ message ClaimChamberRewardsRequestProto {
 message ClaimChamberRewardsResponseProto {
 	ChallengeRpcStatus status = 1;
 	ChamberState state = 2;
-	ClientPlayerSnapshotProto player_snapshot = 3;
+	atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
 }
 
 // ref: Atlas.Rpc.ClaimDailyRewardRequestProto
@@ -5873,7 +5924,7 @@ message ClaimDailyRewardResponseProto {
 	uint64 time_until_next_claim = 1;
 	string daily_reward_monthly_schedule_id = 2;
 	uint32 days_claimed_this_month = 3;
-	LootCollectionProto reward = 4;
+	atlas.proto.LootCollectionProto reward = 4;
 }
 
 // ref: Atlas.Rpc.ClaimPlayerNicknameRequestProto
@@ -5898,7 +5949,7 @@ message ClaimPlayerNicknameResponseProto {
 message ClaimPotionRequestProto {
 	int64 cauldron_id = 1;
 	int32 cauldron_slot = 2;
-	LootCollectionProto requested_rewards = 3;
+	atlas.proto.LootCollectionProto requested_rewards = 3;
 }
 
 // ref: Atlas.Rpc.ClaimPotionResponseProto
@@ -5914,8 +5965,8 @@ message ClaimPotionResponseProto {
 	}
 
 	ClaimPotionResult result = 1;
-	LootCollectionProto received_rewards = 2;
-	LootCollectionProto remaining_rewards = 3;
+	atlas.proto.LootCollectionProto received_rewards = 2;
+	atlas.proto.LootCollectionProto remaining_rewards = 3;
 }
 
 // ref: Atlas.Proto.ClientEnvironmentTagsProto
@@ -5948,7 +5999,7 @@ message CollectIngredientResponseProto {
 	}
 
 	CollectIngredientResult result = 1;
-	LootCollectionProto rewards = 2;
+	atlas.proto.LootCollectionProto rewards = 2;
 }
 
 // ref: Atlas.Rpc.CombatResults
@@ -5983,7 +6034,7 @@ message ContainerConsumptionResponseProto {
 	}
 
 	Status status = 1;
-	LootCollectionProto container_contents = 2;
+	atlas.proto.LootCollectionProto container_contents = 2;
 }
 
 // ref: Atlas.Rpc.ContributeFlooPowderToFortressRequest
@@ -6008,14 +6059,14 @@ message ContributeFlooPowderToFortressResponse {
 	}
 
 	Result result = 1;
-	FlooNetworkFortressStatistics fortress_statistics = 2;
+	atlas.proto.FlooNetworkFortressStatistics fortress_statistics = 2;
 }
 
 // ref: Atlas.Rpc.CraftPotionRequestProto
 message CraftPotionRequestProto {
 	string recipe_gmt_id = 1;
 	int64 cauldron_id = 2;
-	LootCollectionProto ingredients_to_purchase = 3;
+	atlas.proto.LootCollectionProto ingredients_to_purchase = 3;
 }
 
 // ref: Atlas.Rpc.CraftPotionResponseProto
@@ -6035,7 +6086,7 @@ message CraftPotionResponseProto {
 	}
 
 	CraftPotionResult result = 1;
-	LootCollectionProto rewards = 2;
+	atlas.proto.LootCollectionProto rewards = 2;
 }
 
 // ref: Atlas.Rpc.CreateOrUpdatePlayerRequestProto
@@ -6108,7 +6159,7 @@ message DebugSetTeamFlooPointsRequest {
 
 // ref: Atlas.Rpc.DebugSetTeamFlooPointsResponse
 message DebugSetTeamFlooPointsResponse {
-	FlooNetworkFortressStatistics fortress_statistics = 1;
+	atlas.proto.FlooNetworkFortressStatistics fortress_statistics = 1;
 }
 
 // ref: Atlas.Rpc.EchoRequestProto
@@ -6343,8 +6394,8 @@ message EncounterInteractStatusProto {
 
 	// ref: Atlas.Rpc.EncounterInteractStatusProto/Types/Win
 	message Win {
-		LootCollectionProto rewards = 1;
-		LootCollectionProto one_time_rewards = 2;
+		atlas.proto.LootCollectionProto rewards = 1;
+		atlas.proto.LootCollectionProto one_time_rewards = 2;
 	}
 
 	Continue continue = 1;
@@ -6390,6 +6441,7 @@ message EncounterStartCombatStageResultProto {
 	repeated int64 enemy_damage_unblocked = 2;
 	repeated int64 enemy_damage_blocked = 3;
 	int64 hp_max_player = 4;
+	//map<string, ???> player_damage_per_energy = 5;
 	float player_crit_multiplier = 6;
 }
 
@@ -6497,11 +6549,11 @@ message GameEntityProto {
 		environment_tags = 6;
 	}
 
-	ClientMapPoiProto poi = 1;
-	ClientMapTraceProto trace = 2;
-	ClientMapLandmarkProto landmark = 3;
-	ClientMapPotionIngredientProto potion_ingredient = 4;
-	ClientWeatherProto weather = 5;
+	atlas.proto.ClientMapPoiProto poi = 1;
+	atlas.proto.ClientMapTraceProto trace = 2;
+	atlas.proto.ClientMapLandmarkProto landmark = 3;
+	atlas.proto.ClientMapPotionIngredientProto potion_ingredient = 4;
+	niantic.rpc.ClientWeatherProto weather = 5;
 	ClientEnvironmentTagsProto environment_tags = 6;
 }
 
@@ -6518,7 +6570,7 @@ message GetAllStorePacksResponseProto {
 		ERROR = 2;
 	}
 
-	repeated StorePackProto store_pack = 1;
+	repeated atlas.proto.StorePackProto store_pack = 1;
 	Status status = 2;
 }
 
@@ -6530,7 +6582,7 @@ message GetChamberStateRequestProto {
 message GetChamberStateResponseProto {
 	ChallengeRpcStatus status = 1;
 	ChamberState state = 2;
-	ClientPlayerSnapshotProto player_snapshot = 3;
+	atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
 	int64 next_call_timestamp = 4;
 }
 
@@ -6561,7 +6613,7 @@ message GetFlooNetworkRegionScoresRequest {
 message GetFlooNetworkRegionScoresResponse {
 	string season_id = 1;
 	string region_id = 2;
-	FlooNetworkRegionScores scores = 3;
+	atlas.proto.FlooNetworkRegionScores scores = 3;
 	string region_name = 4;
 }
 
@@ -6573,7 +6625,7 @@ message GetFlooNetworkSeasonScoresRequest {
 // ref: Atlas.Rpc.GetFlooNetworkSeasonScoresResponse
 message GetFlooNetworkSeasonScoresResponse {
 	string season_id = 1;
-	FlooNetworkSeasonScores scores = 2;
+	atlas.proto.FlooNetworkSeasonScores scores = 2;
 }
 
 // ref: Atlas.Rpc.GetFortressDetailsRequestProto
@@ -6596,7 +6648,7 @@ message GetFortressDetailsResponseProto {
 	repeated ChamberPreview chambers = 2;
 	string partner_id = 4;
 	PoiDetails poi_details = 5;
-	PoiAccessibility poi_accessibility = 6;
+	atlas.proto.PoiAccessibility poi_accessibility = 6;
 }
 
 // ref: Atlas.Rpc.GetFortressFlooNetworkStatisticsRequest
@@ -6608,7 +6660,7 @@ message GetFortressFlooNetworkStatisticsRequest {
 
 // ref: Atlas.Rpc.GetFortressFlooNetworkStatisticsResponse
 message GetFortressFlooNetworkStatisticsResponse {
-	FlooNetworkFortressStatistics fortress_statistics = 1;
+	atlas.proto.FlooNetworkFortressStatistics fortress_statistics = 1;
 	int64 temp_next_add_pts_timestamp_ms = 2;
 }
 
@@ -6623,13 +6675,14 @@ message GetGreenhouseDetailsRequestProto {
 message GetGreenhouseDetailsResponseProto {
 	string partner_id = 1;
 	PoiDetails poi_details = 2;
-	PoiAccessibility poi_accessibility = 3;
+	atlas.proto.PoiAccessibility poi_accessibility = 3;
 }
 
 // ref: Atlas.Rpc.GetLexiconInventoryResponseProto
 message GetLexiconInventoryResponseProto {
 	bool success = 1;
-	InventoryDeltaProto inventory_delta = 2;
+	niantic.platform.inventory.InventoryDeltaProto inventory_delta = 2;
+	//map<string, ???> volatile_vault_deltas = 3;
 }
 
 // ref: Atlas.Rpc.GetOutpostDetailsRequestProto
@@ -6645,7 +6698,7 @@ message GetOutpostDetailsResponseProto {
 	OutpostMenu current_menu = 2;
 	string partner_id = 3;
 	PoiDetails poi_details = 4;
-	PoiAccessibility poi_accessibility = 5;
+	atlas.proto.PoiAccessibility poi_accessibility = 5;
 }
 
 // ref: Atlas.Rpc.GetPlayerFeatureListRequestProto
@@ -6655,7 +6708,7 @@ message GetPlayerFeatureListRequestProto {
 // ref: Atlas.Rpc.GetPlayerFeatureListResponseProto
 message GetPlayerFeatureListResponseProto {
 	repeated string enabled_feature_list = 1;
-	repeated DisabledFeatureConfigProto disabled_feature_list = 2;
+	repeated atlas.proto.DisabledFeatureConfigProto disabled_feature_list = 2;
 }
 
 // ref: Atlas.Rpc.GetPlayerStateRequestProto
@@ -6664,7 +6717,7 @@ message GetPlayerStateRequestProto {
 
 // ref: Atlas.Rpc.GetPlayerStateResponseProto
 message GetPlayerStateResponseProto {
-	ClientPlayerProto player = 1;
+	atlas.proto.ClientPlayerProto player = 1;
 }
 
 // ref: Atlas.Rpc.GetServerTimeRequestProto
@@ -6691,7 +6744,7 @@ message GetStorePackInfoResponseProto {
 		ERROR = 2;
 	}
 
-	StorePackProto store_pack = 1;
+	atlas.proto.StorePackProto store_pack = 1;
 	Status status = 2;
 }
 
@@ -6715,7 +6768,7 @@ message GiveAwayGreenhouseResponseProto {
 	}
 
 	Status status = 1;
-	LootCollectionProto loot = 2;
+	atlas.proto.LootCollectionProto loot = 2;
 	int64 next_loot_time = 3;
 }
 
@@ -6739,18 +6792,18 @@ message InstantFinishBrewingResponseProto {
 
 // ref: Atlas.Rpc.InventoryCauldronProto
 message InventoryCauldronProto {
-	string iprotoid = 1;
-	int64 id = 2;
-	string template_id = 3;
-	repeated InventoryCauldronSlotProto cauldron_slot = 4;
-	int64 brewing_start_timestamp = 5;
-	int64 availability_start_timestamp = 6;
-	int64 availability_time = 7;
+	string iproto._id = 1;
+	int64 id = 1;
+	string template_id = 2;
+	repeated InventoryCauldronSlotProto cauldron_slot = 3;
+	int64 brewing_start_timestamp = 4;
+	int64 availability_start_timestamp = 5;
+	int64 availability_time = 6;
 }
 
 // ref: Atlas.Rpc.InventoryCauldronSlotProto
 message InventoryCauldronSlotProto {
-	LootCollectionProto rewards = 1;
+	atlas.proto.LootCollectionProto rewards = 1;
 	int64 time_to_brew = 2;
 	string recipe_gmt_id = 3;
 	bool master_note_applied = 4;
@@ -6796,7 +6849,7 @@ message InventoryCompletedQuestProto {
 
 // ref: Atlas.Rpc.InventoryEscrowedRewardsProto
 message InventoryEscrowedRewardsProto {
-	LootCollectionProto rewards = 1;
+	atlas.proto.LootCollectionProto rewards = 1;
 }
 
 // ref: Atlas.Rpc.InventoryFeatureFlagProto
@@ -6826,7 +6879,7 @@ message InventoryFeatureFlagsProto {
 // ref: Atlas.Rpc.InventoryInProgressQuestProto
 message InventoryInProgressQuestProto {
 	string quest_gmt_id = 1;
-	repeated QuestProgress progress_per_task = 2;
+	repeated atlas.proto.QuestProgress progress_per_task = 2;
 	int32 version = 3;
 	int64 start_day_since_epoch_if_daily = 4;
 }
@@ -6846,6 +6899,7 @@ message InventoryQuestLogProto {
 
 // ref: Atlas.Rpc.InventoryVaultCapacityProto
 message InventoryVaultCapacityProto {
+	//map<string, ???> category_capacity = 1;
 }
 
 // ref: Atlas.Rpc.InventoryVaultItemProto
@@ -6884,7 +6938,7 @@ message JoinChamberRequestProto {
 message JoinChamberResponseProto {
 	ChallengeRpcStatus status = 1;
 	ChamberState state = 2;
-	ClientPlayerSnapshotProto player_snapshot = 3;
+	atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
 	string partner_id = 4;
 	uint64 fortress_cooldown_left_ms = 5;
 }
@@ -6934,7 +6988,7 @@ message LootOutpostResponseProto {
 	Status status = 1;
 	int64 awarded_food_key = 2;
 	int64 next_loot_time = 3;
-	LootCollectionProto loot = 4;
+	atlas.proto.LootCollectionProto loot = 4;
 	string partner_id = 5;
 }
 
@@ -7007,14 +7061,14 @@ message OpenFamilyChestRequestProto {
 // ref: Atlas.Rpc.OpenFamilyChestResponseProto
 message OpenFamilyChestResponseProto {
 	int32 family_level = 1;
-	repeated LootCollectionProto chest_reward = 2;
+	repeated atlas.proto.LootCollectionProto chest_reward = 2;
 	int32 family_xp = 3;
 	int32 current_chests_opened = 4;
 }
 
 // ref: Atlas.Rpc.OptIntoEmailsRequestProto
 message OptIntoEmailsRequestProto {
-	EmailOptsProto email_opts = 1;
+	atlas.proto.EmailOptsProto email_opts = 1;
 }
 
 // ref: Atlas.Rpc.OptIntoEmailsResponseProto
@@ -7031,6 +7085,7 @@ message OptIntoEmailsResponseProto {
 
 // ref: Atlas.Rpc.OutpostMenu
 message OutpostMenu {
+	//map<int64, ???> menu_options = 1;
 	int64 menu_timestamp = 2;
 }
 
@@ -7050,7 +7105,7 @@ message PlaceItemResponseProto {
 
 	Status status = 1;
 	string collection_item_id = 2;
-	repeated LootCollectionProto completion_rewards = 3;
+	repeated atlas.proto.LootCollectionProto completion_rewards = 3;
 }
 
 // ref: Atlas.Rpc.PlayerAchievementProto
@@ -7074,7 +7129,7 @@ message PlayerLevelUpRequestProto {
 message PlayerLevelUpResponseProto {
 	bool did_level_up = 1;
 	int32 new_level = 2;
-	LootCollectionProto granted_rewards = 3;
+	atlas.proto.LootCollectionProto granted_rewards = 3;
 }
 
 // ref: Atlas.Rpc.PlayerProfessionProgressV3Proto
@@ -7083,7 +7138,7 @@ message PlayerProfessionProgressV3Proto {
 	message NodeProgressV3 {
 		uint32 level = 1;
 		int64 last_updated_timestamp = 2;
-		LootCollectionProto unlocked_levels_cost = 3;
+		atlas.proto.LootCollectionProto unlocked_levels_cost = 3;
 	}
 
 	// ref: Atlas.Rpc.PlayerProfessionProgressV3Proto/Types/RankProgressV3
@@ -7092,16 +7147,19 @@ message PlayerProfessionProgressV3Proto {
 		message NodeProgressV3 {
 			uint32 level = 1;
 			int64 last_updated_timestamp = 2;
-			LootCollectionProto unlocked_levels_cost = 3;
+			atlas.proto.LootCollectionProto unlocked_levels_cost = 3;
 		}
 
+		//map<string, ???> node_progress = 1;
 	}
 
 	uint32 rank_points = 2;
+	//map<string, ???> rank_progress_map = 3;
 }
 
 // ref: Atlas.Rpc.PlayerProfessionsProgressV3Proto
 message PlayerProfessionsProgressV3Proto {
+	//map<string, ???> profession_progress = 1;
 }
 
 // ref: Atlas.Rpc.PlayerProfileProto
@@ -7136,7 +7194,10 @@ message PlayerProfileProto {
 	repeated string unlocked_selfie_asset_ids = 20;
 	int64 total_swish_success_spell = 21;
 	repeated string discovered_potions_master_note_ids = 22;
-	EmailOptsProto email_opts = 26;
+	//map<string, ???> master_note_discovery_status = 23;
+	//map<string, ???> swish_spellcasts = 24;
+	//map<string, ???> store_pack_purchased = 25;
+	atlas.proto.EmailOptsProto email_opts = 26;
 }
 
 // ref: Atlas.Rpc.PlayerSelectTeamRequestProto
@@ -7171,7 +7232,7 @@ message PortkeyBonusGameNodeRewards {
 
 // ref: Atlas.Rpc.PortkeyBonusGameRewardTuple
 message PortkeyBonusGameRewardTuple {
-	LootRewardProto reward = 1;
+	atlas.proto.LootRewardProto reward = 1;
 	float multiplier = 2;
 	string category_proto_id = 3;
 }
@@ -7321,7 +7382,7 @@ message ReleaseEscrowedRewardsResponseProto {
 	}
 
 	Status status = 1;
-	LootCollectionProto claimed_rewards = 2;
+	atlas.proto.LootCollectionProto claimed_rewards = 2;
 }
 
 // ref: Atlas.Rpc.RemoveVaultItemRequestProto
@@ -7362,7 +7423,7 @@ message SetRunestonesRequestProto {
 message SetRunestonesResponseProto {
 	ChallengeRpcStatus status = 1;
 	ChamberState state = 2;
-	ClientPlayerSnapshotProto player_snapshot = 3;
+	atlas.proto.ClientPlayerSnapshotProto player_snapshot = 3;
 	string fortress_id = 4;
 	string partner_id = 5;
 }
@@ -7408,7 +7469,7 @@ message StoryboardDoStepResponse {
 	}
 
 	Status status = 1;
-	LootCollectionProto rewards = 2;
+	atlas.proto.LootCollectionProto rewards = 2;
 }
 
 // ref: Atlas.Rpc.StoryboardSkipRequest
@@ -7430,10 +7491,13 @@ message StoryboardSkipResponse {
 
 // ref: Atlas.Rpc.TempClientStatsHelper
 message TempClientStatsHelper {
+	//map<string, ???> player_active_stats = 1;
+	//map<string, ???> enemy_active_stats = 2;
 	int64 hp_max_enemy = 3;
 	repeated int64 enemy_damage_unblocked = 4;
 	repeated int64 enemy_damage_blocked = 5;
 	int64 hp_max_player = 6;
+	//map<string, ???> player_damage_per_energy = 7;
 }
 
 // ref: Atlas.Rpc.UpdateProfileFieldRequestProto
@@ -7476,7 +7540,7 @@ message UsePortkeyResponseProto {
 	}
 
 	Status status = 1;
-	LootCollectionProto portkey_rewards = 2;
+	atlas.proto.LootCollectionProto portkey_rewards = 2;
 	repeated PortkeyBonusGameNodeRewards all_bonus_nodes_rewards = 4;
 }
 

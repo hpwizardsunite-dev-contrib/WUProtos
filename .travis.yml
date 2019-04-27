@@ -18,9 +18,12 @@ script:
   - chmod +x ./compile.py
   - ./compile.py python --generate_desc --include_imports --include_source_info
   # Test Scripts...
+  - chmod +x ./cdummyDump.py
   - ./dummyDump.py
+  - chmod +x ./extractDump.py
   - ./extractDump.py
   # Decode
+  - chmod +x ./decode.sh
   - ./decode.sh
   # Compile Single need revision
   #- ./compile_single.py -d -o out2

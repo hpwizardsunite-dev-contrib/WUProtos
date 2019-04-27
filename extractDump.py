@@ -1,4 +1,4 @@
-# Credits to Celandro https://www.pokebattler.com/ for this script.
+#!/usr/bin/env python
 
 import os
 

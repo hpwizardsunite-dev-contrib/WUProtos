@@ -15,9 +15,9 @@ echo
 if  [ "${args[0]}" = "" ]
 then
 {
-    echo Usage $0 [file_to_decode.ext].
-    Exit /b 1
-    }
+echo Usage $0 [file_to_decode.ext].
+exit
+}
 
 echo Decoding ${args[0]}. Wait...
 export  wu_protos_path=./src/*

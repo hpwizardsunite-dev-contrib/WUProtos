@@ -13,4 +13,5 @@ tmp/
 *~
 /helpers/__pycache__/
 /dumpBase/
+/dummyDump/
 

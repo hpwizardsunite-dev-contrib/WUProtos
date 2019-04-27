@@ -20,7 +20,7 @@ package WUProtos.DumpBase;
 
 """.format(package_name=".".join(split['package_hierarchy']))
 
-    print(split)
+    # print(split) # Debug mode
     directory = output_dir
 
     try:

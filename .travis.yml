@@ -17,6 +17,11 @@ install:
 script:
   - chmod +x ./compile.py
   - ./compile.py python --generate_desc --include_imports --include_source_info
+  # Test Scripts...
+  - ./dummyDump.py
+  - ./extractDump.py
+  # Decode
+  - ./decode.sh
   # Compile Single need revision
   #- ./compile_single.py -d -o out2
   #- clang-format-3.8 -i -style file $(find src -name "*.proto")

@@ -22,10 +22,11 @@ script:
   - ./dummyDump.py
   - chmod +x ./extractDump.py
   - ./extractDump.py
-  # Decode
-  - chmod +x ./decode.sh ./GameDataWrapper.bytes
-  - ./decode.sh
+  # Todo Decode
+  #- chmod +x ./decode.sh ./GameDataWrapper.bytes
+  #- ./decode.sh
   # Compile Single need revision
+  #- - chmod +x ./ompile_single.py
   #- ./compile_single.py -d -o out2
   #- clang-format-3.8 -i -style file $(find src -name "*.proto")
   #- git diff --exit-code

@@ -17,6 +17,8 @@ install:
 script:
   - chmod +x ./compile.py
   - ./compile.py python --generate_desc --include_imports --include_source_info
+  # Decode test
+  - ./compile.py python --decode
   # Test Scripts...
   - chmod +x ./dummyDump.py
   - ./dummyDump.py

@@ -310,7 +310,18 @@ parser.add_argument(
     '--keep_proto_files',
     action='store_true',
     help='do not remove .proto files after compiling')
+parser.add_argument(
+    '-d', '--decode',
+    action='store_true',
+    help='decode game master')
 args = parser.parse_args()
+
+# Decode GM
+if args.decode:
+    print("Decode GM...")
+    command = "protoc --proto_path=src --decode WUProtos.Data.GameDataWrapper src/WUProtos/Data/GameDataWrapper.proto < GameDataWrapper.bytes > GameDataWrapper.bytes_decoded.txt"
+    call(command, shell=True)
+    exit(0)
 
 protoc_path = args.protoc_path
 src_path = os.path.join(os.path.dirname(__file__), 'src')

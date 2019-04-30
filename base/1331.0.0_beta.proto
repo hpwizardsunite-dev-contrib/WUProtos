@@ -870,7 +870,7 @@ message BonusConfigProto {
 		LootCollectionProto bonus = 2;
 	}
 
-	string id = 1;
+	repeated BonusTier swish_game_accuracy_reward = 1;
 	LootCollectionProto first_time_success_reward = 2;
 	LootCollectionProto life_time_first_success_reward = 3;
 	repeated string accuracy_tier_bonus_text = 4;
@@ -1235,13 +1235,13 @@ message ClientConditionalModifier {
 
 // ref: Atlas.Proto.ClientConditionalModifiers
 message ClientConditionalModifiers {
-	map<string, Atlas.Proto.ClientConditionalModifier> modifiers = 2;
+	map<string, ClientConditionalModifier> modifiers = 2;
 }
 
 // ref: Atlas.Proto.ClientDailyRewardMonthlyScheduleProto
 message ClientDailyRewardMonthlyScheduleProto {
 	string id = 1;
-	map<uint32, Atlas.Proto.ClientDailyRewardProto> daily_rewards = 2;
+	map<uint32, ClientDailyRewardProto> daily_rewards = 2;
 }
 
 // ref: Atlas.Proto.ClientDailyRewardProto
@@ -1253,7 +1253,7 @@ message ClientDailyRewardProto {
 // ref: Atlas.Proto.ClientDarkDetectorAmplifierProto
 message ClientDarkDetectorAmplifierProto {
 	int32 num_slots = 1;
-	map<int32, Atlas.Proto.ClientDarkDetectorProto> active_dark_detectors = 2;
+	map<int32, ClientDarkDetectorProto> active_dark_detectors = 2;
 }
 
 // ref: Atlas.Proto.ClientDarkDetectorProto
@@ -1373,7 +1373,7 @@ message ClientFtueVideoConfigProto {
 	ClientFtueVideoFallbackDefinitionProto from_assets = 1;
 	ClientFtueVideoNameDefinitionProto from_url = 2;
 	repeated string quality_buckets = 3;
-	map<string, Atlas.Proto.ClientFtueVideoQualityMappingProto> quality_mappings = 4;
+	map<string, ClientFtueVideoQualityMappingProto> quality_mappings = 4;
 }
 
 // ref: Atlas.Proto.ClientFtueVideoFallbackDefinitionProto
@@ -1799,12 +1799,12 @@ message ClientProfessionProto {
 	string icon_highlighted = 13;
 	bool show_profession_rank_meter = 14;
 	string profession_activated_sfx = 15;
-	map<string, Atlas.Proto.ClientProfessionRankProto> profession_ranks_map = 16;
+	map<string, ClientProfessionRankProto> profession_ranks_map = 16;
 }
 
 // ref: Atlas.Proto.ClientProfessionRankProto
 message ClientProfessionRankProto {
-	map<string, Atlas.Proto.ClientProfessionNodeProto> profession_nodes_map = 1;
+	map<string, ClientProfessionNodeProto> profession_nodes_map = 1;
 	string name = 2;
 	repeated ClientProfessionNodeProto profession_nodes = 3;
 	string image_unlocked = 4;
@@ -1817,14 +1817,14 @@ message ClientProfessionRankProto {
 // ref: Atlas.Proto.ClientProfileConfigProto
 message ClientProfileConfigProto {
 	string id = 1;
-	map<string, Atlas.Proto.ClientTitleProto> titles = 2;
-	map<string, Atlas.Proto.ClientBadgeProto> badges = 3;
-	map<string, Atlas.Proto.ClientHouseProto> houses = 4;
-	map<string, Atlas.Proto.ClientThemeProto> themes = 5;
-	map<string, Atlas.Proto.ClientWandCoreProto> wand_cores = 6;
-	map<string, Atlas.Proto.ClientWandWoodProto> wand_woods = 7;
-	map<string, Atlas.Proto.ClientWandFlexibilityProto> wand_flexibilities = 8;
-	map<string, Atlas.Proto.ClientWandLengthProto> wand_lengths = 9;
+	map<string, ClientTitleProto> titles = 2;
+	map<string, ClientBadgeProto> badges = 3;
+	map<string, ClientHouseProto> houses = 4;
+	map<string, ClientThemeProto> themes = 5;
+	map<string, ClientWandCoreProto> wand_cores = 6;
+	map<string, ClientWandWoodProto> wand_woods = 7;
+	map<string, ClientWandFlexibilityProto> wand_flexibilities = 8;
+	map<string, ClientWandLengthProto> wand_lengths = 9;
 }
 
 // ref: Atlas.Proto.ClientProtegoPatternProto
@@ -2600,15 +2600,14 @@ message CollectionItemPlacedRequirement {
 
 // ref: Atlas.Proto.CollectionItemProto
 message CollectionItemProto {
-	repeated MysteryItemInfoProto mystery_data = 1;
-	string id = 2;
-	string family_id = 3;
-	int32 shard_count = 4;
-	int32 rarity = 5;
-	LootCollectionProto one_time_rewards = 6;
-	string page_id = 7;
-	Requirements unlock_requirements = 8;
-	repeated int32 shard_counts = 9;
+	string id = 1;
+	string family_id = 2;
+	int32 shard_count = 3;
+	int32 rarity = 4;
+	LootCollectionProto one_time_rewards = 5;
+	string page_id = 6;
+	Requirements unlock_requirements = 7;
+	repeated int32 shard_counts = 8;
 	bool sticker_disabled = 10;
 }
 
@@ -2700,7 +2699,7 @@ message ColorProto {
 // ref: Atlas.Proto.CombatEnemyStatsProto
 message CombatEnemyStatsProto {
 	map<string, int64> stat_block = 2;
-	map<string, Atlas.Proto.CombatGrowthProto> stat_growth = 3;
+	map<string, CombatGrowthProto> stat_growth = 3;
 }
 
 // ref: Atlas.Proto.CombatGrowthProto
@@ -2806,7 +2805,7 @@ message DailyRewardMonthlyScheduleProto {
 	string id = 1;
 	uint32 number_of_days = 2;
 	LootCollectionProto default_reward = 3;
-	map<uint32, Atlas.Proto.DailyRewardProto> daily_rewards = 4;
+	map<uint32, DailyRewardProto> daily_rewards = 4;
 }
 
 // ref: Atlas.Proto.DailyRewardProto
@@ -2892,9 +2891,7 @@ message EncounterObstacleProto {
 
 // ref: Atlas.Proto.EncounterProto
 message EncounterProto {
-	repeated string encounter_searching_idle_timelines = 1;
 	string id = 1;
-	repeated string encounter_assets = 2;
 	string collection_item_reward_gmt_id = 2;
 	repeated EncounterStageProto stages = 3;
 	int32 collection_item_reward_shards = 4;
@@ -2934,15 +2931,10 @@ message EncounterStageProto {
 		picture = 4;
 	}
 
-	repeated string combat_spell_list = 1;
 	EncounterStageSwishProto swish = 1;
-	repeated ClientSequenceDataProto stage_setup_sequence = 2;
 	EncounterStageCombatProto combat = 2;
-	repeated ClientSequenceDataProto stage_completion_sequence = 3;
 	EncounterStagePortkeyProto portkey = 3;
-	repeated string idle_loop_timelines = 4;
 	EncounterStagePictureProto picture = 4;
-	repeated ClientCombatStateProto state_graph_nodes = 5;
 	string spell_gmt_id = 5;
 	repeated ClientCombatEnemyTraitProto combat_enemy_traits = 6;
 	repeated ClientEncounterTypeProto enemy_rank_tags = 7;
@@ -3082,12 +3074,9 @@ message GameConfigProto {
 	string id = 1;
 	float pickup_range = 2;
 	int32 map_update_rate = 3;
-	repeated int64 floo_contribution_button_values = 4;
 	int32 map_event_update_rate = 4;
 	int32 map_puzzle_update_rate = 5;
-	repeated string ftue_video_quality_buckets = 6;
 	float try_again_bonus_per_failure = 6;
-	repeated VoiceOverLanguageMapping voice_over_mappings = 7;
 	float ar_mode_range = 7;
 	int32 ar_mode_max_encounters = 8;
 	int32 event_cool_down_duration = 9;
@@ -3261,7 +3250,6 @@ message GreenhouseTemplateProto {
 
 // ref: Atlas.Proto.HapticProto
 message HapticProto {
-	repeated int32 ioswait_timings = 1;
 	string id = 1;
 	repeated int32 ioshaptic_types = 2;
 	repeated int32 android_wait_timings = 3;
@@ -3534,9 +3522,7 @@ message LootRewardProto {
 		quest_reward = 14;
 	}
 
-	string id = 1;
 	VaultItemLootRewardProto item_reward = 1;
-	int64 amount = 2;
 	CollectionFamilyLootRewardProto collection_family_reward = 2;
 	CollectionItemRewardProto collection_reward = 3;
 	WalkboxRewardProto walkbox_reward = 4;
@@ -3880,12 +3866,11 @@ message ProfessionNodeLevelProto {
 
 // ref: Atlas.Proto.ProfessionNodeProto
 message ProfessionNodeProto {
-	uint32 potential_rank_points = 1;
-	string id = 2;
-	repeated Requirements edges = 3;
-	repeated ProfessionNodeLevelProto levels = 4;
-	uint32 row_pos = 5;
-	uint32 col_pos = 6;
+	string id = 1;
+	repeated Requirements edges = 2;
+	repeated ProfessionNodeLevelProto levels = 3;
+	uint32 row_pos = 4;
+	uint32 col_pos = 5;
 }
 
 // ref: Atlas.Proto.ProfessionNodeRequirement
@@ -3901,7 +3886,7 @@ message ProfessionProto {
 	string id = 1;
 	repeated Requirements requirements = 3;
 	bool show_in_ui = 4;
-	map<string, Atlas.Proto.ProfessionRankProto> profession_ranks_map = 5;
+	map<string, ProfessionRankProto> profession_ranks_map = 5;
 	repeated ProfessionTierProto profession_tiers = 6;
 }
 
@@ -3916,7 +3901,7 @@ message ProfessionRankPointsRequirement {
 message ProfessionRankProto {
 	uint32 potential_rank_points = 1;
 	repeated Requirements requirements = 2;
-	map<string, Atlas.Proto.ProfessionNodeProto> profession_nodes_map = 3;
+	map<string, ProfessionNodeProto> profession_nodes_map = 3;
 	bool show_in_ui = 4;
 	string id = 5;
 }
@@ -3947,15 +3932,14 @@ message ProfessionTotalNodeLevelRequirement {
 
 // ref: Atlas.Proto.ProfileConfigProto
 message ProfileConfigProto {
-	map<string, Atlas.Proto.ClientTitleProto> titles = 1;
 	string id = 1;
-	map<string, Atlas.Proto.ClientBadgeProto> badges = 2;
-	map<string, Atlas.Proto.ClientHouseProto> houses = 3;
-	map<string, Atlas.Proto.ClientThemeProto> themes = 4;
-	map<string, Atlas.Proto.ClientWandCoreProto> wand_cores = 5;
-	map<string, Atlas.Proto.ClientWandWoodProto> wand_woods = 6;
-	map<string, Atlas.Proto.ClientWandFlexibilityProto> wand_flexibilities = 7;
-	map<string, Atlas.Proto.ClientWandLengthProto> wand_lengths = 8;
+	map<string, ClientBadgeProto> badges = 2;
+	map<string, ClientHouseProto> houses = 3;
+	map<string, ClientThemeProto> themes = 4;
+	map<string, ClientWandCoreProto> wand_cores = 5;
+	map<string, ClientWandWoodProto> wand_woods = 6;
+	map<string, ClientWandFlexibilityProto> wand_flexibilities = 7;
+	map<string, ClientWandLengthProto> wand_lengths = 8;
 }
 
 // ref: Atlas.Proto.ProtegoPatternProto
@@ -4215,7 +4199,7 @@ message SharedQualityLevelProto {
 	bool billboards_face_camera_position = 9;
 	int32 realtime_shadows = 10;
 	bool ar_azimuth_blurring = 11;
-	map<string, Atlas.Proto.QualityLevelOverridesProto> gamemode_overrides = 13;
+	map<string, QualityLevelOverridesProto> gamemode_overrides = 13;
 	int32 ar_encounter_particle_cap = 14;
 	int32 locked_encounter_particle_cap = 15;
 	int32 menu_particle_cap = 16;
@@ -4266,7 +4250,6 @@ message SpellGameBonusMetadataProto {
 
 // ref: Atlas.Proto.SpellProto
 message SpellProto {
-	repeated string charge_up_effect = 1;
 	string id = 1;
 	map<string, string> timelines = 2;
 	map<string, string> critical_hits = 3;
@@ -4304,7 +4287,6 @@ message StoreCategoryProto {
 
 // ref: Atlas.Proto.StoreConfigProto
 message StoreConfigProto {
-	repeated StoreCategoryProto store_categories = 1;
 	string id = 1;
 	repeated StoreRarityProto store_rarities = 2;
 }
@@ -4400,14 +4382,13 @@ message StoryboardPauseStep {
 
 // ref: Atlas.Proto.StoryboardProto
 message StoryboardProto {
-	proto.TriggerPoint trigger_point = 1;
-	string id = 2;
-	Requirements start_reqs = 3;
-	string step_flag_gmt_id = 4;
-	string complete_flag_gmt_id = 5;
-	repeated StoryboardStepProto storyboard_steps = 6;
-	StoryboardResetMode reset_mode = 7;
-	Requirements reset_reqs = 8;
+	string id = 1;
+	Requirements start_reqs = 2;
+	string step_flag_gmt_id = 3;
+	string complete_flag_gmt_id = 4;
+	repeated StoryboardStepProto storyboard_steps = 5;
+	StoryboardResetMode reset_mode = 6;
+	Requirements reset_reqs = 7;
 }
 
 // ref: Atlas.Proto.StoryboardStepProto
@@ -4504,9 +4485,8 @@ message VaultCapacityLootRewardProto {
 
 // ref: Atlas.Proto.VaultCategoryProto
 message VaultCategoryProto {
-	repeated string increase_capacity_store_pack_proto_ids = 1;
-	string id = 2;
-	CategoryCapacityType capacity_type = 3;
+	string id = 1;
+	CategoryCapacityType capacity_type = 2;
 }
 
 // ref: Atlas.Proto.VaultItemActiveBuffSource
@@ -7025,13 +7005,12 @@ message InstantFinishBrewingResponseProto {
 
 // ref: Atlas.Rpc.InventoryCauldronProto
 message InventoryCauldronProto {
-	string iproto._id = 1;
-	int64 id = 2;
-	string template_id = 3;
-	repeated InventoryCauldronSlotProto cauldron_slot = 4;
-	int64 brewing_start_timestamp = 5;
-	int64 availability_start_timestamp = 6;
-	int64 availability_time = 7;
+	int64 id = 1;
+	string template_id = 2;
+	repeated InventoryCauldronSlotProto cauldron_slot = 3;
+	int64 brewing_start_timestamp = 4;
+	int64 availability_start_timestamp = 5;
+	int64 availability_time = 6;
 }
 
 // ref: Atlas.Rpc.InventoryCauldronSlotProto
@@ -7242,7 +7221,7 @@ message LifetimeMetricsProto {
 		int64 won = 2;
 	}
 
-	map<string, Atlas.Rpc.LifetimeMetricsProto/Types/FamilyMetrics> family_metrics = 1;
+	map<string, FamilyMetrics> family_metrics = 1;
 	PoiLootedMetrics poi_looted = 2;
 	MapEncounterMetrics map_encounter = 3;
 	WcMetrics wc = 4;
@@ -7370,7 +7349,7 @@ message OptIntoEmailsResponseProto {
 
 // ref: Atlas.Rpc.OutpostMenu
 message OutpostMenu {
-	map<int64, Atlas.Proto.LootRewardProto> menu_options = 1;
+	map<int64, LootRewardProto> menu_options = 1;
 	int64 menu_timestamp = 2;
 }
 
@@ -7459,16 +7438,16 @@ message PlayerProfessionProgressV3Proto {
 			LootCollectionProto unlocked_levels_cost = 3;
 		}
 
-		map<string, Atlas.Rpc.PlayerProfessionProgressV3Proto/Types/RankProgressV3/Types/NodeProgressV3> node_progress = 1;
+		map<string, NodeProgressV3> node_progress = 1;
 	}
 
 	uint32 rank_points = 2;
-	map<string, Atlas.Rpc.PlayerProfessionProgressV3Proto/Types/RankProgressV3> rank_progress_map = 3;
+	map<string, RankProgressV3> rank_progress_map = 3;
 }
 
 // ref: Atlas.Rpc.PlayerProfessionsProgressV3Proto
 message PlayerProfessionsProgressV3Proto {
-	map<string, Atlas.Rpc.PlayerProfessionProgressV3Proto> profession_progress = 1;
+	map<string, PlayerProfessionProgressV3Proto> profession_progress = 1;
 }
 
 // ref: Atlas.Rpc.PlayerProfileProto

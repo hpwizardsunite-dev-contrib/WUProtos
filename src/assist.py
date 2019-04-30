@@ -33,8 +33,8 @@ def initialize_file(package, message, path):
 
 
 message = underscore_to_camelcase(args.message)
-request_path = os.path.join("WUProtos\Networking\Requests\Messages", "%sMessage.proto" % message)
-response_path = os.path.join("WUProtos\Networking\Responses", "%sResponse.proto" % message)
+request_path = os.path.join("WUProtos/Networking/Requests/Messages", "%sMessage.proto" % message)
+response_path = os.path.join("WUProtos/Networking/Responses", "%sResponse.proto" % message)
 
 initialize_file("WUProtos.Networking.Requests.Messages", "%sMessage" % message, request_path)
 initialize_file("WUProtos.Networking.Responses", "%sResponse" % message, response_path)

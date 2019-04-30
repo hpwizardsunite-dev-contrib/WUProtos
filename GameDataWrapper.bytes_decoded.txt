@@ -88410,56 +88410,56 @@ messages {
 }
 messages {
   vault_category {
-    increase_capacity_store_pack_proto_ids: "proto_vaultcategory_chamber_completion"
-    2: 2
+    id: "proto_vaultcategory_chamber_completion"
+    capacity_type: INFINITE
   }
 }
 messages {
   vault_category {
-    increase_capacity_store_pack_proto_ids: "proto_vaultcategory_energy"
-    2: 1
+    id: "proto_vaultcategory_energy"
+    capacity_type: DEFAULT_CAPACITY_TYPE
   }
 }
 messages {
   vault_category {
-    increase_capacity_store_pack_proto_ids: "proto_vaultcategory_food"
-    2: 1
+    id: "proto_vaultcategory_food"
+    capacity_type: DEFAULT_CAPACITY_TYPE
   }
 }
 messages {
   vault_category {
-    increase_capacity_store_pack_proto_ids: "proto_vaultcategory_ingredients"
-    2: 1
+    id: "proto_vaultcategory_ingredients"
+    capacity_type: DEFAULT_CAPACITY_TYPE
   }
 }
 messages {
   vault_category {
-    increase_capacity_store_pack_proto_ids: "proto_vaultcategory_instant_consume"
-    2: 2
+    id: "proto_vaultcategory_instant_consume"
+    capacity_type: INFINITE
   }
 }
 messages {
   vault_category {
-    increase_capacity_store_pack_proto_ids: "proto_vaultcategory_potions"
-    2: 1
+    id: "proto_vaultcategory_potions"
+    capacity_type: DEFAULT_CAPACITY_TYPE
   }
 }
 messages {
   vault_category {
-    increase_capacity_store_pack_proto_ids: "proto_vaultcategory_runestones"
-    2: 2
+    id: "proto_vaultcategory_runestones"
+    capacity_type: INFINITE
   }
 }
 messages {
   vault_category {
-    increase_capacity_store_pack_proto_ids: "proto_vaultcategory_selfieavatar"
-    2: 2
+    id: "proto_vaultcategory_selfieavatar"
+    capacity_type: INFINITE
   }
 }
 messages {
   vault_category {
-    increase_capacity_store_pack_proto_ids: "proto_vaultcategory_utility"
-    2: 2
+    id: "proto_vaultcategory_utility"
+    capacity_type: INFINITE
   }
 }
 messages {

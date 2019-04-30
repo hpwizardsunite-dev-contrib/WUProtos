@@ -2605,15 +2605,14 @@ message CollectionItemPlacedRequirement {
 
 // ref: Atlas.Proto.CollectionItemProto
 message CollectionItemProto {
-	repeated MysteryItemInfoProto mystery_data = 1;
-	string id = 2;
-	string family_id = 3;
-	int32 shard_count = 4;
-	int32 rarity = 5;
-	LootCollectionProto one_time_rewards = 6;
-	string page_id = 7;
-	Requirements unlock_requirements = 8;
-	repeated int32 shard_counts = 9;
+	string id = 1;
+	string family_id = 2;
+	int32 shard_count = 3;
+	int32 rarity = 4;
+	LootCollectionProto one_time_rewards = 5;
+	string page_id = 6;
+	Requirements unlock_requirements = 7;
+	repeated int32 shard_counts = 8;
 	bool sticker_disabled = 10;
 }
 
@@ -3890,12 +3889,11 @@ message ProfessionNodeLevelProto {
 
 // ref: Atlas.Proto.ProfessionNodeProto
 message ProfessionNodeProto {
-	uint32 potential_rank_points = 1;
-	string id = 2;
-	repeated Requirements edges = 3;
-	repeated ProfessionNodeLevelProto levels = 4;
-	uint32 row_pos = 5;
-	uint32 col_pos = 6;
+	string id = 1;
+	repeated Requirements edges = 2;
+	repeated ProfessionNodeLevelProto levels = 3;
+	uint32 row_pos = 4;
+	uint32 col_pos = 5;
 }
 
 // ref: Atlas.Proto.ProfessionNodeRequirement
@@ -4412,14 +4410,13 @@ message StoryboardPauseStep {
 
 // ref: Atlas.Proto.StoryboardProto
 message StoryboardProto {
-	proto.TriggerPoint trigger_point = 1;
-	string id = 2;
-	Requirements start_reqs = 3;
-	string step_flag_gmt_id = 4;
-	string complete_flag_gmt_id = 5;
-	repeated StoryboardStepProto storyboard_steps = 6;
-	StoryboardResetMode reset_mode = 7;
-	Requirements reset_reqs = 8;
+	string id = 1;
+	Requirements start_reqs = 2;
+	string step_flag_gmt_id = 3;
+	string complete_flag_gmt_id = 4;
+	repeated StoryboardStepProto storyboard_steps = 5;
+	StoryboardResetMode reset_mode = 6;
+	Requirements reset_reqs = 7;
 }
 
 // ref: Atlas.Proto.StoryboardStepProto
@@ -4516,9 +4513,8 @@ message VaultCapacityLootRewardProto {
 
 // ref: Atlas.Proto.VaultCategoryProto
 message VaultCategoryProto {
-	repeated string increase_capacity_store_pack_proto_ids = 1;
-	string id = 2;
-	CategoryCapacityType capacity_type = 3;
+	string id = 1;
+	CategoryCapacityType capacity_type = 2;
 }
 
 // ref: Atlas.Proto.VaultItemActiveBuffSource
@@ -7037,13 +7033,12 @@ message InstantFinishBrewingResponseProto {
 
 // ref: Atlas.Rpc.InventoryCauldronProto
 message InventoryCauldronProto {
-	string iproto._id = 1;
-	int64 id = 2;
-	string template_id = 3;
-	repeated InventoryCauldronSlotProto cauldron_slot = 4;
-	int64 brewing_start_timestamp = 5;
-	int64 availability_start_timestamp = 6;
-	int64 availability_time = 7;
+	int64 id = 1;
+	string template_id = 2;
+	repeated InventoryCauldronSlotProto cauldron_slot = 3;
+	int64 brewing_start_timestamp = 4;
+	int64 availability_start_timestamp = 5;
+	int64 availability_time = 6;
 }
 
 // ref: Atlas.Rpc.InventoryCauldronSlotProto

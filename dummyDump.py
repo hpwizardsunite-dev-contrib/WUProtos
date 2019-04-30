@@ -4,7 +4,7 @@ import os
 import re
 
 TOP_PACKAGE = 'wuprotos'
-INPUT_FILE = 'base/raw_protos.proto' # v0.6.0_beta.proto is optimized raw
+INPUT_FILE = 'base/raw_protos.proto' # v0.6.0_beta.proto or others is optimized raw
 OUTPUT_DIR = 'dummyDump'
 
 

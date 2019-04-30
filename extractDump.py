@@ -4,7 +4,7 @@ import os
 
 
 def main():
-    input_file = 'base/v0.6.0_beta.proto'
+    input_file = 'base/1331.0.0_beta.proto'
     output_dir = 'dumpBase'
     with open(input_file, "r") as f:
         contents = f.readlines()

@@ -118,7 +118,14 @@ message DebugGetSpellcastInfoResponseProto {
 
 // ref: Atlas.Rpc.Debug.DebugGrantLootCollectionRequestProto
 message DebugGrantLootCollectionRequestProto {
+	// ref: Atlas.Rpc.Debug.DebugGrantLootCollectionRequestProto/Types/RequestType
+	enum RequestType {
+		ADD = 0;
+		REMOVE = 1;
+	}
+
 	atlas.proto.LootCollectionProto loot_collection = 1;
+	RequestType request_type = 2;
 }
 
 // ref: Atlas.Rpc.Debug.DebugGrantLootCollectionResponseProto
@@ -595,6 +602,13 @@ enum EqualityOperator {
 	IS_NOT_EQUAL = 2;
 }
 
+// ref: Atlas.Proto.EventReqSubset
+enum EventReqSubset {
+	SUBSET_UNKNOWN = 0;
+	SUBSET_ACTIVATION = 1;
+	SUBSET_RUNNING = 2;
+}
+
 // ref: Atlas.Proto.GrowthType
 enum GrowthType {
 	GROWTH_TYPE_UNSET = 0;
@@ -697,6 +711,7 @@ enum QuestType {
 	QUEST_TYPE_DAILY = 3;
 	QUEST_TYPE_EVENT = 4;
 	QUEST_TYPE_ACHIEVEMENT = 5;
+	QUEST_TYPE_EVENT_CHAIN = 6;
 }
 
 // ref: Atlas.Proto.StatType
@@ -952,6 +967,17 @@ message BuffProto {
 	repeated ConditionalModifiers conditional_modifiers = 7;
 }
 
+// ref: Atlas.Proto.CastSpellsProgress
+message CastSpellsProgress {
+	int64 current_spell_count = 1;
+}
+
+// ref: Atlas.Proto.CastSpellsQuestTask
+message CastSpellsQuestTask {
+	int64 required_spell_count = 1;
+	float required_mastery_level = 2;
+}
+
 // ref: Atlas.Proto.CauldronProto
 message CauldronProto {
 	string id = 1;
@@ -992,6 +1018,7 @@ message ChallengeBonusProto {
 	BonusReceiver receiver = 2;
 	BonusTargetReward target_reward = 3;
 	float modifier = 4;
+	int32 modifier_percentage = 5;
 	PlayerCountChallengeBonusProto player_count = 20;
 	FastCompletionChallengeBonusProto fast_completion = 21;
 	RuneLevelChallengeBonusProto rune_level = 22;
@@ -1476,6 +1503,10 @@ message ClientGameConfigProto {
 	string professions_affinity_disadvantage_icon = 87;
 	int32 internet_outage_backoff_time = 88;
 	string ar_core_storyboard_trigger = 89;
+	repeated VoiceOverLanguageMapping voice_over_mappings = 90;
+	int32 in_app_message_trigger_priority = 91;
+	float internal_fortress_interact_range = 92;
+	float low_connectivity_threshold_bytes_per_ms = 93;
 }
 
 // ref: Atlas.Proto.ClientGameDataWrapper
@@ -1657,11 +1688,19 @@ message ClientMapPoiProto {
 
 // ref: Atlas.Proto.ClientMapPotionIngredientProto
 message ClientMapPotionIngredientProto {
+	// ref: Atlas.Proto.ClientMapPotionIngredientProto/Types/Source
+	enum Source {
+		UNKNOWN = 0;
+		STANDARD = 1;
+		SOCIAL_GROWING = 2;
+	}
+
 	string ingredient_gmt_id = 1;
 	double latitude = 2;
 	double longitude = 3;
 	bytes ticket = 4;
 	int64 expiry_time_ms = 5;
+	Source source = 6;
 }
 
 // ref: Atlas.Proto.ClientMapTraceProto
@@ -2639,6 +2678,20 @@ message CollectPotionIngredientsQuestProgress {
 // ref: Atlas.Proto.CollectPotionIngredientsQuestTask
 message CollectPotionIngredientsQuestTask {
 	int64 required_potion_ingredient_count = 1;
+	string ingredient_gmt_id = 2;
+}
+
+// ref: Atlas.Proto.CollectStickersProgress
+message CollectStickersProgress {
+	int64 current_collect_count = 1;
+}
+
+// ref: Atlas.Proto.CollectStickersQuestTask
+message CollectStickersQuestTask {
+	int64 required_collect_count = 1;
+	string sticker_gmt_id = 2;
+	string sticker_page_gmt_id = 3;
+	string sticker_family_gmt_id = 4;
 }
 
 // ref: Atlas.Proto.ColorProto
@@ -2795,6 +2848,17 @@ message DefeatedMobCountChallengeBonusProto {
 	float threshold = 1;
 }
 
+// ref: Atlas.Proto.DefeatMobTypeInWizardingChallengeProgress
+message DefeatMobTypeInWizardingChallengeProgress {
+	int64 current_defeat_count = 1;
+}
+
+// ref: Atlas.Proto.DefeatMobTypeInWizardingChallengeQuestTask
+message DefeatMobTypeInWizardingChallengeQuestTask {
+	int64 required_defeat_count = 1;
+	string encounter_gmt_id = 2;
+}
+
 // ref: Atlas.Proto.DisabledFeatureConfigProto
 message DisabledFeatureConfigProto {
 	string id = 1;
@@ -2920,11 +2984,13 @@ message EnergyVaultItemProto {
 message EventProto {
 	string id = 1;
 	Requirements activation_reqs = 2;
+	Requirements running_reqs = 3;
 }
 
 // ref: Atlas.Proto.EventRequirement
 message EventRequirement {
 	string event_id = 1;
+	repeated EventReqSubset req_subsets = 2;
 }
 
 // ref: Atlas.Proto.FastCompletionChallengeBonusProto
@@ -3030,8 +3096,9 @@ message GameConfigProto {
 	int32 map_puzzle_update_rate = 5;
 	repeated string ftue_video_quality_buckets = 6;
 	float try_again_bonus_per_failure = 6;
-	map<string, string> parkmode_bgs = 7;
+	repeated VoiceOverLanguageMapping voice_over_mappings = 7;
 	float ar_mode_range = 7;
+	map<string, string> parkmode_bgs = 8;
 	int32 ar_mode_max_encounters = 8;
 	int32 event_cool_down_duration = 9;
 	int32 combat_stun_time = 10;
@@ -3199,6 +3266,7 @@ message GmTemplate {
 // ref: Atlas.Proto.GreenhouseTemplateProto
 message GreenhouseTemplateProto {
 	string id = 1;
+	SharedSocialGrowingSettingsProto social_growing_settings = 2;
 }
 
 // ref: Atlas.Proto.HapticProto
@@ -3235,6 +3303,12 @@ message HookQuestProgress {
 		brew_potions = 5;
 		walk_distance = 6;
 		play_fortress_challenges = 7;
+		defeat_mob_in_challenges = 8;
+		unlock_portmanteau = 9;
+		use_potions = 10;
+		place_stickers = 11;
+		collect_stickers = 12;
+		cast_spells = 13;
 	}
 
 	DoEncounterHookQuestProgress do_encounter = 1;
@@ -3244,6 +3318,12 @@ message HookQuestProgress {
 	BrewPotionsQuestProgress brew_potions = 5;
 	WalkDistanceQuestProgress walk_distance = 6;
 	PlayFortressChallengesQuestProgress play_fortress_challenges = 7;
+	DefeatMobTypeInWizardingChallengeProgress defeat_mob_in_challenges = 8;
+	UnlockPortmanteauProgress unlock_portmanteau = 9;
+	UsePotionsProgress use_potions = 10;
+	PlaceStickersProgress place_stickers = 11;
+	CollectStickersProgress collect_stickers = 12;
+	CastSpellsProgress cast_spells = 13;
 }
 
 // ref: Atlas.Proto.HookQuestTask
@@ -3258,6 +3338,12 @@ message HookQuestTask {
 		brew_potions = 5;
 		walk_distance = 6;
 		play_fortress_challenges = 7;
+		defeat_mob_in_challenges = 8;
+		unlock_portmanteau = 9;
+		use_potions = 10;
+		place_stickers = 11;
+		collect_stickers = 12;
+		cast_spells = 13;
 	}
 
 	DoEncounterHookQuestTask do_encounter = 1;
@@ -3267,6 +3353,12 @@ message HookQuestTask {
 	BrewPotionsQuestTask brew_potions = 5;
 	WalkDistanceQuestTask walk_distance = 6;
 	PlayFortressChallengesQuestTask play_fortress_challenges = 7;
+	DefeatMobTypeInWizardingChallengeQuestTask defeat_mob_in_challenges = 8;
+	UnlockPortmanteauQuestTask unlock_portmanteau = 9;
+	UsePotionsQuestTask use_potions = 10;
+	PlaceStickersQuestTask place_stickers = 11;
+	CollectStickersQuestTask collect_stickers = 12;
+	CastSpellsQuestTask cast_spells = 13;
 }
 
 // ref: Atlas.Proto.InstantBuffDuration
@@ -3401,6 +3493,20 @@ message LexiconApprovedClientTelemetryProto {
 	niantic.platform.telemetry.PlatformServerData server_data = 1001;
 }
 
+// ref: Atlas.Proto.LifetimeMetricRequirement
+message LifetimeMetricRequirement {
+	// ref: Atlas.Proto.LifetimeMetricRequirement/Types/LifetimeMetric
+	enum LifetimeMetric {
+		NONE = 0;
+		INN_LOOTED = 1;
+		GREENHOUSE_LOOTED = 2;
+	}
+
+	LifetimeMetric lifetime_metric = 1;
+	ComparisonOperator comparison_operator = 2;
+	int64 required_count = 3;
+}
+
 // ref: Atlas.Proto.LootCollectionProto
 message LootCollectionProto {
 	repeated LootRewardProto rewards = 1;
@@ -3466,6 +3572,7 @@ message LootTableRewardProto {
 message MapAbilityActiveBuffSource {
 	string map_ability_gmt_id = 1;
 	uint32 map_ability_level = 2;
+	string casting_player_nickname = 3;
 }
 
 // ref: Atlas.Proto.MapAbilityLevelProto
@@ -3613,6 +3720,19 @@ message PermissionsConfigStaticList {
 	repeated PermissionsConfigStaticDataProto list = 1;
 }
 
+// ref: Atlas.Proto.PlaceStickersProgress
+message PlaceStickersProgress {
+	int64 current_sticker_place_count = 1;
+}
+
+// ref: Atlas.Proto.PlaceStickersQuestTask
+message PlaceStickersQuestTask {
+	int64 required_place_count = 1;
+	string sticker_gmt_id = 2;
+	string sticker_page_gmt_id = 3;
+	string sticker_family_gmt_id = 4;
+}
+
 // ref: Atlas.Proto.PlatformRequirement
 message PlatformRequirement {
 	DevicePlatform platform = 1;
@@ -3682,6 +3802,7 @@ message PlayFortressChallengesQuestProgress {
 // ref: Atlas.Proto.PlayFortressChallengesQuestTask
 message PlayFortressChallengesQuestTask {
 	int64 required_challenge_count = 1;
+	int64 required_least_player_count = 2;
 }
 
 // ref: Atlas.Proto.POIInteract
@@ -3727,6 +3848,11 @@ message PotionRewardProto {
 message PotionVaultItemProto {
 	repeated PotionConsumableScenario consumable_scenario = 3;
 	repeated string applied_buff_gmt_id = 4;
+}
+
+// ref: Atlas.Proto.PotTimeItemProto
+message PotTimeItemProto {
+	int64 availability_time = 1;
 }
 
 // ref: Atlas.Proto.ProfessionActiveBuffSource
@@ -3922,6 +4048,9 @@ message QuestProto {
 	repeated QuestTask tasks = 3;
 	LootCollectionProto rewards = 4;
 	int32 version = 5;
+	int32 chain_position = 6;
+	int32 chain_total = 7;
+	repeated Requirements start_requirements = 8;
 }
 
 // ref: Atlas.Proto.QuestRewardProto
@@ -3994,6 +4123,7 @@ message Requirement {
 		player_account_age_requirement = 22;
 		profession_tier_req = 23;
 		account_creation_date_requirement = 24;
+		lifetime_metric_req = 25;
 	}
 
 	BoolLiteral bool_literal_req = 1;
@@ -4020,6 +4150,7 @@ message Requirement {
 	PlayerAccountAgeRequirement player_account_age_requirement = 22;
 	ProfessionTierRequirement profession_tier_req = 23;
 	AccountCreationDateRequirement account_creation_date_requirement = 24;
+	LifetimeMetricRequirement lifetime_metric_req = 25;
 }
 
 // ref: Atlas.Proto.Requirements
@@ -4104,6 +4235,22 @@ message SharedQualityLevelProto {
 	int32 advanced_ar_camera_resolution = 20;
 	int32 vfx_lod = 21;
 	bool force_simple_ar = 22;
+}
+
+// ref: Atlas.Proto.SharedSocialGrowingSettingsProto
+message SharedSocialGrowingSettingsProto {
+	// ref: Atlas.Proto.SharedSocialGrowingSettingsProto/Types/HerbivicusMeterEntryProto
+	message HerbivicusMeterEntryProto {
+		int32 spell_count = 1;
+		int32 additional_number_of_spawning = 2;
+	}
+
+	int32 number_of_normal_pots = 1;
+	int32 number_of_rental_pots = 2;
+	double normal_pot_growing_time_multiplier = 3;
+	double rental_pot_growing_time_multiplier = 4;
+	repeated HerbivicusMeterEntryProto herbivicus_meter = 5;
+	int32 maximum_energy_allowed = 6;
 }
 
 // ref: Atlas.Proto.SoundConfigProto
@@ -4339,6 +4486,28 @@ message TimeRemainingCondition {
 	int64 target_comparison_value = 2;
 }
 
+// ref: Atlas.Proto.UnlockPortmanteauProgress
+message UnlockPortmanteauProgress {
+	int64 current_unlock_count = 1;
+}
+
+// ref: Atlas.Proto.UnlockPortmanteauQuestTask
+message UnlockPortmanteauQuestTask {
+	int64 required_unlock_count = 1;
+	float minimum_distance_type = 2;
+}
+
+// ref: Atlas.Proto.UsePotionsProgress
+message UsePotionsProgress {
+	int64 current_use_count = 1;
+}
+
+// ref: Atlas.Proto.UsePotionsQuestTask
+message UsePotionsQuestTask {
+	int64 required_use_count = 1;
+	string required_potion = 2;
+}
+
 // ref: Atlas.Proto.VaultCapacityLootRewardProto
 message VaultCapacityLootRewardProto {
 	string vault_category_gmt_id = 1;
@@ -4387,6 +4556,7 @@ message VaultItemProto {
 		potion_ingredient = 8;
 		energy_item = 10;
 		cauldron_time_item = 11;
+		pot_time_item = 12;
 	}
 
 	string id = 1;
@@ -4400,6 +4570,7 @@ message VaultItemProto {
 	int64 cap = 9;
 	EnergyVaultItemProto energy_item = 10;
 	CauldronTimeItemProto cauldron_time_item = 11;
+	PotTimeItemProto pot_time_item = 12;
 	int32 relative_value = 100;
 	string vault_category_gmt_id = 101;
 }
@@ -4429,6 +4600,12 @@ message VersionProto {
 	string id = 1;
 	string data_version = 2;
 	string data_branch = 3;
+}
+
+// ref: Atlas.Proto.VoiceOverLanguageMapping
+message VoiceOverLanguageMapping {
+	string language_code = 1;
+	string language_folder = 2;
 }
 
 // ref: Atlas.Proto.WalkboxRewardProto
@@ -4480,6 +4657,10 @@ message WinTracesQuestProgress {
 // ref: Atlas.Proto.WinTracesQuestTask
 message WinTracesQuestTask {
 	int64 required_trace_count = 1;
+	string encounter_gmt_id = 2;
+	string registry_page_gmt_id = 3;
+	string family_gmt_id = 4;
+	float difficulty = 5;
 }
 
 // ref: Atlas.Proto.WrackspurtBonusMetadataProto
@@ -5241,6 +5422,7 @@ message CurrencyUpdateProto {
 	string currency_name = 1;
 	int32 currency_delta = 2;
 	int32 currency_balance = 3;
+	int32 fiat_purchased_balance = 4;
 }
 
 // ref: Niantic.Platform.Iap.Protos.GameItemContentProto
@@ -5419,6 +5601,9 @@ enum Method {
 	STORYBOARD_COMPLETE = 72;
 	ACKNOWLEDGE_PUNISHMENT = 73;
 	OPT_INTO_MARKETING_EMAILS = 74;
+	RENT_POT = 75;
+	PLANT_INGREDIENT = 76;
+	CAST_SPELL_FOR_GROWING = 77;
 	ECHO = 666;
 	DBG_UPDATE_INVENTORY = 999000;
 	DBG_MODIFY_COLLECTION_ITEMS = 999001;
@@ -5631,7 +5816,7 @@ message AtlasInventoryItemProto {
 		escrowed_rewards = 13;
 		professions_progress_v3 = 14;
 		quest_log = 15;
-		achievement = 16;
+		lifetime_metrics = 16;
 	}
 
 	PlayerProfileProto profile = 1;
@@ -5648,7 +5833,7 @@ message AtlasInventoryItemProto {
 	InventoryEscrowedRewardsProto escrowed_rewards = 13;
 	PlayerProfessionsProgressV3Proto professions_progress_v3 = 14;
 	InventoryQuestLogProto quest_log = 15;
-	PlayerAchievementProto achievement = 16;
+	LifetimeMetricsProto lifetime_metrics = 16;
 }
 
 // ref: Atlas.Rpc.AtlasInventoryKeyProto
@@ -5671,7 +5856,7 @@ message AtlasInventoryKeyProto {
 		escrowed_rewards = 13;
 		professions_progress_v3 = 14;
 		quest_log = 15;
-		achievement = 16;
+		lifetime_metrics = 16;
 	}
 
 	bool profile = 1;
@@ -5689,7 +5874,7 @@ message AtlasInventoryKeyProto {
 	bool escrowed_rewards = 13;
 	bool professions_progress_v3 = 14;
 	bool quest_log = 15;
-	bool achievement = 16;
+	bool lifetime_metrics = 16;
 }
 
 // ref: Atlas.Rpc.BuyStorePackRequestProto
@@ -5712,6 +5897,30 @@ message BuyStorePackResponseProto {
 
 	Status status = 1;
 	atlas.proto.LootCollectionProto rewards = 2;
+}
+
+// ref: Atlas.Rpc.CastSpellForGrowingRequestProto
+message CastSpellForGrowingRequestProto {
+	string outpost_id = 1;
+	string pot_id = 2;
+	int32 spell_energy = 3;
+}
+
+// ref: Atlas.Rpc.CastSpellForGrowingResponseProto
+message CastSpellForGrowingResponseProto {
+	// ref: Atlas.Rpc.CastSpellForGrowingResponseProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		TOO_FAR = 2;
+		POI_CLOSED = 3;
+		FEATURE_DISABLED = 4;
+		INVALID_POT = 5;
+		NOT_ENOUGH_SPELL_ENERGY = 6;
+		NO_GROWING_IN_PROGRESS = 7;
+	}
+
+	Status status = 1;
 }
 
 // ref: Atlas.Rpc.ChamberMobState
@@ -6021,8 +6230,6 @@ message CombatResults {
 	int32 level = 7;
 	bool enemy_dodges = 8;
 	bool player_dodges = 9;
-	int64 energy_cost = 10;
-	int64 initial_hp_current_player = 11;
 	TempClientStatsHelper temp_client_stats_helper = 100;
 }
 
@@ -6356,6 +6563,7 @@ message EncounterInteractStatusProto {
 		ENCOUNTER_INTERACT_NOT_IN_ENCOUNTER = 1;
 		ENCOUNTER_INTERACT_WC_PLAYER_NOT_IN_CHAMBER = 2;
 		ENCOUNTER_INTERACT_WC_NOT_IN_PROGRESS = 3;
+		ENCOUNTER_INTERACT_WC_ACTION_ON_COOLDOWN = 4;
 	}
 
 	// ref: Atlas.Rpc.EncounterInteractStatusProto/StatusOneofCase
@@ -6377,6 +6585,7 @@ message EncounterInteractStatusProto {
 			ENCOUNTER_INTERACT_NOT_IN_ENCOUNTER = 1;
 			ENCOUNTER_INTERACT_WC_PLAYER_NOT_IN_CHAMBER = 2;
 			ENCOUNTER_INTERACT_WC_NOT_IN_PROGRESS = 3;
+			ENCOUNTER_INTERACT_WC_ACTION_ON_COOLDOWN = 4;
 		}
 
 		EncounterInteractStatusProto.Reason reason = 1;
@@ -6482,6 +6691,7 @@ message EncounterStartResponseProto {
 		ENCOUNTER_START_WC_MOB_ALREADY_ENGAGED = 13;
 		ENCOUNTER_TUTORIAL_COMPLETED = 14;
 		ENCOUNTER_START_EXPIRY_TIME_REACHED = 15;
+		ENCOUNTER_START_WC_ACTION_ON_COOLDOWN = 16;
 	}
 
 	Status status = 1;
@@ -6681,9 +6891,36 @@ message GetGreenhouseDetailsRequestProto {
 
 // ref: Atlas.Rpc.GetGreenhouseDetailsResponseProto
 message GetGreenhouseDetailsResponseProto {
+	// ref: Atlas.Rpc.GetGreenhouseDetailsResponseProto/Types/ClientPotProto
+	message ClientPotProto {
+		// ref: Atlas.Rpc.GetGreenhouseDetailsResponseProto/Types/ClientPotProto/Types/RentalDetailsProto
+		message RentalDetailsProto {
+			string renter = 1;
+			int64 rental_start_time_ms = 2;
+			int64 rental_expiration_time_ms = 3;
+		}
+
+		string id = 1;
+		string recipe_gmt_id = 2;
+		string planter = 3;
+		repeated string contributor = 4;
+		int64 growing_completion_time_ms = 5;
+		int32 spell_count = 6;
+		GetGreenhouseDetailsResponseProto.RentalDetailsProto rental_details = 7;
+	}
+
+	// ref: Atlas.Rpc.GetGreenhouseDetailsResponseProto/Types/ClientPotProto/Types/RentalDetailsProto
+	message RentalDetailsProto {
+		string renter = 1;
+		int64 rental_start_time_ms = 2;
+		int64 rental_expiration_time_ms = 3;
+	}
+
 	string partner_id = 1;
 	PoiDetails poi_details = 2;
 	atlas.proto.PoiAccessibility poi_accessibility = 3;
+	repeated ClientPotProto normal_pot = 4;
+	repeated ClientPotProto rental_pot = 5;
 }
 
 // ref: Atlas.Rpc.GetLexiconInventoryResponseProto
@@ -6973,6 +7210,58 @@ message LevelUpCollectionFamilyResponseProto {
 	int32 family_level = 2;
 }
 
+// ref: Atlas.Rpc.LifetimeMetricsProto
+message LifetimeMetricsProto {
+	// ref: Atlas.Rpc.LifetimeMetricsProto/Types/CollectedMetrics
+	message CollectedMetrics {
+		map<string, int64> item_quantity = 1;
+		map<string, int64> category_quantity = 2;
+	}
+
+	// ref: Atlas.Rpc.LifetimeMetricsProto/Types/FamilyMetrics
+	message FamilyMetrics {
+		int64 family_xp = 1;
+		int64 family_chest = 2;
+		int64 family_sticker = 3;
+	}
+
+	// ref: Atlas.Rpc.LifetimeMetricsProto/Types/MapEncounterMetrics
+	message MapEncounterMetrics {
+		int64 swish_completed = 1;
+		int64 swish_user_fled = 2;
+		int64 swish_captured = 3;
+		int64 combat_completed = 4;
+		int64 combat_user_fled = 5;
+		int64 combat_captured = 6;
+	}
+
+	// ref: Atlas.Rpc.LifetimeMetricsProto/Types/PoiLootedMetrics
+	message PoiLootedMetrics {
+		int64 inn = 1;
+		int64 greenhouse = 2;
+	}
+
+	// ref: Atlas.Rpc.LifetimeMetricsProto/Types/UsedMetrics
+	message UsedMetrics {
+		map<string, int64> item_quantity = 1;
+		map<string, int64> category_quantity = 2;
+		map<int32, int64> dark_detectors = 3;
+	}
+
+	// ref: Atlas.Rpc.LifetimeMetricsProto/Types/WcMetrics
+	message WcMetrics {
+		int64 completed = 1;
+		int64 won = 2;
+	}
+
+	map<string, Atlas.Rpc.LifetimeMetricsProto/Types/FamilyMetrics> family_metrics = 1;
+	PoiLootedMetrics poi_looted = 2;
+	MapEncounterMetrics map_encounter = 3;
+	WcMetrics wc = 4;
+	CollectedMetrics collected = 5;
+	UsedMetrics used = 6;
+}
+
 // ref: Atlas.Rpc.LootOutpostRequestProto
 message LootOutpostRequestProto {
 	string outpost_id = 1;
@@ -7116,8 +7405,32 @@ message PlaceItemResponseProto {
 	repeated atlas.proto.LootCollectionProto completion_rewards = 3;
 }
 
-// ref: Atlas.Rpc.PlayerAchievementProto
-message PlayerAchievementProto {
+// ref: Atlas.Rpc.PlantIngredientRequestProto
+message PlantIngredientRequestProto {
+	string outpost_id = 1;
+	string pot_id = 2;
+	string recipe_gmt_id = 3;
+}
+
+// ref: Atlas.Rpc.PlantIngredientResponseProto
+message PlantIngredientResponseProto {
+	// ref: Atlas.Rpc.PlantIngredientResponseProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		TOO_FAR = 2;
+		POI_CLOSED = 3;
+		FEATURE_DISABLED = 4;
+		INVALID_POT = 5;
+		RECIPE_DISABLED = 6;
+		RECIPE_LOCKED = 7;
+		INSUFFICIENT_RESOURCES = 8;
+		GROWING_IN_PROGRESS = 9;
+		RENTAL_EXPIRED = 10;
+		RENTER_HAS_PRIORITY = 11;
+	}
+
+	Status status = 1;
 }
 
 // ref: Atlas.Rpc.PlayerHelpInfoRequest
@@ -7206,6 +7519,10 @@ message PlayerProfileProto {
 	map<string, int64> swish_spellcasts = 24;
 	map<string, int64> store_pack_purchased = 25;
 	atlas.proto.EmailOptsProto email_opts = 26;
+	int64 lifetime_inn_looted = 27;
+	int64 lifetime_greenhouse_looted = 28;
+	int64 lifetime_map_encounter_won = 29;
+	int64 lifetime_wc_won = 30;
 }
 
 // ref: Atlas.Rpc.PlayerSelectTeamRequestProto
@@ -7406,6 +7723,30 @@ message RemoveVaultItemResponseProto {
 		NONE = 0;
 		SUCCESS = 1;
 		VAULT_ITEM_NOT_FOUND = 2;
+	}
+
+	Status status = 1;
+}
+
+// ref: Atlas.Rpc.RentPotRequestProto
+message RentPotRequestProto {
+	string outpost_id = 1;
+	string pot_id = 2;
+	string time_item_gmt_id = 3;
+}
+
+// ref: Atlas.Rpc.RentPotResponseProto
+message RentPotResponseProto {
+	// ref: Atlas.Rpc.RentPotResponseProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		TOO_FAR = 2;
+		POI_CLOSED = 3;
+		FEATURE_DISABLED = 4;
+		INVALID_POT = 5;
+		POT_ALREADY_RENTED = 6;
+		INSUFFICIENT_RESOURCES = 7;
 	}
 
 	Status status = 1;
@@ -7828,6 +8169,9 @@ message ClientTelemetryClientSettingsProto {
 	bool use_player_based_sampling = 7;
 	double player_hash = 8;
 	string player_external_omni_id = 9;
+	bool disable_omni_sending = 10;
+	map<string, double> special_sampling_probability_map = 11;
+	string player_external_ua_id = 12;
 }
 
 // ref: Niantic.Platform.Analytics.Telemetry.ClientTelemetryRecordProto

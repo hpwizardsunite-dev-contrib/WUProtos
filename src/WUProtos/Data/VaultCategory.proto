@@ -4,7 +4,6 @@ package WUProtos.Data;
 import "WUProtos/Enums/CategoryCapacityType.proto";
 
 message VaultCategory {
-	repeated string increase_capacity_store_pack_proto_ids = 1;
-	string id = 2;
-	.WUProtos.Enums.CategoryCapacityType capacity_type = 3;
+	string id = 1;
+	.WUProtos.Enums.CategoryCapacityType capacity_type = 2;
 }

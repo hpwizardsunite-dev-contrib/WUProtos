@@ -14,6 +14,7 @@ message ChallengeBonus {
     .WUProtos.Enums.BonusReceiver receiver = 2;
     .WUProtos.Enums.BonusTargetReward target_reward = 3;
     float modifier = 4;
+    int32 modifier_percentage = 5;
 
     oneof BonusKind {
         .WUProtos.Data.Player.PlayerCountChallengeBonus player_count = 20;

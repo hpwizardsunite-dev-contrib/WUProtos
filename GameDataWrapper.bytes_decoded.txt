@@ -17262,6 +17262,7 @@ messages {
   cauldron {
     id: "proto_cauldron_rental"
     type: CAULDRON_RENTAL
+    discount: 0.1
   }
 }
 messages {
@@ -17269,7 +17270,7 @@ messages {
     id: "proto_challengebonus_playercount_2"
     receiver: TEAM
     target_reward: CHALLENGE_FAMILY_XP
-    modifier: 1.1
+    modifier_percentage: 10
     defeated_mob_count {
     }
   }
@@ -17279,7 +17280,7 @@ messages {
     id: "proto_challengebonus_playercount_3"
     receiver: TEAM
     target_reward: CHALLENGE_FAMILY_XP
-    modifier: 1.2
+    modifier_percentage: 20
     defeated_mob_count {
     }
   }
@@ -17289,7 +17290,7 @@ messages {
     id: "proto_challengebonus_playercount_4"
     receiver: TEAM
     target_reward: CHALLENGE_FAMILY_XP
-    modifier: 1.3
+    modifier_percentage: 30
     defeated_mob_count {
     }
   }
@@ -17299,7 +17300,7 @@ messages {
     id: "proto_challengebonus_playercount_5"
     receiver: PLAYER
     target_reward: CHALLENGE_FAMILY_XP
-    modifier: 1.5
+    modifier_percentage: 50
     defeated_mob_count {
     }
   }
@@ -17309,7 +17310,7 @@ messages {
     id: "proto_challengebonus_runelevel_10"
     receiver: PLAYER
     target_reward: CHALLENGE_COLLECTIBLE_SHARDS
-    modifier: 10
+    modifier_percentage: 900
     defeated_mob_count {
     }
   }
@@ -17319,7 +17320,7 @@ messages {
     id: "proto_challengebonus_runelevel_2"
     receiver: PLAYER
     target_reward: CHALLENGE_COLLECTIBLE_SHARDS
-    modifier: 1.5
+    modifier_percentage: 50
     defeated_mob_count {
     }
   }
@@ -17329,7 +17330,7 @@ messages {
     id: "proto_challengebonus_runelevel_3"
     receiver: PLAYER
     target_reward: CHALLENGE_COLLECTIBLE_SHARDS
-    modifier: 2
+    modifier_percentage: 100
     defeated_mob_count {
     }
   }
@@ -17339,7 +17340,7 @@ messages {
     id: "proto_challengebonus_runelevel_4"
     receiver: PLAYER
     target_reward: CHALLENGE_COLLECTIBLE_SHARDS
-    modifier: 2.5
+    modifier_percentage: 150
     defeated_mob_count {
     }
   }
@@ -17349,7 +17350,7 @@ messages {
     id: "proto_challengebonus_runelevel_5"
     receiver: PLAYER
     target_reward: CHALLENGE_COLLECTIBLE_SHARDS
-    modifier: 3
+    modifier_percentage: 200
     defeated_mob_count {
     }
   }
@@ -17359,7 +17360,7 @@ messages {
     id: "proto_challengebonus_runelevel_6"
     receiver: PLAYER
     target_reward: CHALLENGE_COLLECTIBLE_SHARDS
-    modifier: 4
+    modifier_percentage: 300
     defeated_mob_count {
     }
   }
@@ -17369,7 +17370,7 @@ messages {
     id: "proto_challengebonus_runelevel_7"
     receiver: PLAYER
     target_reward: CHALLENGE_COLLECTIBLE_SHARDS
-    modifier: 5
+    modifier_percentage: 400
     defeated_mob_count {
     }
   }
@@ -17379,7 +17380,7 @@ messages {
     id: "proto_challengebonus_runelevel_8"
     receiver: PLAYER
     target_reward: CHALLENGE_COLLECTIBLE_SHARDS
-    modifier: 6
+    modifier_percentage: 500
     defeated_mob_count {
     }
   }
@@ -17389,7 +17390,7 @@ messages {
     id: "proto_challengebonus_runelevel_9"
     receiver: PLAYER
     target_reward: CHALLENGE_COLLECTIBLE_SHARDS
-    modifier: 8
+    modifier_percentage: 700
     defeated_mob_count {
     }
   }
@@ -19199,6 +19200,8 @@ messages {
         }
       }
     }
+    unlock_requirements {
+    }
     subfeature_type: CHALLENGE
   }
 }
@@ -19293,6 +19296,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: CHALLENGE
   }
@@ -19394,6 +19399,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: CHALLENGE
   }
@@ -19501,6 +19508,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: CHALLENGE
   }
@@ -19619,6 +19628,8 @@ messages {
     apex_items: "proto_collectionitem_puffskein"
     apex_items: "proto_collectionitem_hagridshut"
     apex_items: "proto_collectionitem_abraxanwingedhorse"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -19714,6 +19725,8 @@ messages {
         }
       }
     }
+    unlock_requirements {
+    }
     subfeature_type: CHALLENGE
   }
 }
@@ -19794,6 +19807,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: CHALLENGE
   }
@@ -19890,6 +19905,8 @@ messages {
         }
       }
     }
+    unlock_requirements {
+    }
     subfeature_type: CHALLENGE
   }
 }
@@ -19975,6 +19992,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: CHALLENGE
   }
@@ -20062,6 +20081,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: CHALLENGE
   }
@@ -20154,6 +20175,8 @@ messages {
         }
       }
     }
+    unlock_requirements {
+    }
     subfeature_type: CHALLENGE
   }
 }
@@ -20240,6 +20263,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: CHALLENGE
   }
@@ -20408,6 +20433,8 @@ messages {
         }
       }
     }
+    unlock_requirements {
+    }
     subfeature_type: CHALLENGE
   }
 }
@@ -20503,6 +20530,8 @@ messages {
         }
       }
     }
+    unlock_requirements {
+    }
     subfeature_type: CHALLENGE
   }
 }
@@ -20597,6 +20626,8 @@ messages {
         }
       }
     }
+    unlock_requirements {
+    }
     subfeature_type: CHALLENGE
   }
 }
@@ -20684,6 +20715,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: CHALLENGE
   }
@@ -20776,6 +20809,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: CHALLENGE
   }
@@ -20894,6 +20929,8 @@ messages {
     apex_items: "proto_collectionitem_knockturnalleysign"
     apex_items: "proto_collectionitem_magicismightstatue"
     apex_items: "proto_collectionitem_tomriddlesr_gravestone"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -21011,6 +21048,8 @@ messages {
     apex_items: "proto_collectionitem_hogwartshousecup"
     apex_items: "proto_collectionitem_househourglassset"
     apex_items: "proto_collectionitem_owllecturn"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -21128,6 +21167,8 @@ messages {
     apex_items: "proto_collectionitem_halfbloodprinces_advancedpotionmaking"
     apex_items: "proto_collectionitem_flyingkey"
     apex_items: "proto_collectionitem_wizardchessqueen"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -21243,6 +21284,8 @@ messages {
     rune_id: "proto_vaultitem_runestone_magicalgamesandsports_9"
     rune_id: "proto_vaultitem_runestone_magicalgamesandsports_10"
     apex_items: "proto_collectionitem_quidditchpitchstands"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -21360,6 +21403,8 @@ messages {
     apex_items: "proto_collectionitem_murtlap"
     apex_items: "proto_collectionitem_thunderbird"
     apex_items: "proto_collectionitem_occamy"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -21474,6 +21519,8 @@ messages {
     rune_id: "proto_vaultitem_runestone_ministry_9"
     rune_id: "proto_vaultitem_runestone_ministry_10"
     apex_items: "proto_collectionitem_fountainofmagicalbrethren"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -21563,6 +21610,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: MYSTERIES
   }
@@ -21654,6 +21703,8 @@ messages {
         }
       }
     }
+    unlock_requirements {
+    }
     subfeature_type: MYSTERIES
   }
 }
@@ -21738,6 +21789,8 @@ messages {
         }
       }
     }
+    unlock_requirements {
+    }
     subfeature_type: MYSTERIES
   }
 }
@@ -21814,6 +21867,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: MYSTERIES
   }
@@ -21930,6 +21985,8 @@ messages {
     rune_id: "proto_vaultitem_runestone_mysteriousartefacts_9"
     rune_id: "proto_vaultitem_runestone_mysteriousartefacts_10"
     apex_items: "proto_collectionitem_swordofgryffindor"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -22051,6 +22108,8 @@ messages {
     rune_id: "proto_vaultitem_runestone_oddities_8"
     rune_id: "proto_vaultitem_runestone_oddities_9"
     rune_id: "proto_vaultitem_runestone_oddities_10"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -22130,6 +22189,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: EXPLORATION
   }
@@ -22245,6 +22306,8 @@ messages {
     rune_id: "proto_vaultitem_runestone_wondersofthewizardingworld_8"
     rune_id: "proto_vaultitem_runestone_wondersofthewizardingworld_9"
     rune_id: "proto_vaultitem_runestone_wondersofthewizardingworld_10"
+    unlock_requirements {
+    }
     subfeature_type: EXPLORATION
   }
 }
@@ -22326,6 +22389,8 @@ messages {
           amount: 20
         }
       }
+    }
+    unlock_requirements {
     }
     subfeature_type: MYSTERIES
   }
@@ -33103,7 +33168,7 @@ messages {
       rewards {
         item_reward {
           item_id: "vault_item_xp"
-          amount: 250
+          amount: 394
         }
       }
     }
@@ -35310,7 +35375,7 @@ messages {
     completion_rewards {
       rewards {
         collection_family_reward {
-          family_id: "proto_collectionfamily_careofmagicalcreatures"
+          family_id: "proto_collectionfamily_darkarts"
           amount: 150
         }
       }
@@ -41922,7 +41987,7 @@ messages {
         enemy_stats {
           stat {
             key: "proto_rpgstat_stat_combat_affinity_power"
-            value: 20000
+            value: 0
           }
           stat {
             key: "proto_rpgstat_stat_combat_affinity_resist"
@@ -41968,7 +42033,6 @@ messages {
             key: "proto_rpgstat_stat_combat_attack"
             value {
               grow_type: LINEAR
-              growth_adjustment: 0.0224629
             }
           }
           stat_growth {
@@ -41981,7 +42045,6 @@ messages {
             key: "proto_rpgstat_stat_combat_hp"
             value {
               grow_type: LINEAR
-              growth_adjustment: 0.0224629
             }
           }
           stat_growth {
@@ -45407,6 +45470,18 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_decoydetonators_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_decoydetonators"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_demiguise_0001"
     collection_item_reward_gmt_id: "proto_collectionitem_demiguise"
     stages {
@@ -48713,6 +48788,18 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_gobletoffire_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_gobletoffire"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_goblin_0001"
     collection_item_reward_gmt_id: "proto_collectionitem_goblin"
     stages {
@@ -49112,7 +49199,7 @@ messages {
         enemy_ranks: "proto_encountertype_darkwizard"
         enemy_ranks: "proto_encountertype_variant1"
       }
-      spell_gmt_id: "proto_spell_combat_stupefy"
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
@@ -49244,7 +49331,7 @@ messages {
         enemy_ranks: "proto_encountertype_darkwizard"
         enemy_ranks: "proto_encountertype_variant1"
       }
-      spell_gmt_id: "proto_spell_combat_stupefy"
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
@@ -49376,7 +49463,7 @@ messages {
         enemy_ranks: "proto_encountertype_darkwizard"
         enemy_ranks: "proto_encountertype_variant1"
       }
-      spell_gmt_id: "proto_spell_combat_stupefy"
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
@@ -49508,7 +49595,7 @@ messages {
         enemy_ranks: "proto_encountertype_darkwizard"
         enemy_ranks: "proto_encountertype_variant1"
       }
-      spell_gmt_id: "proto_spell_combat_stupefy"
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
@@ -49640,7 +49727,7 @@ messages {
         enemy_ranks: "proto_encountertype_darkwizard"
         enemy_ranks: "proto_encountertype_variant1"
       }
-      spell_gmt_id: "proto_spell_combat_stupefy"
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
@@ -50026,6 +50113,18 @@ messages {
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_mysteriousartefacts"
+  }
+}
+messages {
+  encounter {
+    id: "proto_encounter_maraudersmap_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_maraudersmap"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
   }
 }
 messages {
@@ -50948,6 +51047,18 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_nimbus2000_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_nimbus2000"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_norwegianridgeback_baby_0001"
     collection_item_reward_gmt_id: "proto_collectionitem_norwegianridgeback_baby"
     stages {
@@ -51028,6 +51139,18 @@ messages {
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_mysteriousartefacts"
+  }
+}
+messages {
+  encounter {
+    id: "proto_encounter_pensieve_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_pensieve"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
   }
 }
 messages {
@@ -51169,7 +51292,7 @@ messages {
         enemy_ranks: "proto_encountertype_darkwizard"
         enemy_ranks: "proto_encountertype_variant1"
       }
-      spell_gmt_id: "proto_spell_combat_stupefy"
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
@@ -52636,14 +52759,12 @@ messages {
             key: "proto_rpgstat_stat_combat_affinity_power"
             value {
               grow_type: LINEAR
-              growth_adjustment: 0.01
             }
           }
           stat_growth {
             key: "proto_rpgstat_stat_combat_affinity_resist"
             value {
               grow_type: LINEAR
-              growth_adjustment: 0.01
             }
           }
           stat_growth {
@@ -53379,6 +53500,17 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_portkey_boathouse"
+    stages {
+      portkey {
+      }
+      spell_gmt_id: "proto_spell_accio"
+    }
+    collection_item_reward_shards: 1
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_portkey_borginandburkes_0001"
     stages {
       portkey {
@@ -53412,6 +53544,17 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_portkey_forbiddenforest"
+    stages {
+      portkey {
+      }
+      spell_gmt_id: "proto_spell_accio"
+    }
+    collection_item_reward_shards: 1
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_portkey_hagridshut_0001"
     stages {
       portkey {
@@ -53434,6 +53577,17 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_portkey_honeydukes"
+    stages {
+      portkey {
+      }
+      spell_gmt_id: "proto_spell_accio"
+    }
+    collection_item_reward_shards: 1
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_portkey_ollivanders_0001"
     stages {
       portkey {
@@ -53446,6 +53600,17 @@ messages {
 messages {
   encounter {
     id: "proto_encounter_portkey_snapesoffice_0001"
+    stages {
+      portkey {
+      }
+      spell_gmt_id: "proto_spell_accio"
+    }
+    collection_item_reward_shards: 1
+  }
+}
+messages {
+  encounter {
+    id: "proto_encounter_portkey_spinnersend"
     stages {
       portkey {
       }
@@ -54851,6 +55016,18 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_quibbler_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_quibbler"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_quidditchplayer_chudleycannons_0001"
     collection_item_reward_gmt_id: "proto_collectionitem_quidditchplayer_chudleycannons"
     stages {
@@ -54875,6 +55052,18 @@ messages {
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_magicalgamesandsports"
+  }
+}
+messages {
+  encounter {
+    id: "proto_encounter_quidditchworldcup_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_quidditchworldcup"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
   }
 }
 messages {
@@ -56400,6 +56589,18 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_sortinghat_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_sortinghat"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_sphinx_c0001"
     collection_item_reward_gmt_id: "proto_collectionitem_abraxanwingedhorse"
     stages {
@@ -57074,6 +57275,18 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_student_gryffindor_female_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_student_gryffindor_female"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_student_hufflepuff_male_0001"
     collection_item_reward_gmt_id: "proto_collectionitem_student_hufflepuff_male"
     stages {
@@ -57117,6 +57330,138 @@ messages {
 messages {
   encounter {
     id: "proto_encounter_suitofarmor_c0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_abraxanwingedhorse"
+    stages {
+      combat {
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        enemy_stats {
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value: 20000
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_attack"
+            value: 9
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_hp"
+            value: 70
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_precision"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value: 0
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_attack"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_hp"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_precision"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value {
+              grow_type: LINEAR
+            }
+          }
+        }
+        enemy_ranks: "proto_encountertype_darkwizard"
+        enemy_ranks: "proto_encountertype_variant1"
+      }
+      spell_gmt_id: "proto_spell_combat_stupefy"
+    }
+    collection_item_reward_shards: 1
+    collection_family_gmt_id: "proto_collectionfamily_oddities"
+    affinity_profession_id: "proto_profession_professor"
+  }
+}
+messages {
+  encounter {
+    id: "proto_encounter_suitofarmor_c0002"
     collection_item_reward_gmt_id: "proto_collectionitem_abraxanwingedhorse"
     stages {
       combat {
@@ -57724,6 +58069,18 @@ messages {
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_darkarts"
+  }
+}
+messages {
+  encounter {
+    id: "proto_encounter_tomriddle_hp6_picture_0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_tomriddle_hp6"
+    stages {
+      picture {
+      }
+      spell_gmt_id: "proto_spell_aguamenti"
+    }
+    collection_family_gmt_id: "proto_collectionfamily_magizoology"
   }
 }
 messages {
@@ -58416,6 +58773,534 @@ messages {
 }
 messages {
   encounter {
+    id: "proto_encounter_ukrainianironbelly_c0001"
+    collection_item_reward_gmt_id: "proto_collectionitem_abraxanwingedhorse"
+    stages {
+      combat {
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        enemy_stats {
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value: 20000
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_attack"
+            value: 9
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_hp"
+            value: 70
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_precision"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value: 0
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_attack"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_hp"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_precision"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value {
+              grow_type: LINEAR
+            }
+          }
+        }
+        enemy_ranks: "proto_encountertype_darkwizard"
+        enemy_ranks: "proto_encountertype_variant1"
+      }
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
+    }
+    collection_item_reward_shards: 1
+    collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
+    affinity_profession_id: "proto_profession_professor"
+  }
+}
+messages {
+  encounter {
+    id: "proto_encounter_ukrainianironbelly_c0002"
+    collection_item_reward_gmt_id: "proto_collectionitem_abraxanwingedhorse"
+    stages {
+      combat {
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        enemy_stats {
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value: 20000
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_attack"
+            value: 9
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_hp"
+            value: 70
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_precision"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value: 0
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_attack"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_hp"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_precision"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value {
+              grow_type: LINEAR
+            }
+          }
+        }
+        enemy_ranks: "proto_encountertype_darkwizard"
+        enemy_ranks: "proto_encountertype_variant1"
+      }
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
+    }
+    collection_item_reward_shards: 1
+    collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
+    affinity_profession_id: "proto_profession_professor"
+  }
+}
+messages {
+  encounter {
+    id: "proto_encounter_ukrainianironbelly_c0003"
+    collection_item_reward_gmt_id: "proto_collectionitem_abraxanwingedhorse"
+    stages {
+      combat {
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        enemy_stats {
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value: 20000
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_attack"
+            value: 9
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_hp"
+            value: 70
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_precision"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value: 0
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_attack"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_hp"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_precision"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value {
+              grow_type: LINEAR
+            }
+          }
+        }
+        enemy_ranks: "proto_encountertype_darkwizard"
+        enemy_ranks: "proto_encountertype_variant1"
+      }
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
+    }
+    collection_item_reward_shards: 1
+    collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
+    affinity_profession_id: "proto_profession_professor"
+  }
+}
+messages {
+  encounter {
+    id: "proto_encounter_ukrainianironbelly_c0004"
+    collection_item_reward_gmt_id: "proto_collectionitem_abraxanwingedhorse"
+    stages {
+      combat {
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_defend {
+            }
+          }
+        }
+        state_graph_nodes {
+          possible_moves {
+            player_attack {
+            }
+          }
+          possible_moves {
+            player_auto_advance {
+            }
+          }
+        }
+        enemy_stats {
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value: 20000
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_attack"
+            value: 9
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_hp"
+            value: 70
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_precision"
+            value: 0
+          }
+          stat {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value: 0
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_power"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_affinity_resist"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_attack"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_dodge"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_hp"
+            value {
+              grow_type: LINEAR
+              growth_adjustment: 0.0224629
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_mitigation"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_precision"
+            value {
+              grow_type: LINEAR
+            }
+          }
+          stat_growth {
+            key: "proto_rpgstat_stat_combat_sunder"
+            value {
+              grow_type: LINEAR
+            }
+          }
+        }
+        enemy_ranks: "proto_encountertype_darkwizard"
+        enemy_ranks: "proto_encountertype_variant1"
+      }
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
+    }
+    collection_item_reward_shards: 1
+    collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
+    affinity_profession_id: "proto_profession_professor"
+  }
+}
+messages {
+  encounter {
     id: "proto_encounter_ukranianironbelly_c0005"
     collection_item_reward_gmt_id: "proto_collectionitem_abraxanwingedhorse"
     stages {
@@ -58539,7 +59424,7 @@ messages {
         enemy_ranks: "proto_encountertype_darkwizard"
         enemy_ranks: "proto_encountertype_variant1"
       }
-      spell_gmt_id: "proto_spell_combat_stupefy"
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
@@ -59683,7 +60568,7 @@ messages {
         enemy_ranks: "proto_encountertype_darkwizard"
         enemy_ranks: "proto_encountertype_variant1"
       }
-      spell_gmt_id: "proto_spell_combat_stupefy"
+      spell_gmt_id: "proto_spell_combat_stupefy_horntail"
     }
     collection_item_reward_shards: 1
     collection_family_gmt_id: "proto_collectionfamily_careofmagicalcreatures"
@@ -61305,6 +62190,7 @@ messages {
         }
       }
     }
+    3: ""
   }
 }
 messages {
@@ -62649,6 +63535,96 @@ messages {
 }
 messages {
   feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
     bval: true
   }
 }
@@ -62759,12 +63735,82 @@ messages {
 }
 messages {
   feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
     lval: 0
   }
 }
 messages {
   feature_flag {
     bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    bval: true
+  }
+}
+messages {
+  feature_flag {
+    lval: 0
   }
 }
 messages {
@@ -65600,7 +66646,7 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_alastormoody_hp4_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_doloresumbridgesoffice_0001"
   }
 }
 messages {
@@ -65618,19 +66664,19 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_book_beginnersguide"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_book_historyofmagic"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_book_hogwartsahistory"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65642,19 +66688,19 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_buckbeak_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_chudleycannons_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_darkmark_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65668,7 +66714,7 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_deluminator_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65698,19 +66744,19 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_extendableears_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_fangedfrisbee_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_flyingfordanglia_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65728,7 +66774,7 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_gobletoffire_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65740,7 +66786,7 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_harrypotter_hp8_street_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65752,7 +66798,7 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_inquisitorialsquadbadge_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65806,13 +66852,13 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_pensieve_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_pickett_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65836,7 +66882,7 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_quicknotesquill_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65860,7 +66906,7 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_sortinghat_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -65872,37 +66918,37 @@ messages {
 messages {
   portkey {
     id: "proto_portkey_swoopingevil_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_theveil_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_wand_harrypotter_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_wand_hermionegranger_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_wand_ronweasley_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
   portkey {
     id: "proto_portkey_wand_severussnape_0001"
-    portkey_encounter_id: "proto_encounter_portkey_hagridshut_0001"
+    portkey_encounter_id: "proto_encounter_portkey_ollivanders_0001"
   }
 }
 messages {
@@ -69413,6 +70459,15 @@ messages {
         }
         id: "auror_rank_2"
       }
+    }
+    profession_tiers {
+      rank_points_upper_bound: 10
+    }
+    profession_tiers {
+      rank_points_upper_bound: 20
+    }
+    profession_tiers {
+      rank_points_upper_bound: 30
     }
   }
 }
@@ -72990,6 +74045,15 @@ messages {
         id: "magizoologist_rank_2"
       }
     }
+    profession_tiers {
+      rank_points_upper_bound: 10
+    }
+    profession_tiers {
+      rank_points_upper_bound: 20
+    }
+    profession_tiers {
+      rank_points_upper_bound: 30
+    }
   }
 }
 messages {
@@ -76481,6 +77545,15 @@ messages {
         id: "professor_rank_2"
       }
     }
+    profession_tiers {
+      rank_points_upper_bound: 10
+    }
+    profession_tiers {
+      rank_points_upper_bound: 20
+    }
+    profession_tiers {
+      rank_points_upper_bound: 30
+    }
   }
 }
 messages {
@@ -77515,9 +78588,8 @@ messages {
         }
       }
     }
-    time_to_craft: 600000
+    time_to_craft: 3600000
     master_note_gmt_id: "proto_masternote_invigoration_draught"
-    disabled: true
     unlock_conditions {
       reqs {
         level_req {
@@ -77565,9 +78637,8 @@ messages {
         }
       }
     }
-    time_to_craft: 1800000
+    time_to_craft: 7200000
     master_note_gmt_id: "proto_masternote_invigoration_draught_strong"
-    disabled: true
     unlock_conditions {
       reqs {
         level_req {
@@ -77933,6 +79004,13 @@ messages {
 }
 messages {
   selfie_avatar_asset {
+    id: "proto_selfieavatarasset_filter_griffindor_colors"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
     id: "proto_selfieavatarasset_filter_none"
     unlock_conditions {
     }
@@ -77963,6 +79041,13 @@ messages {
           qty: 1
         }
       }
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_filter_underwater"
+    unlock_conditions {
     }
   }
 }
@@ -78024,6 +79109,13 @@ messages {
 messages {
   selfie_avatar_asset {
     id: "proto_selfieavatarasset_frame_floonetwork"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_frame_forbiddenforest"
     unlock_conditions {
     }
   }
@@ -78105,7 +79197,21 @@ messages {
 }
 messages {
   selfie_avatar_asset {
+    id: "proto_selfieavatarasset_frame_movingstaircase"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
     id: "proto_selfieavatarasset_frame_none"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_frame_sneakoscope"
     unlock_conditions {
     }
   }
@@ -78517,6 +79623,27 @@ messages {
 }
 messages {
   selfie_avatar_asset {
+    id: "proto_selfieavatarasset_lens_moaningmyrtle_bot"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_lens_moaningmyrtle_mid"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_lens_moaningmyrtle_top"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
     id: "proto_selfieavatarasset_lens_mouth_none"
     unlock_conditions {
     }
@@ -78859,6 +79986,13 @@ messages {
 }
 messages {
   selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_careofmagicalcreatures"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
     id: "proto_selfieavatarasset_sticker_chocolatefrog"
     unlock_conditions {
       reqs {
@@ -78874,6 +80008,13 @@ messages {
 messages {
   selfie_avatar_asset {
     id: "proto_selfieavatarasset_sticker_courage_gryffindorcolors"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_darkarts"
     unlock_conditions {
     }
   }
@@ -79117,6 +80258,13 @@ messages {
 }
 messages {
   selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_hogwartsschool"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
     id: "proto_selfieavatarasset_sticker_housegryffindor"
     unlock_conditions {
       reqs {
@@ -79180,6 +80328,13 @@ messages {
 }
 messages {
   selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_hpwulogo"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
     id: "proto_selfieavatarasset_sticker_isolemnlyswear"
     unlock_conditions {
       reqs {
@@ -79202,6 +80357,13 @@ messages {
           qty: 1
         }
       }
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_legendsofhogwarts"
+    unlock_conditions {
     }
   }
 }
@@ -79241,7 +80403,28 @@ messages {
 }
 messages {
   selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_magicalgamesandsports"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
     id: "proto_selfieavatarasset_sticker_magicspark"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_magizoology"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_malfoycrest"
     unlock_conditions {
     }
   }
@@ -79256,6 +80439,20 @@ messages {
           level: 15
         }
       }
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_mimbulusmimbletonia"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_ministry"
+    unlock_conditions {
     }
   }
 }
@@ -79282,6 +80479,20 @@ messages {
 messages {
   selfie_avatar_asset {
     id: "proto_selfieavatarasset_sticker_mostcharmingsmile"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_mysteriousartifacts"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_oddities"
     unlock_conditions {
     }
   }
@@ -79408,6 +80619,13 @@ messages {
 }
 messages {
   selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_sortinghatonastool"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
     id: "proto_selfieavatarasset_sticker_sos"
     unlock_conditions {
     }
@@ -79424,6 +80642,13 @@ messages {
           qty: 1
         }
       }
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_stagpatronus"
+    unlock_conditions {
     }
   }
 }
@@ -79490,6 +80715,13 @@ messages {
 messages {
   selfie_avatar_asset {
     id: "proto_selfieavatarasset_sticker_wizardsunite"
+    unlock_conditions {
+    }
+  }
+}
+messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_sticker_wondersofthewizardingworld"
     unlock_conditions {
     }
   }
@@ -79777,6 +81009,13 @@ messages {
   }
 }
 messages {
+  selfie_avatar_asset {
+    id: "proto_selfieavatarasset_venomoustentacula"
+    unlock_conditions {
+    }
+  }
+}
+messages {
   spell {
     id: "proto_spell_accio"
   }
@@ -79839,6 +81078,11 @@ messages {
 messages {
   spell {
     id: "proto_spell_combat_stupefy"
+  }
+}
+messages {
+  spell {
+    id: "proto_spell_combat_stupefy_horntail"
   }
 }
 messages {
@@ -83647,38 +84891,6 @@ messages {
 }
 messages {
   storyboard {
-    id: "proto_storyboard_ministryid_map_intro"
-    start_reqs {
-      reqs {
-        flag_req {
-          player_flag_feature_id: "proto_featureconfig_storyboards"
-          player_flag_id: "proto_featureflag_storyboard_assignments_02_end"
-          comparison_operator: EQUAL
-          bval: true
-        }
-      }
-      reqs {
-        flag_req {
-          player_flag_feature_id: "proto_featureconfig_storyboards"
-          player_flag_id: "proto_featureflag_storyboard_ministryid_main_end"
-          comparison_operator: EQUAL
-          bval: false
-        }
-      }
-    }
-    step_flag_gmt_id: "proto_featureflag_storyboard_ministryid_map_intro_step"
-    complete_flag_gmt_id: "proto_featureflag_storyboard_ministryid_map_intro_end"
-    storyboard_steps {
-      rewards {
-      }
-    }
-    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
-    reset_reqs {
-    }
-  }
-}
-messages {
-  storyboard {
     id: "proto_storyboard_ministryid_share"
     start_reqs {
       reqs {
@@ -85376,6 +86588,28 @@ messages {
 }
 messages {
   storyboard {
+    id: "proto_storyboard_player_levelup_15"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: EQUAL
+          level: 15
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_15_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_15_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
     id: "proto_storyboard_player_levelup_20"
     start_reqs {
       reqs {
@@ -85398,6 +86632,116 @@ messages {
 }
 messages {
   storyboard {
+    id: "proto_storyboard_player_levelup_25"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: EQUAL
+          level: 25
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_25_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_25_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_player_levelup_30"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: EQUAL
+          level: 30
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_30_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_30_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_player_levelup_35"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: EQUAL
+          level: 35
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_35_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_35_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_player_levelup_40"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: EQUAL
+          level: 40
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_40_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_40_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_player_levelup_45"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: EQUAL
+          level: 45
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_45_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_45_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
     id: "proto_storyboard_player_levelup_5"
     start_reqs {
       reqs {
@@ -85409,6 +86753,72 @@ messages {
     }
     step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_5_step"
     complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_5_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_player_levelup_50"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: EQUAL
+          level: 50
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_50_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_50_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_player_levelup_55"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: EQUAL
+          level: 55
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_55_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_55_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_player_levelup_60"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: EQUAL
+          level: 60
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_60_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_player_levelup_60_end"
     storyboard_steps {
       rewards {
       }
@@ -85703,6 +87113,10 @@ messages {
       rewards {
       }
     }
+    storyboard_steps {
+      rewards {
+      }
+    }
     reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
     reset_reqs {
     }
@@ -85741,10 +87155,6 @@ messages {
             amount: 1
           }
         }
-      }
-    }
-    storyboard_steps {
-      rewards {
       }
     }
     reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
@@ -85869,9 +87279,111 @@ messages {
           profession_gmt_id: "proto_profession_auror"
         }
       }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_explaination_end"
+          comparison_operator: EQUAL
+          bval: true
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_professor_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
     }
     step_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_auror_step"
     complete_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_auror_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_profession_confirm_auror_02"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: GREATER_OR_EQUAL
+          level: 6
+        }
+      }
+      reqs {
+        profession_req {
+          profession_gmt_id: "proto_profession_auror"
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_professor_explaination_end"
+          comparison_operator: EQUAL
+          bval: true
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_auror_02_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_auror_02_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_profession_confirm_auror_explaination"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: GREATER_OR_EQUAL
+          level: 6
+        }
+      }
+      reqs {
+        profession_req {
+          profession_gmt_id: "proto_profession_auror"
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_professor_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_auror_explaination_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_auror_explaination_end"
     storyboard_steps {
       rewards {
       }
@@ -85908,9 +87420,119 @@ messages {
           profession_gmt_id: "proto_profession_magizoologist"
         }
       }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_auror_explaination_end"
+          comparison_operator: EQUAL
+          bval: true
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_professor_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
     }
     step_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_step"
     complete_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_profession_confirm_magizoologist_02"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: GREATER_OR_EQUAL
+          level: 6
+        }
+      }
+      reqs {
+        profession_req {
+          profession_gmt_id: "proto_profession_magizoologist"
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_auror_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_professor_explaination_end"
+          comparison_operator: EQUAL
+          bval: true
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_02_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_02_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_profession_confirm_magizoologist_explaination"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: GREATER_OR_EQUAL
+          level: 6
+        }
+      }
+      reqs {
+        profession_req {
+          profession_gmt_id: "proto_profession_magizoologist"
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_auror_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_professor_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_explaination_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_explaination_end"
     storyboard_steps {
       rewards {
       }
@@ -85951,9 +87573,119 @@ messages {
           profession_gmt_id: "proto_profession_professor"
         }
       }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_auror_explaination_end"
+          comparison_operator: EQUAL
+          bval: true
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
     }
     step_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_professor_step"
     complete_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_professor_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_profession_confirm_professor_02"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: GREATER_OR_EQUAL
+          level: 6
+        }
+      }
+      reqs {
+        profession_req {
+          profession_gmt_id: "proto_profession_professor"
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_auror_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_explaination_end"
+          comparison_operator: EQUAL
+          bval: true
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_professor_02_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_professor_02_end"
+    storyboard_steps {
+      rewards {
+      }
+    }
+    storyboard_steps {
+      rewards {
+      }
+    }
+    reset_mode: STORYBOARD_RESET_WHEN_INCOMPLETE
+    reset_reqs {
+    }
+  }
+}
+messages {
+  storyboard {
+    id: "proto_storyboard_profession_confirm_professor_explaination"
+    start_reqs {
+      reqs {
+        level_req {
+          comparison_operator: GREATER_OR_EQUAL
+          level: 6
+        }
+      }
+      reqs {
+        profession_req {
+          profession_gmt_id: "proto_profession_professor"
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_auror_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_profession_confirm_magizoologist_explaination_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
+    }
+    step_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_professor_explaination_step"
+    complete_flag_gmt_id: "proto_featureflag_storyboard_profession_confirm_professor_explaination_end"
     storyboard_steps {
       rewards {
       }
@@ -86166,7 +87898,7 @@ messages {
       reqs {
         flag_req {
           player_flag_feature_id: "proto_featureconfig_storyboards"
-          player_flag_id: "proto_featureflag_storyboard_potion_room_collect_end"
+          player_flag_id: "proto_featureflag_storyboard_potion_room_finish_now_end"
           comparison_operator: EQUAL
           bval: true
         }
@@ -86431,6 +88163,14 @@ messages {
           bval: true
         }
       }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_trace_tutorial_3_end"
+          comparison_operator: EQUAL
+          bval: false
+        }
+      }
     }
     step_flag_gmt_id: "proto_featureflag_storyboard_trace_tutorial_1_1b_step"
     complete_flag_gmt_id: "proto_featureflag_storyboard_trace_tutorial_1_1b_end"
@@ -86463,6 +88203,14 @@ messages {
         active_ar_mode_req {
           ar_mode: simple
           operator: IS_EQUAL
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_trace_tutorial_3_end"
+          comparison_operator: EQUAL
+          bval: false
         }
       }
     }
@@ -86519,6 +88267,14 @@ messages {
           player_flag_id: "proto_featureflag_storyboard_trace_tutorial_2_end"
           comparison_operator: EQUAL
           bval: true
+        }
+      }
+      reqs {
+        flag_req {
+          player_flag_feature_id: "proto_featureconfig_storyboards"
+          player_flag_id: "proto_featureflag_storyboard_trace_tutorial_3_end"
+          comparison_operator: EQUAL
+          bval: false
         }
       }
     }
@@ -86963,6 +88719,15 @@ messages {
 messages {
   vault_item {
     id: "proto_vaultitem_currency_profession_02"
+    currency_item {
+    }
+    cap: 100000
+    vault_category_gmt_id: "proto_vaultcategory_utility"
+  }
+}
+messages {
+  vault_item {
+    id: "proto_vaultitem_currency_profession_03"
     currency_item {
     }
     cap: 100000
@@ -89656,7 +91421,7 @@ messages {
 messages {
   version {
     id: "proto_version_data"
-    data_version: "172299"
+    data_version: "173737"
     data_branch: "No Branch Set"
   }
 }
@@ -89706,5 +91471,5 @@ messages {
     vault_category_gmt_id: "proto_vaultcategory_instant_consume"
   }
 }
-basis_batch_id: 1554943708977
-environment: 19
+basis_batch_id: 1556573327555
+environment: 2

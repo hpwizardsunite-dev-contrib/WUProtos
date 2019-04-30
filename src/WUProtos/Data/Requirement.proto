@@ -25,6 +25,7 @@ import "WUProtos/Data/Telemetry/PlatformRequirement.proto";
 import "WUProtos/Data/Player/PlayerAccountAgeRequirement.proto";
 import "WUProtos/Data/Profession/ProfessionTierRequirement.proto";
 import "WUProtos/Data/AccountCreationDateRequirement.proto";
+import "WUProtos/Data/LifetimeMetricRequirement.proto";
 
 message Requirement {
 	oneof Requirement {
@@ -52,5 +53,6 @@ message Requirement {
 		.WUProtos.Data.Player.PlayerAccountAgeRequirement player_account_age_requirement = 22;
 		.WUProtos.Data.Profession.ProfessionTierRequirement profession_tier_req = 23;
 		.WUProtos.Data.AccountCreationDateRequirement account_creation_date_requirement = 24;
+		.WUProtos.Data.LifetimeMetricRequirement lifetime_metric_req = 25;
 	}
 }

@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message CastSpellsQuestTask {
+    int64 required_spell_count = 1;
+    float required_mastery_level = 2;
+}

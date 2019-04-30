@@ -8,6 +8,12 @@ import "WUProtos/Data/CollectPotionIngredientsQuestTask.proto";
 import "WUProtos/Data/BrewPotionsQuestTask.proto";
 import "WUProtos/Data/WalkDistanceQuestTask.proto";
 import "WUProtos/Data/PlayFortressChallengesQuestTask.proto";
+import "WUProtos/Data/DefeatMobTypeInWizardingChallengeQuestTask.proto";
+import "WUProtos/Data/UnlockPortmanteauQuestTask.proto";
+import "WUProtos/Data/UsePotionsQuestTask.proto";
+import "WUProtos/Data/PlaceStickersQuestTask.proto";
+import "WUProtos/Data/CollectStickersQuestTask.proto";
+import "WUProtos/Data/CastSpellsQuestTask.proto";
 
 message HookQuestTask {
 	oneof Type {
@@ -18,5 +24,11 @@ message HookQuestTask {
 		.WUProtos.Data.BrewPotionsQuestTask brew_potions = 5;
 		.WUProtos.Data.WalkDistanceQuestTask walk_distance = 6;
 		.WUProtos.Data.PlayFortressChallengesQuestTask play_fortress_challenges = 7;
+		.WUProtos.Data.DefeatMobTypeInWizardingChallengeQuestTask defeat_mob_in_challenges = 8;
+		.WUProtos.Data.UnlockPortmanteauQuestTask unlock_portmanteau = 9;
+		.WUProtos.Data.UsePotionsQuestTask use_potions = 10;
+		.WUProtos.Data.PlaceStickersQuestTask place_stickers = 11;
+		.WUProtos.Data.CollectStickersQuestTask collect_stickers = 12;
+		.WUProtos.Data.CastSpellsQuestTask cast_spells = 13;
 	}
 }

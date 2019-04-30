@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message DefeatMobTypeInWizardingChallengeProgress {
+    int64 current_defeat_count = 1;
+}

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message PlaceStickersProgress {
+    int64 current_sticker_place_count = 1;
+}

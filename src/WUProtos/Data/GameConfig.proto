@@ -36,12 +36,12 @@ message GameConfig {
 	int32 portkey_num_wrackspurts_in_env = 28;
 	map<string, int64> player_stats_base = 30;
 	map<string, string> player_profession_affinity_strength = 31;
-	map<string, string>  enemy_affinity_profession_strength = 32;
+	map<string, string> enemy_affinity_profession_strength = 32;
 	int32 cauldrons_num_queue_slots = 33;
 	repeated float swish_game_accuracy_tiers = 34;
 	float cauldrons_instant_finish_cost_per_second = 35;
 	string cauldrons_instant_finish_currency_id = 36;
-	map<int32, int32> rune_ratings = 37;
+	map<int32, uint32> rune_ratings = 37;
 	string tutorial_encounter_id = 38;
 	string tutorial_encounter_feature_flag_id = 39;
 	.WUProtos.Data.BonusConfig bonus_config = 40;

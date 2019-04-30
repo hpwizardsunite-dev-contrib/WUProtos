@@ -72,6 +72,9 @@ enum RequestType {
 	STORYBOARD_COMPLETE = 72;                    // Implemented
 	ACKNOWLEDGE_PUNISHMENT = 73;                 // Implemented
 	OPT_INTO_MARKETING_EMAILS = 74;              // Implemented
+	RENT_POT = 75;                               // Implemented
+	PLANT_INGREDIENT = 76;                       // Implemented
+	CAST_SPELL_FOR_GROWING = 77;                 // Implemented
 	ECHO = 666;                                  // Implemented
 	DBG_UPDATE_INVENTORY = 999000;               // Implemented
 	DBG_MODIFY_COLLECTION_ITEMS = 999001;        // Implemented

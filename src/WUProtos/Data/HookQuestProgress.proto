@@ -8,6 +8,12 @@ import "WUProtos/Data/CollectPotionIngredientsQuestProgress.proto";
 import "WUProtos/Data/BrewPotionsQuestProgress.proto";
 import "WUProtos/Data/WalkDistanceQuestProgress.proto";
 import "WUProtos/Data/PlayFortressChallengesQuestProgress.proto";
+import "WUProtos/Data/DefeatMobTypeInWizardingChallengeProgress.proto";
+import "WUProtos/Data/UnlockPortmanteauProgress.proto";
+import "WUProtos/Data/UsePotionsProgress.proto";
+import "WUProtos/Data/PlaceStickersProgress.proto";
+import "WUProtos/Data/CollectStickersProgress.proto";
+import "WUProtos/Data/CastSpellsProgress.proto";
 
 message HookQuestProgress {
 	oneof Type {
@@ -18,5 +24,11 @@ message HookQuestProgress {
 		.WUProtos.Data.BrewPotionsQuestProgress brew_potions = 5;
 		.WUProtos.Data.WalkDistanceQuestProgress walk_distance = 6;
 		.WUProtos.Data.PlayFortressChallengesQuestProgress play_fortress_challenges = 7;
+		.WUProtos.Data.DefeatMobTypeInWizardingChallengeProgress defeat_mob_in_challenges = 8;
+		.WUProtos.Data.UnlockPortmanteauProgress unlock_portmanteau = 9;
+		.WUProtos.Data.UsePotionsProgress use_potions = 10;
+		.WUProtos.Data.PlaceStickersProgress place_stickers = 11;
+		.WUProtos.Data.CollectStickersProgress collect_stickers = 12;
+		.WUProtos.Data.CastSpellsProgress cast_spells = 13;
 	}
 }

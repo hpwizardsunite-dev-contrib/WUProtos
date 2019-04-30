@@ -13,6 +13,7 @@ import "WUProtos/Data/BatterySaverProfile.proto";
 import "WUProtos/Data/Encounter/EncounterSoundBanks.proto";
 import "WUProtos/Data/SoundConfig.proto";
 import "WUProtos/Data/AudioParameter.proto";
+import "WUProtos/Data/VoiceOverLanguageMapping.proto";
 
 message ClientGameConfig {
     string id = 1;
@@ -99,4 +100,8 @@ message ClientGameConfig {
     string professions_affinity_disadvantage_icon = 87;
     int32 internet_outage_backoff_time = 88;
     string ar_core_storyboard_trigger = 89;
+    repeated .WUProtos.Data.VoiceOverLanguageMapping voice_over_mappings = 90;
+    int32 in_app_message_trigger_priority = 91;
+    float internal_fortress_interact_range = 92;
+    float low_connectivity_threshold_bytes_per_ms = 93;
 }

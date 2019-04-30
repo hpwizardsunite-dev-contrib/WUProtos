@@ -3,4 +3,5 @@ package WUProtos.Data;
 
 message CollectPotionIngredientsQuestTask {
 	int64 required_potion_ingredient_count = 1;
+	string ingredient_gmt_id = 2;
 }

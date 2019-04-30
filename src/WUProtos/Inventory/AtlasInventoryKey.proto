@@ -18,6 +18,6 @@ message AtlasInventoryKey {
 		bool escrowed_rewards = 13;
 		bool professions_progress_v3 = 14;
 		bool quest_log = 15;
-		bool achievement = 16;
+		bool lifetime_metrics = 16;
 	}
 }

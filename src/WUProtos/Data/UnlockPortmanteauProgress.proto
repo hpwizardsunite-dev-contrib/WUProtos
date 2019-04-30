@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message UnlockPortmanteauProgress {
+    int64 current_unlock_count = 1;
+}

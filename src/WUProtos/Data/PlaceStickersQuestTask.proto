@@ -1,0 +1,9 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message PlaceStickersQuestTask {
+    int64 required_place_count = 1;
+    string sticker_gmt_id = 2;
+    string sticker_page_gmt_id = 3;
+    string sticker_family_gmt_id = 4;
+}

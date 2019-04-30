@@ -5,4 +5,10 @@ import "WUProtos/Data/Loot/LootCollection.proto";
 
 message DbgGrantLootCollectionMessage {
     .WUProtos.Data.Loot.LootCollection loot_collection = 1;
+    RequestType request_type = 2;
+
+    enum RequestType {
+        ADD = 0;
+        REMOVE = 1;
+    }
 }

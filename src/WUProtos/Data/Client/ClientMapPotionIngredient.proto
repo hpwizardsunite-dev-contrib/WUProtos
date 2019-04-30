@@ -7,4 +7,11 @@ message ClientMapPotionIngredient {
     double longitude = 3;
     bytes ticket = 4;
     int64 expiry_time_ms = 5;
+    Source source = 6;
+
+    enum Source {
+        UNKNOWN = 0;
+        STANDARD = 1;
+        SOCIAL_GROWING = 2;
+    }
 }

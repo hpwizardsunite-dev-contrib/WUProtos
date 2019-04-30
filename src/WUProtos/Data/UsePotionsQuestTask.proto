@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message UsePotionsQuestTask {
+    int64 required_use_count = 1;
+    string required_potion = 2;
+}

@@ -1,6 +1,9 @@
 syntax = "proto3";
 package WUProtos.Data;
 
+import "WUProtos/Data/SharedSocialGrowingSettings.proto";
+
 message GreenhouseTemplate {
 	string id = 1;
+	.WUProtos.Data.SharedSocialGrowingSettings social_growing_settings = 2;
 }

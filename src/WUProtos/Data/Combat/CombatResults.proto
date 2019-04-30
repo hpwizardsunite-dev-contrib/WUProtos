@@ -13,7 +13,5 @@ message CombatResults {
 	int32 level = 7;
 	bool enemy_dodges = 8;
 	bool player_dodges = 9;
-	int64 energy_cost = 10;
-	int64 initial_hp_current_player = 11;
 	.WUProtos.Data.TempClientStatsHelper temp_client_stats_helper = 100;
 }

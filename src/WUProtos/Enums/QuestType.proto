@@ -8,4 +8,5 @@ enum QuestType {
     QUEST_TYPE_DAILY = 3;
     QUEST_TYPE_EVENT = 4;
     QUEST_TYPE_ACHIEVEMENT = 5;
+    QUEST_TYPE_EVENT_CHAIN = 6;
 }

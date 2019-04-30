@@ -1,0 +1,16 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+import "WUProtos/Enums/ComparisonOperator.proto";
+
+message LifetimeMetricRequirement {
+    LifetimeMetric lifetime_metric = 1;
+    .WUProtos.Enums.ComparisonOperator comparison_operator = 2;
+    int64 required_count = 3;
+
+    enum LifetimeMetric {
+        NONE = 0;
+        INN_LOOTED = 1;
+        GREENHOUSE_LOOTED = 2;
+    }
+}

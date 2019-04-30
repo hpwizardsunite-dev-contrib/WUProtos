@@ -4,6 +4,7 @@ package WUProtos.Data;
 import "WUProtos/Enums/QuestType.proto";
 import "WUProtos/Data/QuestTask.proto";
 import "WUProtos/Data/Loot/LootCollection.proto";
+import "WUProtos/Data/Requirements.proto";
 
 message Quest {
 	string id = 1;
@@ -11,4 +12,7 @@ message Quest {
 	repeated .WUProtos.Data.QuestTask tasks = 3;
 	.WUProtos.Data.Loot.LootCollection rewards = 4;
 	int32 version = 5;
+	int32 chain_position = 6;
+	int32 chain_total = 7;
+	repeated .WUProtos.Data.Requirements start_requirements = 8;
 }

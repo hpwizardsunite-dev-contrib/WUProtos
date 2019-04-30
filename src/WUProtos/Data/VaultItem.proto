@@ -10,6 +10,7 @@ import "WUProtos/Data/Potion/PotionVaultItem.proto";
 import "WUProtos/Data/Potion/PotionIngredientVaultItem.proto";
 import "WUProtos/Data/EnergyVaultItem.proto";
 import "WUProtos/Data/CauldronTimeItem.proto";
+import "WUProtos/Data/PotTimeItem.proto";
 
 message VaultItem {
 	string id = 1;
@@ -24,6 +25,7 @@ message VaultItem {
 		.WUProtos.Data.Potion.PotionIngredientVaultItem potion_ingredient = 8;
 		.WUProtos.Data.EnergyVaultItem energy_item = 10;
 		.WUProtos.Data.CauldronTimeItem cauldron_time_item = 11;
+		.WUProtos.Data.PotTimeItem pot_time_item = 12;
 	}
 
 	int64 cap = 9;

@@ -30,6 +30,10 @@ message PlayerProfile {
 	map<string, int64> swish_spellcasts = 24;
 	map<string, int64> store_pack_purchased = 25;
 	.WUProtos.Data.EmailOpts email_opts = 26;
+	int64 lifetime_inn_looted = 27;
+	int64 lifetime_greenhouse_looted = 28;
+	int64 lifetime_map_encounter_won = 29;
+	int64 lifetime_wc_won = 30;
 
 	message WandOptions {
 		string core_id = 1;

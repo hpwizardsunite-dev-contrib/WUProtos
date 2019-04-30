@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message VoiceOverLanguageMapping {
+    string language_code = 1;
+    string language_folder = 2;
+}

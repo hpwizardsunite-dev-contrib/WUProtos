@@ -1,0 +1,47 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message LifetimeMetrics {
+    map<string, FamilyMetrics> family_metrics = 1;
+    PoiLootedMetrics poi_looted = 2;
+    MapEncounterMetrics map_encounter = 3;
+    WcMetrics wc = 4;
+    CollectedMetrics collected = 5;
+    UsedMetrics used = 6;
+
+    message CollectedMetrics {
+        map<string, int64> item_quantity = 1;
+        map<string, int64> category_quantity = 2;
+    }
+
+    message FamilyMetrics {
+        int64 family_xp = 1;
+        int64 family_chest = 2;
+        int64 family_sticker = 3;
+    }
+
+    message MapEncounterMetrics {
+        int64 swish_completed = 1;
+        int64 swish_user_fled = 2;
+        int64 swish_captured = 3;
+        int64 combat_completed = 4;
+        int64 combat_user_fled = 5;
+        int64 combat_captured = 6;
+    }
+
+    message PoiLootedMetrics {
+        int64 inn = 1;
+        int64 greenhouse = 2;
+    }
+
+    message UsedMetrics {
+        map<string, int64> item_quantity = 1;
+        map<string, int64> category_quantity = 2;
+        map<int32, int64> dark_detectors = 3;
+    }
+
+    message WcMetrics {
+        int64 completed = 1;
+        int64 won = 2;
+    }
+}

@@ -3,7 +3,7 @@ package WUProtos.Inventory;
 
 import "WUProtos/Data/Player/PlayerProfile.proto";
 import "WUProtos/Data/Player/PlayerProfessionsProgressV3.proto";
-import "WUProtos/Data/Player/PlayerAchievement.proto";
+import "WUProtos/Data/LifetimeMetrics.proto";
 import "WUProtos/Inventory/InventoryVaultItem.proto";
 import "WUProtos/Inventory/InventoryCollectionItem.proto";
 import "WUProtos/Inventory/InventoryCollectionFamily.proto";
@@ -33,6 +33,6 @@ message AtlasInventoryItem {
 		.WUProtos.Inventory.InventoryEscrowedRewards escrowed_rewards = 13;
 		.WUProtos.Data.Player.PlayerProfessionsProgressV3 professions_progress_v3 = 14;
 		.WUProtos.Inventory.InventoryQuestLog quest_log = 15;
-		.WUProtos.Data.Player.PlayerAchievement achievement = 16;
+		.WUProtos.Data.LifetimeMetrics lifetime_metrics = 16;
 	}
 }

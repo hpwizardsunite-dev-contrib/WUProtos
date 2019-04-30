@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message CollectStickersProgress {
+    int64 current_collect_count = 1;
+}

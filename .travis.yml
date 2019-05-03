@@ -25,7 +25,7 @@ script:
   - chmod +x ./extractDump.py
   - ./extractDump.py
   - chmod +x ./decode.sh
-  - ./decode.sh ./GameDataWrapper.bytes
+  - ./decode.sh
   # Compile Single need revision
   #- - chmod +x ./compile_single.py
   #- ./compile_single.py -d -o out2

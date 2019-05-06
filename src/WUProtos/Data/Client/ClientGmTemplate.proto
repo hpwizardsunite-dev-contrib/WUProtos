@@ -3,6 +3,7 @@ package WUProtos.Data.Client;
 
 import "WUProtos/Data/Client/ClientCollectionFamily.proto";
 import "WUProtos/Data/Client/ClientCollectionItem.proto";
+import "WUProtos/Data/Client/ClientCollectionPage.proto";
 import "WUProtos/Data/Client/ClientWalkboxTemplate.proto";
 import "WUProtos/Data/Client/ClientEncounter.proto";
 import "WUProtos/Data/Client/ClientEncounterType.proto";
@@ -48,7 +49,7 @@ message ClientGmTemplate {
         .WUProtos.Data.Client.ClientSpell spell = 9;
         .WUProtos.Data.Client.ClientProtegoPattern protego_pattern = 10;
         .WUProtos.Data.Client.ClientChamberTemplate chamber_template = 11;
-        .WUProtos.Data.Client.ClientTeamControl collection_page = 12;
+        .WUProtos.Data.Client.ClientCollectionPage collection_page = 12;
         .WUProtos.Data.Client.ClientTeamControl team_control = 13;
         .WUProtos.Data.Client.ClientStoreConfig store_config = 14;
         .WUProtos.Data.Client.ClientStoreSubcategory store_subcategory = 15;

@@ -23,7 +23,7 @@ message ChamberState {
 	message FinishedState {
 		.WUProtos.Enums.ChallengeFinishStatus finish_status = 1;
 		.WUProtos.Data.Loot.LootCollection rewards = 2;
-		WUProtos.Data.FortressCooldownData cooldown_data = 3;
+		.WUProtos.Data.FortressCooldownData cooldown_data = 3;
 	}
 
 	message InProgressState {

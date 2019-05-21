@@ -22,4 +22,5 @@ message StorePackConfig {
 	string icon2_path = 16;
 	string popup_image_override = 17;
 	bool hide_pack_on_sold_out = 18;
+	bool hide_pack_on_map_hud_click = 19;
 }

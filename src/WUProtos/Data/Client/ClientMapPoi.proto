@@ -5,6 +5,7 @@ import "WUProtos/Data/Client/ClientMapOutpost.proto";
 import "WUProtos/Data/Client/ClientMapFortress.proto";
 import "WUProtos/Data/Client/ClientMapGreenhouse.proto";
 import "WUProtos/Enums/PoiAccessibility.proto";
+import "WUProtos/Data/Partner.proto";
 
 message ClientMapPoi {
     string id = 1;
@@ -20,4 +21,6 @@ message ClientMapPoi {
     }
 
     .WUProtos.Enums.PoiAccessibility poi_accessibility = 9;
+    .WUProtos.Data.Partner partner = 10;
+    bool show_passcode_scanner = 11;
 }

@@ -8,4 +8,5 @@ message InventoryInProgressQuest {
 	repeated .WUProtos.Data.QuestProgress progress_per_task = 2;
 	int32 version = 3;
 	int64 start_day_since_epoch_if_daily = 4;
+	int64 start_day_since_epoch = 5;
 }

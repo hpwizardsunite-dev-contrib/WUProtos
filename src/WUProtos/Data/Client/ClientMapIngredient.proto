@@ -4,4 +4,5 @@ package WUProtos.Data.Client;
 message ClientMapIngredient {
     string id = 1;
     string prefab = 2;
+    bool hide_at_capacity = 3;
 }

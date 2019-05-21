@@ -6,6 +6,7 @@ import "WUProtos/Data/Loot/LootCollection.proto";
 import "WUProtos/Map/MapCoordinate.proto";
 import "WUProtos/Data/ChamberMobState.proto";
 import "WUProtos/Data/ChamberPlayerState.proto";
+import "WUProtos/Data/FortressCooldownData.proto";
 
 message ChamberState {
 	string chamber_template_gmt_id = 1;
@@ -22,21 +23,10 @@ message ChamberState {
 	message FinishedState {
 		.WUProtos.Enums.ChallengeFinishStatus finish_status = 1;
 		.WUProtos.Data.Loot.LootCollection rewards = 2;
+		WUProtos.Data.FortressCooldownData cooldown_data = 3;
 	}
 
 	message InProgressState {
-		message UsedMapAbility {
-			string map_ability_gmt_id = 1;
-			string caster_id = 2;
-			float radius = 3;
-			int64 casting_timestamp = 4;
-			int64 ending_timestamp = 5;
-			.WUProtos.Map.MapCoordinate map_coordinate = 6;
-			int32 map_ability_level = 7;
-			bytes target_mob_id = 8;
-			string target_player_nickname = 9;
-		}
-
 		int64 end_time_ms = 1;
 		repeated .WUProtos.Data.ChamberMobState mobs = 2;
 		repeated ChamberState.UsedMapAbility used_map_ability = 3;
@@ -46,9 +36,6 @@ message ChamberState {
 	message UsedMapAbility {
 		string map_ability_gmt_id = 1;
 		string caster_id = 2;
-		float radius = 3;
-		int64 casting_timestamp = 4;
-		int64 ending_timestamp = 5;
 		.WUProtos.Map.MapCoordinate map_coordinate = 6;
 		int32 map_ability_level = 7;
 		bytes target_mob_id = 8;

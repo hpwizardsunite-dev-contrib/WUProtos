@@ -8,6 +8,7 @@ import "WUProtos/Data/FastCompletionChallengeBonus.proto";
 import "WUProtos/Data/RuneLevelChallengeBonus.proto";
 import "WUProtos/Data/DefeatedMobCountChallengeBonus.proto";
 import "WUProtos/Data/Player/PlayerRatioChallengeBonus.proto";
+import "WUProtos/Data/PlayingWithFriendsBonus.proto";
 
 message ChallengeBonus {
     string id = 1;
@@ -22,5 +23,6 @@ message ChallengeBonus {
         .WUProtos.Data.RuneLevelChallengeBonus rune_level = 22;
         .WUProtos.Data.DefeatedMobCountChallengeBonus defeated_mob_count = 23;
         .WUProtos.Data.Player.PlayerRatioChallengeBonus player_ratio = 24;
+        .WUProtos.Data.PlayingWithFriendsBonus playing_with_friends = 25;
     }
 }

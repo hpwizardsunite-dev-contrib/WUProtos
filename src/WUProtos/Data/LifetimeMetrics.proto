@@ -6,13 +6,30 @@ message LifetimeMetrics {
     PoiLootedMetrics poi_looted = 2;
     MapEncounterMetrics map_encounter = 3;
     WcMetrics wc = 4;
-    CollectedMetrics collected = 5;
-    UsedMetrics used = 6;
-
-    message CollectedMetrics {
-        map<string, int64> item_quantity = 1;
-        map<string, int64> category_quantity = 2;
-    }
+    int32 collected_gold_quantity = 5;
+    int32 used_gold_quantity = 6;
+    map<int32, int32> dark_detectors_placed = 7;
+    map<string, int32> collected_category_quantity = 8;
+    map<string, int32> used_category_quantity = 9;
+    int32 successful_swish_spellcast = 10;
+    int32 successful_combat_attack_spellcast = 11;
+    int32 successful_combat_defend_spellcast = 12;
+    int32 portkeys_opened = 13;
+    int32 potions_brewed = 14;
+    int32 map_ingredient_collected = 15;
+    int32 potion_exstimulo1_used = 16;
+    int32 potion_exstimulo2_used = 17;
+    int32 potion_exstimulo3_used = 18;
+    int32 potion_brain_elixir_used = 19;
+    int32 potion_used_encounter = 20;
+    int32 potion_used_wc = 21;
+    int32 swish_masterful_spellcast = 22;
+    int32 mobs_defeated_by_me = 23;
+    int32 seeds_planted = 24;
+    int32 mystery_items_found = 25;
+    repeated string encounter_completed_countries = 26;
+    int32 elite_mobs_defeated_by_me = 27;
+    int32 map_abilities_used = 28;
 
     message FamilyMetrics {
         int64 family_xp = 1;
@@ -32,12 +49,6 @@ message LifetimeMetrics {
     message PoiLootedMetrics {
         int64 inn = 1;
         int64 greenhouse = 2;
-    }
-
-    message UsedMetrics {
-        map<string, int64> item_quantity = 1;
-        map<string, int64> category_quantity = 2;
-        map<int32, int64> dark_detectors = 3;
     }
 
     message WcMetrics {

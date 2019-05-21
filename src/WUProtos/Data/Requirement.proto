@@ -55,4 +55,7 @@ message Requirement {
 		.WUProtos.Data.AccountCreationDateRequirement account_creation_date_requirement = 24;
 		.WUProtos.Data.LifetimeMetricRequirement lifetime_metric_req = 25;
 	}
+
+	message TimeRequirementTuple {
+	}
 }

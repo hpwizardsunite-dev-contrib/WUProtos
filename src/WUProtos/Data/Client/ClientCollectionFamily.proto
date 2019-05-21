@@ -3,6 +3,8 @@ package WUProtos.Data.Client;
 
 import "WUProtos/Data/Color.proto";
 import "WUProtos/Data/SoundConfig.proto";
+import "WUProtos/Data/Requirements.proto";
+import "WUProtos/Data/Collection/CollectionPrestigeLevel.proto";
 
 message ClientCollectionFamily {
     string id = 1;
@@ -20,4 +22,8 @@ message ClientCollectionFamily {
     repeated string border_images = 15;
     string family_runestone_icon = 16;
     .WUProtos.Data.SoundConfig sound = 17;
+    .WUProtos.Data.Requirements unarchive_requirements = 18;
+    string trace_rarity_vfx_override = 19;
+    repeated .WUProtos.Data.Collection.CollectionPrestigeLevel prestige_override = 20;
+    bool hide_landmark_info_details = 21;
 }

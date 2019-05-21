@@ -15,4 +15,13 @@ message Quest {
 	int32 chain_position = 6;
 	int32 chain_total = 7;
 	repeated .WUProtos.Data.Requirements start_requirements = 8;
+
+	enum ENCOUNTER_DIFFICULTY {
+		UNSET = 0;
+		LOW = 1;
+		MEDIUM = 2;
+		HIGH = 3;
+		SEVERE = 4;
+		EMERGENCY = 5;
+	}
 }

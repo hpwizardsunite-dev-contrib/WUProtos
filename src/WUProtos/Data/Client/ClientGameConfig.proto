@@ -14,6 +14,7 @@ import "WUProtos/Data/Encounter/EncounterSoundBanks.proto";
 import "WUProtos/Data/SoundConfig.proto";
 import "WUProtos/Data/AudioParameter.proto";
 import "WUProtos/Data/VoiceOverLanguageMapping.proto";
+import "WUProtos/Data/LocalizationMapping.proto";
 
 message ClientGameConfig {
     string id = 1;
@@ -104,4 +105,9 @@ message ClientGameConfig {
     int32 in_app_message_trigger_priority = 91;
     float internal_fortress_interact_range = 92;
     float low_connectivity_threshold_bytes_per_ms = 93;
+    int32 game_size_in_kb = 94;
+    string wc_map_enemy_marker_buff_occupied_image = 95;
+    string wc_map_enemy_marker_buff_vacant_image = 96;
+    string wc_enemy_look_in_buff_border_image = 97;
+    repeated .WUProtos.Data.LocalizationMapping localization_mappings = 98;
 }

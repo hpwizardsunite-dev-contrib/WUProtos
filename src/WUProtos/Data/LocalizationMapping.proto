@@ -1,0 +1,8 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message LocalizationMapping {
+    string language_code = 1;
+    string loc_string = 2;
+    bool is_enabled = 3;
+}

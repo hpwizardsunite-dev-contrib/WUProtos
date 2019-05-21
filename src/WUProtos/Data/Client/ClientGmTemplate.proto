@@ -35,6 +35,7 @@ import "WUProtos/Data/Client/ClientRecipe.proto";
 import "WUProtos/Data/Client/ClientMasterNote.proto";
 import "WUProtos/Data/Client/ClientQuest.proto";
 import "WUProtos/Data/Client/ClientDailyRewardMonthlySchedule.proto";
+import "WUProtos/Data/Client/ClientEvent.proto";
 
 message ClientGmTemplate {
     oneof MessageType {
@@ -72,5 +73,6 @@ message ClientGmTemplate {
         .WUProtos.Data.Client.ClientQuest quest = 33;
         .WUProtos.Data.Client.ClientDailyRewardMonthlySchedule daily_reward_monthly_schedule = 34;
         .WUProtos.Data.Client.ClientEncounterType encounter_type = 35;
+        .WUProtos.Data.Client.ClientEvent event = 36;
     }
 }

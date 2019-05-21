@@ -15,4 +15,5 @@ message ClientTelemetryStartup {
 	string graphics_device_type = 10;
 	double graphics_shader_level = 11;
 	repeated .WUProtos.Data.Client.ClientTelemetrySubsystemStartup subsystem_load_times = 12;
+	string player_nickname = 13;
 }

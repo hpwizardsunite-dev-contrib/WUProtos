@@ -1,0 +1,6 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message PlayingWithFriendsBonus {
+    int32 number_of_friends = 1;
+}

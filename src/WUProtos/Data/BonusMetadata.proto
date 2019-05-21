@@ -9,6 +9,7 @@ import "WUProtos/Data/SpellGameBonusMetadata.proto";
 import "WUProtos/Data/Challenge/ChallengeBonusMetadata.proto";
 import "WUProtos/Data/ShardConversionBonusMetadata.proto";
 import "WUProtos/Data/Challenge/ChallengeChamberBonusMetadata.proto";
+import "WUProtos/Data/Challenge/ChallengeSocialBonusMetadata.proto";
 
 message BonusMetadata {
     oneof MetadataType {
@@ -20,5 +21,6 @@ message BonusMetadata {
         .WUProtos.Data.Challenge.ChallengeBonusMetadata challenge_bonus = 6;
         .WUProtos.Data.ShardConversionBonusMetadata shard_conversion = 7;
         .WUProtos.Data.Challenge.ChallengeChamberBonusMetadata challenge_chamber_bonus = 8;
+        .WUProtos.Data.Challenge.ChallengeSocialBonusMetadata challenge_social_bonus = 9;
     }
 }

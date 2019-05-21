@@ -27,7 +27,6 @@ message ChamberPlayerState {
 
 	message MapAbility {
 		string map_ability_gmt_id = 1;
-		float radius = 2;
 		int64 cooldown_ms = 3;
 		int32 map_ability_level = 4;
 	}

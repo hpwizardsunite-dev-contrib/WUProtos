@@ -1,0 +1,17 @@
+syntax = "proto3";
+package WUProtos.Data.Client;
+
+import "WUProtos/Data/Color.proto";
+
+message ClientEvent {
+    string id = 1;
+    bool is_user_facing = 2;
+    string title_text = 3;
+    string description_text = 4;
+    string image = 5;
+    string encounter_icon = 6;
+    string encounter_hud_tooltip_text = 7;
+    string encounter_start_text = 8;
+    .WUProtos.Data.Color quest_ui_frame_color = 9;
+    .WUProtos.Data.Color quest_ui_background_color = 10;
+}

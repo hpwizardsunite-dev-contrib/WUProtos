@@ -1,0 +1,10 @@
+syntax = "proto3";
+package WUProtos.Enums;
+
+enum DeviceOS {
+    UNSET = 0;
+    IOS = 1;
+    ANDROID = 2;
+    OSX = 3;
+    WINDOWS = 4;
+}

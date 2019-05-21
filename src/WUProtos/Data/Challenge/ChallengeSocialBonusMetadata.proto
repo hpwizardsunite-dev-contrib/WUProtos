@@ -1,0 +1,7 @@
+syntax = "proto3";
+package WUProtos.Data.Challenge;
+
+message ChallengeSocialBonusMetadata {
+    string social_friend_bonus_gmt_id = 1;
+    string challenge_bonus_gmt_id = 2;
+}

@@ -16,6 +16,7 @@ import "WUProtos/Data/CauldronReward.proto";
 import "WUProtos/Data/CurrencyReward.proto";
 import "WUProtos/Data/QuestReward.proto";
 import "WUProtos/Data/BonusMetadata.proto";
+import "WUProtos/Map/MapIngredientReward.proto";
 
 message LootReward {
 	oneof RewardData {
@@ -33,6 +34,7 @@ message LootReward {
 		.WUProtos.Data.CauldronReward cauldron_reward = 12;
 		.WUProtos.Data.CurrencyReward currency_reward = 13;
 		.WUProtos.Data.QuestReward quest_reward = 14;
+		.WUProtos.Map.MapIngredientReward map_ingredient_reward = 15;
 	}
 
 	//int64 amount = 15; // not sure this is needed according dynspy viewer 

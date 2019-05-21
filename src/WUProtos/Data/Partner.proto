@@ -1,0 +1,16 @@
+syntax = "proto3";
+package WUProtos.Data;
+
+message Partner {
+    string id = 1;
+    string popup_desc = 2;
+    string hyperlink = 3;
+    PartnerType partner_type = 4;
+
+    enum PartnerType {
+        PARTNER_TYPE_UNSPECIFIED = 0;
+        PARTNER_TYPE_REGULAR = 1;
+        PARTNER_TYPE_FRANCHISE = 2;
+        PARTNER_TYPE_PSEUDO_ORGANIC = 3;
+    }
+}

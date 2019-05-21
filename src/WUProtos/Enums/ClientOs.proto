@@ -3,7 +3,7 @@ package WUProtos.Enums;
 
 enum ClientOs {
     UNKNOWN_OS = 0;
-    IOS = 1;
-    ANDROID = 2;
-    DESKTOP = 3;
+    CLIENT_IOS = 1;
+    CLIENT_ANDROID = 2;
+    CLIENT_DESKTOP = 3;
 }

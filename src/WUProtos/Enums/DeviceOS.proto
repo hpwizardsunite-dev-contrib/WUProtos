@@ -2,9 +2,9 @@ syntax = "proto3";
 package WUProtos.Enums;
 
 enum DeviceOS {
-    UNSET = 0;
-    IOS = 1;
-    ANDROID = 2;
-    OSX = 3;
-    WINDOWS = 4;
+    DEVICE_UNSET = 0;
+    DEVICE_IOS = 1;
+    DEVICE_ANDROID = 2;
+    DEVICE_OSX = 3;
+    DEVICE_WINDOWS = 4;
 }

@@ -2,7 +2,7 @@ syntax = "proto3";
 package WUProtos.Enums;
 
 enum DevicePlatform {
-    DEVICE_UNKNOWN = 0;
-    DEVICE_IOS = 1;
-    DEVICE_ANDROID = 2;
+    DEVICE_PLATFORM_UNKNOWN = 0;
+    DEVICE_PLATFORM_IOS = 1;
+    DEVICE_PLATFORM_ANDROID = 2;
 }

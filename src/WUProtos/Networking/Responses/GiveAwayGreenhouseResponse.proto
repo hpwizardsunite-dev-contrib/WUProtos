@@ -1,11 +1,11 @@
 syntax = "proto3";
 package WUProtos.Networking.Responses;
 
-import "WUProtos/Data/Loot/LootCollection.proto";
+import "WUProtos/Data/Loot/LootReward.proto";
 
 message GiveAwayGreenhouseResponse {
 	Status status = 1;
-	.WUProtos.Data.Loot.LootCollection loot = 2;
+	.WUProtos.Data.Loot.LootReward.LootCollection loot = 2;
 	int64 next_loot_time = 3;
 
 	enum Status {

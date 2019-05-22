@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message DoEncounterHookQuestProgress {
-	int64 current_win_count = 1;
-}

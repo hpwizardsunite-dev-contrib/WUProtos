@@ -1,12 +1,26 @@
 syntax = "proto3";
 package WUProtos.Networking.Responses;
 
-import "WUProtos/Data/Encounter/EncounterGetStateStageResult.proto";
+import "WUProtos/Data/Combat/CombatResults.proto";
 
 message EncounterGetStateResponse {
 	Status status = 1;
 	int32 current_stage_index = 2;
-	.WUProtos.Data.Encounter.EncounterGetStateStageResult stage = 3;
+	EncounterGetStateStageResult stage = 3;
+
+	message EncounterGetStateStageResult {
+		oneof Type {
+			EncounterGetStateSwishStageResult swish = 1;
+			EncounterGetStateCombatStageResult combat = 2;
+		}
+
+		message EncounterGetStateSwishStageResult {
+		}
+
+		message EncounterGetStateCombatStageResult {
+			.WUProtos.Data.Combat.CombatResults results = 1;
+		}
+	}
 
 	enum Status {
 		ENCOUNTER_GET_STATE_UNKNOWN = 0;

@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message Portkey {
-	string id = 1;
-	string portkey_encounter_id = 2;
-}

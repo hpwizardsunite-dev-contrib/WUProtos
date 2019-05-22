@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message TeamControl {
-	string id = 1;
-	string team_name = 2;
-}

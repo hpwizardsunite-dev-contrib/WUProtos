@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientChallengeBonus {
-    string id = 1;
-    string display_text = 2;
-    string icon = 3;
-}

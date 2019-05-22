@@ -1,8 +1,16 @@
 syntax = "proto3";
 package WUProtos.Networking.Requests.Messages;
 
-import "WUProtos/Data/Event/AnalyticsEvents.proto";
-
 message PushAnalyticsEventsMessage {
-	.WUProtos.Data.Event.AnalyticsEvents events = 1;
+	AnalyticsEvents events = 1;
+
+	message AnalyticsEvents {
+		repeated AnalyticsEvent event = 1;
+
+		message AnalyticsEvent {
+			string event_name = 1;
+			int64 event_timestamp = 2;
+			map<string, string> event_metadata = 3;
+		}
+	}
 }

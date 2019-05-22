@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Storyboard;
-
-import "WUProtos/Data/SpeechBubble.proto";
-
-message StoryboardConversationInterjectionStep {
-	repeated .WUProtos.Data.SpeechBubble conversation = 1;
-}

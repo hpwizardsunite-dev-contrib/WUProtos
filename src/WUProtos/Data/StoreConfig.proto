@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message StoreConfig {
-	string id = 1;
-}

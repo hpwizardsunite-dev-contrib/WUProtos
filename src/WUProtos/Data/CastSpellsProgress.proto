@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message CastSpellsProgress {
-    int64 current_spell_count = 1;
-}

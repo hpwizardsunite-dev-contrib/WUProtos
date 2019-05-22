@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message BrewPotionsQuestTask {
-    int64 required_brew_count = 1;
-}

@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message DefeatMobTypeInWizardingChallengeQuestTask {
-    int64 required_defeat_count = 1;
-    string encounter_gmt_id = 2;
-}

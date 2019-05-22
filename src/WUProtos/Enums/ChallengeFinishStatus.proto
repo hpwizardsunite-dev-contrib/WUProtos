@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Enums;
-
-enum ChallengeFinishStatus {
-    CHALLENGE_FINISH_STATUS_UNKNOWN = 0;
-    CHALLENGE_FINISH_STATUS_PLAYER_WON = 1;
-    CHALLENGE_FINISH_STATUS_PLAYER_LOSE = 2;
-}

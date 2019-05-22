@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryDeeplinkTriggered {
-    string link = 1;
-    bool rejected = 2;
-    string rejection_reason = 3;
-}

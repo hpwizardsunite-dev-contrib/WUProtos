@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-import "WUProtos/Enums/CategoryRandomize.proto";
-
-message ClientTelemetryProfileButtonRandomize {
-	.WUProtos.Enums.CategoryRandomize category = 1;
-}

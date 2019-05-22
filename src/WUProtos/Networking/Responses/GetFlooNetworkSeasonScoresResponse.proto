@@ -1,9 +1,12 @@
 syntax = "proto3";
 package WUProtos.Networking.Responses;
 
-import "WUProtos/Data/FlooNetworkSeasonScores.proto";
-
 message GetFlooNetworkSeasonScoresResponse {
 	string season_id = 1;
-	.WUProtos.Data.FlooNetworkSeasonScores scores = 2;
+	FlooNetworkSeasonScores scores = 2;
+
+	message FlooNetworkSeasonScores {
+		string season_id = 1;
+		map<string, int64> points_per_team = 2;
+	}
 }

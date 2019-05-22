@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Mob;
-
-import "WUProtos/Enums/MobRewardRecipient.proto";
-
-message MobRewardFocus {
-	int32 quantity = 1;
-	.WUProtos.Enums.MobRewardRecipient recipient = 2;
-}

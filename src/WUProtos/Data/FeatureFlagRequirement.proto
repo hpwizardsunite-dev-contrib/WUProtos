@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message FeatureFlagRequirement {
-	string feature_flag_id = 1;
-}

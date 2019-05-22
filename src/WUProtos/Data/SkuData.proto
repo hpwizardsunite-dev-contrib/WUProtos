@@ -1,18 +1,14 @@
 syntax = "proto3";
 package WUProtos.Data;
 
-import "WUProtos/Data/SkuContent.proto";
-import "WUProtos/Data/SkuPrice.proto";
-import "WUProtos/Data/SkuPresentationData.proto";
-
 message SkuData {
 	string id = 1;
 	bool is_enabled = 2;
-	repeated .WUProtos.Data.SkuContent content = 3;
-	repeated .WUProtos.Data.SkuPrice price = 4;
+	repeated SkuContent content = 3;
+	repeated SkuPrice price = 4;
 	SkuPaymentType payment_type = 5;
 	int64 last_modified_timestamp_ms = 6;
-	repeated .WUProtos.Data.SkuPresentationData presentation_data = 7;
+	repeated SkuPresentationData presentation_data = 7;
 	int64 enabled_window_start_ms = 8;
 	int64 enabled_window_end_ms = 9;
 
@@ -20,5 +16,20 @@ message SkuData {
 		UNSET = 0;
 		THIRD_PARTY = 1;
 		IN_GAME = 2;
+	}
+
+	message SkuPrice {
+		string currency_type = 1;
+		int32 price = 2;
+	}
+
+	message SkuContent {
+		string item_type = 1;
+		int32 quantity = 2;
+	}
+
+	message SkuPresentationData {
+		string key = 1;
+		string value = 2;
 	}
 }

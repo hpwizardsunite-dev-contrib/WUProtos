@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Inventory;
-
-message InventoryPortkeyItem {
-	int64 id = 1;
-	int64 timestamp = 2;
-	string template_id = 3;
-}

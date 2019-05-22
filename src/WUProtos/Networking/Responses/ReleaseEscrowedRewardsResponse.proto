@@ -1,11 +1,11 @@
 syntax = "proto3";
 package WUProtos.Networking.Responses;
 
-import "WUProtos/Data/Loot/LootCollection.proto";
+import "WUProtos/Data/Loot/LootReward.proto";
 
 message ReleaseEscrowedRewardsResponse {
 	Status status = 1;
-	.WUProtos.Data.Loot.LootCollection claimed_rewards = 2;
+	.WUProtos.Data.Loot.LootReward.LootCollection claimed_rewards = 2;
 
 	enum Status {
 		UNSET = 0;

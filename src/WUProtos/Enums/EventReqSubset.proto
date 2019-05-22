@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Enums;
-
-enum EventReqSubset {
-    SUBSET_UNKNOWN = 0;
-    SUBSET_ACTIVATION = 1;
-    SUBSET_RUNNING = 2;
-}

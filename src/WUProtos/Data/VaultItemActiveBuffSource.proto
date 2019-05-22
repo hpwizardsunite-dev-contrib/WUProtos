@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message VaultItemActiveBuffSource {
-	string vault_item_gmt_id = 1;
-}

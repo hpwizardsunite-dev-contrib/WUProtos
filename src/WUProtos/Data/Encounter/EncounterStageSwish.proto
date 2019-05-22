@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Encounter;
-
-message EncounterStageSwish {
-	float base_win_rate = 1;
-}

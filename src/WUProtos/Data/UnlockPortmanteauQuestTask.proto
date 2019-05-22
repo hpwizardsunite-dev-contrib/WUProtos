@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message UnlockPortmanteauQuestTask {
-    int64 required_unlock_count = 1;
-    float minimum_distance_type = 2;
-}

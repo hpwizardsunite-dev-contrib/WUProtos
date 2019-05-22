@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetrySubsystemStartup {
-	string system_name = 1;
-	float load_time = 2;
-}

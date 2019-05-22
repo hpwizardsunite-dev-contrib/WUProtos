@@ -1,11 +1,11 @@
 syntax = "proto3";
 package WUProtos.Networking.Responses;
 
-import "WUProtos/Data/Loot/LootCollection.proto";
+import "WUProtos/Data/Loot/LootReward.proto";
 
 message ContainerConsumptionResponse {
 	Status status = 1;
-	.WUProtos.Data.Loot.LootCollection container_contents = 2;
+	.WUProtos.Data.Loot.LootReward.LootCollection container_contents = 2;
 
 	enum Status {
 		NONE = 0;

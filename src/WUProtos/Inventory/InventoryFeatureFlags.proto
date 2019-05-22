@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Inventory;
-
-import "WUProtos/Inventory/InventoryFeatureFlag.proto";
-
-message InventoryFeatureFlags {
-	string id = 1;
-	repeated .WUProtos.Inventory.InventoryFeatureFlag flags = 2;
-}

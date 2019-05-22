@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message MysteryItemInfo {
-	string name = 1;
-	string description = 2;
-	string icon = 3;
-	string placed_storyboard_id = 4;
-}

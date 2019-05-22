@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-import "WUProtos/Enums/EventReqSubset.proto";
-
-message EventRequirement {
-	string event_id = 1;
-	repeated .WUProtos.Enums.EventReqSubset req_subsets = 2;
-}

@@ -1,8 +1,11 @@
 syntax = "proto3";
 package WUProtos.Networking.Requests.Messages;
 
-import "WUProtos/Data/StorePackPurchased.proto";
-
 message DbgResetStorePackPurchasedMessage {
-    repeated .WUProtos.Data.StorePackPurchased store_pack = 1;
+    repeated StorePackPurchased store_pack = 1;
+
+    message StorePackPurchased {
+        string store_pack_id = 1;
+        int64 new_count = 2;
+    }
 }

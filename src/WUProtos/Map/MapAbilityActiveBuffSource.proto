@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Map;
-
-message MapAbilityActiveBuffSource {
-	string map_ability_gmt_id = 1;
-	uint32 map_ability_level = 2;
-	string casting_player_nickname = 3;
-}

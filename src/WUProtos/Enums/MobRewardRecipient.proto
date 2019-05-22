@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Enums;
-
-enum MobRewardRecipient {
-    MOB_REWARD_RECIPIENT_UNSET = 0;
-    MOB_REWARD_RECIPIENT_PLAYER = 1;
-    MOB_REWARD_RECIPIENT_TEAM = 2;
-    MOB_REWARD_RECIPIENT_RANDOM_PLAYER = 3;
-}

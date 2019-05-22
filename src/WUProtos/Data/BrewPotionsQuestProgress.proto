@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message BrewPotionsQuestProgress {
-    int64 current_brew_count = 1;
-}

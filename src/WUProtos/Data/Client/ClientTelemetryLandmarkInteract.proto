@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-import "WUProtos/Data/POIInteract.proto";
-
-message ClientTelemetryLandmarkInteract {
-	string landmark_type = 1;
-	.WUProtos.Data.POIInteract common_data = 2;
-}

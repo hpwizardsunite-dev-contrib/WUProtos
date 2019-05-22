@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryRewardsFlow {
-	bool skipped_long_rewards = 1;
-	float current_player_level = 2;
-}

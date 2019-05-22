@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message QuestReward {
-	string quest_gmt_id = 1;
-}

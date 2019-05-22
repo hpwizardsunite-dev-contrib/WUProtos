@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message Spell {
-	//repeated string charge_up_effect = 1;
-	string id = 1;
-	map<string, string> timelines = 2;
-	map<string, string> critical_hits = 3;
-}

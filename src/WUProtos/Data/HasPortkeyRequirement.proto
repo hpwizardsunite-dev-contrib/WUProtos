@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-import "WUProtos/Enums/ComparisonOperator.proto";
-
-message HasPortkeyRequirement {
-	.WUProtos.Enums.ComparisonOperator comparison_operator = 1;
-	int32 qty = 2;
-}

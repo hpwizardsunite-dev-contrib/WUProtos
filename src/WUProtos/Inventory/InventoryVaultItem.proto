@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Inventory;
-
-message InventoryVaultItem {
-	string id = 1;
-	int64 qty = 2;
-}

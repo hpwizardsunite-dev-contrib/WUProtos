@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message WalkboxTemplate {
-	string id = 1;
-	float required_distance_km = 2;
-}

@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-import "WUProtos/Enums/CategoryShareLocation.proto";
-
-message ClientTelemetryProfileScreenGrab {
-	.WUProtos.Enums.CategoryShareLocation screengrab_location = 1;
-}

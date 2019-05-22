@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Combat;
-
-import "WUProtos/Data/Combat/CombatGrowth.proto";
-
-message CombatEnemyStats {
-    map<string, int64> stat = 2;
-    map<string, .WUProtos.Data.Combat.CombatGrowth> stat_growth = 3;
-}

@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientDailyReward {
-    bool hide_as_crate = 1;
-    bool make_sparkly = 2;
-}

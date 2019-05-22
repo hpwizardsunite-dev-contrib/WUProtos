@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message GameItemContent {
-	string type = 1;
-	int32 quantity = 2;
-}

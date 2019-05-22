@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Profession;
-
-message ProfessionRequirement {
-	string profession_gmt_id = 1;
-}

@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message SkuContent {
-	string item_type = 1;
-	int32 quantity = 2;
-}

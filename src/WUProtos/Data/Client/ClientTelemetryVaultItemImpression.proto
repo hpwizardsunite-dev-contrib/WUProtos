@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryVaultItemImpression {
-	string vault_item_id = 1;
-}

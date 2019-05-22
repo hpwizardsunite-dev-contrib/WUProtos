@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetryException {
-    string exception_type = 1;
-    string stack_trace = 2;
-}

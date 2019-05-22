@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientProfessionNodeLevel {
-    bool is_grant_new_map_ability = 1;
-}

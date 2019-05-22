@@ -1,8 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Potion;
-
-import "WUProtos/Data/Loot/LootCollection.proto";
-
-message PotionIngredientVaultItem {
-	.WUProtos.Data.Loot.LootCollection cost = 1;
-}

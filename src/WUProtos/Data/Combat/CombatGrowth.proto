@@ -1,9 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Combat;
-
-import "WUProtos/Enums/GrowthType.proto";
-
-message CombatGrowth {
-	.WUProtos.Enums.GrowthType grow_type = 1;
-	float growth_adjustment = 2;
-}

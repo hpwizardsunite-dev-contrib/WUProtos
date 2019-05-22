@@ -1,6 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data;
-
-message UsePotionsProgress {
-    int64 current_use_count = 1;
-}

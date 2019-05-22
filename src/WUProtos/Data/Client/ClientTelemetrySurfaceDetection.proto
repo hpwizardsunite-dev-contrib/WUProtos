@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WUProtos.Data.Client;
-
-message ClientTelemetrySurfaceDetection {
-	string encounter_gmt_id = 1;
-	bool found_surface = 2;
-}

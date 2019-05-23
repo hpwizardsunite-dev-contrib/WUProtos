@@ -76,7 +76,7 @@ enum RequestType {
 	PLANT_INGREDIENT = 76;                       // Implemented
 	CAST_SPELL_FOR_GROWING = 77;                 // Implemented
 	REDEEM_POI_PASSCODE = 78;                    // Implemented
-	GET_PLAYER_DISPLAY_INFO = 79;                // ??? Maybe .WUProtos.Data.Partner ?
+	GET_PLAYER_DISPLAY_INFO = 79;                // ???
 	ECHO = 666;                                  // Implemented
 	DBG_UPDATE_INVENTORY = 999000;               // Implemented
 	DBG_MODIFY_COLLECTION_ITEMS = 999001;        // Implemented

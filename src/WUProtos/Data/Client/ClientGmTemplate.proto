@@ -1,23 +1,22 @@
 syntax = "proto3";
 package WUProtos.Data.Client;
 
-import "WUProtos/Data/Client/ClientCollectionFamily.proto";
-import "WUProtos/Data/Client/ClientGameConfig.proto";
 import "WUProtos/Data/Client/ClientProfileConfig.proto";
 import "WUProtos/Data/Color.proto";
 import "WUProtos/Data/Requirements.proto";
 import "WUProtos/Data/AudioParameter.proto";
 import "WUProtos/Data/SoundConfig.proto";
+import "WUProtos/Data/Collection/CollectionFamily.proto";
 
 message ClientGmTemplate {
     oneof MessageType {
-        .WUProtos.Data.Client.ClientCollectionFamily collection_family = 1;
+        ClientCollectionFamily collection_family = 1;
         ClientCollectionItem collection_item = 2;
         ClientWalkboxTemplate walkbox_template = 3;
         ClientEncounter encounter = 4;
         ClientPortkey portkey = 5;
         ClientVaultItem vault_item = 6;
-        .WUProtos.Data.Client.ClientGameConfig game_config = 7;
+        ClientGameConfig game_config = 7;
         ClientStorePack store_pack = 8;
         ClientSpell spell = 9;
         ClientProtegoPattern protego_pattern = 10;
@@ -46,6 +45,239 @@ message ClientGmTemplate {
         ClientDailyRewardMonthlySchedule daily_reward_monthly_schedule = 34;
         ClientEncounterType encounter_type = 35;
         ClientEvent event = 36;
+    }
+
+    message ClientGameConfig {
+        string id = 1;
+        .WUProtos.Data.Color target_glyph_color = 2;
+        .WUProtos.Data.Color reticle_glyph_color = 3;
+        .WUProtos.Data.Color aligned_glyph_color = 4;
+        float encounter_angle_of_spawn = 5;
+        float time_before_ar_hint_display = 6;
+        float max_lock_distance_from_origin = 7;
+        float distance_behind_camera_to_spawn_marker = 8;
+        float time_before_switch_to_ar_simple = 9;
+        string tutorial_encounter_id = 10;
+        float encounter_reset_gforce = 11;
+        float local_map_update_interval_seconds = 12;
+        ClientFlooNetworkConfig floo_network_config = 13;
+        repeated int64 floo_contribution_button_values = 14;
+        int32 app_background_map = 15;
+        int32 app_background_full = 16;
+        float triggerable_cooldown = 17;
+        int32 level_up_trigger_priority = 18;
+        int32 walkbox_trigger_priority = 19;
+        PermissionsConfigStaticList permissions_config = 20;
+        repeated float swish_game_scoring_thresholds = 22;
+        repeated float swish_game_scoring_bonuses = 23;
+        AudioConfig audio_config = 24;
+        repeated string audio_initial_banks = 25;
+        repeated CollectionSubfeaturePrestigeLevels subfeature_prestige_levels = 26;
+        ClientBonusConfig bonus_config = 27;
+        string portkey_wrackspurt_collection_haptic_key = 28;
+        map<string, string> parkmode_bgs = 29;
+        int32 potion_masternote_unlock_treshold = 30;
+        repeated CollectionSubfeatureFamilyOrders subfeature_family_orders = 31;
+        repeated BatterySaverProfile battery_saver_profiles = 32;
+        int32 rate_app_min_player_level = 33;
+        int32 rate_app_cooldown_days = 34;
+        int32 too_fast_cooldown = 35;
+        repeated EncounterSoundBanks encounter_banks = 36;
+        int32 daily_reward_popup_trigger_priority = 37;
+        int32 rate_app_trigger_priority = 38;
+        ClientFtueVideoConfig ftue_video = 43;
+        string tutorial_potion_brew = 44;
+        string generic_trace_spell_fail_sfx = 45;
+        string tracing_spell_glyph_sfx = 46;
+        string tracing_complete_sfx = 47;
+        string spell_bar_increasing_sfx = 48;
+        string bad_spell_cast_sfx = 49;
+        string good_spell_cast_sfx = 50;
+        string great_spell_cast_sfx = 51;
+        string perfect_spell_cast_sfx = 52;
+        string registry_sticker_placed_haptic_key = 53;
+        repeated string rewards_vessel_by_rarity = 54;
+        repeated string rewards_sound_banks = 55;
+        string first_sticker_storyboard_id = 56;
+        string first_sticker_collection_id = 57;
+        .WUProtos.Data.Color avatar_default_color = 58;
+        .WUProtos.Data.SoundConfig lock_on_completion_sfx = 59;
+        .WUProtos.Data.SoundConfig lock_on_time_up_sfx = 60;
+        .WUProtos.Data.SoundConfig protego_cast_sfx = 61;
+        .WUProtos.Data.SoundConfig protego_time_up_sfx = 62;
+        int32 ms_before_final_intensity = 63;
+        int32 ms_before_secondary_intensity = 64;
+        repeated .WUProtos.Data.AudioParameter challenge_thirty_seconds_left_stinger = 65;
+        repeated .WUProtos.Data.AudioParameter challenge_encounter_player_victorious_stinger = 66;
+        repeated .WUProtos.Data.AudioParameter challenge_encounter_player_defeated_stinger = 67;
+        repeated .WUProtos.Data.AudioParameter challenge_begin_stinger = 68;
+        repeated .WUProtos.Data.AudioParameter challenge_finish_victory = 69;
+        repeated .WUProtos.Data.AudioParameter challenge_finish_defeat = 70;
+        repeated .WUProtos.Data.AudioParameter challenge_elite_mob_spawns_stinger = 71;
+        string internet_reachability_check_url = 72;
+        int32 rate_app_max_prompts = 73;
+        int32 rate_app_version = 74;
+        int32 rate_app_trigger_wizarding_challenge = 75;
+        int32 rate_app_trigger_sticker_page_complete = 76;
+        int32 rate_app_trigger_event_quest_line_complete = 77;
+        int32 checks_until_gps_prompt = 78;
+        repeated string fortress_sound_banks = 79;
+        .WUProtos.Data.SoundConfig ten_seconds_left_in_challenge_sfx = 80;
+        .WUProtos.Data.SoundConfig long_second_left_in_challenge_sfx = 81;
+        .WUProtos.Data.SoundConfig short_half_second_left_in_challenge_sfx = 82;
+        .WUProtos.Data.SoundConfig one_minute_warning_sfx = 83;
+        bool rate_app_trigger_map_enter = 84;
+        string professions_affinity_advantage_icon = 85;
+        string professions_affinity_neutral_icon = 86;
+        string professions_affinity_disadvantage_icon = 87;
+        int32 internet_outage_backoff_time = 88;
+        string ar_core_storyboard_trigger = 89;
+        repeated VoiceOverLanguageMapping voice_over_mappings = 90;
+        int32 in_app_message_trigger_priority = 91;
+        float internal_fortress_interact_range = 92;
+        float low_connectivity_threshold_bytes_per_ms = 93;
+        int32 game_size_in_kb = 94;
+        string wc_map_enemy_marker_buff_occupied_image = 95;
+        string wc_map_enemy_marker_buff_vacant_image = 96;
+        string wc_enemy_look_in_buff_border_image = 97;
+        repeated LocalizationMapping localization_mappings = 98;
+
+        message ClientFtueVideoConfig {
+            oneof VideoSource {
+                ClientFtueVideoFallbackDefinition from_assets = 1;
+                ClientFtueVideoNameDefinition from_url = 2;
+            }
+
+            repeated string quality_buckets = 3;
+            map<string, ClientFtueVideoQualityMapping> quality_mappings = 4;
+
+            message ClientFtueVideoQualityMapping {
+                Measure measure = 1;
+                int32 lower_bound = 2;
+                int32 upper_bound = 3;
+
+                enum Measure {
+                    camera_pixel_width = 0;
+                    camera_pixel_height = 1;
+                    screen_pixel_width = 2;
+                    screen_pixel_height = 3;
+                }
+            }
+
+            message ClientFtueVideoFallbackDefinition {
+                repeated ClientFtueVideoNameDefinition name_definitions = 1;
+            }
+
+            message ClientFtueVideoNameDefinition {
+                string name_format = 1;
+            }
+        }
+
+        message ClientFlooNetworkConfig {
+            repeated ElectoralVotesPerFlooPoints electoral_votes_per_floo_points = 1;
+
+            message ElectoralVotesPerFlooPoints {
+                repeated string fortress_prefabs = 1;
+            }
+        }
+
+        message ClientBonusConfig {
+            string id = 1;
+            repeated float accuracy_tier = 2;
+            repeated string accuracy_tier_bonus_id = 3;
+            repeated string accuracy_tier_bonus_text = 4;
+            string first_time_bonus_id = 5;
+            string first_time_bonus_text = 6;
+            string life_time_bonus_id = 7;
+            string life_time_bonus_text = 8;
+        }
+
+        message LocalizationMapping {
+            string language_code = 1;
+            string loc_string = 2;
+            bool is_enabled = 3;
+        }
+
+        message PermissionsConfigStaticList {
+            repeated PermissionsConfigStaticData list = 1;
+
+            message PermissionsConfigStaticData {
+                string id = 1;
+                string initial_prompt = 2;
+                string denial_prompt = 3;
+                bool optional = 4;
+                string title = 5;
+                bool begging_enabled = 6;
+            }
+        }
+
+        message VoiceOverLanguageMapping {
+            string language_code = 1;
+            string language_folder = 2;
+        }
+
+        message AudioConfig {
+            string music_event = 1;
+            repeated MusicConfig music_config = 2;
+        }
+
+        message BatterySaverProfile {
+            repeated string profiles = 1;
+            string name = 2;
+        }
+
+        message CollectionSubfeatureFamilyOrders {
+            .WUProtos.Data.Collection.CollectionFamily.SubfeatureType subfeature = 1;
+            repeated string family_ids = 2;
+        }
+
+        message CollectionSubfeaturePrestigeLevels {
+            .WUProtos.Data.Collection.CollectionFamily.SubfeatureType subfeature = 1;
+            repeated CollectionPrestigeLevel prestige_levels = 2;
+        }
+
+        message EncounterSoundBanks {
+            string encounter_type = 1;
+            repeated string sound_banks = 2;
+        }
+
+        message MusicConfig {
+            int32 music_location = 1;
+            repeated .WUProtos.Data.AudioParameter parameters = 2;
+        }
+    }
+
+    message ClientCollectionFamily {
+        string id = 1;
+        string name = 3;
+        string description = 4;
+        string icon = 5;
+        string landmark_texture = 6;
+        string landmark_prefab = 7;
+        string landmark_description = 8;
+        bool show_in_ui = 9;
+        string landmark_icon = 11;
+        .WUProtos.Data.Color color = 12;
+        .WUProtos.Data.Color color_highlight = 13;
+        string trace_prefab = 14;
+        repeated string border_images = 15;
+        string family_runestone_icon = 16;
+        .WUProtos.Data.SoundConfig sound = 17;
+        .WUProtos.Data.Requirements unarchive_requirements = 18;
+        string trace_rarity_vfx_override = 19;
+        repeated CollectionPrestigeLevel prestige_override = 20;
+        bool hide_landmark_info_details = 21;
+    }
+
+    message CollectionPrestigeLevel {
+        string border_image = 1;
+        string name = 2;
+        .WUProtos.Data.Color color = 3;
+        bool is_metallic = 4;
+        string frame_mesh = 5;
+        string normal_map = 6;
+        string albedo_map = 7;
+        float roughness = 8;
     }
 
     message ClientVaultItem {

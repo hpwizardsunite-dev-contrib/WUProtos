@@ -18,7 +18,7 @@ message ClientInbox {
 		string category = 3;
 		int64 create_timestamp_ms = 4;
 		repeated TemplateVariable variables = 5;
-		repeated ClientInbox.Label labels = 6;
+		repeated Label labels = 6;
 		int64 expire_time_ms = 7;
 	}
 

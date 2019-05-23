@@ -3,14 +3,13 @@ package WUProtos.Data;
 
 import "WUProtos/Data/Loot/LootReward.proto";
 import "WUProtos/Map/MapCoordinate.proto";
-import "WUProtos/Data/ChamberPlayerState.proto";
 import "WUProtos/Data/FortressCooldownData.proto";
 import "WUProtos/Data/Mob/MobReward.proto";
-import "WUProtos/Data/Buff/ActiveBuff.proto";
+import "WUProtos/Data/Buff/ActiveBuffList.proto";
 
 message ChamberState {
 	string chamber_template_gmt_id = 1;
-	repeated .WUProtos.Data.ChamberPlayerState player = 2;
+	repeated ChamberPlayerState player = 2;
 
 	oneof State {
 		WaitingToStartState waiting_to_start = 4;
@@ -61,12 +60,80 @@ message ChamberState {
 		bytes encounter_ticket = 8;
 		double x = 9;
 		double y = 10;
-		ActiveBuffList active_buff_list = 11;
+		.WUProtos.Data.Buff.ActiveBuffList active_buff_list = 11;
 		repeated .WUProtos.Data.Mob.MobReward rewards = 12;
 		int64 time_to_spawn = 101;
 	}
 
-	message ActiveBuffList {
-		repeated .WUProtos.Data.Buff.ActiveBuff buffs = 1;
+	message ChamberPlayerState {
+		string nickname = 1;
+		map<string, int64> runestone_contributions = 2;
+
+		oneof State {
+			PlayerWaitingState waiting = 3;
+			PlayerInProgressState in_progress = 4;
+			PlayerFinishedState finished = 5;
+		}
+		PlayerProfessionInfo profession_info = 6;
+		.WUProtos.Data.Buff.ActiveBuffList active_buff_list = 7;
+
+		message Healthy {
+			int64 hp = 1;
+			bytes engaged_mob_id = 2;
+		}
+
+		message KnockedOut {
+			int64 knockout_time_ms = 1;
+			int64 recovery_time_ms = 2;
+		}
+
+		message MapAbility {
+			string map_ability_gmt_id = 1;
+			int64 cooldown_ms = 3;
+			int32 map_ability_level = 4;
+		}
+
+		message PlayerFinishedState {
+			bool has_claimed_rewards = 1;
+		}
+
+		message PlayerInProgressState {
+			message Healthy {
+				int64 hp = 1;
+				bytes engaged_mob_id = 2;
+			}
+
+			message KnockedOut {
+				int64 knockout_time_ms = 1;
+				int64 recovery_time_ms = 2;
+			}
+
+			message MapAbility {
+				string map_ability_gmt_id = 1;
+				float radius = 2;
+				int64 cooldown_ms = 3;
+				int32 map_ability_level = 4;
+			}
+
+			double latitude = 1;
+			double longitude = 2;
+			int64 max_hp = 5;
+			repeated ChamberPlayerState.MapAbility map_abilities = 6;
+
+			oneof Status {
+				ChamberPlayerState.Healthy healthy = 7;
+				ChamberPlayerState.KnockedOut knocked_out = 8;
+			}
+
+			int32 focus = 9;
+			int32 max_focus = 10;
+		}
+
+		message PlayerProfessionInfo {
+			string profession_gmt_id = 1;
+		}
+
+		message PlayerWaitingState {
+		}
 	}
 }

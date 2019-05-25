@@ -30,7 +30,7 @@ async function build() {
         }
     }
 
-    await fs.writeFile(path.join(__dirname, 'WUProtos.proto'), content);
+    await fs.writeFile(path.join(__dirname, 'WUProtos.proto.js'), content);
 }
 
 build().then(() => console.log('Done.'));

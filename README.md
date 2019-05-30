@@ -104,8 +104,6 @@ python compile.py swift:
 
 If you don't want to compile WUProtos but instead use it directly, check out the following repository.
 
-[![NuGet](https://img.shields.io/nuget/vpre/WUProtos.Core.svg?maxAge=60)](https://www.nuget.org/packages/WUProtos.Core)
-
 | Language              | Source                                                         | Status                                                                                                                  |
 |-----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | .NET (nuget pack)     | https://github.com/hpwizardsunite-dev-contrib/WUProtos.Core    | [![NuGet](https://img.shields.io/nuget/vpre/WUProtos.Core.svg?maxAge=60)](https://www.nuget.org/packages/WUProtos.Core) |

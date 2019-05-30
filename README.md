@@ -18,7 +18,7 @@ We are following [semantic versioning](http://semver.org/) for WUProtos.  Every 
 
 | Version      | API           | Notes           | Extra                     |
 |--------------|---------------|-----------------|---------------------------|
-| 1.0.0.2-beta | 0.8.0-beta    | Initial         |  Protocol Buffers v3.7.1  |
+| 1.0.0.2-beta | 0.8.0-beta    | Initial         |  Protocol Buffers v3.8.0  |
 
 ### Usage
 
@@ -30,7 +30,7 @@ If you want to figure out the current version in an automated system, use this f
 
 ### Preparation
 
-Current recommended protoc version: "Protocol Buffers v3.7.1".
+Current recommended protoc version: "Protocol Buffers v3.8.0".
 
 You can find download links [here](https://github.com/google/protobuf/releases).
 
@@ -104,6 +104,9 @@ python compile.py swift:
 
 If you don't want to compile WUProtos but instead use it directly, check out the following repository.
 
-| Language              | Source                                                         | Status |
-|-----------------------|----------------------------------------------------------------|--------|
-| Java                  | https://github.com/hpwizardsunite-dev-contrib/WUProtos-Java    |  OK    |
+[![NuGet](https://img.shields.io/nuget/vpre/WUProtos.Core.svg?maxAge=60)](https://www.nuget.org/packages/WUProtos.Core)
+
+| Language              | Source                                                         | Status                                                                                                                  |
+|-----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| .NET (nuget pack)     | https://github.com/hpwizardsunite-dev-contrib/WUProtos.Core    | [![NuGet](https://img.shields.io/nuget/vpre/WUProtos.Core.svg?maxAge=60)](https://www.nuget.org/packages/WUProtos.Core) |
+| Java                  | https://github.com/hpwizardsunite-dev-contrib/WUProtos-Java    |  OK                                                                                                                     |

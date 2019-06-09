@@ -1,7 +1,7 @@
 <!-- define variables -->
 [1.1]: http://i.imgur.com/M4fJ65n.png (ATTENTION)
 
-WUProtos [![Build Status](https://travis-ci.org/Furtif/WUProtos.svg?branch=master)](https://travis-ci.org/Furtif/WUProtos) [![Maintainability](https://api.codeclimate.com/v1/badges/86d147c2b7a696427f0a/maintainability)](https://codeclimate.com/github/Furtif/WUProtos/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/86d147c2b7a696427f0a/test_coverage)](https://codeclimate.com/github/Furtif/WUProtos/test_coverage) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/rocketbot)
+WUProtos [![Build Status](https://travis-ci.org/hpwizardsunite-dev-contrib/WUProtos.svg?branch=master)](https://travis-ci.org/hpwizardsunite-dev-contrib/WUProtos) [![Maintainability](https://api.codeclimate.com/v1/badges/86d147c2b7a696427f0a/maintainability)](https://codeclimate.com/github/Furtif/WUProtos/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/86d147c2b7a696427f0a/test_coverage)](https://codeclimate.com/github/Furtif/WUProtos/test_coverage) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/rocketbot)
 ===================
 
 ![alt text][1.1] <strong><em>`The contents of this repo are a proof of concept and are for educational use only`</em></strong>![alt text][1.1]<br/>

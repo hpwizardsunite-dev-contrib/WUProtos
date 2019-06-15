@@ -1,7 +1,7 @@
 <!-- define variables -->
 [1.1]: http://i.imgur.com/M4fJ65n.png (ATTENTION)
 
-WUProtos [![Build Status](https://travis-ci.org/hpwizardsunite-dev-contrib/WUProtos.svg?branch=master)](https://travis-ci.org/hpwizardsunite-dev-contrib/WUProtos) [![Maintainability](https://api.codeclimate.com/v1/badges/86d147c2b7a696427f0a/maintainability)](https://codeclimate.com/github/Furtif/WUProtos/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/86d147c2b7a696427f0a/test_coverage)](https://codeclimate.com/github/Furtif/WUProtos/test_coverage) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/rocketbot)
+WUProtos [![Build Status](https://travis-ci.org/hpwizardsunite-dev-contrib/WUProtos.svg?branch=master)](https://travis-ci.org/hpwizardsunite-dev-contrib/WUProtos) 
 ===================
 
 ![alt text][1.1] <strong><em>`The contents of this repo are a proof of concept and are for educational use only`</em></strong>![alt text][1.1]<br/>
@@ -9,8 +9,8 @@ WUProtos [![Build Status](https://travis-ci.org/hpwizardsunite-dev-contrib/WUPro
 This repository contains the [ProtoBuf](https://github.com/google/protobuf) `.proto` files needed to decode the Harry Potter: Wizards Unite RPC.
 
 ### Implemented messages types
- - [``Global``](https://github.com/Furtif/WUProtos/blob/master/src/WUProtos/Networking/Requests/RequestType.proto)
- - [``Platform``](https://github.com/Furtif/WUProtos/blob/master/src/WUProtos/Networking/Platform/PlatformRequestType.proto) 
+ - [``Global``](https://github.com/hpwizardsunite-dev-contrib/WUProtos/blob/master/src/WUProtos/Networking/Requests/RequestType.proto)
+ - [``Platform``](https://github.com/hpwizardsunite-dev-contrib/WUProtos/blob/master/src/WUProtos/Networking/Platform/PlatformRequestType.proto) 
    
 ### Versioning
 
@@ -106,5 +106,4 @@ If you don't want to compile WUProtos but instead use it directly, check out the
 
 | Language              | Source                                                         | Status                                                                                                                  |
 |-----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| .NET (nuget pack)     | https://github.com/hpwizardsunite-dev-contrib/WUProtos.Core    | [![NuGet](https://img.shields.io/nuget/vpre/WUProtos.Core.svg?maxAge=60)](https://www.nuget.org/packages/WUProtos.Core) |
 | Java                  | https://github.com/hpwizardsunite-dev-contrib/WUProtos-Java    |  OK                                                                                                                     |

@@ -24,7 +24,7 @@ We are following [semantic versioning](http://semver.org/) for WUProtos.  Every 
 
 If you want to figure out the current version in an automated system, use this file.
 
-[.current-version](https://raw.githubusercontent.com/Furtif/WUProtos/master/.current-version)
+[.current-version](https://raw.githubusercontent.com/hpwizardsunite-dev-contrib/WUProtos/master/.current-version)
 
 *Note: This file will contain pre-release versions too.*
 

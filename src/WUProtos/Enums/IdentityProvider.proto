@@ -11,6 +11,6 @@ enum IdentityProvider {
     SFIDA = 6;
     SUPER_AWESOME = 7;
     DEVELOPER = 8;
-	SHARED_SECRET = 9;
+    SHARED_SECRET = 9;
 	POSEIDON = 10;
 }

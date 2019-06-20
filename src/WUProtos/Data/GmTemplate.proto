@@ -453,6 +453,12 @@ message GmTemplate {
 		.WUProtos.Data.Requirements unlock_requirements = 7;
 		repeated int32 shard_counts = 8;
 		bool sticker_disabled = 10;
+		repeated CollectionItemPrestigeLevel prestige_levels = 11;
+	}
+
+	message CollectionItemPrestigeLevel {
+		int32 shard_count = 1;
+		.WUProtos.Data.Loot.LootReward.LootCollection sticker_placement_rewards = 2;
 	}
 
 	message CollectionFamilyRankTable {

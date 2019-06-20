@@ -11,10 +11,29 @@ enum IdentityProvider {
 	INTERNAL = 5;
 	SFIDA = 6;
 	SUPER_AWESOME = 7;
+	DEVELOPER = 8;
+	SHARED_SECRET = 9;
+	POSEIDON = 10;
 }
 
 
 //----- End auth -----
+//------------------------------
+//----- Begin bgmode -----
+
+// ref: Niantic.Platform.Bgmode.BackgroundModeClientSettingsProto
+message BackgroundModeClientSettingsProto {
+	int64 maximum_sample_age_ms = 1;
+	bool accept_manual_fitness_samples = 2;
+	double minimum_location_accuracy_meters = 3;
+	int32 background_wake_up_interval_minutes = 4;
+	int32 max_upload_size_in_bytes = 5;
+	double min_enclosing_geofence_radius_m = 6;
+	int64 background_token_refresh_interval_s = 7;
+}
+
+
+//----- End bgmode -----
 //------------------------------
 //----- Begin clientconfig -----
 
@@ -53,6 +72,7 @@ message ClientConfigurationRequestProto {
 	iOSDeviceInfo ios_device_info = 6;
 	AndroidDeviceInfo android_device_info = 7;
 	string build_number = 8;
+	string product_name = 9;
 }
 
 // ref: Atlas.ClientConfig.ClientConfigurationResponseProto
@@ -148,6 +168,21 @@ message DebugModifyCollectionItemsRequestProto {
 // ref: Atlas.Rpc.Debug.DebugModifyCollectionItemsResponseProto
 message DebugModifyCollectionItemsResponseProto {
 	repeated string updated_collection_item_ids = 1;
+}
+
+// ref: Atlas.Rpc.Debug.DebugQuestRemovalRequestProto
+message DebugQuestRemovalRequestProto {
+}
+
+// ref: Atlas.Rpc.Debug.DebugQuestRemovalResponseProto
+message DebugQuestRemovalResponseProto {
+	// ref: Atlas.Rpc.Debug.DebugQuestRemovalResponseProto/Types/Status
+	enum Status {
+		UNKNOWN = 0;
+		SUCCESS = 1;
+	}
+
+	Status status = 1;
 }
 
 // ref: Atlas.Rpc.Debug.DebugResetPlayerRequestProto
@@ -439,6 +474,7 @@ message ProxyResponseProto {
 		BAD_REQUEST = 7;
 		ACCESS_DENIED = 8;
 		TIMEOUT_ERROR = 9;
+		RATE_LIMITED = 10;
 	}
 
 	Status status = 1;
@@ -495,6 +531,14 @@ enum BonusTargetReward {
 	PROFESSION_SPELLBOOKS = 3;
 	TRACE_FAMILY_COLLECTIBLE_SHARDS = 4;
 	ADVERSARY_COLLECTIBLE_SHARDS = 5;
+	PLAYER_XP = 6;
+}
+
+// ref: Atlas.Proto.boolEnum
+enum boolEnum {
+	BOOL_UNSET = 0;
+	BOOL_TRUE = 1;
+	BOOL_FALSE = 2;
 }
 
 // ref: Atlas.Proto.BoolLiteral
@@ -661,6 +705,14 @@ enum MobRewardRecipient {
 	MOB_REWARD_RECIPIENT_RANDOM_PLAYER = 3;
 }
 
+// ref: Atlas.Proto.PartnerTier
+enum PartnerTier {
+	PARTNER_TIER_UNSET = 0;
+	PARTNER_TIER_GOLD = 1;
+	PARTNER_TIER_SILVER = 2;
+	PARTNER_TIER_BRONZE = 3;
+}
+
 // ref: Atlas.Proto.PoiAccessibility
 enum PoiAccessibility {
 	UNKNOWN_POI_STATE = 0;
@@ -692,6 +744,7 @@ enum PotionConsumableScenario {
 	SWISH_ENCOUNTER = 3;
 	COMBAT_ENCOUNTER = 4;
 	WC_ENCOUNTER = 5;
+	WC_ARENAMAP = 6;
 }
 
 // ref: Atlas.Proto.ProfileTabSource
@@ -777,14 +830,12 @@ message ActiveBuffExpiration {
 		time = 1;
 		charges = 2;
 		profession = 3;
-		permanent = 4;
 		challenge = 6;
 	}
 
 	TimeActiveBuffExpiration time = 1;
 	ChargesActiveBuffExpiration charges = 2;
 	ProfessionBuffExpiration profession = 3;
-	PermanentBuffExpiration permanent = 4;
 	ChallengeBuffExpiration challenge = 6;
 }
 
@@ -826,6 +877,13 @@ message AnalyticsEventProto {
 // ref: Atlas.Proto.AnalyticsEventsProto
 message AnalyticsEventsProto {
 	repeated AnalyticsEventProto event = 1;
+}
+
+// ref: Atlas.Proto.AppPlatformRequirement
+message AppPlatformRequirement {
+	bool platform_allowed_ios = 1;
+	bool platform_allowed_google = 2;
+	bool platform_allowed_samsung = 3;
 }
 
 // ref: Atlas.Proto.AudioConfigProto
@@ -933,7 +991,6 @@ message BuffDuration {
 		time = 1;
 		charges = 2;
 		profession = 3;
-		permanent = 4;
 		instant = 5;
 		challenge = 6;
 	}
@@ -941,7 +998,6 @@ message BuffDuration {
 	TimeBuffDuration time = 1;
 	ChargesBuffDuration charges = 2;
 	ProfessionBuffDuration profession = 3;
-	PermanentBuffDuration permanent = 4;
 	InstantBuffDuration instant = 5;
 	ChallengeBuffDuration challenge = 6;
 }
@@ -1148,6 +1204,7 @@ message ClientChamberTemplateProto {
 	int32 base_difficulty = 5;
 	map<int32, int32> runestone_difficulties = 6;
 	map<string, string> parkmode_bgs = 7;
+	int32 recommended_profession_grade = 8;
 }
 
 // ref: Atlas.Proto.ClientCollectionFamilyProto
@@ -1171,6 +1228,7 @@ message ClientCollectionFamilyProto {
 	string trace_rarity_vfx_override = 19;
 	repeated CollectionPrestigeLevelProto prestige_override = 20;
 	bool hide_landmark_info_details = 21;
+	SoundConfigProto trace_spawn_sfx_override = 22;
 }
 
 // ref: Atlas.Proto.ClientCollectionItemProto
@@ -1395,6 +1453,12 @@ message ClientFlooNetworkConfigProto {
 	repeated ElectoralVotesPerFlooPoints electoral_votes_per_floo_points = 1;
 }
 
+// ref: Atlas.Proto.ClientFortressTemplateProto
+message ClientFortressTemplateProto {
+	string id = 1;
+	string exterior = 2;
+}
+
 // ref: Atlas.Proto.ClientFtueVideoConfigProto
 message ClientFtueVideoConfigProto {
 	// ref: Atlas.Proto.ClientFtueVideoConfigProto/VideoSourceOneofCase
@@ -1408,6 +1472,8 @@ message ClientFtueVideoConfigProto {
 	ClientFtueVideoNameDefinitionProto from_url = 2;
 	repeated string quality_buckets = 3;
 	map<string, Atlas.Proto.ClientFtueVideoQualityMappingProto> quality_mappings = 4;
+	ClientFtueVideoPlatformSettingsProto ios_settings = 5;
+	ClientFtueVideoPlatformSettingsProto android_settings = 6;
 }
 
 // ref: Atlas.Proto.ClientFtueVideoFallbackDefinitionProto
@@ -1429,6 +1495,19 @@ message ClientFtueVideoFromUrlProto {
 // ref: Atlas.Proto.ClientFtueVideoNameDefinitionProto
 message ClientFtueVideoNameDefinitionProto {
 	string name_format = 1;
+}
+
+// ref: Atlas.Proto.ClientFtueVideoPlatformSettingsProto
+message ClientFtueVideoPlatformSettingsProto {
+	// ref: Atlas.Proto.ClientFtueVideoPlatformSettingsProto/VideoSourceOneofCase
+	enum VideoSourceOneofCase {
+		none = 0;
+		from_assets = 1;
+		from_url = 2;
+	}
+
+	ClientFtueVideoFallbackDefinitionProto from_assets = 1;
+	ClientFtueVideoNameDefinitionProto from_url = 2;
 }
 
 // ref: Atlas.Proto.ClientFtueVideoQualityMappingProto
@@ -1541,6 +1620,14 @@ message ClientGameConfigProto {
 	string wc_map_enemy_marker_buff_vacant_image = 96;
 	string wc_enemy_look_in_buff_border_image = 97;
 	repeated LocalizationMapping localization_mappings = 98;
+	string social_friend_learn_how_url = 99;
+	int32 social_max_friends_per_player = 100;
+	float social_notif_polling_interval = 101;
+	int32 social_fetch_friend_data_cooldown_seconds = 102;
+	float social_chamber_friends_inside_polling_frequency_seconds = 103;
+	string internet_reachability_check_url_fallback = 104;
+	repeated string story_progression_quests = 105;
+	int32 code_name_max_size = 106;
 }
 
 // ref: Atlas.Proto.ClientGameDataWrapper
@@ -1588,6 +1675,7 @@ message ClientGmTemplate {
 		daily_reward_monthly_schedule = 34;
 		encounter_type = 35;
 		event = 36;
+		fortress_template = 37;
 	}
 
 	ClientCollectionFamilyProto collection_family = 1;
@@ -1625,6 +1713,13 @@ message ClientGmTemplate {
 	ClientDailyRewardMonthlyScheduleProto daily_reward_monthly_schedule = 34;
 	ClientEncounterTypeProto encounter_type = 35;
 	ClientEventProto event = 36;
+	ClientFortressTemplateProto fortress_template = 37;
+}
+
+// ref: Atlas.Proto.ClientGreenhouseGrowthStage
+message ClientGreenhouseGrowthStage {
+	int32 percentage = 1;
+	string growth = 2;
 }
 
 // ref: Atlas.Proto.ClientHapticProto
@@ -1855,6 +1950,7 @@ message ClientProfessionProto {
 	string enemy_affinity_name = 18;
 	string affinity_desc = 19;
 	ColorProto profession_color = 20;
+	string pennant_icon = 21;
 }
 
 // ref: Atlas.Proto.ClientProfessionRankProto
@@ -1897,6 +1993,14 @@ message ClientQuestProto {
 	int32 sort_order = 2;
 	string quest_name_loc_key = 3;
 	string quest_desc_loc_key = 4;
+	bool should_show_when_complete = 5;
+	string icon = 6;
+	ColorProto border_color = 7;
+	int32 tier = 8;
+	string collected_icon = 9;
+	Requirements visibility_requirements = 10;
+	string header_image = 11;
+	string character_name_loc_key = 12;
 }
 
 // ref: Atlas.Proto.ClientRecipeProto
@@ -1912,6 +2016,36 @@ message ClientRecipeProto {
 	ColorProto primary_color = 9;
 	ColorProto secondary_color = 10;
 	int32 index = 11;
+	ClientRecipeTypeProto recipe_type = 12;
+}
+
+// ref: Atlas.Proto.ClientRecipeTypeGreenhouseProto
+message ClientRecipeTypeGreenhouseProto {
+	repeated ClientGreenhouseGrowthStage growth_stages = 1;
+	string usage_description = 2;
+}
+
+// ref: Atlas.Proto.ClientRecipeTypePotionProto
+message ClientRecipeTypePotionProto {
+	string model = 1;
+	string collect_fx = 2;
+	string crafting_fx = 3;
+	string reveal_fx = 4;
+	ColorProto primary_color = 5;
+	ColorProto secondary_color = 6;
+}
+
+// ref: Atlas.Proto.ClientRecipeTypeProto
+message ClientRecipeTypeProto {
+	// ref: Atlas.Proto.ClientRecipeTypeProto/RecipeTypeOneofCase
+	enum RecipeTypeOneofCase {
+		none = 0;
+		potion_recipe_template = 1;
+		greenhouse_recipe_template = 2;
+	}
+
+	ClientRecipeTypePotionProto potion_recipe_template = 1;
+	ClientRecipeTypeGreenhouseProto greenhouse_recipe_template = 2;
 }
 
 // ref: Atlas.Proto.ClientRpgstatProto
@@ -2007,6 +2141,7 @@ message ClientSpellProto {
 	string spell_rng_loop_tl = 13;
 	string spell_rng_succeed_tl = 14;
 	string spell_rng_fail_tl = 15;
+	string localized_name = 16;
 }
 
 // ref: Atlas.Proto.ClientStoreConfigProto
@@ -2040,6 +2175,7 @@ message ClientStoryboardProto {
 	repeated ClientStoryboardStep steps = 2;
 	string trigger_point = 3;
 	int32 priority = 4;
+	bool always_try_to_trigger = 5;
 }
 
 // ref: Atlas.Proto.ClientStoryboardStep
@@ -2052,6 +2188,7 @@ message ClientStoryboardStep {
 		advice_overlay = 4;
 		advice_interjection = 5;
 		conversation_interjection = 6;
+		cta_only = 10;
 	}
 
 	string custom_state = 1;
@@ -2062,6 +2199,8 @@ message ClientStoryboardStep {
 	StoryboardConversationInterjectionStep conversation_interjection = 6;
 	string call_to_action_asset = 7;
 	string call_to_action_button_identifier = 8;
+	float delay_before_showing = 9;
+	StoryboardLooseCTAStep cta_only = 10;
 }
 
 // ref: Atlas.Proto.ClientTeamControlProto
@@ -2481,6 +2620,7 @@ message ClientTelemetrySwishSpellGameEnd {
 	double median_drawing_error = 8;
 	double final_spellbar_score = 9;
 	string encounter_proto_id = 10;
+	boolEnum result = 11;
 }
 
 // ref: Atlas.Proto.ClientTelemetrySwishSpellGameStart
@@ -2570,6 +2710,7 @@ message ClientVaultItemProto {
 	SoundConfigProto reward_sound = 14;
 	int32 reward_sound_priority = 15;
 	string spine_animated_icon = 16;
+	string out_of_resource_loc_key = 17;
 }
 
 // ref: Atlas.Proto.ClientWalkboxTemplateProto
@@ -2642,11 +2783,8 @@ message CollectionFamilyProto {
 	}
 
 	string id = 1;
-	CollectionFamilyType family_type = 2;
 	repeated string items = 3;
-	repeated CollectionFamilyLevelProto levels = 4;
 	repeated string pages = 5;
-	string family_rune_name = 6;
 	string family_rank_table_id = 7;
 	repeated LootCollectionProto returned_rewards = 8;
 	repeated string rune_id = 9;
@@ -2683,6 +2821,12 @@ message CollectionItemPlacedRequirement {
 	string page_gmt_id = 3;
 }
 
+// ref: Atlas.Proto.CollectionItemPrestigeLevelProto
+message CollectionItemPrestigeLevelProto {
+	int32 shard_count = 1;
+	LootCollectionProto sticker_placement_rewards = 2;
+}
+
 // ref: Atlas.Proto.CollectionItemProto
 message CollectionItemProto {
 	string id = 1;
@@ -2694,6 +2838,7 @@ message CollectionItemProto {
 	Requirements unlock_requirements = 7;
 	repeated int32 shard_counts = 8;
 	bool sticker_disabled = 10;
+	repeated CollectionItemPrestigeLevelProto prestige_level = 11;
 }
 
 // ref: Atlas.Proto.CollectionItemRequirement
@@ -3189,8 +3334,9 @@ message GameConfigProto {
 	float ar_mode_range = 7;
 	repeated LocalizationMapping loc_mappings = 8;
 	int32 ar_mode_max_encounters = 8;
-	map<string, string> parkmode_bgs = 9;
+	repeated string story_progression_quests = 9;
 	int32 event_cool_down_duration = 9;
+	map<string, string> parkmode_bgs = 10;
 	int32 combat_stun_time = 10;
 	int32 professions_min_level = 11;
 	float accuracy_min_bonus = 12;
@@ -3522,6 +3668,10 @@ message LexiconApprovedClientTelemetryProto {
 		store_tab_open = 54;
 		vault_popup_open = 55;
 		vault_tab_open = 56;
+		partner_poi_interact = 57;
+		partner_poi_info = 58;
+		partner_poi_hyperlink = 59;
+		partner_poi_leaving = 60;
 	}
 
 	ClientTelemetryStartup startup = 1;
@@ -3580,6 +3730,10 @@ message LexiconApprovedClientTelemetryProto {
 	ClientTelemetryStoreTabOpen store_tab_open = 54;
 	ClientTelemetryVaultItemImpression vault_popup_open = 55;
 	ClientTelemetryVaultTabImpression vault_tab_open = 56;
+	ClientTelemetryPartnerPoiInteract partner_poi_interact = 57;
+	ClientTelemetryPartnerPoiInfo partner_poi_info = 58;
+	ClientTelemetryPartnerPoiHyperlink partner_poi_hyperlink = 59;
+	ClientTelemetryPartnerPoiLeaving partner_poi_leaving = 60;
 	niantic.platform.telemetry.PlatformServerData server_data = 1001;
 }
 
@@ -3615,6 +3769,18 @@ message LifetimeMetricRequirement {
 		ENCOUNTER_COMPLETED_COUNTRY_COUNT = 25;
 		ELITE_MOBS_DEFEATED_BY_ME = 26;
 		MAP_ABILITIES_USED = 27;
+		SWISH_SPELL_TYPE_USED = 28;
+		AUROR_PROFESSION_NODES_UNLOCKED = 29;
+		MAGIZOOLOGIST_PROFESSION_NODES_UNLOCKED = 30;
+		PROFESSOR_PROFESSION_NODES_UNLOCKED = 31;
+		AUROR_RANKS_COMPLETED = 32;
+		MAGIZOOLOGIST_RANKS_COMPLETED = 33;
+		PROFESSOR_RANKS_COMPLETED = 34;
+		AUROR_LEVELS_UPGRADED = 35;
+		MAGIZOOLOGIST_LEVELS_UPGRADED = 36;
+		PROFESSOR_LEVELS_UPGRADED = 37;
+		MAX_CONCURRENT_FRIENDS = 38;
+		POTION_TOTAL_EXSTIMULO_USED = 39;
 	}
 
 	LifetimeMetric lifetime_metric = 1;
@@ -3710,6 +3876,13 @@ message MapAbilityLevelProto {
 
 // ref: Atlas.Proto.MapAbilityProto
 message MapAbilityProto {
+	// ref: Atlas.Proto.MapAbilityProto/TargetGroup
+	enum TargetGroup {
+		UNDEFINED = 0;
+		FRIENDLY = 1;
+		ENEMY = 2;
+	}
+
 	string id = 1;
 	MapAbilityTargetType target_type = 2;
 	string base_buff_gmt_id = 3;
@@ -3809,8 +3982,23 @@ message OutpostTemplateProto {
 	string id = 1;
 }
 
+// ref: Atlas.Proto.PartnerPoiQuestInfo
+message PartnerPoiQuestInfo {
+	string image_url = 1;
+	string partner_name = 2;
+	PartnerTier partner_tier = 3;
+}
+
 // ref: Atlas.Proto.PartnerProto
 message PartnerProto {
+	// ref: Atlas.Proto.PartnerProto/Types/DevicePlatform
+	enum DevicePlatform {
+		UNKNOWN = 0;
+		ANDROID = 1;
+		IOS = 2;
+		WEB_OR_DESKTOP = 3;
+	}
+
 	// ref: Atlas.Proto.PartnerProto/Types/PartnerType
 	enum PartnerType {
 		PARTNER_TYPE_UNSPECIFIED = 0;
@@ -3823,6 +4011,8 @@ message PartnerProto {
 	string popup_desc = 2;
 	string hyperlink = 3;
 	PartnerType partner_type = 4;
+	bool show_headline = 5;
+	repeated DevicePlatform show_passcode_scanner_platform = 6;
 }
 
 // ref: Atlas.Proto.PerformanceSnapshotProto
@@ -3832,14 +4022,6 @@ message PerformanceSnapshotProto {
 	int64 frame_number = 3;
 	float real_time_seconds = 4;
 	string label = 5;
-}
-
-// ref: Atlas.Proto.PermanentBuffDuration
-message PermanentBuffDuration {
-}
-
-// ref: Atlas.Proto.PermanentBuffExpiration
-message PermanentBuffExpiration {
 }
 
 // ref: Atlas.Proto.PermissionsConfigLocalDataProto
@@ -3925,17 +4107,6 @@ message PlayerFlagRequirement {
 message PlayerLevelProto {
 	string id = 1;
 	int32 required_xp = 2;
-}
-
-// ref: Atlas.Proto.PlayerLifetimeMetricsConfig
-message PlayerLifetimeMetricsConfig {
-	string energy_vault_category_gmt_id = 1;
-	string ingredient_vault_category_gmt_id = 2;
-	string potion_extimulo1_gmt_id = 3;
-	string potion_extimulo2_gmt_id = 4;
-	string potion_extimulo3_gmt_id = 5;
-	string potion_brain_elixir_gmt_id = 6;
-	string elite_mob_tag = 7;
 }
 
 // ref: Atlas.Proto.PlayerRatioChallengeBonusProto
@@ -4205,6 +4376,11 @@ message QuestCompletedRequirement {
 	string quest_gmt_id = 1;
 }
 
+// ref: Atlas.Proto.QuestInProgressRequirement
+message QuestInProgressRequirement {
+	string quest_gmt_id = 1;
+}
+
 // ref: Atlas.Proto.QuestProgress
 message QuestProgress {
 	// ref: Atlas.Proto.QuestProgress/TypeOneofCase
@@ -4238,6 +4414,7 @@ message QuestProto {
 	int32 chain_position = 6;
 	int32 chain_total = 7;
 	repeated Requirements start_requirements = 8;
+	PartnerPoiQuestInfo partner_poi_quest_info = 9;
 }
 
 // ref: Atlas.Proto.QuestRewardProto
@@ -4311,6 +4488,8 @@ message Requirement {
 		profession_tier_req = 23;
 		account_creation_date_requirement = 24;
 		lifetime_metric_req = 25;
+		quest_in_progress_req = 26;
+		app_platform_requirement = 27;
 	}
 
 	// ref: Atlas.Proto.Requirement/TimeRequirementTuple
@@ -4342,6 +4521,8 @@ message Requirement {
 	ProfessionTierRequirement profession_tier_req = 23;
 	AccountCreationDateRequirement account_creation_date_requirement = 24;
 	LifetimeMetricRequirement lifetime_metric_req = 25;
+	QuestInProgressRequirement quest_in_progress_req = 26;
+	AppPlatformRequirement app_platform_requirement = 27;
 }
 
 // ref: Atlas.Proto.Requirements
@@ -4426,6 +4607,7 @@ message SharedQualityLevelProto {
 	int32 advanced_ar_camera_resolution = 20;
 	int32 vfx_lod = 21;
 	bool force_simple_ar = 22;
+	int32 video_format = 23;
 }
 
 // ref: Atlas.Proto.SharedSocialGrowingSettingsProto
@@ -4442,11 +4624,7 @@ message SharedSocialGrowingSettingsProto {
 	double rental_pot_growing_time_multiplier = 4;
 	repeated HerbivicusMeterEntryProto herbivicus_meter = 5;
 	int32 maximum_energy_allowed = 6;
-}
-
-// ref: Atlas.Proto.SocialFriendBonusProto
-message SocialFriendBonusProto {
-	string id = 1;
+	int64 spawning_duration_ms = 7;
 }
 
 // ref: Atlas.Proto.SoundConfigProto
@@ -4603,6 +4781,10 @@ message StoryboardGenericDialogStep {
 	string button_text = 3;
 }
 
+// ref: Atlas.Proto.StoryboardLooseCTAStep
+message StoryboardLooseCTAStep {
+}
+
 // ref: Atlas.Proto.StoryboardPauseStep
 message StoryboardPauseStep {
 }
@@ -4729,16 +4911,6 @@ message VaultItemLootRewardProto {
 
 // ref: Atlas.Proto.VaultItemProto
 message VaultItemProto {
-	// ref: Atlas.Proto.VaultItemProto/PotionStateEnum
-	enum PotionStateEnum {
-		usable = 0;
-		map_unusable = 1;
-		potion_active = 2;
-		stronger_active = 3;
-		hpalready_full = 4;
-		focus_already_full = 5;
-	}
-
 	// ref: Atlas.Proto.VaultItemProto/VaultItemTypeOneofCase
 	enum VaultItemTypeOneofCase {
 		none = 0;
@@ -4876,6 +5048,14 @@ enum AppBackgroundResult {
 	DEFAULT = 3;
 }
 
+// ref: ClientOperatingSystem
+enum ClientOperatingSystem {
+	OS_UNKNOWN = 0;
+	OS_ANDROID = 1;
+	OS_IOS = 2;
+	OS_DESKTOP = 3;
+}
+
 // ref: CombatMoveType
 enum CombatMoveType {
 	COMBAT_PLAYER_ATTACK = 0;
@@ -4938,31 +5118,35 @@ enum TriggerPoint {
 	potion_room = 43;
 	master_note = 44;
 	cauldron_was_rented = 45;
-	greenhouse_ui = 46;
-	selfie_validation_over_age = 47;
-	potion_room_no_brew = 48;
-	potion_room_active_brew = 49;
-	potion_room_ready_to_collect = 50;
-	potion_start_brew = 51;
-	potion_confirm_finish_now = 52;
-	potion_recipe_list_open = 53;
-	potion_recipe_list_close = 54;
-	potion_collect_potion = 55;
-	potion_room_rental_cauldron_locked = 56;
-	potion_room_rental_cauldron_available = 57;
-	potion_room_rental_cauldron_active = 58;
-	swish_spell_cast_zero_energy = 59;
-	combat_spell_cast_zero_energy = 60;
-	passport_share_button_displayed = 61;
-	selfie_validation_under_age = 62;
-	challenge_teammate_joined = 63;
-	registry_sticker_placed = 64;
-	profession_before_open_book = 65;
-	profession_top_lesson_seen = 66;
-	player_map_ability_ready = 67;
-	enemy_map_ability_ready = 68;
-	profession_learn_lesson = 69;
-	new_challenge_map = 70;
+	greenhouse_giveaway = 46;
+	greenhouse_social_intro = 47;
+	selfie_validation_over_age = 48;
+	potion_room_no_brew = 49;
+	potion_room_active_brew = 50;
+	potion_room_ready_to_collect = 51;
+	potion_start_brew = 52;
+	potion_confirm_finish_now = 53;
+	potion_recipe_list_open = 54;
+	potion_recipe_list_close = 55;
+	potion_collect_potion = 56;
+	potion_room_rental_cauldron_locked = 57;
+	potion_room_rental_cauldron_available = 58;
+	potion_room_rental_cauldron_active = 59;
+	swish_spell_cast_zero_energy = 60;
+	combat_spell_cast_zero_energy = 61;
+	passport_share_button_displayed = 62;
+	selfie_validation_under_age = 63;
+	challenge_teammate_joined = 64;
+	registry_sticker_placed = 65;
+	profession_before_open_book = 66;
+	profession_top_lesson_seen = 67;
+	player_map_ability_ready = 68;
+	enemy_map_ability_ready = 69;
+	profession_learn_lesson = 70;
+	new_challenge_map = 71;
+	friend_passport = 72;
+	assignments_completed = 73;
+	assignments_story_tab_entered = 74;
 }
 
 // ref: UIAnimationState
@@ -5039,6 +5223,7 @@ message AdminDeleteInAppPurchaseItemProto {
 	string item_id = 2;
 	string reason = 3;
 	int32 quantity = 4;
+	map<string, int32> item_ids = 5;
 }
 
 // ref: AdminGetInAppPurchaseLogsOutProto
@@ -5113,6 +5298,192 @@ message BalanceSnapshotEntryProto {
 	int32 quantity = 2;
 }
 
+// ref: FitnessMetricsProto
+message FitnessMetricsProto {
+	double distance_walked_meters = 1;
+	int32 step_count = 2;
+	double calories_burned_kcals = 3;
+	int64 exercise_duration_mi = 4;
+	double wheelchair_distance_meters = 5;
+	double wheelchair_push_count = 6;
+}
+
+// ref: FitnessMetricsReportHistory
+message FitnessMetricsReportHistory {
+	// ref: FitnessMetricsReportHistory/Types/MetricsHistory
+	message MetricsHistory {
+		int64 bucket = 1;
+		FitnessMetricsProto metrics = 2;
+	}
+
+	repeated MetricsHistory weekly_history = 1;
+	repeated MetricsHistory daily_history = 2;
+}
+
+// ref: FitnessRecordProto
+message FitnessRecordProto {
+	map<int64, FitnessMetricsProto> hourly_reports = 1;
+	repeated FitnessSample raw_samples = 2;
+	int64 last_aggregation_timestamp_ms = 3;
+	FitnessStatsProto fitness_stats = 4;
+	FitnessMetricsReportHistory report_history = 5;
+}
+
+// ref: FitnessReportProto
+message FitnessReportProto {
+	// ref: FitnessReportProto/WindowOneofCase
+	enum WindowOneofCase {
+		none = 0;
+		day_offset_from_now = 1;
+		week_offset_from_now = 2;
+	}
+
+	int32 day_offset_from_now = 1;
+	int32 week_offset_from_now = 2;
+	FitnessMetricsProto metrics = 10;
+	bytes game_data = 11;
+}
+
+// ref: FitnessSample
+message FitnessSample {
+	// ref: FitnessSample/Types/FitnessSampleType
+	enum FitnessSampleType {
+		SAMPLE_UNSET = 0;
+		STEPS = 1;
+		WALKING_DISTANCE_METERS = 2;
+		WHEELCHAIR_DISTANCE_METERS = 3;
+		CALORIES_KCALS = 4;
+		WHEELCHAIR_PUSH_COUNT = 5;
+		EXERCISE_TIME_MI = 6;
+	}
+
+	// ref: FitnessSample/Types/FitnessSourceType
+	enum FitnessSourceType {
+		SOURCE_UNSET = 0;
+		HEALTHKIT = 1;
+		GOOGLE_FIT = 2;
+		APPLE_WATCH = 3;
+		GPS = 4;
+	}
+
+	FitnessSampleType sample_type = 1;
+	int64 sample_start_timestamp_ms = 2;
+	int64 sample_end_timestamp_ms = 3;
+	double value = 4;
+	FitnessSourceType source_type = 5;
+}
+
+// ref: FitnessStatsProto
+message FitnessStatsProto {
+	int64 last_accumulated_timestamp_ms = 1;
+	FitnessMetricsProto accumulated = 2;
+	FitnessMetricsProto pending = 3;
+	double player_initial_walk_km = 4;
+	double player_total_walk_km = 5;
+}
+
+// ref: FitnessUpdateOutProto
+message FitnessUpdateOutProto {
+	// ref: FitnessUpdateOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+	}
+
+	Status status = 1;
+}
+
+// ref: FitnessUpdateProto
+message FitnessUpdateProto {
+	repeated FitnessSample fitness_samples = 1;
+}
+
+// ref: GeofenceMetadata
+message GeofenceMetadata {
+	double latitude_deg = 1;
+	double longitude_deg = 2;
+	double radius = 3;
+	string identifier = 4;
+	int64 expiration_ms = 5;
+	int64 dwell_time_ms = 6;
+	bool fire_on_entrance = 7;
+	bool fire_on_exit = 8;
+}
+
+// ref: GeofenceUpdateOutProto
+message GeofenceUpdateOutProto {
+	repeated GeofenceMetadata geofence = 1;
+}
+
+// ref: GeofenceUpdateProto
+message GeofenceUpdateProto {
+	int32 number_of_points = 1;
+	double minimum_point_radius_m = 2;
+}
+
+// ref: GetBackgroundModeSettingsOutProto
+message GetBackgroundModeSettingsOutProto {
+	// ref: GetBackgroundModeSettingsOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+	}
+
+	Status status = 1;
+	niantic.platform.bgmode.BackgroundModeClientSettingsProto settings = 2;
+}
+
+// ref: GetBackgroundModeSettingsProto
+message GetBackgroundModeSettingsProto {
+}
+
+// ref: GetFitnessReportOutProto
+message GetFitnessReportOutProto {
+	// ref: GetFitnessReportOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_NOT_FOUND = 2;
+		ERROR_RECORDS_NOT_FOUND = 3;
+		ERROR_INVALID_WINDOW = 4;
+		ERROR_UNKNOWN = 5;
+	}
+
+	Status status = 1;
+	repeated FitnessReportProto daily_reports = 2;
+	repeated FitnessReportProto weekly_reports = 3;
+	int64 week_reset_timestamp_since_monday_ms = 4;
+}
+
+// ref: GetFitnessReportProto
+message GetFitnessReportProto {
+	int32 num_of_days = 1;
+	int32 num_of_weeks = 2;
+}
+
+// ref: LocationPingOutProto
+message LocationPingOutProto {
+}
+
+// ref: LocationPingProto
+message LocationPingProto {
+	// ref: LocationPingProto/Types/PingReason
+	enum PingReason {
+		UNSET = 0;
+		ENTRANCE_EVENT = 1;
+		EXIT_EVENT = 2;
+		DWELL_EVENT = 3;
+		VISIT_EVENT = 4;
+		FITNESS_WAKEUP = 5;
+		OTHER_WAKEUP = 6;
+	}
+
+	string geofence_identifier = 1;
+	PingReason reason = 2;
+}
+
 // ref: PlayerInAppPurchaseLogProto
 message PlayerInAppPurchaseLogProto {
 	int64 timestamp_ms = 1;
@@ -5142,6 +5513,7 @@ message RedeemPasscodeResponseProto {
 		NOT_AVAILABLE = 2;
 		OVER_INVENTORY_LIMIT = 3;
 		ALREADY_REDEEMED = 4;
+		OVER_PLAYER_REDEMPTION_LIMIT = 5;
 	}
 
 	// ref: RedeemPasscodeResponseProto/Types/AcquiredItem
@@ -5154,6 +5526,33 @@ message RedeemPasscodeResponseProto {
 	repeated AcquiredItem acquired_item = 2;
 	bytes acquired_items_proto = 3;
 	string passcode = 4;
+}
+
+// ref: SetInGameCurrencyExchangeRateOutProto
+message SetInGameCurrencyExchangeRateOutProto {
+	// ref: SetInGameCurrencyExchangeRateOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+
+	Status status = 1;
+}
+
+// ref: SetInGameCurrencyExchangeRateProto
+message SetInGameCurrencyExchangeRateProto {
+	string in_game_currency = 1;
+	string fiat_currency = 2;
+	int64 fiat_currency_cost_e6_per_in_game_unit = 3;
+}
+
+// ref: SetInGameCurrencyExchangeRateTrackingProto
+message SetInGameCurrencyExchangeRateTrackingProto {
+	string in_game_currency = 1;
+	string fiat_currency = 2;
+	int64 fiat_currency_cost_e6_per_in_game_unit = 3;
+	string status = 4;
 }
 
 // ref: SkuContentProto
@@ -5311,6 +5710,14 @@ message WeatherSettingsProto {
 //------------------------------
 //----- Begin protos -----
 
+// ref: Niantic.Platform.Protos.InvitationType
+enum InvitationType {
+	INVITATION_TYPE_UNSET = 0;
+	INVITATION_TYPE_CODE = 1;
+	INVITATION_TYPE_FACEBOOK = 2;
+	INVITATION_TYPE_SERVER_REQUEST = 3;
+}
+
 // ref: Niantic.Platform.Protos.NotificationState
 enum NotificationState {
 	UNSET_STATE = 0;
@@ -5336,6 +5743,73 @@ enum PlatformClientAction {
 	CLIENT_TELEMETRY = 5013;
 	GET_AVAILABLE_SUBMISSIONS = 5014;
 	GET_SIGNED_URL_FOR_PHOTO_UPLOAD = 5015;
+	REPLACE_LOGIN_ACTION = 5016;
+	PROXY_SOCIAL_SIDE_CHANNEL_ACTION = 5017;
+	COLLECT_CLIENT_TELEMETRY = 5018;
+	PURCHASE_SKU = 5019;
+	GET_AVAILABLE_SKUS_AND_BALANCES = 5020;
+	REDEEM_GOOGLE_RECEIPT = 5021;
+	REDEEM_APPLE_RECEIPT = 5022;
+	REDEEM_DESKTOP_RECEIPT = 5023;
+	UPDATE_FITNESS_METRICS = 5024;
+	GET_FITNESS_REPORT = 5025;
+	GET_CLIENT_TELEMETRY_SETTINGS = 5026;
+	PING_ASYNC = 5027;
+	REGISTER_BACKGROUND_SERVICE = 5028;
+	GET_CLIENT_BGMODE_SETTINGS = 5029;
+	PING_DOWNSTREAM = 5030;
+	SET_IN_GAME_CURRENCY_EXCHANGE_RATE = 5032;
+	REQUEST_GEOFENCE_UPDATES = 5033;
+	UPDATE_PLAYER_LOCATION = 5034;
+	GENERATE_GMAP_SIGNED_URL = 5035;
+	GET_GMAP_SETTINGS = 5036;
+	REDEEM_SAMSUNG_RECEIPT = 5037;
+	ADD_NEW_ROUTE = 5038;
+	GET_OUTSTANDING_WARNINGS = 5039;
+	ACKNOWLEDGE_WARNINGS = 5040;
+	SUBMIT_POI_IMAGE = 5041;
+	SUBMIT_POI_TEXT_METADATA_UPDATE = 5042;
+	SUBMIT_POI_LOCATION_UPDATE = 5043;
+	SUBMIT_POI_TAKEDOWN_REQUEST = 5044;
+}
+
+// ref: Niantic.Platform.Protos.SocialNotificationCategory
+enum SocialNotificationCategory {
+	unset__social_notification_category = 0;
+	FRIEND_INVITE_RECEIVED = 1;
+	FRIEND_INVITE_ACCEPTED = 2;
+}
+
+// ref: Niantic.Platform.Protos.SocialNotificationVariableName
+enum SocialNotificationVariableName {
+	unset__social_notification_variable_name = 0;
+	SOCIAL_CODENAME = 1;
+	SOCIAL_TEAM = 2;
+	SOCIAL_PLAYER_SUMMARY = 3;
+	SOCIAL_FULL_NAME = 4;
+}
+
+// ref: Niantic.Platform.Protos.AcceptFriendInviteOutProto
+message AcceptFriendInviteOutProto {
+	// ref: Niantic.Platform.Protos.AcceptFriendInviteOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_INVITE_DOES_NOT_EXIST = 3;
+		ERROR_MAX_FRIENDS_LIMIT_REACHED_DELETED = 4;
+		ERROR_INVITE_HAS_BEEN_CANCELLED = 5;
+		ERROR_SENDER_HAS_MAX_FRIENDS = 6;
+		ERROR_RECEIVER_HAS_MAX_FRIENDS = 7;
+	}
+
+	Result result = 1;
+	PlayerSummaryProto friend = 2;
+}
+
+// ref: Niantic.Platform.Protos.AcceptFriendInviteProto
+message AcceptFriendInviteProto {
+	string player_id = 1;
 }
 
 // ref: Niantic.Platform.Protos.AddLoginActionOutProto
@@ -5363,6 +5837,25 @@ message ApnToken {
 	string registration_id = 1;
 	string bundle_identifier = 2;
 	int32 payload_byte_size = 3;
+}
+
+// ref: Niantic.Platform.Protos.CancelFriendInviteOutProto
+message CancelFriendInviteOutProto {
+	// ref: Niantic.Platform.Protos.CancelFriendInviteOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_INVITE_DOES_NOT_EXIST = 3;
+		ERROR_ALREADY_CANCELLED = 4;
+	}
+
+	Result result = 1;
+}
+
+// ref: Niantic.Platform.Protos.CancelFriendInviteProto
+message CancelFriendInviteProto {
+	string player_id = 1;
 }
 
 // ref: Niantic.Platform.Protos.ClientInbox
@@ -5396,6 +5889,25 @@ message DebugInfoProto {
 	double longitude = 2;
 }
 
+// ref: Niantic.Platform.Protos.DeclineFriendInviteOutProto
+message DeclineFriendInviteOutProto {
+	// ref: Niantic.Platform.Protos.DeclineFriendInviteOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_INVITE_DOES_NOT_EXIST = 3;
+		ERROR_INVITE_ALREADY_DECLINED = 4;
+	}
+
+	Result result = 1;
+}
+
+// ref: Niantic.Platform.Protos.DeclineFriendInviteProto
+message DeclineFriendInviteProto {
+	string player_id = 1;
+}
+
 // ref: Niantic.Platform.Protos.DownloadSettingsActionProto
 message DownloadSettingsActionProto {
 	string sha1 = 1;
@@ -5408,19 +5920,289 @@ message DownloadSettingsResponseProto {
 	bytes values = 3;
 }
 
+// ref: Niantic.Platform.Protos.FriendDetailsProto
+message FriendDetailsProto {
+	// ref: Niantic.Platform.Protos.FriendDetailsProto/Types/OnlineStatus
+	enum OnlineStatus {
+		UNSET = 0;
+		STATUS_UNKNOWN = 1;
+		STATUS_ONLINE = 2;
+		STATUS_OFFLINE = 3;
+	}
+
+	PlayerSummaryProto player = 1;
+	bytes friend_visible_data = 2;
+	int32 score = 3;
+	bytes data_with_me = 4;
+	OnlineStatus online_status = 5;
+}
+
 // ref: Niantic.Platform.Protos.GcmToken
 message GcmToken {
 	string registration_id = 1;
+}
+
+// ref: Niantic.Platform.Protos.GenerateGmapSignedUrlOutProto
+message GenerateGmapSignedUrlOutProto {
+	// ref: Niantic.Platform.Protos.GenerateGmapSignedUrlOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_NOT_VALID = 2;
+		ERROR_RATE_LIMITED = 3;
+		ERROR_MISSING_INPUT = 4;
+		ERROR_UNKNOWN = 5;
+	}
+
+	Result result = 1;
+	string signed_url = 2;
+}
+
+// ref: Niantic.Platform.Protos.GenerateGmapSignedUrlProto
+message GenerateGmapSignedUrlProto {
+	double latitude = 1;
+	double longitude = 2;
+	int32 width = 3;
+	int32 height = 4;
+	int32 zoom = 5;
+	string language_code = 6;
+	string country_code = 7;
+	string map_style = 8;
+	string map_type = 9;
+	string icon_params = 10;
 }
 
 // ref: Niantic.Platform.Protos.GetAvailableSubmissionsOutProto
 message GetAvailableSubmissionsOutProto {
 	int32 submissions_left = 1;
 	int32 min_player_level = 2;
+	bool has_valid_email = 3;
+	bool is_feature_enabled = 4;
+	int64 time_window_for_submissions_limit_ms = 5;
 }
 
 // ref: Niantic.Platform.Protos.GetAvailableSubmissionsProto
 message GetAvailableSubmissionsProto {
+}
+
+// ref: Niantic.Platform.Protos.GetFacebookFriendListOutProto
+message GetFacebookFriendListOutProto {
+	// ref: Niantic.Platform.Protos.GetFacebookFriendListOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_FACEBOOK_API = 3;
+		ERROR_FACEBOOK_PERMISSIONS = 4;
+		ERROR_NO_FACEBOOK_ID = 5;
+		ERROR_PLAYER_NOT_FOUND = 6;
+	}
+
+	// ref: Niantic.Platform.Protos.GetFacebookFriendListOutProto/Types/FacebookFriendProto
+	message FacebookFriendProto {
+		PlayerSummaryProto player = 1;
+		string full_name = 2;
+	}
+
+	Result result = 1;
+	repeated FacebookFriendProto friend = 2;
+	string next_cursor = 3;
+}
+
+// ref: Niantic.Platform.Protos.GetFacebookFriendListProto
+message GetFacebookFriendListProto {
+	string fb_access_token = 1;
+	int32 limit = 2;
+	string cursor = 3;
+}
+
+// ref: Niantic.Platform.Protos.GetFriendCodeOutProto
+message GetFriendCodeOutProto {
+	// ref: Niantic.Platform.Protos.GetFriendCodeOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+
+	Result result = 1;
+	string friend_code = 2;
+}
+
+// ref: Niantic.Platform.Protos.GetFriendCodeProto
+message GetFriendCodeProto {
+	bool force_generate_code = 1;
+}
+
+// ref: Niantic.Platform.Protos.GetFriendDetailsOutProto
+message GetFriendDetailsOutProto {
+	// ref: Niantic.Platform.Protos.GetFriendDetailsOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		EXCEEDS_MAX_PLAYERS_PER_QUERY = 3;
+	}
+
+	// ref: Niantic.Platform.Protos.GetFriendDetailsOutProto/Types/DebugProto/Types/Callee
+	message Callee {
+		repeated int32 callee_id = 1;
+		string player_id = 2;
+	}
+
+	// ref: Niantic.Platform.Protos.GetFriendDetailsOutProto/Types/DebugProto
+	message DebugProto {
+		// ref: Niantic.Platform.Protos.GetFriendDetailsOutProto/Types/DebugProto/Types/Callee
+		message Callee {
+			repeated int32 callee_id = 1;
+			string player_id = 2;
+		}
+
+		int32 fetched_from_db = 1;
+		int32 fetched_from_fanout = 2;
+		int32 fetched_from_player_mapper = 3;
+		int32 fetched_from_status_cache = 4;
+		int32 failed_to_fetch = 5;
+		repeated GetFriendDetailsOutProto.Callee callee_list = 6;
+		int32 fetched_from_same_server_as_player = 7;
+	}
+
+	Result result = 1;
+	repeated FriendDetailsProto friend = 2;
+	DebugProto friend_details_debug_info = 3;
+}
+
+// ref: Niantic.Platform.Protos.GetFriendDetailsProto
+message GetFriendDetailsProto {
+	repeated string player_id = 1;
+}
+
+// ref: Niantic.Platform.Protos.GetFriendsListOutProto
+message GetFriendsListOutProto {
+	// ref: Niantic.Platform.Protos.GetFriendsListOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+	}
+
+	// ref: Niantic.Platform.Protos.GetFriendsListOutProto/Types/FriendProto
+	message FriendProto {
+		string player_id = 1;
+		string codename = 2;
+		string team = 3;
+		int32 score = 4;
+		bytes data_with_me = 5;
+		int64 version = 6;
+		int64 created_ms = 7;
+		string fb_user_id = 8;
+		bool is_facebook_friendship = 9;
+		GetFriendsListOutProto.SharedFriendshipProto shared_data = 10;
+	}
+
+	// ref: Niantic.Platform.Protos.GetFriendsListOutProto/Types/SharedFriendshipProto
+	message SharedFriendshipProto {
+		bytes shared_data = 1;
+		int64 version = 2;
+	}
+
+	Result result = 1;
+	repeated FriendProto friend = 2;
+}
+
+// ref: Niantic.Platform.Protos.GetFriendsListProto
+message GetFriendsListProto {
+}
+
+// ref: Niantic.Platform.Protos.GetGmapSettingsOutProto
+message GetGmapSettingsOutProto {
+	// ref: Niantic.Platform.Protos.GetGmapSettingsOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_MISSING_CONFIG = 3;
+		ERROR_NO_UNIQUE_ID = 4;
+	}
+
+	Result result = 1;
+	string gmap_template_url = 2;
+	int32 max_poi_distance_in_meters = 3;
+}
+
+// ref: Niantic.Platform.Protos.GetGmapSettingsProto
+message GetGmapSettingsProto {
+}
+
+// ref: Niantic.Platform.Protos.GetInboxV2Proto
+message GetInboxV2Proto {
+	bool is_history = 1;
+	bool is_reverse = 2;
+	int64 not_before_ms = 3;
+}
+
+// ref: Niantic.Platform.Protos.GetIncomingFriendInvitesOutProto
+message GetIncomingFriendInvitesOutProto {
+	// ref: Niantic.Platform.Protos.GetIncomingFriendInvitesOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+	}
+
+	Result result = 1;
+	repeated IncomingFriendInviteDisplayProto invites = 2;
+}
+
+// ref: Niantic.Platform.Protos.GetIncomingFriendInvitesProto
+message GetIncomingFriendInvitesProto {
+}
+
+// ref: Niantic.Platform.Protos.GetNotificationInboxOutProto
+message GetNotificationInboxOutProto {
+	// ref: Niantic.Platform.Protos.GetNotificationInboxOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+
+	Result result = 1;
+	ClientInbox inbox = 2;
+}
+
+// ref: Niantic.Platform.Protos.GetOutgoingFriendInvitesOutProto
+message GetOutgoingFriendInvitesOutProto {
+	// ref: Niantic.Platform.Protos.GetOutgoingFriendInvitesOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+	}
+
+	Result result = 1;
+	repeated OutgoingFriendInviteDisplayProto invites = 2;
+}
+
+// ref: Niantic.Platform.Protos.GetOutgoingFriendInvitesProto
+message GetOutgoingFriendInvitesProto {
+}
+
+// ref: Niantic.Platform.Protos.GetPlayerSettingsOutProto
+message GetPlayerSettingsOutProto {
+	// ref: Niantic.Platform.Protos.GetPlayerSettingsOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_PLAYER_NOT_FOUND = 3;
+	}
+
+	Result result = 1;
+	PlayerSettingsProto settings = 2;
+}
+
+// ref: Niantic.Platform.Protos.GetPlayerSettingsProto
+message GetPlayerSettingsProto {
 }
 
 // ref: Niantic.Platform.Protos.GetUploadUrlOutProto
@@ -5443,6 +6225,78 @@ message GetUploadUrlProto {
 	string game_unique_id = 2;
 }
 
+// ref: Niantic.Platform.Protos.IncomingFriendInviteDisplayProto
+message IncomingFriendInviteDisplayProto {
+	IncomingFriendInviteProto invite = 1;
+	PlayerSummaryProto player = 2;
+}
+
+// ref: Niantic.Platform.Protos.IncomingFriendInviteProto
+message IncomingFriendInviteProto {
+	// ref: Niantic.Platform.Protos.IncomingFriendInviteProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		PENDING = 1;
+		DECLINED = 2;
+		CANCELLED = 3;
+	}
+
+	Status status = 1;
+	string player_id = 2;
+	int64 created_ms = 3;
+	InvitationType invitation_type = 4;
+	string full_name = 5;
+}
+
+// ref: Niantic.Platform.Protos.InviteFacebookFriendOutProto
+message InviteFacebookFriendOutProto {
+	// ref: Niantic.Platform.Protos.InviteFacebookFriendOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_PLAYER_NOT_FOUND = 3;
+		ERROR_PLAYER_OUTBOX_FULL = 4;
+		ERROR_PLAYER_INBOX_FULL = 5;
+		ERROR_SENDER_HAS_MAX_FRIENDS = 6;
+		ERROR_RECEIVER_HAS_MAX_FRIENDS = 7;
+		ERROR_ALREADY_A_FRIEND = 8;
+		ERROR_INVITE_ALREADY_SENT = 9;
+		ERROR_INVITE_ALREADY_RECEIVED = 10;
+		ERROR_CANNOT_SEND_INVITES_TO_YOURSELF = 11;
+		ERROR_FRIEND_CACHE_EXPIRED = 12;
+		ERROR_FRIEND_NOT_CACHED = 13;
+		ERROR_INVALID_SENDER_FACEBOOK_ID = 14;
+	}
+
+	Result result = 1;
+}
+
+// ref: Niantic.Platform.Protos.InviteFacebookFriendProto
+message InviteFacebookFriendProto {
+	string fb_access_token = 1;
+	string friend_fb_user_id = 2;
+}
+
+// ref: Niantic.Platform.Protos.IsMyFriendOutProto
+message IsMyFriendOutProto {
+	// ref: Niantic.Platform.Protos.IsMyFriendOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_PLAYER_NOT_FOUND_DELETED = 3;
+	}
+
+	Result result = 1;
+	bool is_friend = 2;
+}
+
+// ref: Niantic.Platform.Protos.IsMyFriendProto
+message IsMyFriendProto {
+	string player_id = 1;
+}
+
 // ref: Niantic.Platform.Protos.ListLoginActionOutProto
 message ListLoginActionOutProto {
 	bool success = 1;
@@ -5460,11 +6314,35 @@ message OptOutProto {
 	repeated string categories = 1;
 }
 
+// ref: Niantic.Platform.Protos.OutgoingFriendInviteDisplayProto
+message OutgoingFriendInviteDisplayProto {
+	OutgoingFriendInviteProto invite = 1;
+	PlayerSummaryProto player = 2;
+}
+
+// ref: Niantic.Platform.Protos.OutgoingFriendInviteProto
+message OutgoingFriendInviteProto {
+	// ref: Niantic.Platform.Protos.OutgoingFriendInviteProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		PENDING = 1;
+		CANCELLED = 2;
+		DECLINED = 3;
+	}
+
+	Status status = 1;
+	string player_id = 2;
+	int64 created_ms = 3;
+	InvitationType invitation_type = 4;
+	string full_name = 5;
+}
+
 // ref: Niantic.Platform.Protos.PingRequestProto
 message PingRequestProto {
 	int32 response_size_bytes = 1;
 	string random_request_bytes = 2;
 	bool use_cache_for_random_request_bytes = 3;
+	string return_value = 4;
 }
 
 // ref: Niantic.Platform.Protos.PingResponseProto
@@ -5472,6 +6350,7 @@ message PingResponseProto {
 	string user_info = 1;
 	string server_info = 2;
 	string random_response_bytes = 3;
+	string return_value = 4;
 }
 
 // ref: Niantic.Platform.Protos.PlayerReputationProto
@@ -5487,6 +6366,20 @@ message PlayerReputationProto {
 	int64 player_level = 2;
 	repeated CheatReputation cheat_reputation = 3;
 	bool is_minor = 4;
+}
+
+// ref: Niantic.Platform.Protos.PlayerSettingsProto
+message PlayerSettingsProto {
+	bool opt_out_online_status = 1;
+}
+
+// ref: Niantic.Platform.Protos.PlayerSummaryProto
+message PlayerSummaryProto {
+	string player_id = 1;
+	string codename = 2;
+	bytes public_data = 3;
+	string team = 4;
+	string fb_user_id = 5;
 }
 
 // ref: Niantic.Platform.Protos.PortalCurationImageResult
@@ -5523,15 +6416,125 @@ message PushNotificationRegistryProto {
 	GcmToken gcm_token = 2;
 }
 
+// ref: Niantic.Platform.Protos.RemoveFriendOutProto
+message RemoveFriendOutProto {
+	// ref: Niantic.Platform.Protos.RemoveFriendOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_DOES_NOT_EXIST_DELETED = 2;
+		ERROR_PLAYER_NOT_A_FRIEND = 3;
+	}
+
+	Result result = 1;
+}
+
+// ref: Niantic.Platform.Protos.RemoveFriendProto
+message RemoveFriendProto {
+	string player_id = 1;
+}
+
 // ref: Niantic.Platform.Protos.RemoveLoginActionOutProto
 message RemoveLoginActionOutProto {
+	// ref: Niantic.Platform.Protos.RemoveLoginActionOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		LOGIN_NOT_REMOVABLE = 1;
+	}
+
 	bool success = 1;
 	repeated LoginDetail login_detail = 2;
+	Status status = 3;
 }
 
 // ref: Niantic.Platform.Protos.RemoveLoginActionProto
 message RemoveLoginActionProto {
 	com.nianticproject.platform.auth.IdentityProvider identity_provider = 1;
+}
+
+// ref: Niantic.Platform.Protos.ReplaceLoginActionOutProto
+message ReplaceLoginActionOutProto {
+	// ref: Niantic.Platform.Protos.ReplaceLoginActionOutProto/Types/Status
+	enum Status {
+		UNSET = 0;
+		AUTH_FAILURE = 1;
+		LOGIN_TAKEN = 2;
+		LOGIN_ALREADY_HAVE = 3;
+		LOGIN_NOT_REPLACEABLE = 4;
+	}
+
+	bool success = 1;
+	repeated LoginDetail login_detail = 2;
+	Status status = 3;
+}
+
+// ref: Niantic.Platform.Protos.ReplaceLoginActionProto
+message ReplaceLoginActionProto {
+	com.nianticproject.platform.auth.IdentityProvider existing_identity_provider = 1;
+	AddLoginActionProto new_login = 2;
+}
+
+// ref: Niantic.Platform.Protos.SavePlayerSettingsOutProto
+message SavePlayerSettingsOutProto {
+	// ref: Niantic.Platform.Protos.SavePlayerSettingsOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+	}
+
+	Result result = 1;
+}
+
+// ref: Niantic.Platform.Protos.SavePlayerSettingsProto
+message SavePlayerSettingsProto {
+	PlayerSettingsProto settings = 1;
+}
+
+// ref: Niantic.Platform.Protos.SearchPlayerOutProto
+message SearchPlayerOutProto {
+	// ref: Niantic.Platform.Protos.SearchPlayerOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_PLAYER_NOT_FOUND = 3;
+	}
+
+	Result result = 1;
+	PlayerSummaryProto player = 2;
+}
+
+// ref: Niantic.Platform.Protos.SearchPlayerProto
+message SearchPlayerProto {
+	string friend_code = 1;
+}
+
+// ref: Niantic.Platform.Protos.SendFriendInviteOutProto
+message SendFriendInviteOutProto {
+	// ref: Niantic.Platform.Protos.SendFriendInviteOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_ALREADY_A_FRIEND = 3;
+		ERROR_PLAYER_DOES_NOT_EXIST_DELETED = 4;
+		ERROR_PLAYER_INBOX_FULL = 5;
+		ERROR_PLAYER_OUTBOX_FULL = 6;
+		ERROR_SENDER_HAS_MAX_FRIENDS = 7;
+		ERROR_INVITE_ALREADY_SENT = 8;
+		ERROR_CANNOT_SEND_INVITES_TO_YOURSELF = 9;
+		ERROR_INVITE_ALREADY_RECEIVED = 10;
+		ERROR_RECEIVER_HAS_MAX_FRIENDS = 11;
+	}
+
+	Result result = 1;
+}
+
+// ref: Niantic.Platform.Protos.SendFriendInviteProto
+message SendFriendInviteProto {
+	string player_id = 1;
+	string friend_code = 2;
 }
 
 // ref: Niantic.Platform.Protos.SubmitNewPoiOutProto
@@ -5545,22 +6548,18 @@ message SubmitNewPoiOutProto {
 		TOO_MANY_RECENT_SUBMISSIONS = 4;
 		INVALID_INPUT = 5;
 		MINOR = 6;
+		NOT_AVAILABLE = 7;
 	}
 
 	Status status = 1;
-	repeated string message = 2;
 }
 
 // ref: Niantic.Platform.Protos.SubmitNewPoiProto
 message SubmitNewPoiProto {
 	string title = 1;
 	string long_description = 2;
-	string image_gs_file_path = 3;
 	int32 lat_e6 = 4;
 	int32 lng_e6 = 5;
-	string image_serving_url = 6;
-	string supporting_image_gs_file_path = 12;
-	string supporting_image_serving_url = 13;
 	string supporting_statement = 14;
 }
 
@@ -5571,6 +6570,27 @@ message TemplateVariable {
 	string key = 3;
 	string lookup_table = 4;
 	bytes byte_value = 5;
+}
+
+// ref: Niantic.Platform.Protos.UpdateFacebookStatusOutProto
+message UpdateFacebookStatusOutProto {
+	// ref: Niantic.Platform.Protos.UpdateFacebookStatusOutProto/Types/Result
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_PLAYER_NOT_FOUND = 3;
+		ERROR_FACEBOOK_API = 4;
+		ERROR_ALREADY_EXISTS = 5;
+	}
+
+	Result result = 1;
+}
+
+// ref: Niantic.Platform.Protos.UpdateFacebookStatusProto
+message UpdateFacebookStatusProto {
+	string fb_access_token = 1;
+	bool force_update = 2;
 }
 
 // ref: Niantic.Platform.Protos.UpdateNotificationOutProto
@@ -5701,6 +6721,38 @@ message SkuPresentationProto {
 
 //----- End protos -----
 //------------------------------
+//----- Begin protos -----
+
+// ref: Niantic.Social.Protos.SocialAction
+enum SocialAction {
+	UNKNOWN_SOCIAL_ACTION = 0;
+	SEARCH_PLAYER = 10000;
+	SEND_FRIEND_INVITE = 10002;
+	CANCEL_FRIEND_INVITE = 10003;
+	ACCEPT_FRIEND_INVITE = 10004;
+	DECLINE_FRIEND_INVITE = 10005;
+	LIST_FRIENDS = 10006;
+	LIST_OUTGOING_FRIEND_INVITES = 10007;
+	LIST_INCOMING_FRIEND_INVITES = 10008;
+	REMOVE_FRIEND = 10009;
+	LIST_FRIEND_STATUS = 10010;
+	SEND_FACEBOOK_FRIEND_INVITE = 10011;
+	IS_MY_FRIEND = 10012;
+	CREATE_INVITE_CODE = 10013;
+	GET_FACEBOOK_FRIEND_LIST = 10014;
+	UPDATE_FACEBOOK_STATUS = 10015;
+	SAVE_PLAYER_SETTINGS = 10016;
+	GET_PLAYER_SETTINGS = 10017;
+	REGISTER_PUSH_NOTIFICATION = 10101;
+	UNREGISTER_PUSH_NOTIFICATION = 10102;
+	UPDATE_NOTIFICATION = 10103;
+	OPT_OUT_PUSH_NOTIFICATION_CATEGORY = 10104;
+	GET_INBOX = 10105;
+}
+
+
+//----- End protos -----
+//------------------------------
 //----- Begin rpc -----
 
 // ref: Atlas.Rpc.ChallengeFinishStatus
@@ -5809,6 +6861,8 @@ enum Method {
 	CAST_SPELL_FOR_GROWING = 77;
 	REDEEM_POI_PASSCODE = 78;
 	GET_PLAYER_DISPLAY_INFO = 79;
+	GET_PLAYER_BAN_INFO = 80;
+	ACKNOWLEDGE_WARNING = 81;
 	ECHO = 666;
 	DBG_UPDATE_INVENTORY = 999000;
 	DBG_MODIFY_COLLECTION_ITEMS = 999001;
@@ -5827,6 +6881,7 @@ enum Method {
 	DBG_WC_ADD_BUFF = 999015;
 	DBG_CHALLENGE_WIN = 999016;
 	DBG_RESET_STORE_PACK_PURCHASED = 999017;
+	DBG_QUEST_REMOVAL = 999018;
 }
 
 // ref: Atlas.Rpc.MoonPhaseTag
@@ -5906,6 +6961,43 @@ message AcknowledgePunishmentResponseProto {
 	}
 
 	Result result = 1;
+}
+
+// ref: Atlas.Rpc.AcknowledgeWarningRequestProto
+message AcknowledgeWarningRequestProto {
+	// ref: Atlas.Rpc.AcknowledgeWarningRequestProto/TypeOneofCase
+	enum TypeOneofCase {
+		none = 0;
+		warning_ack = 1;
+	}
+
+	// ref: Atlas.Rpc.AcknowledgeWarningRequestProto/Types/WarningAcknowledgementType
+	enum WarningAcknowledgementType {
+		UNKNOWN = 0;
+		GAME_LAUNCH_DRIVING_ACK = 1;
+		GAME_LAUNCH_DANGEROUS_AREAS_ACK = 2;
+		GAME_LAUNCH_TRESPASSING_ACK = 3;
+		SPEED_EXCEEDANCE_PASSENGER_ACK = 4;
+		SPEED_EXCEEDANCE_NOT_DRIVING_ACK = 5;
+		UNAUTHORIZED_THIRD_PARTY_APPS_DETECTED_ACK = 6;
+		AR_PLUS_ACK = 7;
+		SOCIAL_ACK = 8;
+		HAZARDOUS_WEATHER_ACK = 9;
+		PORTKEY_ACK = 10;
+	}
+
+	WarningAcknowledgementType warning_ack = 1;
+}
+
+// ref: Atlas.Rpc.AcknowledgeWarningResponseProto
+message AcknowledgeWarningResponseProto {
+	// ref: Atlas.Rpc.AcknowledgeWarningResponseProto/Types/Status
+	enum Status {
+		ERROR = 0;
+		SUCCESS = 1;
+	}
+
+	Status status = 1;
 }
 
 // ref: Atlas.Rpc.AddDarkDetectorRequestProto
@@ -6123,6 +7215,7 @@ message CastSpellForGrowingResponseProto {
 		INVALID_POT = 5;
 		NOT_ENOUGH_SPELL_ENERGY = 6;
 		NO_GROWING_IN_PROGRESS = 7;
+		SPELL_ALREADY_COMPLETED = 8;
 	}
 
 	Status status = 1;
@@ -6563,6 +7656,7 @@ message CreateOrUpdatePlayerResponseProto {
 	ClientPlayerDataProto player = 2;
 	bool first_login_of_day = 3;
 	PlayerDisciplineInfoProto player_discipline = 4;
+	repeated int32 user_permission = 5;
 }
 
 // ref: Atlas.Rpc.CurrencyQuantityProto
@@ -7189,6 +8283,27 @@ message GetOutpostDetailsResponseProto {
 	atlas.proto.PoiAccessibility poi_accessibility = 5;
 }
 
+// ref: Atlas.Rpc.GetPlayerBanInfoRequestProto
+message GetPlayerBanInfoRequestProto {
+}
+
+// ref: Atlas.Rpc.GetPlayerBanInfoResponseProto
+message GetPlayerBanInfoResponseProto {
+	// ref: Atlas.Rpc.GetPlayerBanInfoResponseProto/Types/BanStatus
+	enum BanStatus {
+		NONE = 0;
+		WARNING = 1;
+		SUSPENDED = 2;
+		BANNED = 3;
+		BANNED_ADMIN = 4;
+	}
+
+	string codename = 1;
+	string email = 2;
+	string player_support_id = 3;
+	BanStatus ban_status = 4;
+}
+
 // ref: Atlas.Rpc.GetPlayerFeatureListRequestProto
 message GetPlayerFeatureListRequestProto {
 }
@@ -7479,6 +8594,13 @@ message LifetimeMetricsProto {
 		int64 greenhouse = 2;
 	}
 
+	// ref: Atlas.Rpc.LifetimeMetricsProto/Types/ProfessionMetrics
+	message ProfessionMetrics {
+		int32 nodes_unlocked = 1;
+		repeated string rank_completed = 2;
+		int32 levels_upgraded = 3;
+	}
+
 	// ref: Atlas.Rpc.LifetimeMetricsProto/Types/WcMetrics
 	message WcMetrics {
 		int64 completed = 1;
@@ -7513,6 +8635,9 @@ message LifetimeMetricsProto {
 	repeated string encounter_completed_countries = 26;
 	int32 elite_mobs_defeated_by_me = 27;
 	int32 map_abilities_used = 28;
+	map<string, int32> swish_spell_type_used = 29;
+	map<string, Atlas.Rpc.LifetimeMetricsProto/Types/ProfessionMetrics> profession_metrics = 30;
+	int32 max_concurrent_friends = 31;
 }
 
 // ref: Atlas.Rpc.LootOutpostRequestProto
@@ -7655,7 +8780,8 @@ message PlaceItemResponseProto {
 
 	Status status = 1;
 	string collection_item_id = 2;
-	repeated atlas.proto.LootCollectionProto completion_rewards = 3;
+	atlas.proto.LootCollectionProto page_completion_rewards = 4;
+	atlas.proto.LootCollectionProto sticker_placement_rewards = 5;
 }
 
 // ref: Atlas.Rpc.PlantIngredientRequestProto
@@ -7777,6 +8903,8 @@ message PlayerProfileProto {
 	int64 lifetime_greenhouse_looted = 28;
 	int64 lifetime_map_encounter_won = 29;
 	int64 lifetime_wc_won = 30;
+	string last_foundable_returned_id = 31;
+	int64 last_foundable_returned_timestamp = 32;
 }
 
 // ref: Atlas.Rpc.PlayerSelectTeamRequestProto
@@ -7811,6 +8939,7 @@ message PoiPasscodeRedeemRequest {
 		UNKNOWN = 0;
 		ANDROID = 1;
 		IOS = 2;
+		WEB = 3;
 	}
 
 	string passcode = 1;
@@ -7831,6 +8960,8 @@ message PoiPasscodeRedeemResponse {
 		WRONG_LOCATION = 5;
 		RATE_LIMITED = 6;
 		INVALID = 7;
+		STATUS_FULLY_REDEEMED = 8;
+		STATUS_EXPIRED = 9;
 	}
 
 	Status status = 1;
@@ -8204,6 +9335,22 @@ message UsePotionResponseProto {
 //------------------------------
 //----- Begin rpc -----
 
+// ref: Niantic.Platform.Rpc.ClientUpgradeRequestProto
+message ClientUpgradeRequestProto {
+	string version = 1;
+	proto.ClientOperatingSystem operating_system = 2;
+}
+
+// ref: Niantic.Platform.Rpc.ClientUpgradeResponseProto
+message ClientUpgradeResponseProto {
+	bool needs_upgrade = 1;
+}
+
+
+//----- End rpc -----
+//------------------------------
+//----- Begin rpc -----
+
 // ref: Niantic.Rpc.ClientWeatherProto
 message ClientWeatherProto {
 	int64 s2_cell_id = 1;
@@ -8265,35 +9412,6 @@ message WeatherAlertProto {
 //----- End rpc -----
 //------------------------------
 //----- Begin telemetry -----
-
-// ref: Niantic.Platform.Telemetry.TelemetryDomainId
-enum TelemetryDomainId {
-	TELEMETRY_NO_DOMAIN_ID = 0;
-	TELEMETRY_DITTO = 1;
-	TELEMETRY_GAME = 2;
-}
-
-// ref: Niantic.Platform.Telemetry.ClientTelemetryOutProto
-message ClientTelemetryOutProto {
-	// ref: Niantic.Platform.Telemetry.ClientTelemetryOutProto/Types/Status
-	enum Status {
-		UNSET = 0;
-		SUCCESS = 1;
-		FAILURE = 2;
-		ERROR_INVALID_REQUEST = 3;
-		ERROR_INVALID_PROTO = 4;
-		ERROR_UNSET_TELEMETRY_ID = 5;
-	}
-
-	Status status = 1;
-	int32 rows_written = 2;
-}
-
-// ref: Niantic.Platform.Telemetry.ClientTelemetryProto
-message ClientTelemetryProto {
-	repeated PlatformDataId data_id = 1;
-	repeated bytes application_data = 2;
-}
 
 // ref: Niantic.Platform.Telemetry.Distribution
 message Distribution {
@@ -8372,17 +9490,6 @@ message Distribution {
 	repeated int64 bucket_counts = 6;
 }
 
-// ref: Niantic.Platform.Telemetry.PlatformDataId
-message PlatformDataId {
-	int32 telemetry_id = 1;
-	TelemetryDomainId telemetry_domain_id = 2;
-}
-
-// ref: Niantic.Platform.Telemetry.PlatformEventData
-message PlatformEventData {
-	TelemetryCommon common_telemetry = 1;
-}
-
 // ref: Niantic.Platform.Telemetry.PlatformMetricData
 message PlatformMetricData {
 	// ref: Niantic.Platform.Telemetry.PlatformMetricData/DatapointValueOneofCase
@@ -8416,12 +9523,16 @@ message PlatformServerData {
 	string telemetry_id = 2;
 	string session_id = 3;
 	repeated int32 experiment_ids = 4;
+	string event_request_id = 5;
+	int64 server_timestamp_ms = 6;
 }
 
 // ref: Niantic.Platform.Telemetry.TelemetryCommon
 message TelemetryCommon {
 	int64 timestamp = 1;
 	string correlation_vector = 2;
+	string event_id = 3;
+	int64 client_timestamp_ms = 4;
 }
 
 

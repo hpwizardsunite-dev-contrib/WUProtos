@@ -12,5 +12,5 @@ enum IdentityProvider {
     SUPER_AWESOME = 7;
     DEVELOPER = 8;
     SHARED_SECRET = 9;
-	POSEIDON = 10;
+    POSEIDON = 10;
 }
